@@ -40,26 +40,20 @@
 <SOS>l = cl[n]<tab>lをclのn番目とする<EOS>
 <SOS>for m in reversed(b):<tab>{{bを反転した列}}を先頭から順にmとして、以下を繰り返す<EOS>
 <SOS>l += 1<tab>lを1だけ増加させる<EOS>
-<SOS>if m < N:<tab>もしmがNより小さいとき、<EOS>
 <SOS>cl[m] = l<tab>clのm番目をlとする<EOS>
-<SOS>m = 0<tab>mを0とする<EOS>
 <SOS>ret = 0<tab>retを0とする<EOS>
 <SOS>for i, n in enumerate(cl):<tab>{{clに番号をつける}}を先頭から順にiとnとして、以下を繰り返す<EOS>
 <SOS>if m < n:<tab>もしmがnより小さいとき、以下のとおり<EOS>
-<SOS>m = n<tab>mをnとする<EOS>
 <SOS>ret = i<tab>retをiとする<EOS>
 <SOS>return ret<tab>retが関数出力となる<EOS>
 <SOS>def euler014_collatz_calc(n):<tab>関数euler014_collatz_calc(n)は、以下の通り定義される<EOS>
 <SOS>return int(n / 2) if n % 2 == 0 else n * 3 + 1<tab>もし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}が関数出力となる<EOS>
 <SOS>def euler014_collatz_problem_count(n):<tab>関数euler014_collatz_problem_count(n)は、以下の通り定義される<EOS>
 <SOS>c = 0<tab>cを0とする<EOS>
-<SOS>while n != 1:<tab>もしnが1と等しくないとき、以下を繰り返す<EOS>
 <SOS>n = int(n / 2) if n % 2 == 0 else n * 3 + 1<tab>nをもし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}とする<EOS>
-<SOS>c += 1<tab>cを1だけ増加させる<EOS>
 <SOS>return c<tab>cが関数出力となる<EOS>
 <SOS>def euler014_list_init(l, n):<tab>関数euler014_list_init(l, n)は、以下の通り定義される<EOS>
 <SOS>ret = []<tab>retを空のリストとする<EOS>
-<SOS>for i in range(l):<tab>{{0からl未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
 <SOS>ret.append(n)<tab>retにnを追加する<EOS>
 <SOS>return ret<tab>retが関数出力となる<EOS>
 <SOS>def euler014_list_enum(l):<tab>関数euler014_list_enum(l)は、以下の通り定義される<EOS>
@@ -81,8 +75,6 @@
 <SOS>q = str(2**1000)<tab>qを{{2を1000乗した値}}の文字列とする<EOS>
 <SOS>s = 0<tab>sを0とする<EOS>
 <SOS>for x in q:<tab>qを先頭から順にxとして、以下を繰り返す<EOS>
-<SOS>s += int(x)<tab>sをxの整数値だけ増加させる<EOS>
-<SOS>return s<tab>sが関数出力となる<EOS>
 <SOS>def euler016_all_digit_sum(n):<tab>関数euler016_all_digit_sum(n)は、以下の通り定義される<EOS>
 <SOS>q = str(n)<tab>qをnの文字列とする<EOS>
 <SOS>s = 0<tab>sを0とする<EOS>
@@ -107,7 +99,6 @@
 <SOS>def euler017():<tab>関数euler017()は、以下の通り定義される<EOS>
 <SOS>ret = 0<tab>retを0とする<EOS>
 <SOS>for n in range(1, 1001):<tab>{{1から1001未満までの数列}}を先頭から順にnとして、以下を繰り返す<EOS>
-<SOS>if n <= 20:<tab>もしnが20以下のとき、<EOS>
 <SOS>ret += len(word[n])<tab>retをwordのn番目の長さだけ増加させる<EOS>
 <SOS>elif len(str(n)) == 2:<tab>もしそうでなく、nの文字列の長さが2と等しいとき、以下のとおり<EOS>
 <SOS>ret += len(twoword[int(n / 10)])<tab>retをtwowordの{{nを10で割った値}}の整数値番目の長さだけ増加させる<EOS>
@@ -684,7 +675,6 @@
 <SOS>return s<tab>sが関数出力となる<EOS>
 <SOS>def euler019():<tab>関数euler019()は、以下の通り定義される<EOS>
 <SOS>d = 365<tab>dを365とする<EOS>
-<SOS>sd = 0<tab>sdを0とする<EOS>
 <SOS>for y in range(1901, 2001):<tab>{{1901から2001未満までの数列}}を先頭から順にyとして、以下を繰り返す<EOS>
 <SOS>for i, day in enumerate(days):<tab>{{daysに番号をつける}}を先頭から順にiとdayとして、以下を繰り返す<EOS>
 <SOS>if d % 7 == 6:<tab>もし{{dを7で割った余り}}が6と等しいとき、<EOS>

@@ -1,0 +1,10 @@
+<SOS>sd = 0<tab>sdを0とする<EOS>
+<SOS>s += int(x)<tab>sをxの整数値だけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>for i in range(l):<tab>{{0からl未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>c += 1<tab>cを1だけ増加させる<EOS>
+<SOS>if n <= 20:<tab>もしnが20以下のとき、<EOS>
+<SOS>m = 0<tab>mを0とする<EOS>
+<SOS>if m < N:<tab>もしmがNより小さいとき、<EOS>
+<SOS>while n != 1:<tab>もしnが1と等しくないとき、以下を繰り返す<EOS>
+<SOS>m = n<tab>mをnとする<EOS>
