@@ -28,6 +28,8 @@ import numpy as np
 from janome.tokenizer import Tokenizer
 # Janomeのロード
 
+MAX_LENGTH = 1000
+
 # Python : 空白で単語分割
 class Lang(object):
     def __init__(self, name):
@@ -152,7 +154,7 @@ class EncoderRNN(nn.Module):
 
 # Decoder
 class AttnDecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=100):
+    def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
         super(AttnDecoderRNN, self).__init__()
         self.hidden_size = hidden_size
         self.output_size = output_size
@@ -270,7 +272,7 @@ class Train(object):
         self.encoder = encoder
         self.decoder = decoder
 
-    def train(self, input_tensor, target_tensor, encoder_optimizer, decoder_optimizer, criterion, max_length=100, teacher_forcing_ratio=0.5):
+    def train(self, input_tensor, target_tensor, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5):
         encoder_hidden = self.encoder.initHidden()
         # 勾配の初期化
         encoder_optimizer.zero_grad()
@@ -352,7 +354,7 @@ class Train(object):
 
         Plot().showPlot(plot_losses)
 
-    def evaluate(self, reverse, sentence, max_length=100):
+    def evaluate(self, reverse, sentence, max_length=MAX_LENGTH):
         with torch.no_grad():
             if reverse :
                 input_tensor = Sentence(input_lang, sentence).tensorFromJSentence()
