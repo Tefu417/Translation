@@ -378,13 +378,14 @@
 <SOS>return n * n<tab>{{nにnを掛けた値}}が関数出力となる<EOS>
 <SOS>def euler009_n_square_a(n):<tab>関数euler009_n_square_a(n)は、以下の通り定義される<EOS>
 <SOS>ret = 0<tab>retを0とする<EOS>
-<SOS>for i in range(n):<tab>{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>for i in range(l):<tab>{{0からl未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
 <SOS>ret += n<tab>retをnだけ増加させる<EOS>
 <SOS>return ret<tab>retが関数出力となる<EOS>
 <SOS>def euler009_is_sum_equation1000(tp):<tab>関数euler009_is_sum_equation1000(tp)は、以下の通り定義される<EOS>
 <SOS>s = 0<tab>sを0とする<EOS>
 <SOS>for x in tp:<tab>tpを先頭から順にxとして、以下を繰り返す<EOS>
 <SOS>s += x<tab>sをxだけ増加させる<EOS>
+<SOS>if m < N:<tab>もしmがNより小さいとき、<EOS>
 <SOS>return s == 1000<tab>{{sが1000と等しいか}}が関数出力となる<EOS>
 <SOS>def euler009_is_sum_equation1000_a(tp):<tab>関数euler009_is_sum_equation1000_a(tp)は、以下の通り定義される<EOS>
 <SOS>return sum(tp) == 1000<tab>{{tpの総和が1000と等しいか}}が関数出力となる<EOS>
@@ -434,7 +435,6 @@
 <SOS>for i in range(2, 20):<tab>{{2から20未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
 <SOS>l = []<tab>lを空のリストとする<EOS>
 <SOS>for y in prime:<tab>primeを先頭から順にyとして、以下を繰り返す<EOS>
-<SOS>if i % y == 0:<tab>もし{{iをyで割った余り}}が0と等しいとき、<EOS>
 <SOS>l.append(y)<tab>lにyを追加する<EOS>
 <SOS>if len(l) == 0:<tab>もしlの長さが0と等しいとき、<EOS>
 <SOS>prime.append(i)<tab>primeにiを追加する<EOS>
