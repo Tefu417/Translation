@@ -434,3 +434,6 @@ def main():
     Train(encoder1, attn_decoder1).evaluateOnce(s_list)
 
 main()
+
+# TODO: 55%だけ55.0000000000001%になる
+# TODO: ユニークな単語数調べる
