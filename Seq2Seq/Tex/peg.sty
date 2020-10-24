@@ -1,0 +1,138 @@
+\definecolor{ltblue}{rgb}{0,0.4,0.4}
+\definecolor{dkblue}{rgb}{0,0.1,0.6}
+\definecolor{dkgreen}{rgb}{0,0.35,0}
+\definecolor{dkviolet}{rgb}{0.3,0,0.5}
+\definecolor{dkred}{rgb}{0.5,0,0}
+
+\newcommand{\Xe}{{\color{blue} e}}
+\newcommand{\Xr}{{\color{dkviolet} r}}
+
+\newcommand{\Xt}{{\color{ltblue} \tau}}
+
+\newcommand{\EMPTY}{{\varepsilon}}
+\newcommand{\CAT}{{\;}}
+\newcommand{\OR}{{\color{dkred}\;\texttt{|}\;}}
+\newcommand{\ORE}{{\color{dkred}\;\texttt{/}\;}}
+\newcommand{\AND}{{\color{dkred} \texttt{\&}}}
+\newcommand{\NOT}{{\color{dkred} \texttt{!}}}
+\newcommand{\ZERO}{{\color{dkred} \texttt{*}}}
+\newcommand{\ONE}{{\color{dkred} \texttt{+}}}
+\newcommand{\OPT}{{\color{dkred} \texttt{?}}}
+
+\newcommand{\Parse}[1]{{\color{red} ~~\xrightarrow{{\color{dkviolet} #1}} ~~ }}
+\newcommand{\EV}{~{\color{red} \Downarrow}~}
+\newcommand{\PEV}[2]{~{\color{red} \Downarrow^{#1}_{#2}}~}
+\newcommand{\FAIL}{{\bullet}}
+
+
+\newcommand{\FOLD}{{\color{dkred} \wedge}}
+\newcommand{\TREE}[2]{\{ {#2}\; \#\lb{#1} \}}
+%\newcommand{\FIELD}[2]{ #1\mathbf{:}\; #2 }
+\newcommand{\el}{{\color{blue} \ell}}
+\newcommand{\FOLDM}[3]{{{#2}\textcolor{dkred}{\el\wedge\kern-.3em{^\ast}}\CAP{#1}{#3}}}
+\newcommand{\EDGE}[2]{ #1\mathbf{:}\; #2 }
+
+\newcommand{\LLFOLD}[4]{{\EDGE{#1}{#2}\textcolor{dkred}{\wedge\kern-.3em{^\ast}}\CAP{#4}{#3}}}
+
+
+
+%% daisuke
+\newcommand{\lb}[1]{{\color{magenta}\mathbf{#1}}}
+
+\newcommand{\valspace}[1]{~|_{#1}~}
+\newcommand{\CAP}[2]{\{ {#2}\; \#{#1} \}}
+\newcommand{\LNK}[2]{ #1\mathbf{:}\; #2 }
+\newcommand{\LFOLD}[3]{{{#2}\textcolor{dkred}{\wedge\kern-.3em{^\ast}}\CAP{#1}{#3}}}
+\newcommand{\EPEG}{\Xe}
+
+
+
+\lstdefinelanguage{PEG}{ 
+%
+% Anything betweeen $ becomes LaTeX math mode
+%mathescape=true,
+%
+% Comments may or not include Latex commands
+%texcl=false, 
+%
+% Vernacular commands
+morekeywords=[1]{left,right},
+%
+% Gallina
+morekeywords=[2]{Post,Code},
+%
+% Comments delimiters, we do turn this off for the manual
+morecomment=[l]{//},
+%
+% Spaces are not displayed as a special character
+showstringspaces=false,
+%
+% String delimiters
+morestring=[b]",
+%morestring=[d],
+%
+% Size of tabulations
+tabsize=8,
+%
+% Enables ASCII chars 128 to 255
+extendedchars=false,
+%
+% Case sensitivity
+sensitive=true,
+%
+% Automatic breaking of long lines
+breaklines=false,
+breakindent=20pt,
+xleftmargin=16pt,%
+%
+% Default style fors listings
+% basicstyle={\small\sffamily},
+basicstyle={\small\ttfamily},
+% Position of captions is bottom
+captionpos=b,
+%
+% flexible columns
+columns=[l]flexible,
+%dkgreen
+% Style for (listings') identifiers
+%identifierstyle={\rmfamily\itshape\footnotesize\color{dkviolet}},
+identifierstyle={\rmfamily\itshape\color{dkviolet}},
+% Style for declaration keywords
+keywordstyle=[1]{\sffamily\color{dkblue}},
+% Style for gallina keywords
+keywordstyle=[2]{\ttfamily\bfseries\color{dkred}},
+% Style for sorts keywords
+keywordstyle=[3]{\ttfamily\color{dkblue}},
+% Style for strings
+stringstyle={\rmfamily\itshape},
+% Style for comments
+commentstyle={\rmfamily\bfseries\itshape\color{dkgreen}},
+%
+%moredelim=**[is][\ttfamily\color{red}]{/&}{&/},
+morecomment=[s][\color{dkblue}\ttfamily]{[}{]},
+morecomment=[s][\bfseries\color{dkblue}\ttfamily]{'}{'},
+morecomment=[s][\bfseries\color{dkblue}\ttfamily]{`}{`},
+%morecomment=[s][\bfseries\color{dkred}\ttfamily]{#}{ }
+literate=%
+  {\\&}{{{\bfseries$\AND$}}}1
+  {\\!}{{{\bfseries$\NOT$}}}1
+  {\\+}{{{\bfseries$\ONE$}}}1
+  {\\*}{{{\bfseries$\ZERO$}}}1
+  {\\?}{{{\bfseries$\OPT$}}}1
+  {\\/}{{{\bfseries$\ORE$}}}1
+  {\\|}{{{\bfseries$\OR$}}}1
+  {\\^}{{{\bfseries$\FOLD$}}}1
+%
+}[keywords,comments,strings]
+
+\lstnewenvironment{peg}{\lstset{language=PEG}}{}
+
+% pour inliner dans le texte
+\def\pe{\lstinline[language=PEG, basicstyle=\small]}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% Local IspellDict: british
+%%% TeX-master: "main.tex"
+%%% End: 
+

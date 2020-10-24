@@ -1,0 +1,133 @@
+\documentclass[dvipdfmx,12pt,report]{jsbook}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{epsfig}
+\usepackage{suthesis-2e}
+\usepackage{color}
+\usepackage{latexsym}
+\usepackage{listings,plistings}
+\usepackage{peg}
+\usepackage{bcprules}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage{bm}
+
+\lstset{
+	language=c,
+	basicstyle={\ttfamily},
+	breaklines=true,
+	columns=[l]{fullflexible},
+	lineskip=-0.5zw,
+	commentstyle=\textit,
+	classoffset=1,
+	keywordstyle=\bfseries,
+	showstringspaces=false,
+	numbers=left,
+	stepnumber=1,
+	numberstyle=\tiny,
+	tabsize=2,
+	frame=trbl,
+	framesep=5pt
+}
+
+\renewcommand{\lstlistingname}{ソースコード}
+
+\newcommand{\TODO}[1]{{\color{blue} [TODO: #1]}}
+\newcommand{\FIXME}[1]{{\color{red} {\bf FIXME}: #1}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% タイトル，学籍番号，著者名
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \title{卒業論文\\  {\LARGE 自然言語記述に対する単語分散表現を用いた\\初学者プログラミング支援の研究} \\A NLP Programming Support for novices based on word distuributed representation} 
+\title{{\LARGE Attention付きSeq2Seqモデル}}
+
+\studentid{21716070}
+\author{縫嶋 慧深}
+
+\univ{Japan Women's University}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 学科名，学位
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% For B4
+\dept{Course of Computer Science} % 数物科学科
+\degree{Bachelor of Science} % 学士(理学)
+
+% For M2
+%\dept{Department of Physics, Electrical and Computer Engineering} % 電気電子ネットワークコース
+%\degree{Master of Science} % 修士(工学)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 提出日(月まで)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\submitdate{2020年10月}
+\copyrightyear{2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 指導教官と査読者(B4は指導教官のみ)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\principaladviser{倉光 君郎\hspace{1em}(Kimio Kuramitsu)}
+% For M2
+%\firstreader{Hoge}
+%\secondreader{HOGE Fuga}
+
+\beforepreface
+\tablespagefalse
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 概要
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \prefacesection{概要}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 謝辞
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \prefacesection{謝辞}
+
+
+\afterpreface
+
+
+\chapter{Attention付きSeq2Seqモデル}
+
+本モデルは２つのゲート付き回帰型ユニット(GRU)で構成されるニューラル機械翻訳のモデルである。
+一方のGRUは入力系列を一つの固定長ベクトルに符号化(encode)し、もう一方のGRUにより固定長ベクトル符号を出力の系列へと複合化(decode)する。
+また、本モデルは出力系列を複合化する際に、出力系列と入力系列の参照を行うAttention機構を備えており、これによってより長い分における精度向上を実現している。
+モデルは原文を目的文に翻訳する際の条件付き確率を最大化するためのパラメータを、原文-目的文の対訳コーパスから学習する。
+
+Attention$c_t$はEncoder側の隠れ変数$\bar{h}_s$とDecoder側の隠れ変数$h_t$で定義される。
+原文を$x$、目的文を$y$とする時、Attention$c_t$を使って次に翻訳される単語の確率を以下の式で求めている。
+
+$$p(y_t\mid y_1, y_2, \cdots, y_{t-1}, x)=softmax(W_s\cdot \tilde{h}_s)$$
+$$\tilde{h}_t=tanh(W_c,[c_t;h_t])$$
+$$c_t=\Sigma_{s=1}^S a(s)\bar{h}_s$$
+$$a_t(s)=align(h_t,\bar{h}_s)=\frac{exp(score(h_t,\bar{h}_s))}{\Sigma_s^{'} exp(score(h_t,\bar{h}_s^{'}))}$$
+$$score(h_t,\bar{h}_s)=v_a^T tanh(W_a(h_t;\bar{h}_s))$$
+$$\bar{h}_s : Encoder側の隠れ変数$$
+$$h_t : Decoder側の隠れ変数$$
+$$a_t(s) : 両側の隠れ変数の荷重比率$$
+$$W_s,W_c,W_a,v_a : 学習パラメータ$$
+$$(a;b) : ベクトルaとbの連結$$
+
+
+% \chapter*{発表文献}
+% \addcontentsline{toc}{chapter}{発表文献}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 参考文献
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \bibliographystyle{plain}
+% \bibliography{mybib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 付録
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \appendix
+
+% \chapter{ソースコード}
+
+
+\end{document}
