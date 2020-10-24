@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2020.5.11)  24 OCT 2020 22:36
+This is e-pTeX, Version 3.14159265-p3.8.2-190131-2.6 (utf8.euc) (TeX Live 2019) (preloaded format=platex 2020.5.11)  24 OCT 2020 22:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -333,71 +333,7 @@ LaTeX Font Info:    ... okay on input line 38.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 38.
 LaTeX Font Info:    ... okay on input line 38.
 \c@lstlisting=\count195
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 76.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 76.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 76.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 76.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 76.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 76.
- [1
 
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
- [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 76.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 76.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 76.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 76.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 76.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 76.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 76.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 76.
- [3]
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 90.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 90.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 90.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 90.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 90.
- (./Seq2Seq.toc)
-\tf@toc=\write3
-\openout3 = `Seq2Seq.toc'.
-
- [4
-
-
-] (./Seq2Seq.lof)
-\tf@lof=\write4
-\openout4 = `Seq2Seq.lof'.
-
- [5
-
-]
 第1章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 93.
@@ -407,6 +343,28 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 93.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 93.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 23.90964pt on input line 93.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 23.90964pt on input line 93.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 100.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 100.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 100.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 100.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 100.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 100.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 100.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 100.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 107.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
@@ -415,17 +373,17 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 107.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 107.
-[1
+ [1
 
 
 ] [2] (./Seq2Seq.aux) ) 
 Here is how much of TeX's memory you used:
- 12656 strings out of 493223
- 230428 string characters out of 6144415
+ 12615 strings out of 493223
+ 229846 string characters out of 6144415
  555303 words of memory out of 5000000
- 16591 multiletter control sequences out of 15000+600000
- 545429 words of font info for 87 fonts, out of 8000000 for 9000
+ 16562 multiletter control sequences out of 15000+600000
+ 542548 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  33i,9n,49p,825b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Seq2Seq.dvi (7 pages, 6380 bytes).
+Output written on Seq2Seq.dvi (2 pages, 3876 bytes).
