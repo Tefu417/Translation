@@ -319,7 +319,7 @@ class Train(object):
 
         return loss.item() / target_length
 
-    def trainIters(self, n_iters, print_every=1000, plot_every=100, learning_rate=0.01):
+    def trainIters(self, n_iters, print_every, plot_every=100, learning_rate=0.01):
         start = time.time()
         plot_losses = []
         print_loss_total = 0    # print_every ごとにリセットする
@@ -345,7 +345,7 @@ class Train(object):
                 print_loss_avg = '{:.4f}'.format(print_loss_total / print_every)
                 print_loss_total = 0
                 print('{0} ({1} {2}%) {3}'.format(Time().timeSince(start, iter / n_iters),
-                                            iter, iter / n_iters * 100, print_loss_avg))
+                                            iter, int(iter / n_iters * 100), print_loss_avg))
 
             if iter % plot_every == 0:
                 plot_loss_avg = plot_loss_total / plot_every
@@ -384,7 +384,6 @@ class Train(object):
                     break
                 else:
                     decoded_words.append(output_lang.index2word[topi.item()])
-
                 decoder_input = topi.squeeze().detach()
 
             return decoded_words, decoder_attentions[:di + 1]
