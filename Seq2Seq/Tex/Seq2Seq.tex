@@ -40,7 +40,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % タイトル，学籍番号，著者名
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \title{卒業論文\\  {\LARGE 自然言語記述に対する単語分散表現を用いた\\初学者プログラミング支援の研究} \\A NLP Programming Support for novices based on word distuributed representation} 
+% \title{卒業論文\\  {\LARGE 自然言語記述に対する単語分散表現を用いた\\初学者プログラミング支援の研究} \\A NLP Programming Support for novices based on word distuributed representation}
 % \title{{\LARGE Attention付きSeq2Seqモデル}}
 
 % \studentid{21716070}
@@ -93,12 +93,12 @@
 \chapter{Attention付きSeq2Seqモデル}
 
 本モデルは２つのゲート付き回帰型ユニット(GRU)で構成されるニューラル機械翻訳のモデルである。
-一方のGRUは入力系列を一つの固定長ベクトルに符号化(encode)し、もう一方のGRUにより固定長ベクトル符号を出力の系列へと複合化(decode)する。
-また、本モデルは出力系列を複合化する際に、出力系列と入力系列の参照を行うAttention機構を備えており、これによってより長い分における精度向上を実現している。
+一方のGRUは入力系列を一つの固定長ベクトルに符号化(encode)し、もう一方のGRUにより固定長ベクトル符号を出力の系列へと復号化(decode)する。
+また、本モデルは出力系列を復号化する際に出力系列と入力系列の参照を行うAttention機構を備えており、これによってより長い文における精度向上を実現している。
 モデルは原文を目的文に翻訳する際の条件付き確率を最大化するためのパラメータを、原文-目的文の対訳コーパスから学習する。
 
-Attention$c_t$はEncoder側の隠れ変数$\bar{h}_s$とDecoder側の隠れ変数$h_t$で定義される。
-原文を$x$、目的文を$y$とする時、Attention$c_t$を使って次に翻訳される単語の確率を以下の式で求めている。
+Attention $c_t$はEncoder側の隠れ変数$\bar{h}_s$とDecoder側の隠れ変数$h_t$で定義される。
+原文を$x$、目的文を$y$とする時、Attention $c_t$を使って次に翻訳される単語の確率を以下の式で求めている。
 
 $$p(y_t\mid y_1, y_2, \cdots, y_{t-1}, x)=softmax(W_s\cdot \tilde{h}_s)$$
 $$\tilde{h}_t=tanh(W_c,[c_t;h_t])$$
