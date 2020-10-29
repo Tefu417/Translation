@@ -1,7 +1,7 @@
 # Py2Pj
-sd = 0, s += int(x), return s, for i in range(n):, c += 1, if n <= 20:, m = 0, if i % y == 0:, while n != 1:, m = n
+sd = 0<sep>s += int(x)<sep>return s<sep>for i in range(n):<sep>c += 1<sep>if n <= 20:<sep>m = 0<sep>if i % y == 0:<sep>while n != 1:<sep>m = n
 
 # Pj2Py
-sdを0とする, sをxの整数値だけ増加させる, sが関数出力となる, {{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す, cを1だけ増加させる, もしnが20以下のとき、, mを0とする, もし{{iをyで割った余り}}が0と等しいとき、, もしnが1と等しくないとき、以下を繰り返す, mをnとする
+sdを0とする<sep>sをxの整数値だけ増加させる<sep>sが関数出力となる<sep>{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<sep>cを1だけ増加させる<sep>もしnが20以下のとき、<sep>mを0とする<sep>もし{{iをyで割った余り}}が0と等しいとき、<sep>もしnが1と等しくないとき、以下を繰り返す<sep>mをnとする
 
 # 入力にコピーして貼り付ける
