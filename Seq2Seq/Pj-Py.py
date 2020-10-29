@@ -1,5 +1,6 @@
 # pip install torch torchvision
 # pip install janome
+# pip install -U git+https://github.com/KuramitsuLab/kolab.git
 
 import unicodedata
 # Unicode のテキスト処理を行うため
@@ -28,6 +29,11 @@ import numpy as np
 from janome.tokenizer import Tokenizer
 # Janomeのロード
 
+# from kolab.pegtree.pytokens import pytokens
+# トークナイザのロード
+# pytokens('if a == 1: pass') → ['if', 'a', '==', '1', ':', '[BGN]', 'pass', '[END]']
+# Pythonのコードを入れると、字句のリストが帰る
+
 MAX_LENGTH = 1000
 
 # Python : 空白で単語分割
@@ -45,8 +51,12 @@ class Lang(object):
         # Count SOS and EOS
 
     def addSentence(self, sentence):
+        # sentenceをトークナイザで単語分割した中にwordがあった時
+        # for word in pytokens(sentence):
+        #     self.addWord(word)
+
+        # sentenceを空白で区切り単語化した中にwordがあった時
         for word in sentence.split(' '):
-            # sentenceを空白で区切り単語化した中にwordがあった時
             self.addWord(word)
 
     def addWord(self, word):
@@ -84,6 +94,16 @@ class Normalize(object):
         s = re.sub(r" {2,}", r" ", s)
         # {x, y} x回以上、y回以下の繰り返し
         s = re.sub(r"<SOS>", r"", s)
+        s = re.sub(r"\(", r" ( ", s)
+        s = re.sub(r"\)", r" ) ", s)
+        s = re.sub(r"\{", r" { ", s)
+        s = re.sub(r"\}", r" } ", s)
+        s = re.sub(r"\[", r" [ ", s)
+        s = re.sub(r"\]", r" ] ", s)
+        s = re.sub(r"\:", r" : ", s)
+        s = re.sub(r"\,", r" , ", s)
+        s = re.sub(r"\"", r" \" ", s)
+        s = re.sub(r"\'", r" ' ", s)
         return s
 
 class Pair(object):
@@ -229,6 +249,7 @@ class  Plot(object):
         # plt.savefig("plot.png")
         # content フォルダ下に保存される
         plt.show()
+        print('finish plot')
 
 class Sentence(object):
     def __init__(self, lang, sentence):
@@ -236,6 +257,7 @@ class Sentence(object):
         self.sentence = sentence
 
     def indexesFromSentence(self):
+        # return [self.lang.word2index[word] for word in pytokens(self.sentence)]
         return [self.lang.word2index[word] for word in self.sentence.split(' ')]
 
     def indexesFromJSentence(self):
@@ -353,6 +375,7 @@ class Train(object):
                 plot_loss_total = 0
 
         Plot().showPlot(plot_losses)
+        print('finish trainIters')
 
     def evaluate(self, reverse, sentence, max_length=MAX_LENGTH):
         with torch.no_grad():
@@ -400,6 +423,8 @@ class Train(object):
 
     def evaluateOnce(self, s_list):
         for s in s_list:
+            s_list[s_list.index(s)] = Normalize().normalizeString(s)
+
             print('{0}/{1}'.format(s_list.index(s)+1, len(s_list)))
             print('>', s)
             output_words, attentions = self.evaluate(reverse, s)
@@ -408,7 +433,7 @@ class Train(object):
 
 
 print('リスト入力：', end='')
-s_list = list(map(str, input().split(',')))
+s_list = list(map(str, input().split('<sep>')))
 print('学習中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -416,23 +441,21 @@ txt = 'Seq2Seq/train-euler-corpus.txt'
 SOS_token = 0
 EOS_token = 1
 
-# Pj2Py
-input_lang, output_lang, pairs, reverse = Pair().prepareData('pj', 'py', True)
-# Py2Pj
-# input_lang, output_lang, pairs, reverse = Pair().prepareData('py', 'pj', False)
+# PJ2Py
+# input_lang, output_lang, pairs, reverse = Pair().prepareData('pj', 'py', True)
+# Py2PJ
+input_lang, output_lang, pairs, reverse = Pair().prepareData('py', 'pj', False)
 
 hidden_size = 256
 encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
-def main():
-    Train(encoder1, attn_decoder1).trainIters(10000, print_every=500)
+Train(encoder1, attn_decoder1).trainIters(1000, print_every=50)
 
-    print('翻訳中……')
-    # Train(encoder1, attn_decoder1).evaluateRandomly()
-    Train(encoder1, attn_decoder1).evaluateOnce(s_list)
+print('翻訳中……')
+# Train(encoder1, attn_decoder1).evaluateRandomly()
+Train(encoder1, attn_decoder1).evaluateOnce(s_list)
 
-main()
 
-# TODO: 55%だけ55.0000000000001%になる
-# TODO: ユニークな単語数調べる
+
+# ユニークな単語数調べる
