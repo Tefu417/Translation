@@ -91,8 +91,6 @@ class Normalize(object):
         s = re.sub(r"\n", r" ", s)
         s = re.sub(r"\t+", r" ", s)
         # + 1回以上の繰り返し
-        s = re.sub(r" {2,}", r" ", s)
-        # {x, y} x回以上、y回以下の繰り返し
         s = re.sub(r"<SOS>", r"", s)
         s = re.sub(r"\(", r" ( ", s)
         s = re.sub(r"\)", r" ) ", s)
@@ -104,6 +102,8 @@ class Normalize(object):
         s = re.sub(r"\,", r" , ", s)
         s = re.sub(r"\"", r" \" ", s)
         s = re.sub(r"\'", r" ' ", s)
+        s = re.sub(r" {2,}", r" ", s)
+        # {x, y} x回以上、y回以下の繰り返し
         return s
 
 class Pair(object):
@@ -245,11 +245,11 @@ class  Plot(object):
         loc = ticker.MultipleLocator(base=0.2)
         # loc は定期的に ticker を配置する
         ax.yaxis.set_major_locator(loc)
+        # plt.yticks([0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5])
         plt.plot(points)
         # plt.savefig("plot.png")
         # content フォルダ下に保存される
         plt.show()
-        print('finish plot')
 
 class Sentence(object):
     def __init__(self, lang, sentence):
@@ -341,7 +341,7 @@ class Train(object):
 
         return loss.item() / target_length
 
-    def trainIters(self, n_iters, print_every, plot_every=100, learning_rate=0.01):
+    def trainIters(self, n_iters, print_every, plot_every=50, learning_rate=0.01):
         start = time.time()
         plot_losses = []
         print_loss_total = 0    # print_every ごとにリセットする
@@ -353,6 +353,8 @@ class Train(object):
 
         training_pairs = [Tensor(random.choice(pairs), reverse).tensorsFromPair() for i in range(n_iters)]
         criterion = nn.NLLLoss()    # 損失関数
+
+        print('学習中……')
 
         for iter in range(1, n_iters + 1):
             training_pair = training_pairs[iter - 1]
@@ -375,7 +377,6 @@ class Train(object):
                 plot_loss_total = 0
 
         Plot().showPlot(plot_losses)
-        print('finish trainIters')
 
     def evaluate(self, reverse, sentence, max_length=MAX_LENGTH):
         with torch.no_grad():
@@ -423,18 +424,19 @@ class Train(object):
 
     def evaluateOnce(self, s_list):
         for s in s_list:
-            s_list[s_list.index(s)] = Normalize().normalizeString(s)
+            norm_s = Normalize().normalizeString(s)
+            s_list[s_list.index(s)] = norm_s
 
-            print('{0}/{1}'.format(s_list.index(s)+1, len(s_list)))
-            print('>', s)
-            output_words, attentions = self.evaluate(reverse, s)
+            print('{0}/{1}'.format(s_list.index(norm_s)+1, len(s_list)))
+            print('>', norm_s)
+            output_words, attentions = self.evaluate(reverse, norm_s)
             output_sentence = ' '.join(output_words)
             print('<', output_sentence)
 
 
 print('リスト入力：', end='')
 s_list = list(map(str, input().split('<sep>')))
-print('学習中……')
+print('準備中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 txt = 'Seq2Seq/train-euler-corpus.txt'
@@ -450,12 +452,12 @@ hidden_size = 256
 encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
-Train(encoder1, attn_decoder1).trainIters(1000, print_every=50)
+Train(encoder1, attn_decoder1).trainIters(2500, print_every=100)
 
 print('翻訳中……')
 # Train(encoder1, attn_decoder1).evaluateRandomly()
 Train(encoder1, attn_decoder1).evaluateOnce(s_list)
 
 
-
+# 学習済みモデル別で作る
 # ユニークな単語数調べる
