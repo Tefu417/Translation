@@ -8,6 +8,7 @@
 # !pip3 install torchtext spacy --user
 # !python3 -m spacy download en --user
 # !python3 -m spacy download de --user
+# !wget https://s3.amazonaws.com/opennmt-models/iwslt.pt
 
 
 import matplotlib
@@ -21,6 +22,8 @@ import matplotlib.pyplot as plt
 import seaborn
 seaborn.set_context(context="talk")
 # %matplotlib inline
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class EncoderDecoder(nn.Module):
     """
@@ -353,9 +356,9 @@ def get_std_opt(model):
             torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
 # Three settings of the lrate hyperparameters.
-# opts = [NoamOpt(512, 1, 4000, None),
-#         NoamOpt(512, 1, 8000, None),
-#         NoamOpt(256, 1, 4000, None)]
+opts = [NoamOpt(512, 1, 4000, None),
+        NoamOpt(512, 1, 8000, None),
+        NoamOpt(256, 1, 4000, None)]
 # plt.plot(np.arange(1, 20000), [[opt.rate(i) for opt in opts] for i in range(1, 20000)])
 # plt.legend(["512:4000", "512:8000", "256:4000"])
 # None
@@ -384,62 +387,62 @@ class LabelSmoothing(nn.Module):
         return self.criterion(x, Variable(true_dist, requires_grad=False))
 
 # Example of label smoothing.
-# crit = LabelSmoothing(5, 0, 0.4)
-# predict = torch.FloatTensor([[0, 0.2, 0.7, 0.1, 0],
-#                              [0, 0.2, 0.7, 0.1, 0],
-#                              [0, 0.2, 0.7, 0.1, 0]])
-# v = crit(Variable(predict.log()),
-#          Variable(torch.LongTensor([2, 1, 0])))
+crit = LabelSmoothing(5, 0, 0.4)
+predict = torch.FloatTensor([[0, 0.2, 0.7, 0.1, 0],
+                             [0, 0.2, 0.7, 0.1, 0],
+                             [0, 0.2, 0.7, 0.1, 0]])
+v = crit(Variable(predict.log()),
+         Variable(torch.LongTensor([2, 1, 0])))
 
 # Show the target distributions expected by the system.
 # plt.imshow(crit.true_dist)
 # None
 
-# crit = LabelSmoothing(5, 0, 0.1)
-# def loss(x):
-#     d = x + 3 * 1
-#     predict = torch.FloatTensor([[0, x / d, 1 / d, 1 / d, 1 / d],
-#                                  ])
-#     #print(predict)
-#     return crit(Variable(predict.log()),
-#                  Variable(torch.LongTensor([1]))).data.item()
+crit = LabelSmoothing(5, 0, 0.1)
+def loss(x):
+    d = x + 3 * 1
+    predict = torch.FloatTensor([[0, x / d, 1 / d, 1 / d, 1 / d],
+                                 ])
+    #print(predict)
+    return crit(Variable(predict.log()),
+                 Variable(torch.LongTensor([1]))).data.item()
 # plt.plot(np.arange(1, 100), [loss(x) for x in range(1, 100)])
 # None
 
 # Copy-Task
 
-# def data_gen(V, batch, nbatches):
-#     "Generate random data for a src-tgt copy task."
-#     for i in range(nbatches):
-#         data = torch.from_numpy(np.random.randint(1, V, size=(batch, 10)))
-#         data[:, 0] = 1
-#         src = Variable(data, requires_grad=False)
-#         tgt = Variable(data, requires_grad=False)
-#         yield Batch(src, tgt, 0)
+def data_gen(V, batch, nbatches):
+    "Generate random data for a src-tgt copy task."
+    for i in range(nbatches):
+        data = torch.from_numpy(np.random.randint(1, V, size=(batch, 10)))
+        data[:, 0] = 1
+        src = Variable(data, requires_grad=False)
+        tgt = Variable(data, requires_grad=False)
+        yield Batch(src, tgt, 0)
 
-# class SimpleLossCompute:
-#     "A simple loss compute and train function."
-#     def __init__(self, generator, criterion, opt=None):
-#         self.generator = generator
-#         self.criterion = criterion
-#         self.opt = opt
+class SimpleLossCompute:
+    "A simple loss compute and train function."
+    def __init__(self, generator, criterion, opt=None):
+        self.generator = generator
+        self.criterion = criterion
+        self.opt = opt
 
-#     def __call__(self, x, y, norm):
-#         x = self.generator(x)
-#         loss = self.criterion(x.contiguous().view(-1, x.size(-1)),
-#                               y.contiguous().view(-1)) / norm
-#         loss.backward()
-#         if self.opt is not None:
-#             self.opt.step()
-#             self.opt.optimizer.zero_grad()
-#         return loss.data.item() * norm
+    def __call__(self, x, y, norm):
+        x = self.generator(x)
+        loss = self.criterion(x.contiguous().view(-1, x.size(-1)),
+                              y.contiguous().view(-1)) / norm
+        loss.backward()
+        if self.opt is not None:
+            self.opt.step()
+            self.opt.optimizer.zero_grad()
+        return loss.data.item() * norm
 
 # # Train the simple copy task.
-# V = 11
-# criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
-# model = make_model(V, V, N=2)
-# model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,
-#         torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+V = 11
+criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
+model = make_model(V, V, N=2)
+model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,
+        torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
 # for epoch in range(10):
 #     model.train()
@@ -449,24 +452,24 @@ class LabelSmoothing(nn.Module):
 #     print(run_epoch(data_gen(V, 30, 5), model,
 #                     SimpleLossCompute(model.generator, criterion, None)))
 
-# def greedy_decode(model, src, src_mask, max_len, start_symbol):
-#     memory = model.encode(src, src_mask)
-#     ys = torch.ones(1, 1).fill_(start_symbol).type_as(src.data)
-#     for i in range(max_len-1):
-#         out = model.decode(memory, src_mask,
-#                            Variable(ys),
-#                            Variable(subsequent_mask(ys.size(1))
-#                                     .type_as(src.data)))
-#         prob = model.generator(out[:, -1])
-#         _, next_word = torch.max(prob, dim = 1)
-#         next_word = next_word.data[0]
-#         ys = torch.cat([ys,
-#                         torch.ones(1, 1).type_as(src.data).fill_(next_word)], dim=1)
-#     return ys
+def greedy_decode(model, src, src_mask, max_len, start_symbol):
+    memory = model.encode(src, src_mask)
+    ys = torch.ones(1, 1).fill_(start_symbol).type_as(src.data)
+    for i in range(max_len-1):
+        out = model.decode(memory, src_mask,
+                           Variable(ys),
+                           Variable(subsequent_mask(ys.size(1))
+                                    .type_as(src.data)))
+        prob = model.generator(out[:, -1])
+        _, next_word = torch.max(prob, dim = 1)
+        next_word = next_word.data[0]
+        ys = torch.cat([ys,
+                        torch.ones(1, 1).type_as(src.data).fill_(next_word)], dim=1)
+    return ys
 
-# model.eval()
-# src = Variable(torch.LongTensor([[1,2,3,4,5,6,7,8,9,10]]) )
-# src_mask = Variable(torch.ones(1, 1, 10) )
+model.eval()
+src = Variable(torch.LongTensor([[1,2,3,4,5,6,7,8,9,10]]) )
+src_mask = Variable(torch.ones(1, 1, 10) )
 # print(greedy_decode(model, src, src_mask, max_len=10, start_symbol=1))
 
 # Translation-Task(en-de)
@@ -586,20 +589,65 @@ class MultiGPULossCompute:
 
 # GPUs to use
 devices = [0, 1, 2, 3]
+
 if True:
     pad_idx = TGT.vocab.stoi["<blank>"]
     model = make_model(len(SRC.vocab), len(TGT.vocab), N=6)
-    # model.cuda()
-    model.cpu()
-    # localでは.cuda()使えないため
+    model.cuda()
     criterion = LabelSmoothing(size=len(TGT.vocab), padding_idx=pad_idx, smoothing=0.1)
     criterion.cuda()
     BATCH_SIZE = 12000
-    train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=0,
+
+    # train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=0,
+    #                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
+    #                         batch_size_fn=batch_size_fn, train=True)
+    # valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=0,
+    #                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
+    #                         batch_size_fn=batch_size_fn, train=False)
+
+    train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=device,
                             repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                             batch_size_fn=batch_size_fn, train=True)
-    valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=0,
+    valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
                             repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                             batch_size_fn=batch_size_fn, train=False)
+
     model_par = nn.DataParallel(model, device_ids=devices)
 None
+
+if False:
+    model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
+            torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+    for epoch in range(10):
+        model_par.train()
+        run_epoch((rebatch(pad_idx, b) for b in train_iter),
+                  model_par,
+                  MultiGPULossCompute(model.generator, criterion,
+                                      devices=devices, opt=model_opt))
+        model_par.eval()
+        loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter),
+                          model_par,
+                          MultiGPULossCompute(model.generator, criterion,
+                          devices=devices, opt=None))
+        print(loss)
+else:
+    model = torch.load("iwslt.pt")
+
+for i, batch in enumerate(valid_iter):
+    src = batch.src.transpose(0, 1)[:1]
+    src_mask = (src != SRC.vocab.stoi["<blank>"]).unsqueeze(-2)
+    out = greedy_decode(model, src, src_mask,
+                        max_len=60, start_symbol=TGT.vocab.stoi["<s>"])
+    print("Translation:", end="\t")
+    for i in range(1, out.size(1)):
+        sym = TGT.vocab.itos[out[0, i]]
+        if sym == "</s>": break
+        print(sym, end =" ")
+    print()
+    print("Target:", end="\t")
+    for i in range(1, batch.trg.size(0)):
+        sym = TGT.vocab.itos[batch.trg.data[i, 0]]
+        if sym == "</s>": break
+        print(sym, end =" ")
+    print()
+    break
