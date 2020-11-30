@@ -23,6 +23,11 @@ import seaborn
 seaborn.set_context(context="talk")
 # %matplotlib inline
 
+import re
+import unicodedata
+import string
+from janome.tokenizer import Tokenizer
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class EncoderDecoder(nn.Module):
@@ -246,7 +251,7 @@ class PositionalEncoding(nn.Module):
 # plt.plot(np.arange(100), y[0, :, 4:8].data.numpy())
 # plt.legend(["dim %d"%p for p in [4,5,6,7]])
 
-def make_model(src_vocab, tgt_vocab, N=6,
+def make_model(src_vocab, tgt_vocab, N=8,
                d_model=512, d_ff=2048, h=8, dropout=0.1):
     "Helper: Construct a model from hyperparameters."
     c = copy.deepcopy
@@ -352,7 +357,7 @@ class NoamOpt:
             min(step ** (-0.5), step * self.warmup ** (-1.5)))
 
 def get_std_opt(model):
-    return NoamOpt(model.src_embed[0].d_model, 2, 4000,
+    return NoamOpt(model.src_embed[0].d_model, 2, 2500,
             torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
 # Three settings of the lrate hyperparameters.
@@ -592,7 +597,7 @@ devices = [0, 1, 2, 3]
 
 if True:
     pad_idx = TGT.vocab.stoi["<blank>"]
-    model = make_model(len(SRC.vocab), len(TGT.vocab), N=6)
+    model = make_model(len(SRC.vocab), len(TGT.vocab), N=8)
     model.cuda()
     criterion = LabelSmoothing(size=len(TGT.vocab), padding_idx=pad_idx, smoothing=0.1)
     criterion.cuda()
