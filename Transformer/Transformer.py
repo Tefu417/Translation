@@ -9,6 +9,8 @@
 # !python3 -m spacy download en --user
 # !python3 -m spacy download de --user
 # !wget https://s3.amazonaws.com/opennmt-models/iwslt.pt
+# !pip3 install spacy[ja] --user
+# !pip3 install "https://github.com/megagonlabs/ginza/releases/download/latest/ginza-latest.tar.gz" --user
 
 
 import matplotlib
@@ -26,9 +28,132 @@ seaborn.set_context(context="talk")
 import re
 import unicodedata
 import string
-from janome.tokenizer import Tokenizer
+# from spacy.lang.ja import Japanese
+import codecs
+
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+txt = 'train-euler-corpus.txt'
+SOS_token = 0
+EOS_token = 1
+
+# Python : 空白で単語分割
+class Lang(object):
+    def __init__(self, name):
+        self.name = name
+        # 登録する単語
+        self.word2index = {}
+        # 辞書を作成
+        self.word2count = {}
+        self.index2word = {0: "SOS", 1: "EOS"}
+        # 0, 1番目はSOS, EOS
+        # Start(End) Of Sequence
+        self.n_words = 2
+        # Count SOS and EOS
+
+    def addSentence(self, sentence):
+        # sentenceをトークナイザで単語分割した中にwordがあった時
+        # for word in pytokens(sentence):
+        #     self.addWord(word)
+
+        # sentenceを空白で区切り単語化した中にwordがあった時
+        for word in sentence.split(' '):
+            self.addWord(word)
+
+    def addWord(self, word):
+        if word not in self.word2index:
+        # もしwordが word2index辞書内にない場合
+            self.word2index[word] = self.n_words
+            # word を key としてその値に n_words をいれる
+            self.word2count[word] = 1
+            # word を key としてその値を1とする
+            self.index2word[self.n_words] = word
+            # n_words を key としてその値に word をいれる
+            self.n_words += 1
+        else:
+        # wordが word2index辞書内にある場合
+            self.word2count[word] += 1
+            # word を key とした値に1を足す
+
+# PJ(日本語) : spaCyで単語分割
+class JLang(Lang):
+    def addJsentence(self, sentence):
+        nlp = spacy.load('ja_ginza')
+        for word in nlp(sentence):
+            self.addWord(word.text)
+
+    # def addJSentence(self, sentence):
+    #     tokens = Tokenizer().tokenize(sentence, wakati = True)
+    #     # 入力文を分かち書きし、文字列のリストとする
+    #     for word in tokens :
+    #         self.addWord(word)
+
+# 正規化
+class Normalize(object):
+    # def __init__(self, s):
+    #     self.s = s
+
+    def normalizeString(self, s):
+        s = re.sub(r"\n", r" ", s)
+        s = re.sub(r"\t+", r" ", s)
+        # + 1回以上の繰り返し
+        s = re.sub(r"<SOS>", r"", s)
+        s = re.sub(r"\(", r" ( ", s)
+        s = re.sub(r"\)", r" ) ", s)
+        s = re.sub(r"\{", r" { ", s)
+        s = re.sub(r"\}", r" } ", s)
+        s = re.sub(r"\[", r" [ ", s)
+        s = re.sub(r"\]", r" ] ", s)
+        s = re.sub(r"\:", r" : ", s)
+        s = re.sub(r"\,", r" , ", s)
+        s = re.sub(r"\"", r" \" ", s)
+        s = re.sub(r"\'", r" ' ", s)
+        s = re.sub(r" {2,}", r" ", s)
+        # {x, y} x回以上、y回以下の繰り返し
+        return s
+
+class Pair(object):
+    def __init__(self):
+        self.lines = []
+        self.pairs = []
+
+    def readLangs(self, lang1, lang2, reverse) :
+        # ファイルを読み込んで行に分割する
+        self.lines = codecs.open(txt, encoding='utf-8').read().strip().split('<EOS>')
+        del self.lines[len(self.lines) - 1]
+        # すべての行をペアに分割して正規化する
+        self.pairs = [[Normalize().normalizeString(s) for s in l.split('<tab>')] for l in self.lines]
+        # ペアを反転させ、Langインスタンスを作る
+        if reverse :
+        # もし reverse = False なら
+            self.pairs = [list(reversed(p)) for p in self.pairs]
+            # ペアを反転する
+            input_lang = JLang(lang2)
+            output_lang = Lang(lang1)
+            # Jpn2Py
+        else:
+            input_lang = Lang(lang1)
+            output_lang = JLang(lang2)
+            # Py2Jpn
+        return input_lang, output_lang, self.pairs
+
+    def prepareData(self, lang1, lang2, reverse):
+        input_lang, output_lang, self.pairs = self.readLangs(lang1, lang2, reverse)
+        # print("Read {0} sentence pairs".format(len(pairs)))
+        # print("Trimmed to {0} sentence pairs".format(len(pairs)))
+        for pair in self.pairs:
+            if len(pair) >= 2 :
+                if reverse :
+                # もしreverse = False なら
+                    input_lang.addJsentence(pair[0])
+                    output_lang.addSentence(pair[1])
+                else :
+                    input_lang.addSentence(pair[0])
+                    output_lang.addJsentence(pair[1])
+        # print("Counted words:")
+        # print(input_lang.name, input_lang.n_words)
+        # print(output_lang.name, output_lang.n_words)
+        return input_lang, output_lang, self.pairs, reverse
 
 class EncoderDecoder(nn.Module):
     """
