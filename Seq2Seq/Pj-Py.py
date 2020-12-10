@@ -26,13 +26,14 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
 
+import janome
 from janome.tokenizer import Tokenizer
 # Janomeのロード
 
 # from kolab.pegtree.pytokens import pytokens
 # トークナイザのロード
 # pytokens('if a == 1: pass') → ['if', 'a', '==', '1', ':', '[BGN]', 'pass', '[END]']
-# Pythonのコードを入れると、字句のリストが帰る
+# Pythonのコードを入れると、字句のリストが返る
 
 MAX_LENGTH = 1000
 
@@ -439,7 +440,7 @@ s_list = list(map(str, input().split('<sep>')))
 print('準備中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'Seq2Seq/train-euler-corpus.txt'
+txt = 'train-euler-corpus.txt'
 SOS_token = 0
 EOS_token = 1
 
