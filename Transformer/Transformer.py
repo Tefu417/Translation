@@ -3,6 +3,8 @@
 # !pip3 install matplotlib --user
 # !pip3 install seaborn --user
 # !pip3 install torchtext --user
+# !pip3 install tensorflow --user
+# !pip3 install sklearn --user
 
 # Translation-Task
 # !pip3 install torchtext spacy --user
@@ -24,18 +26,33 @@ import matplotlib.pyplot as plt
 import seaborn
 seaborn.set_context(context="talk")
 # %matplotlib inline
+import pandas as pd
 
 import re
 import unicodedata
 import string
 # from spacy.lang.ja import Japanese
 import codecs
+from torchtext import data, datasets
+import spacy
 
+from sklearn.model_selection import train_test_split
+import tensorflow as tf
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 txt = 'train-euler-corpus.txt'
 SOS_token = 0
 EOS_token = 1
+
+train_df = pd.read_csv(txt,  header=None, sep='<tab>')
+train_df.columns = ['Python', 'PJ']
+train_df['Python'] = train_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
+train_df['PJ'] = train_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
+
+test_df = pd.read_csv('test-euler-corpus.txt',  header=None, sep='<tab>')
+test_df.columns = ['Python', 'PJ']
+test_df['Python'] = test_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
+test_df['PJ'] = test_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
 
 # Python : 空白で単語分割
 class Lang(object):
@@ -75,6 +92,12 @@ class Lang(object):
             self.word2count[word] += 1
             # word を key とした値に1を足す
 
+    def tokenize(self, sentence):
+        return [tok.text for tok in spacy.tokenizer(sentence)]
+
+    def dic(self):
+        return self.word2index
+
 # PJ(日本語) : spaCyで単語分割
 class JLang(Lang):
     def addJsentence(self, sentence):
@@ -87,6 +110,12 @@ class JLang(Lang):
     #     # 入力文を分かち書きし、文字列のリストとする
     #     for word in tokens :
     #         self.addWord(word)
+
+    def Jtokenize(self, sentence):
+        return [tok.text for tok in spacy.tokenizer(sentence)]
+
+    def Jdic(self):
+        return self.word2index
 
 # 正規化
 class Normalize(object):
@@ -119,10 +148,17 @@ class Pair(object):
 
     def readLangs(self, lang1, lang2, reverse) :
         # ファイルを読み込んで行に分割する
-        self.lines = codecs.open(txt, encoding='utf-8').read().strip().split('<EOS>')
-        del self.lines[len(self.lines) - 1]
+        # self.lines = codecs.open(txt, encoding='utf-8').read().strip().split('<EOS>')]
+        # del self.lines[len(self.lines) - 1]
+
+        # TODO : for文じゃない方法で
+        # FIXME : test -> train
+        for i in range(len(test_df)) :
+            self.lines.append(test_df['Python'][i] + ',' + test_df['PJ'][i])
+
         # すべての行をペアに分割して正規化する
-        self.pairs = [[Normalize().normalizeString(s) for s in l.split('<tab>')] for l in self.lines]
+        self.pairs = [[Normalize().normalizeString(s) for s in l.split(',')] for l in self.lines]
+
         # ペアを反転させ、Langインスタンスを作る
         if reverse :
         # もし reverse = False なら
@@ -130,11 +166,11 @@ class Pair(object):
             # ペアを反転する
             input_lang = JLang(lang2)
             output_lang = Lang(lang1)
-            # Jpn2Py
+            # PJ2Py
         else:
             input_lang = Lang(lang1)
             output_lang = JLang(lang2)
-            # Py2Jpn
+            # Py2PJ
         return input_lang, output_lang, self.pairs
 
     def prepareData(self, lang1, lang2, reverse):
@@ -154,6 +190,30 @@ class Pair(object):
         # print(input_lang.name, input_lang.n_words)
         # print(output_lang.name, output_lang.n_words)
         return input_lang, output_lang, self.pairs, reverse
+
+class Sentence(object):
+    def __init__(self, lang, sentence):
+        self.lang = lang
+        self.sentence = sentence
+
+    def indexesFromSentence(self):
+        # return [self.lang.word2index[word] for word in pytokens(self.sentence)]
+        return [self.lang.word2index[word] for word in self.sentence.split(' ')]
+
+    def indexesFromJSentence(self):
+        tokens = Tokenizer().tokenize(self.sentence, wakati = True)
+        # 入力文を分かち書きし、文字列のリストとする
+        return [self.lang.word2index[word] for word in tokens]
+
+    def tensorFromSentence(self):
+        indexes = self.indexesFromSentence()
+        indexes.append(EOS_token)
+        return torch.tensor(indexes, dtype=torch.long, device=device).view(-1, 1)
+
+    def tensorFromJSentence(self):
+        indexes = self.indexesFromJSentence()
+        indexes.append(EOS_token)
+        return torch.tensor(indexes, dtype=torch.long, device=device).view(-1, 1)
 
 class EncoderDecoder(nn.Module):
     """
@@ -441,7 +501,9 @@ def run_epoch(data_iter, model, loss_compute):
             start = time.time()
             tokens = 0
     return total_loss / total_tokens
+
 global max_src_in_batch, max_tgt_in_batch
+
 def batch_size_fn(new, count, sofar):
     "Keep augmenting batch and calculate total number of tokens + padding."
     global max_src_in_batch, max_tgt_in_batch
@@ -567,7 +629,7 @@ class SimpleLossCompute:
             self.opt.optimizer.zero_grad()
         return loss.data.item() * norm
 
-# # Train the simple copy task.
+# Train the simple copy task.
 V = 11
 criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
 model = make_model(V, V, N=2)
@@ -604,32 +666,36 @@ src_mask = Variable(torch.ones(1, 1, 10) )
 
 # Translation-Task(en-de)
 
-# For data loading.
-from torchtext import data, datasets
-
 if True:
-    import spacy
-    spacy_de = spacy.load('de')
-    spacy_en = spacy.load('en')
-
-    def tokenize_de(text):
-        return [tok.text for tok in spacy_de.tokenizer(text)]
-
-    def tokenize_en(text):
-        return [tok.text for tok in spacy_en.tokenizer(text)]
-
-    BOS_WORD = '<s>'
-    EOS_WORD = '</s>'
+    BOS_WORD = '<SOS>'
+    EOS_WORD = '<EOS>'
     BLANK_WORD = "<blank>"
-    SRC = data.Field(tokenize=tokenize_de, pad_token=BLANK_WORD)
-    TGT = data.Field(tokenize=tokenize_en, init_token = BOS_WORD,
-                     eos_token = EOS_WORD, pad_token=BLANK_WORD)
+
+    # Py2Pj
+    # SRC = data.Field(tokenize=Lang.tokenize, pad_token=BLANK_WORD)
+    # TGT = data.Field(tokenize=JLang.Jtokenize, init_token = BOS_WORD,
+    #                     eos_token = EOS_WORD, pad_token=BLANK_WORD)
+    # SRC.vocab = Lang.dic
+    # TGT.vocab = JLang.Jdic
+
+    # Pj2Py
+    SRC = data.Field(tokenize=JLang.tokenize, pad_token=BLANK_WORD)
+    TGT = data.Field(tokenize=Lang.tokenize, init_token = BOS_WORD,
+                        eos_token = EOS_WORD, pad_token=BLANK_WORD)
+    SRC.vocab = JLang.Jdic
+    TGT.vocab = Lang.dic
 
     MAX_LEN = 100
-    train, val, test = datasets.IWSLT.splits(
-        exts=('.de', '.en'), fields=(SRC, TGT),
-        filter_pred=lambda x: len(vars(x)['src']) <= MAX_LEN and
-            len(vars(x)['trg']) <= MAX_LEN)
+    # train, val, test = datasets.IWSLT.splits(
+    #     exts=('.de', '.en'), fields=(SRC, TGT),
+    #     filter_pred=lambda x: len(vars(x)['src']) <= MAX_LEN and
+    #         len(vars(x)['trg']) <= MAX_LEN)
+
+    # データの分割
+    train, valid = train_test_split(train_df, test_size=0.3, shuffle=True, random_state=123)
+    train.reset_index(drop=True, inplace=True)
+    valid.reset_index(drop=True, inplace=True)
+
     MIN_FREQ = 2
     SRC.build_vocab(train.src, min_freq=MIN_FREQ)
     TGT.build_vocab(train.trg, min_freq=MIN_FREQ)
