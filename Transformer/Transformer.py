@@ -481,7 +481,6 @@ def loss(x):
 # None
 
 # Copy-Task
-
 def data_gen(V, batch, nbatches):
     "Generate random data for a src-tgt copy task."
     for i in range(nbatches):
