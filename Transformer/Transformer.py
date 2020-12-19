@@ -3,6 +3,8 @@
 # !pip3 install matplotlib --user
 # !pip3 install seaborn --user
 # !pip3 install torchtext --user
+# !pip3 install tensorflow --user
+# !pip3 install sklearn --user
 
 # Translation-Task
 # !pip3 install torchtext spacy --user
@@ -24,75 +26,55 @@ import matplotlib.pyplot as plt
 import seaborn
 seaborn.set_context(context="talk")
 # %matplotlib inline
+import pandas as pd
 
 import re
 import unicodedata
 import string
 # from spacy.lang.ja import Japanese
 import codecs
+from torchtext import data, datasets
+import spacy
 
+from sklearn.model_selection import train_test_split
+from collections import Counter
+from torchtext.vocab import Vocab
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 txt = 'train-euler-corpus.txt'
 SOS_token = 0
 EOS_token = 1
+flg = 0     # Py2Pj
+# flg = 1     # Pj2Py
+
+
+train_df = pd.read_csv(txt,  header=None, sep='<tab>')
+train_df.columns = ['Python', 'PJ']
+train_df['Python'] = train_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
+train_df['PJ'] = train_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
+
+test_df = pd.read_csv('test-euler-corpus.txt',  header=None, sep='<tab>')
+test_df.columns = ['Python', 'PJ']
+test_df['Python'] = test_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
+test_df['PJ'] = test_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
 
 # Python : 空白で単語分割
 class Lang(object):
-    def __init__(self, name):
-        self.name = name
-        # 登録する単語
-        self.word2index = {}
-        # 辞書を作成
-        self.word2count = {}
-        self.index2word = {0: "SOS", 1: "EOS"}
-        # 0, 1番目はSOS, EOS
-        # Start(End) Of Sequence
-        self.n_words = 2
-        # Count SOS and EOS
-
-    def addSentence(self, sentence):
-        # sentenceをトークナイザで単語分割した中にwordがあった時
-        # for word in pytokens(sentence):
-        #     self.addWord(word)
-
-        # sentenceを空白で区切り単語化した中にwordがあった時
+    def tokenize(self, sentence):
+        sentence = Normalize().normalizeString(sentence)
+        l = []
         for word in sentence.split(' '):
-            self.addWord(word)
-
-    def addWord(self, word):
-        if word not in self.word2index:
-        # もしwordが word2index辞書内にない場合
-            self.word2index[word] = self.n_words
-            # word を key としてその値に n_words をいれる
-            self.word2count[word] = 1
-            # word を key としてその値を1とする
-            self.index2word[self.n_words] = word
-            # n_words を key としてその値に word をいれる
-            self.n_words += 1
-        else:
-        # wordが word2index辞書内にある場合
-            self.word2count[word] += 1
-            # word を key とした値に1を足す
+            l.append(word)
+        return l
 
 # PJ(日本語) : spaCyで単語分割
 class JLang(Lang):
-    def addJsentence(self, sentence):
-        nlp = spacy.load('ja_ginza')
-        for word in nlp(sentence):
-            self.addWord(word.text)
-
-    # def addJSentence(self, sentence):
-    #     tokens = Tokenizer().tokenize(sentence, wakati = True)
-    #     # 入力文を分かち書きし、文字列のリストとする
-    #     for word in tokens :
-    #         self.addWord(word)
+    def Jtokenize(self, sentence):
+        sentence = Normalize().normalizeString(sentence)
+        return [tok.text for tok in spacy.tokenizer(sentence)]
 
 # 正規化
 class Normalize(object):
-    # def __init__(self, s):
-    #     self.s = s
-
     def normalizeString(self, s):
         s = re.sub(r"\n", r" ", s)
         s = re.sub(r"\t+", r" ", s)
@@ -111,49 +93,6 @@ class Normalize(object):
         s = re.sub(r" {2,}", r" ", s)
         # {x, y} x回以上、y回以下の繰り返し
         return s
-
-class Pair(object):
-    def __init__(self):
-        self.lines = []
-        self.pairs = []
-
-    def readLangs(self, lang1, lang2, reverse) :
-        # ファイルを読み込んで行に分割する
-        self.lines = codecs.open(txt, encoding='utf-8').read().strip().split('<EOS>')
-        del self.lines[len(self.lines) - 1]
-        # すべての行をペアに分割して正規化する
-        self.pairs = [[Normalize().normalizeString(s) for s in l.split('<tab>')] for l in self.lines]
-        # ペアを反転させ、Langインスタンスを作る
-        if reverse :
-        # もし reverse = False なら
-            self.pairs = [list(reversed(p)) for p in self.pairs]
-            # ペアを反転する
-            input_lang = JLang(lang2)
-            output_lang = Lang(lang1)
-            # Jpn2Py
-        else:
-            input_lang = Lang(lang1)
-            output_lang = JLang(lang2)
-            # Py2Jpn
-        return input_lang, output_lang, self.pairs
-
-    def prepareData(self, lang1, lang2, reverse):
-        input_lang, output_lang, self.pairs = self.readLangs(lang1, lang2, reverse)
-        # print("Read {0} sentence pairs".format(len(pairs)))
-        # print("Trimmed to {0} sentence pairs".format(len(pairs)))
-        for pair in self.pairs:
-            if len(pair) >= 2 :
-                if reverse :
-                # もしreverse = False なら
-                    input_lang.addJsentence(pair[0])
-                    output_lang.addSentence(pair[1])
-                else :
-                    input_lang.addSentence(pair[0])
-                    output_lang.addJsentence(pair[1])
-        # print("Counted words:")
-        # print(input_lang.name, input_lang.n_words)
-        # print(output_lang.name, output_lang.n_words)
-        return input_lang, output_lang, self.pairs, reverse
 
 class EncoderDecoder(nn.Module):
     """
@@ -441,7 +380,9 @@ def run_epoch(data_iter, model, loss_compute):
             start = time.time()
             tokens = 0
     return total_loss / total_tokens
+
 global max_src_in_batch, max_tgt_in_batch
+
 def batch_size_fn(new, count, sofar):
     "Keep augmenting batch and calculate total number of tokens + padding."
     global max_src_in_batch, max_tgt_in_batch
@@ -540,7 +481,6 @@ def loss(x):
 # None
 
 # Copy-Task
-
 def data_gen(V, batch, nbatches):
     "Generate random data for a src-tgt copy task."
     for i in range(nbatches):
@@ -567,7 +507,7 @@ class SimpleLossCompute:
             self.opt.optimizer.zero_grad()
         return loss.data.item() * norm
 
-# # Train the simple copy task.
+# Train the simple copy task.
 V = 11
 criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
 model = make_model(V, V, N=2)
@@ -603,36 +543,30 @@ src_mask = Variable(torch.ones(1, 1, 10) )
 # print(greedy_decode(model, src, src_mask, max_len=10, start_symbol=1))
 
 # Translation-Task(en-de)
-
-# For data loading.
-from torchtext import data, datasets
-
 if True:
-    import spacy
-    spacy_de = spacy.load('de')
-    spacy_en = spacy.load('en')
-
-    def tokenize_de(text):
-        return [tok.text for tok in spacy_de.tokenizer(text)]
-
-    def tokenize_en(text):
-        return [tok.text for tok in spacy_en.tokenizer(text)]
-
-    BOS_WORD = '<s>'
-    EOS_WORD = '</s>'
+    BOS_WORD = '<SOS>'
+    EOS_WORD = '<EOS>'
     BLANK_WORD = "<blank>"
-    SRC = data.Field(tokenize=tokenize_de, pad_token=BLANK_WORD)
-    TGT = data.Field(tokenize=tokenize_en, init_token = BOS_WORD,
-                     eos_token = EOS_WORD, pad_token=BLANK_WORD)
 
-    MAX_LEN = 100
-    train, val, test = datasets.IWSLT.splits(
-        exts=('.de', '.en'), fields=(SRC, TGT),
-        filter_pred=lambda x: len(vars(x)['src']) <= MAX_LEN and
-            len(vars(x)['trg']) <= MAX_LEN)
-    MIN_FREQ = 2
-    SRC.build_vocab(train.src, min_freq=MIN_FREQ)
-    TGT.build_vocab(train.trg, min_freq=MIN_FREQ)
+    # データの分割
+    train, valid = train_test_split(train_df, test_size=0.3, shuffle=True, random_state=123)
+    train.reset_index(drop=True, inplace=True)
+    valid.reset_index(drop=True, inplace=True)
+
+    def build_vocab(filepath, tokenizer):
+        counter = Counter()
+        for i in range(len(filepath)):
+            counter.update(tokenizer(filepath[i]))
+        return Vocab(counter, specials=[BOS_WORD, EOS_WORD, BLANK_WORD])
+
+    # Py2Pj
+    if flg == 0:
+        SRC_vocab = build_vocab(train['Python'], Lang().tokenize)
+        TGT_vocab = build_vocab(train['PJ'], JLang().tokenize)
+    # Pj2Py
+    else :
+        SRC_vocab = build_vocab(train['PJ'], JLang().tokenize)
+        TGT_vocab = build_vocab(train['Python'], Lang().tokenize)
 
 class MyIterator(data.Iterator):
     def create_batches(self):
@@ -657,7 +591,6 @@ def rebatch(pad_idx, batch):
     src, trg = batch.src.transpose(0, 1), batch.trg.transpose(0, 1)
     return Batch(src, trg, pad_idx)
 
-# Skip if not interested in multigpu.
 class MultiGPULossCompute:
     "A multi-gpu loss compute and train function."
     def __init__(self, generator, criterion, devices, opt=None, chunk_size=5):
@@ -721,63 +654,55 @@ class MultiGPULossCompute:
 devices = [0, 1, 2, 3]
 
 if True:
-    pad_idx = TGT.vocab.stoi["<blank>"]
-    model = make_model(len(SRC.vocab), len(TGT.vocab), N=8)
+    pad_idx = TGT_vocab.stoi["<blank>"]
+    model = make_model(len(SRC_vocab), len(TGT_vocab), N=8)
     model.cuda()
-    criterion = LabelSmoothing(size=len(TGT.vocab), padding_idx=pad_idx, smoothing=0.1)
+    criterion = LabelSmoothing(size=len(TGT_vocab), padding_idx=pad_idx, smoothing=0.1)
     criterion.cuda()
     BATCH_SIZE = 12000
-
-    # train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=0,
-    #                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
-    #                         batch_size_fn=batch_size_fn, train=True)
-    # valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=0,
-    #                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
-    #                         batch_size_fn=batch_size_fn, train=False)
 
     train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=device,
                             repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                             batch_size_fn=batch_size_fn, train=True)
-    valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=device,
+    valid_iter = MyIterator(valid, batch_size=BATCH_SIZE, device=device,
                             repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                             batch_size_fn=batch_size_fn, train=False)
 
     model_par = nn.DataParallel(model, device_ids=devices)
 None
 
-if False:
-    model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
-            torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
-    for epoch in range(10):
-        model_par.train()
-        run_epoch((rebatch(pad_idx, b) for b in train_iter),
-                  model_par,
-                  MultiGPULossCompute(model.generator, criterion,
-                                      devices=devices, opt=model_opt))
-        model_par.eval()
-        loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter),
-                          model_par,
-                          MultiGPULossCompute(model.generator, criterion,
-                          devices=devices, opt=None))
-        print(loss)
-else:
-    model = torch.load("iwslt.pt")
+model_opt = NoamOpt(model.src_embed[0].d_model, 1, 2000,
+        torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+for epoch in range(10):
+    model_par.train()
+    run_epoch((rebatch(pad_idx, b) for b in train_iter),
+                model_par,
+                MultiGPULossCompute(model.generator, criterion,
+                                    devices=devices, opt=model_opt))
+    model_par.eval()
+    loss = run_epoch((rebatch(pad_idx, b) for b in valid_iter),
+                        model_par,
+                        MultiGPULossCompute(model.generator, criterion,
+                        devices=devices, opt=None))
+    print(loss)
 
 for i, batch in enumerate(valid_iter):
     src = batch.src.transpose(0, 1)[:1]
-    src_mask = (src != SRC.vocab.stoi["<blank>"]).unsqueeze(-2)
+    src_mask = (src != SRC_vocab.stoi["<blank>"]).unsqueeze(-2)
     out = greedy_decode(model, src, src_mask,
-                        max_len=60, start_symbol=TGT.vocab.stoi["<s>"])
+                        max_len=60, start_symbol=TGT_vocab.stoi["<SOS>"])
     print("Translation:", end="\t")
     for i in range(1, out.size(1)):
-        sym = TGT.vocab.itos[out[0, i]]
-        if sym == "</s>": break
+        sym = TGT_vocab.itos[out[0, i]]
+        if sym == "<EOS>":
+            break
         print(sym, end =" ")
     print()
     print("Target:", end="\t")
     for i in range(1, batch.trg.size(0)):
-        sym = TGT.vocab.itos[batch.trg.data[i, 0]]
-        if sym == "</s>": break
+        sym = TGT_vocab.itos[batch.trg.data[i, 0]]
+        if sym == "<EOS>":
+            break
         print(sym, end =" ")
     print()
     break
