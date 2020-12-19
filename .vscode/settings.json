@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "/Users/tefu/.pyenv/versions/3.7.6/bin/python"
+    "python.pythonPath": "/Users/tefu/.pyenv/versions/3.7.6/bin/python",
+    "python.analysis.extraPaths": [
+        "./source"
+    ]
 }

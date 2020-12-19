@@ -5,6 +5,7 @@
 # !pip3 install torchtext --user
 # !pip3 install tensorflow --user
 # !pip3 install sklearn --user
+# !pip3 install sentencepiece --user
 
 # Translation-Task
 # !pip3 install torchtext spacy --user
@@ -40,6 +41,8 @@ from sklearn.model_selection import train_test_split
 from collections import Counter
 from torchtext.vocab import Vocab
 
+import sentencepiece as spm
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 txt = 'train-euler-corpus.txt'
 SOS_token = 0
@@ -67,11 +70,13 @@ class Lang(object):
             l.append(word)
         return l
 
-# PJ(日本語) : spaCyで単語分割
+# PJ(日本語) : SentencePieceで単語分割
 class JLang(Lang):
     def Jtokenize(self, sentence):
+        sp = spm.SentencePieceProcessor()
+        sp.load('prog8k/prog8k.model')
         sentence = Normalize().normalizeString(sentence)
-        return [tok.text for tok in spacy.tokenizer(sentence)]
+        return [tok.text for tok in sp.EncodeAsPieces(sentence)]
 
 # 正規化
 class Normalize(object):
@@ -117,7 +122,6 @@ class EncoderDecoder(nn.Module):
 
     def decode(self, memory, src_mask, tgt, tgt_mask):
         return self.decoder(self.tgt_embed(tgt), memory, src_mask, tgt_mask)
-
 class Generator(nn.Module):
     "Define standard linear + softmax generation step."
     def __init__(self, d_model, vocab):
