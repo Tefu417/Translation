@@ -28,6 +28,7 @@ import seaborn
 seaborn.set_context(context="talk")
 # %matplotlib inline
 import pandas as pd
+import torch
 
 import re
 import unicodedata
@@ -44,39 +45,46 @@ from torchtext.vocab import Vocab
 import sentencepiece as spm
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'train-euler-corpus.txt'
+# txt = 'train-euler-corpus.txt'
 SOS_token = 0
 EOS_token = 1
-flg = 0     # Py2Pj
+# flg = 0     # Py2Pj
 # flg = 1     # Pj2Py
 
 
-train_df = pd.read_csv(txt,  header=None, sep='<tab>')
-train_df.columns = ['Python', 'PJ']
-train_df['Python'] = train_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
-train_df['PJ'] = train_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
+# train_df = pd.read_csv(txt,  header=None, sep='<tab>')
+# train_df.columns = ['Python', 'PJ']
+# train_df['Python'] = train_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
+# train_df['PJ'] = train_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
 
-test_df = pd.read_csv('test-euler-corpus.txt',  header=None, sep='<tab>')
-test_df.columns = ['Python', 'PJ']
-test_df['Python'] = test_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
-test_df['PJ'] = test_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
+# test_df = pd.read_csv('test-euler-corpus.txt',  header=None, sep='<tab>')
+# test_df.columns = ['Python', 'PJ']
+# test_df['Python'] = test_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
+# test_df['PJ'] = test_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
 
 # Python : 空白で単語分割
-class Lang(object):
-    def tokenize(self, sentence):
-        sentence = Normalize().normalizeString(sentence)
-        l = []
-        for word in sentence.split(' '):
-            l.append(word)
-        return l
+# class Lang(object):
+#     def tokenize(self, sentence):
+#         sentence = Normalize().normalizeString(sentence)
+#         l = []
+#         for word in sentence.split(' '):
+#             l.append(word)
+#         return l
 
-# PJ(日本語) : SentencePieceで単語分割
-class JLang(Lang):
-    def Jtokenize(self, sentence):
-        sp = spm.SentencePieceProcessor()
-        sp.load('prog8k/prog8k.model')
-        sentence = Normalize().normalizeString(sentence)
-        return [tok.text for tok in sp.EncodeAsPieces(sentence)]
+# # PJ(日本語) : SentencePieceで単語分割
+# class JLang(Lang):
+#     def Jtokenize(self, sentence):
+#         sp = spm.SentencePieceProcessor()
+#         sp.load('prog8k/prog8k.model')
+#         sentence = Normalize().normalizeString(sentence)
+#         return [tok.text for tok in sp.EncodeAsPieces(sentence)]
+
+# SentencePieceで単語分割
+def tokenize(sentence):
+    sp = spm.SentencePieceProcessor()
+    sp.load('prog8k/prog8k.model')
+    sentence = Normalize().normalizeString(sentence)
+    return sp.EncodeAsPieces(sentence)
 
 # 正規化
 class Normalize(object):
@@ -310,7 +318,7 @@ class PositionalEncoding(nn.Module):
 
     def forward(self, x):
         x = x + Variable(self.pe[:, :x.size(1)],
-                         requires_grad=False)
+                         requires_grad=True)
         return self.dropout(x)
 
 # plt.figure(figsize=(15, 5))
@@ -319,9 +327,9 @@ class PositionalEncoding(nn.Module):
 # plt.plot(np.arange(100), y[0, :, 4:8].data.numpy())
 # plt.legend(["dim %d"%p for p in [4,5,6,7]])
 
-def make_model(src_vocab, tgt_vocab, N=8,
-               d_model=512, d_ff=2048, h=8, dropout=0.1):
+def make_model(src_vocab, tgt_vocab, N=8, d_model=512, d_ff=2048, h=8, dropout=0.1):
     "Helper: Construct a model from hyperparameters."
+
     c = copy.deepcopy
     attn = MultiHeadedAttention(h, d_model)
     ff = PositionwiseFeedForward(d_model, d_ff, dropout)
@@ -342,7 +350,7 @@ def make_model(src_vocab, tgt_vocab, N=8,
     return model
 
 # Small example model.
-tmp_model = make_model(10, 10, 2)
+# tmp_model = make_model(10, 10, 2)
 
 class Batch:
     "Object for holding a batch of data with mask during training."
@@ -459,7 +467,7 @@ class LabelSmoothing(nn.Module):
         if mask.dim() > 0:
             true_dist.index_fill_(0, mask.squeeze(), 0.0)
         self.true_dist = true_dist
-        return self.criterion(x, Variable(true_dist, requires_grad=False))
+        return self.criterion(x, Variable(true_dist, requires_grad=True))
 
 # Example of label smoothing.
 crit = LabelSmoothing(5, 0, 0.4)
@@ -490,8 +498,8 @@ def data_gen(V, batch, nbatches):
     for i in range(nbatches):
         data = torch.from_numpy(np.random.randint(1, V, size=(batch, 10)))
         data[:, 0] = 1
-        src = Variable(data, requires_grad=False)
-        tgt = Variable(data, requires_grad=False)
+        src = Variable(data, requires_grad=True)
+        tgt = Variable(data, requires_grad=True)
         yield Batch(src, tgt, 0)
 
 class SimpleLossCompute:
@@ -514,9 +522,9 @@ class SimpleLossCompute:
 # Train the simple copy task.
 V = 11
 criterion = LabelSmoothing(size=V, padding_idx=0, smoothing=0.0)
-model = make_model(V, V, N=2)
-model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,
-        torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
+# model = make_model(V, V, N=2)
+# model_opt = NoamOpt(model.src_embed[0].d_model, 1, 400,
+        # torch.optim.Adam(model.parameters(), lr=0, betas=(0.9, 0.98), eps=1e-9))
 
 # for epoch in range(10):
 #     model.train()
@@ -541,9 +549,9 @@ def greedy_decode(model, src, src_mask, max_len, start_symbol):
                         torch.ones(1, 1).type_as(src.data).fill_(next_word)], dim=1)
     return ys
 
-model.eval()
-src = Variable(torch.LongTensor([[1,2,3,4,5,6,7,8,9,10]]) )
-src_mask = Variable(torch.ones(1, 1, 10) )
+# model.eval()
+# src = Variable(torch.LongTensor([[1,2,3,4,5,6,7,8,9,10]]) )
+# src_mask = Variable(torch.ones(1, 1, 10) )
 # print(greedy_decode(model, src, src_mask, max_len=10, start_symbol=1))
 
 # Translation-Task(en-de)
@@ -551,26 +559,48 @@ if True:
     BOS_WORD = '<SOS>'
     EOS_WORD = '<EOS>'
     BLANK_WORD = "<blank>"
+    MAX_LEN = 100
+
+    # Fieldオブジェクトの作成
+    SRC = data.Field(tokenize=tokenize, pad_token=BLANK_WORD)
+    TGT = data.Field(tokenize=tokenize, init_token = BOS_WORD,
+                        eos_token = EOS_WORD, pad_token=BLANK_WORD)
+
+    # CSVファイルを読み込み、TabularDatasetオブジェクトの作成
+    train, valid = data.TabularDataset.splits(
+        path='Transformer/',
+        train='train-euler-corpus.csv',
+        test='test-euler-corpus.csv',
+        format='csv',
+        fields=[('src', SRC), ('trg', TGT)],
+        filter_pred=lambda x: len(vars(x)['src']) <= MAX_LEN and len(vars(x)['trg']) <= MAX_LEN)
+
+    # for example in test:
+    #     print(example.src, example.trg)
+
+    MIN_FREQ = 2
+    SRC.build_vocab(train.src, min_freq=MIN_FREQ)
+    TGT.build_vocab(train.trg, min_freq=MIN_FREQ)
 
     # データの分割
-    train, valid = train_test_split(train_df, test_size=0.3, shuffle=True, random_state=123)
-    train.reset_index(drop=True, inplace=True)
-    valid.reset_index(drop=True, inplace=True)
+    # train, valid = train_test_split(train_df, test_size=0.3, shuffle=True, random_state=123)
+    # train.reset_index(drop=True, inplace=True)
+    # valid.reset_index(drop=True, inplace=True)
 
-    def build_vocab(filepath, tokenizer):
-        counter = Counter()
-        for i in range(len(filepath)):
-            counter.update(tokenizer(filepath[i]))
-        return Vocab(counter, specials=[BOS_WORD, EOS_WORD, BLANK_WORD])
+    # def build_vocab(filepath, tokenizer):
+    #     counter = Counter()
+    #     for i in range(len(filepath)):
+    #         counter.update(tokenizer(filepath[i]))
+    #     return Vocab(counter, specials=[BOS_WORD, EOS_WORD, BLANK_WORD])
 
-    # Py2Pj
-    if flg == 0:
-        SRC_vocab = build_vocab(train['Python'], Lang().tokenize)
-        TGT_vocab = build_vocab(train['PJ'], JLang().tokenize)
-    # Pj2Py
-    else :
-        SRC_vocab = build_vocab(train['PJ'], JLang().tokenize)
-        TGT_vocab = build_vocab(train['Python'], Lang().tokenize)
+    # # Py2Pj
+    # if flg == 0:
+    #     SRC_vocab = build_vocab(train['Python'], Lang().tokenize)
+    #     TGT_vocab = build_vocab(train['PJ'], JLang().tokenize)
+    # # Pj2Py
+    # else :
+    #     SRC_vocab = build_vocab(train['PJ'], JLang().tokenize)
+    #     TGT_vocab = build_vocab(train['Python'], Lang().tokenize)
 
 class MyIterator(data.Iterator):
     def create_batches_(self):
@@ -632,10 +662,10 @@ class MultiGPULossCompute:
             loss = nn.parallel.parallel_apply(self.criterion, y)
 
             # Sum and normalize loss
-            l = nn.parallel.gather(loss,
-                                   target_device=self.devices[0])
-            l = l.sum()[0] / normalize
-            total += l.data[0]
+            with torch.enable_grad():
+                l = nn.parallel.gather(loss, target_device=self.devices[0])
+                l = l.sum().item() / normalize
+                total += l.data.item()
 
             # Backprop loss to output of transformer
             if self.opt is not None:
@@ -657,10 +687,10 @@ class MultiGPULossCompute:
 # GPUs to use
 devices = [0, 1, 2, 3]
 
-pad_idx = TGT_vocab.stoi["<blank>"]
-model = make_model(len(SRC_vocab), len(TGT_vocab), N=8)
+pad_idx = TGT.vocab.stoi["<blank>"]
+model = make_model(len(SRC.vocab), len(TGT.vocab), N=8)
 model.cuda()
-criterion = LabelSmoothing(size=len(TGT_vocab), padding_idx=pad_idx, smoothing=0.1)
+criterion = LabelSmoothing(size=len(TGT.vocab), padding_idx=pad_idx, smoothing=0.1)
 criterion.cuda()
 BATCH_SIZE = 12000
 
@@ -690,19 +720,19 @@ for epoch in range(10):
 
 for i, batch in enumerate(valid_iter):
     src = batch.src.transpose(0, 1)[:1]
-    src_mask = (src != SRC_vocab.stoi["<blank>"]).unsqueeze(-2)
+    src_mask = (src != SRC.vocab.stoi["<blank>"]).unsqueeze(-2)
     out = greedy_decode(model, src, src_mask,
-                        max_len=60, start_symbol=TGT_vocab.stoi["<SOS>"])
+                        max_len=60, start_symbol=TGT.vocab.stoi["<SOS>"])
     print("Translation:", end="\t")
     for i in range(1, out.size(1)):
-        sym = TGT_vocab.itos[out[0, i]]
+        sym = TGT.vocab.itos[out[0, i]]
         if sym == "<EOS>":
             break
         print(sym, end =" ")
     print()
     print("Target:", end="\t")
     for i in range(1, batch.trg.size(0)):
-        sym = TGT_vocab.itos[batch.trg.data[i, 0]]
+        sym = TGT.vocab.itos[batch.trg.data[i, 0]]
         if sym == "<EOS>":
             break
         print(sym, end =" ")

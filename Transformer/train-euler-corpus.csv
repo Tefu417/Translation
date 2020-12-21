@@ -1,0 +1,703 @@
+def euler015():,関数euler015()は、以下の通り定義される
+facts = [1] * 21,factsを1のリストの21倍とする
+for i in range(20):,{{0から20未満までの数列}}を先頭から順にiとして、以下を繰り返す
+facts[i + 1] = facts[i] * (i + 1),factsの{{iに1を加えた値}}番目を{{factsのi番目に{{iに1を加えた値}}を掛けた値}}とする
+dinomials = [0] * 21,dinomialsを0のリストの21倍とする
+for i in range(21):,{{0から21未満までの数列}}を先頭から順にiとして、以下を繰り返す
+dinomials[i] = int(facts[20] / (facts[i] * facts[20 - i])),dinomialsのi番目を{{factsの20番目を{{factsのi番目にfactsの{{20からiを引いた値}}番目を掛けた値}}で割った値}}の整数値とする
+for i in range(20):,{{0から20未満までの数列}}を先頭から順にiとして、以下を繰り返す
+for j in range(20):,{{0から20未満までの数列}}を先頭から順にjとして、以下を繰り返す
+dinomials[j] += dinomials[j + 1],dinomialsのj番目をdinomialsの{{jに1を加えた値}}番目だけ増加させる
+return dinomials[0],dinomialsの先頭が関数出力となる
+def euler015_combination(n, r):,関数euler015_combination(n, r)は、以下の通り定義される
+facts = [1] * (n + 1),factsを1のリストの{{nに1を加えた値}}倍とする
+for x in range(n):,{{0からn未満までの数列}}を先頭から順にxとして、以下を繰り返す
+facts[x + 1] = facts[x] * (x + 1),factsの{{xに1を加えた値}}番目を{{factsのx番目に{{xに1を加えた値}}を掛けた値}}とする
+return int(facts[n] / (facts[r] * facts[n - r])),{{factsのn番目を{{factsのr番目にfactsの{{nからrを引いた値}}番目を掛けた値}}で割った値}}の整数値が関数出力となる
+def euler015_all_factorials(n):,関数euler015_all_factorials(n)は、以下の通り定義される
+facts = [1] * (n + 1),factsを1のリストの{{nに1を加えた値}}倍とする
+for x in range(n):,{{0からn未満までの数列}}を先頭から順にxとして、以下を繰り返す
+facts[x + 1] = facts[x] * (x + 1),factsの{{xに1を加えた値}}番目を{{factsのx番目に{{xに1を加えた値}}を掛けた値}}とする
+return facts,factsが関数出力となる
+def euler015_pascal_triangle(n):,関数euler015_pascal_triangle(n)は、以下の通り定義される
+if n == 1:,もしnが1と等しいとき、
+return [1],1のリストが関数出力となる
+もしそうでなければ、,なければ、
+l = euler015_pascal_triangle(n - 1),lをeuler015_pascal_triangle({{nから1を引いた値}})とする
+ret = [l[0], l[-1]],retをlの先頭とlの-1番目のリストとする
+for i in range(n - 2):,{{0から{{nから2を引いた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret.insert(i + 1, l[i] + l[i + 1]),ret.insert(i + 1, l[i] + l[i + 1]) # retのi+1番目にlのi番目とi+1番目の要素の和を追加する
+return ret,retが関数出力となる
+def euler014():,関数euler014()は、以下の通り定義される
+N = 10**6,Nを{{10を6乗した値}}とする
+cl = [-1] * N,clを-1のリストのN倍とする
+cl[1] = 0,clの1番目を0とする
+for n in range(2, N):,{{2からN未満までの数列}}を先頭から順にnとして、以下を繰り返す
+b = [],bを空のリストとする
+while n >= N or cl[n] == -1:,もし{{nがN以上}}、または{{clのn番目が-1と等しいか}}のとき、以下を繰り返す
+b.append(n),bにnを追加する
+n = int(n / 2) if n % 2 == 0 else n * 3 + 1,nをもし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}とする
+l = cl[n],lをclのn番目とする
+for m in reversed(b):,{{bを反転した列}}を先頭から順にmとして、以下を繰り返す
+l += 1,lを1だけ増加させる
+cl[m] = l,clのm番目をlとする
+ret = 0,retを0とする
+for i, n in enumerate(cl):,{{clに番号をつける}}を先頭から順にiとnとして、以下を繰り返す
+if m < n:,もしmがnより小さいとき、以下のとおり
+ret = i,retをiとする
+return ret,retが関数出力となる
+def euler014_collatz_calc(n):,関数euler014_collatz_calc(n)は、以下の通り定義される
+return int(n / 2) if n % 2 == 0 else n * 3 + 1,もし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}が関数出力となる
+def euler014_collatz_problem_count(n):,関数euler014_collatz_problem_count(n)は、以下の通り定義される
+c = 0,cを0とする
+n = int(n / 2) if n % 2 == 0 else n * 3 + 1,nをもし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}とする
+return c,cが関数出力となる
+def euler014_list_init(l, n):,関数euler014_list_init(l, n)は、以下の通り定義される
+ret = [],retを空のリストとする
+ret.append(n),retにnを追加する
+return ret,retが関数出力となる
+def euler014_list_enum(l):,関数euler014_list_enum(l)は、以下の通り定義される
+ret = [],retを空のリストとする
+for i in range(len(l)):,{{0からlの長さ未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret.append((i, l[i])),retにiとlのi番目の組を追加する
+return ret,retが関数出力となる
+def euler014_list_reverse(l):,関数euler014_list_reverse(l)は、以下の通り定義される
+ret = [],retを空のリストとする
+for i in reversed(l):,{{lを反転した列}}を先頭から順にiとして、以下を繰り返す
+ret.append(i),retにiを追加する
+return ret,retが関数出力となる
+def euler014_make_range_list(s, e):,関数euler014_make_range_list(s, e)は、以下の通り定義される
+ret = [],retを空のリストとする
+for i in range(s, e):,{{sからe未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret.append(i),retにiを追加する
+return ret,retが関数出力となる
+def euler016():,関数euler016()は、以下の通り定義される
+q = str(2**1000),qを{{2を1000乗した値}}の文字列とする
+s = 0,sを0とする
+for x in q:,qを先頭から順にxとして、以下を繰り返す
+def euler016_all_digit_sum(n):,関数euler016_all_digit_sum(n)は、以下の通り定義される
+q = str(n),qをnの文字列とする
+s = 0,sを0とする
+for ch in q:,qを先頭から順にchとして、以下を繰り返す
+s += int(ch),sをchの整数値だけ増加させる
+return s,sが関数出力となる
+def euler016_n_separate_digit(n):,関数euler016_n_separate_digit(n)は、以下の通り定義される
+ret = [n % 10],retを{{nを10で割った余り}}のリストとする
+while int(n / 10) > 0:,もし{{nを10で割った値}}の整数値が0より大きいとき、以下を繰り返す
+n = int(n / 10),nを{{nを10で割った値}}の整数値とする
+ret.insert(0, n % 10),ret.insert(0, n % 10) # retの先頭にnを10で割った余りを追加する
+return ret,retが関数出力となる
+def euler016_a_exp_b(a, b):,関数euler016_a_exp_b(a, b)は、以下の通り定義される
+res = 1,resを1とする
+c = 0,cを0とする
+while c < b:,もしcがbより小さいとき、以下を繰り返す
+res *= a,resをa倍にする
+c += 1,cを1だけ増加させる
+return res,resが関数出力となる
+def euler016_a_exp_b_a(a, b):,関数euler016_a_exp_b_a(a, b)は、以下の通り定義される
+return a**b,{{aをb乗した値}}が関数出力となる
+def euler017():,関数euler017()は、以下の通り定義される
+ret = 0,retを0とする
+for n in range(1, 1001):,{{1から1001未満までの数列}}を先頭から順にnとして、以下を繰り返す
+ret += len(word[n]),retをwordのn番目の長さだけ増加させる
+elif len(str(n)) == 2:,もしそうでなく、nの文字列の長さが2と等しいとき、以下のとおり
+ret += len(twoword[int(n / 10)]),retをtwowordの{{nを10で割った値}}の整数値番目の長さだけ増加させる
+ret += len(word[n % 10]),retをwordの{{nを10で割った余り}}番目の長さだけ増加させる
+elif len(str(n)) == 3:,もしそうでなく、nの文字列の長さが3と等しいとき、以下のとおり
+ret += len(word[int(n / 100)]),retをwordの{{nを100で割った値}}の整数値番目の長さだけ増加させる
+ret += len("hundredand"),retを"hundredand"の長さだけ増加させる
+a = n % 100,aを{{nを100で割った余り}}とする
+if a != 0 and a <= 20:,もし{{aが0と等しくないか}}、かつ{{aが20以下}}のとき、
+ret += len(word[a]),retをwordのa番目の長さだけ増加させる
+elif a == 0:,もしそうでなく、aが0と等しいとき、
+ret -= 3,retを3だけ減少させる
+もしそうでなければ、,なければ、
+ret += len(twoword[int(a / 10)]),retをtwowordの{{aを10で割った値}}の整数値番目の長さだけ増加させる
+ret += len(word[a % 10]),retをwordの{{aを10で割った余り}}番目の長さだけ増加させる
+もしそうでなければ、,なければ、
+ret += len("onethousand"),retを"onethousand"の長さだけ増加させる
+return ret,retが関数出力となる
+def euler017_digit_separate(n):,関数euler017_digit_separate(n)は、以下の通り定義される
+q = str(n),qをnの文字列とする
+ret = [],retを空のリストとする
+for ch in q:,qを先頭から順にchとして、以下を繰り返す
+ret.append(int(ch)),retにchの整数値を追加する
+return ret,retが関数出力となる
+def euler017_digit_count(n):,関数euler017_digit_count(n)は、以下の通り定義される
+c = 1,cを1とする
+while int(n / 10) > 0:,もし{{nを10で割った値}}の整数値が0より大きいとき、以下を繰り返す
+n /= 10,nを10分の一にする
+c += 1,cを1だけ増加させる
+return c,cが関数出力となる
+def euler017_ones_to_string(n):,関数euler017_ones_to_string(n)は、以下の通り定義される
+return word[n % 10],wordの{{nを10で割った余り}}番目が関数出力となる
+def euler017_is_equal(a, b):,関数euler017_is_equal(a, b)は、以下の通り定義される
+return a == b,{{aがbと等しいか}}が関数出力となる
+def euler017_divid_integer_part(a, b):,関数euler017_divid_integer_part(a, b)は、以下の通り定義される
+return int(a / b),{{aをbで割った値}}の整数値が関数出力となる
+def euler017_string_length(s):,関数euler017_string_length(s)は、以下の通り定義される
+c = 0,cを0とする
+for ch in s:,sを先頭から順にchとして、以下を繰り返す
+c += 1,cを1だけ増加させる
+return c,cが関数出力となる
+def euler017_string_length_a(s):,関数euler017_string_length_a(s)は、以下の通り定義される
+return len(s),sの長さが関数出力となる
+def euler013():,関数euler013()は、以下の通り定義される
+q = [],qを空のリストとする
+a = str(sum(q)),aをqの総和の文字列とする
+ret = "",retを""とする
+for i, ch in enumerate(a):,{{aに番号をつける}}を先頭から順にiとchとして、以下を繰り返す
+if i < 10:,もしiが10より小さいとき、
+ret += ch,retをchだけ増加させる
+return ret,retが関数出力となる
+def euler013_front_n_slice(s, n):,関数euler013_front_n_slice(s, n)は、以下の通り定義される
+ret = "",retを""とする
+for i, ch in enumerate(s):,{{sに番号をつける}}を先頭から順にiとchとして、以下を繰り返す
+if i < n:,もしiがnより小さいとき、
+ret += ch,retをchだけ増加させる
+return ret,retが関数出力となる
+def euler013_query_n_sum(q, n):,関数euler013_query_n_sum(q, n)は、以下の通り定義される
+s = 0,sを0とする
+for i in range(n):,{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す
+s += q[i],sをqのi番目だけ増加させる
+return s,sが関数出力となる
+def euler012():,関数euler012()は、以下の通り定義される
+s = 1,sを1とする
+c = 0,cを0とする
+pl = [2],plを2のリストとする
+fl = [1] * 4 + [0] * 96,flを1のリストの{{4に0のリストの96倍を加えた値}}倍とする
+while c < 500:,もしcが500より小さいとき、以下を繰り返す
+tn = sum(range(1, s + 1)),tnを{{1から{{sに1を加えた値}}未満までの数列}}の総和とする
+if not s % 2:,もし{{sを2で割った余り}}の反対のとき、
+t = (int(s / 2), s + 1),tを{{sを2で割った値}}の整数値と{{sに1を加えた値}}の組とする
+もしそうでなければ、,なければ、
+t = (s, int((s + 1) / 2)),tをsと{{{{sに1を加えた値}}を2で割った値}}の整数値の組とする
+fc = 1,fcを1とする
+for x in t:,tを先頭から順にxとして、以下を繰り返す
+if len(fl) < x:,もしflの長さがxより小さいとき、以下のとおり
+l = [0] * (x - len(fl) + 1),lを0のリストの{{{{xからflの長さを引いた値}}に1を加えた値}}倍とする
+fl += l,flをlだけ増加させる
+if not fl[x]:,もしflのx番目の反対のとき、以下のとおり
+nc = 1,ncを1とする
+for i in range(pl[-1], x + 1):,{{plの-1番目から{{xに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+for j in range(2, int(x**0.5) + 1):,2から{{{{xを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す
+if i % j == 0:,もし{{iをjで割った余り}}が0と等しいとき、
+break,この繰り返しを中断する
+for i in pl:,plを先頭から順にiとして、以下を繰り返す
+if i > int(tn / 2):,もしiが{{tnを2で割った値}}の整数値より大きいとき、
+break,この繰り返しを中断する
+if x % i == 0:,もし{{xをiで割った余り}}が0と等しいとき、以下のとおり
+j = 1,jを1とする
+a = tn,aをtnとする
+while a % i == 0:,もし{{aをiで割った余り}}が0と等しいとき、以下を繰り返す
+a /= i,aをi分の一にする
+j += 1,jを1だけ増加させる
+fl[x] = nc,flのx番目をncとする
+fc *= fl[x],fcをflのx番目倍にする
+s += 1,sを1だけ増加させる
+c = fc,cをfcとする
+return tn,tnが関数出力となる
+def euler012_a_over_b(a, b):,関数euler012_a_over_b(a, b)は、以下の通り定義される
+return b < a,{{bがaより小さいか}}が関数出力となる
+def euler012_range_prime_enumerate(s, e):,関数euler012_range_prime_enumerate(s, e)は、以下の通り定義される
+pl = [],plを空のリストとする
+if s <= 1:,もしsが1以下のとき、
+s = 2,sを2とする
+for i in range(s, e + 1):,{{sから{{eに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+f = True,fを真とする
+for j in range(2, int(i**0.5) + 1):,2から{{{{iを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す
+if i % j == 0:,もし{{iをjで割った余り}}が0と等しいとき、
+break,この繰り返しを中断する
+return pl,plが関数出力となる
+def euler012_is_coprime(a, b):,関数euler012_is_coprime(a, b)は、以下の通り定義される
+while b != 0:,もしbが0と等しくないとき、以下を繰り返す
+a, b = b, a % b,aを{{aをbで割った余り}}とするbをbとする
+return a == 1,{{aが1と等しいか}}が関数出力となる
+def euler012_count_division(n, a):,関数euler012_count_division(n, a)は、以下の通り定義される
+ret = 0,retを0とする
+while n % a == 0:,もし{{nをaで割った余り}}が0と等しいとき、以下を繰り返す
+n /= a,nをa分の一にする
+ret += 1,retを1だけ増加させる
+return ret,retが関数出力となる
+def euler012_prime_factorize(n):,関数euler012_prime_factorize(n)は、以下の通り定義される
+primes = [True] * (n + 1),primesを真のリストの{{nに1を加えた値}}倍とする
+p = [],pを空のリストとする
+for i in range(2, int(n**0.5) + 1):,2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す
+if primes[i]:,もしprimesのi番目のとき、
+for j in range(i + i, n + 1, i):,{{{{iにiを加えた値}}から{{nに1を加えた値}}未満までのi間隔の数列}}を先頭から順にjとして、以下を繰り返す
+primes[j] = False,primesのj番目を偽とする
+for i in range(2, n + 1):,{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+if primes[i]:,もしprimesのi番目のとき、
+p.append(i),pにiを追加する
+fl = [],flを空のリストとする
+for x in p:,pを先頭から順にxとして、以下を繰り返す
+if n % x == 0:,もし{{nをxで割った余り}}が0と等しいとき、以下のとおり
+a = n,aをnとする
+c = 0,cを0とする
+while a % x == 0:,もし{{aをxで割った余り}}が0と等しいとき、以下を繰り返す
+a /= x,aをx分の一にする
+c += 1,cを1だけ増加させる
+return fl,flが関数出力となる
+def euler012_nth_triangular_number(n):,関数euler012_nth_triangular_number(n)は、以下の通り定義される
+return sum(range(1, n + 1)),{{1から{{nに1を加えた値}}未満までの数列}}の総和が関数出力となる
+def euler012_next_triangular_number(tn):,関数euler012_next_triangular_number(tn)は、以下の通り定義される
+ret = 0,retを0とする
+c = 1,cを1とする
+while ret <= tn:,もしretがtn以下のとき、以下を繰り返す
+ret += c,retをcだけ増加させる
+c += 1,cを1だけ増加させる
+return ret,retが関数出力となる
+def euler012_count_divisor(expl):,関数euler012_count_divisor(expl)は、以下の通り定義される
+ret = 1,retを1とする
+for x in expl:,explを先頭から順にxとして、以下を繰り返す
+ret *= (x + 1),retを{{xに1を加えた値}}倍にする
+return ret,retが関数出力となる
+def euler012_is_list_empty(l):,関数euler012_is_list_empty(l)は、以下の通り定義される
+return not l,lの反対が関数出力となる
+def euler012_is_list_empty_a(l):,関数euler012_is_list_empty_a(l)は、以下の通り定義される
+return len(l) == 0,{{lの長さが0と等しいか}}が関数出力となる
+def euler010():,関数euler010()は、以下の通り定義される
+p = [True] * 2000000,pを真のリストの2000000倍とする
+for x in range(2, int(2000000**0.5) + 1):,2から{{{{2000000を0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にxとして、以下を繰り返す
+if p[x]:,もしpのx番目のとき、
+for i in range(2 * x, len(p), x):,{{{{2にxを掛けた値}}からpの長さ未満までのx間隔の数列}}を先頭から順にiとして、以下を繰り返す
+p[i] = False,pのi番目を偽とする
+ret = [],retを空のリストとする
+for i in range(2, 2000000):,{{2から2000000未満までの数列}}を先頭から順にiとして、以下を繰り返す
+if p[i]:,もしpのi番目のとき、
+ret.append(i),retにiを追加する
+return sum(ret),retの総和が関数出力となる
+def euler010_enum_prime(n):,関数euler010_enum_prime(n)は、以下の通り定義される
+p = [True] * n,pを真のリストのn倍とする
+for x in range(2, int(n**0.5) + 1):,2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にxとして、以下を繰り返す
+if p[x]:,もしpのx番目のとき、
+for i in range(2 * x, len(p), x):,{{{{2にxを掛けた値}}からpの長さ未満までのx間隔の数列}}を先頭から順にiとして、以下を繰り返す
+p[i] = False,pのi番目を偽とする
+ret = [],retを空のリストとする
+for i in range(2, n):,{{2からn未満までの数列}}を先頭から順にiとして、以下を繰り返す
+if p[i]:,もしpのi番目のとき、
+ret.append(i),retにiを追加する
+return ret,retが関数出力となる
+def euler010_n_is_prime(n):,関数euler010_n_is_prime(n)は、以下の通り定義される
+judge = True,judgeを真とする
+if n < 2:,もしnが2より小さいとき、
+return False,偽が関数出力となる
+elif n == 2:,もしそうでなく、nが2と等しいとき、
+return True,真が関数出力となる
+for i in range(2, int(n**0.5) + 1):,2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す
+if judge and n % i == 0:,もしjudge、かつ{{{{nをiで割った余り}}が0と等しいか}}のとき、
+judge = False,judgeを偽とする
+return judge,judgeが関数出力となる
+def euler010_list_sum(l):,関数euler010_list_sum(l)は、以下の通り定義される
+s = 0,sを0とする
+for x in l:,lを先頭から順にxとして、以下を繰り返す
+s += x,sをxだけ増加させる
+return s,sが関数出力となる
+def euler010_list_sum_a(l):,関数euler010_list_sum_a(l)は、以下の通り定義される
+return sum(l),lの総和が関数出力となる
+def euler010_n_multiple_list(s, e, d):,関数euler010_n_multiple_list(s, e, d)は、以下の通り定義される
+ret = [],retを空のリストとする
+while s < e:,もしsがeより小さいとき、以下を繰り返す
+ret.append(s),retにsを追加する
+s += d,sをdだけ増加させる
+return ret,retが関数出力となる
+@TODO [#MultiString '""'], [#MultiString '""']
+def euler011():,関数euler011()は、以下の通り定義される
+grid = """""".split(),gridを{{[#MultiString '""']を空白で分割した文字列リスト}}とする
+q = [],qを空のリストとする
+for ch in grid:,gridを先頭から順にchとして、以下を繰り返す
+q.append(int(ch)),qにchの整数値を追加する
+m = 0,mを0とする
+for i in range(20):,{{0から20未満までの数列}}を先頭から順にiとして、以下を繰り返す
+for j in range(20):,{{0から20未満までの数列}}を先頭から順にjとして、以下を繰り返す
+if j <= 16:,もしjが16以下のとき、以下のとおり
+m = max(m, q[i*20+j] * q[i*20+j+1] * q[i*20+j+2] * q[i*20+j+3]),mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに20を掛けた値}}にjを加えた値}}に1を加えた値番目を掛けた値にqの{{{{iに20を掛けた値}}にjを加えた値}}に2を加えた値番目を掛けた値にqの{{{{iに20を掛けた値}}にjを加えた値}}に3を加えた値番目を掛けた値の最大値とする
+if i <= 16:,もしiが16以下のとき、
+m = max(m, q[i*20+j] * q[(i+1)*20+j+1] * q[(i+2)*20+j+2] * q[(i+3)*20+j+3]),mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに1を加えた値}}に20を掛けた値}}にjを加えた値に1を加えた値番目を掛けた値にqの{{{{iに2を加えた値}}に20を掛けた値}}にjを加えた値に2を加えた値番目を掛けた値にqの{{{{iに3を加えた値}}に20を掛けた値}}にjを加えた値に3を加えた値番目を掛けた値の最大値とする
+if 4 <= j and i <= 16:,もし{{4がj以下}}、かつ{{iが16以下}}のとき、
+m = max(m, q[i*20+j] * q[(i+1)*20+j-1] * q[(i+2)*20+j-2] * q[(i+3)*20+j-3]),mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに1を加えた値}}に20を掛けた値}}にjを加えた値から1を引いた値番目を掛けた値にqの{{{{iに2を加えた値}}に20を掛けた値}}にjを加えた値から2を引いた値番目を掛けた値にqの{{{{iに3を加えた値}}に20を掛けた値}}にjを加えた値から3を引いた値番目を掛けた値の最大値とする
+if i <= 16:,もしiが16以下のとき、
+m = max(m, q[i*20+j] * q[(i+1)*20+j] * q[(i+2)*20+j] * q[(i+3)*20+j]),mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに1を加えた値}}に20を掛けた値}}にjを加えた値番目を掛けた値にqの{{{{iに2を加えた値}}に20を掛けた値}}にjを加えた値番目を掛けた値にqの{{{{iに3を加えた値}}に20を掛けた値}}にjを加えた値番目を掛けた値の最大値とする
+return m,mが関数出力となる
+def euler011_less_or_equal(a, b):,関数euler011_less_or_equal(a, b)は、以下の通り定義される
+return a <= b,{{aがb以下}}が関数出力となる
+def euler011_less_or_equal_a(a, b):,関数euler011_less_or_equal_a(a, b)は、以下の通り定義される
+res = b - a,resを{{bからaを引いた値}}とする
+return res >= 0,{{resが0以上}}が関数出力となる
+def euler011_over_or_equal(a, b):,関数euler011_over_or_equal(a, b)は、以下の通り定義される
+return b <= a,{{bがa以下}}が関数出力となる
+def euler011_over_or_equal_a(a, b):,関数euler011_over_or_equal_a(a, b)は、以下の通り定義される
+res = b - a,resを{{bからaを引いた値}}とする
+return res <= 0,{{resが0以下}}が関数出力となる
+def euler011_string_space_split(s):,関数euler011_string_space_split(s)は、以下の通り定義される
+sl = [],slを空のリストとする
+buf = "",bufを""とする
+for ch in s:,sを先頭から順にchとして、以下を繰り返す
+if ch == " ":,もしchが" "と等しいとき、以下のとおり
+sl.append(buf),slにbufを追加する
+buf = "",bufを""とする
+もしそうでなければ、,なければ、
+buf += ch,bufをchだけ増加させる
+sl.append(buf),slにbufを追加する
+return sl,slが関数出力となる
+def euler011_zero_to_n_list(n):,関数euler011_zero_to_n_list(n)は、以下の通り定義される
+ret = [],retを空のリストとする
+a = 0,aを0とする
+while a < n:,もしaがnより小さいとき、以下を繰り返す
+ret.append(a),retにaを追加する
+a += 1,aを1だけ増加させる
+return ret,retが関数出力となる
+def euler011_zero_to_n_list_a(n):,関数euler011_zero_to_n_list_a(n)は、以下の通り定義される
+return list(range(n)),{{0からn未満までの数列}}のリストが関数出力となる
+def euler011_upward_point(x, y):,関数euler011_upward_point(x, y)は、以下の通り定義される
+return (x, y - 1),xと{{yから1を引いた値}}の組が関数出力となる
+def euler011_downward_point(x, y):,関数euler011_downward_point(x, y)は、以下の通り定義される
+return (x, y + 1),xと{{yに1を加えた値}}の組が関数出力となる
+def euler011_left_point(x, y):,関数euler011_left_point(x, y)は、以下の通り定義される
+return (x - 1, y),{{xから1を引いた値}}とyの組が関数出力となる
+def euler011_right_point(x, y):,関数euler011_right_point(x, y)は、以下の通り定義される
+return (x + 1, y),{{xに1を加えた値}}とyの組が関数出力となる
+def euler011_upper_left_point(x, y):,関数euler011_upper_left_point(x, y)は、以下の通り定義される
+return (x - 1, y - 1),{{xから1を引いた値}}と{{yから1を引いた値}}の組が関数出力となる
+def euler011_upper_right_point(x, y):,関数euler011_upper_right_point(x, y)は、以下の通り定義される
+return (x + 1, y - 1),{{xに1を加えた値}}と{{yから1を引いた値}}の組が関数出力となる
+def euler011_lower_left_point(x, y):,関数euler011_lower_left_point(x, y)は、以下の通り定義される
+return (x - 1, y + 1),{{xから1を引いた値}}と{{yに1を加えた値}}の組が関数出力となる
+def euler011_lower_right_point(x, y):,関数euler011_lower_right_point(x, y)は、以下の通り定義される
+return (x + 1, y + 1),{{xに1を加えた値}}と{{yに1を加えた値}}の組が関数出力となる
+def euler009():,関数euler009()は、以下の通り定義される
+for i in range(1, 1000):,{{1から1000未満までの数列}}を先頭から順にiとして、以下を繰り返す
+for j in range(i, 1000):,{{iから1000未満までの数列}}を先頭から順にjとして、以下を繰り返す
+for k in range(j, 1000):,{{jから1000未満までの数列}}を先頭から順にkとして、以下を繰り返す
+p = i * i + j * j,pを{{{{iにiを掛けた値}}に{{jにjを掛けた値}}を加えた値}}とする
+if p == k * k and i + j + k == 1000:,もし{{pが{{kにkを掛けた値}}と等しいか}}、かつ{{{{iにjを加えた値}}にkを加えた値}}が1000と等しいとき、
+return i * j * k,{{{{iにjを掛けた値}}にkを掛けた値}}が関数出力となる
+def euler009_is_pythagoras(a, b, c):,関数euler009_is_pythagoras(a, b, c)は、以下の通り定義される
+return a * a + b * b == c * c,{{{{aにaを掛けた値}}に{{bにbを掛けた値}}を加えた値}}が{{cにcを掛けた値}}と等しいかが関数出力となる
+def euler009_n_square(n):,関数euler009_n_square(n)は、以下の通り定義される
+return n * n,{{nにnを掛けた値}}が関数出力となる
+def euler009_n_square_a(n):,関数euler009_n_square_a(n)は、以下の通り定義される
+ret = 0,retを0とする
+for i in range(l):,{{0からl未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret += n,retをnだけ増加させる
+return ret,retが関数出力となる
+def euler009_is_sum_equation1000(tp):,関数euler009_is_sum_equation1000(tp)は、以下の通り定義される
+s = 0,sを0とする
+for x in tp:,tpを先頭から順にxとして、以下を繰り返す
+s += x,sをxだけ増加させる
+if m < N:,もしmがNより小さいとき、
+return s == 1000,{{sが1000と等しいか}}が関数出力となる
+def euler009_is_sum_equation1000_a(tp):,関数euler009_is_sum_equation1000_a(tp)は、以下の通り定義される
+return sum(tp) == 1000,{{tpの総和が1000と等しいか}}が関数出力となる
+def euler009_all_product(l):,関数euler009_all_product(l)は、以下の通り定義される
+ret = 1,retを1とする
+for a in l:,lを先頭から順にaとして、以下を繰り返す
+ret *= a,retをa倍にする
+return ret,retが関数出力となる
+def euler008():,関数euler008()は、以下の通り定義される
+sl = [],slを空のリストとする
+for i in range(5):,{{0から5未満までの数列}}を先頭から順にiとして、以下を繰り返す
+sl.append(int(s[i])),slにsのi番目の整数値を追加する
+m = 1,mを1とする
+for i in sl:,slを先頭から順にiとして、以下を繰り返す
+m *= i,mをi倍にする
+for i in range(5, len(s)):,{{5からsの長さ未満までの数列}}を先頭から順にiとして、以下を繰り返す
+sl.append(int(s[i])),slにsのi番目の整数値を追加する
+sl.pop(0),sl.pop(0) # slの最初の要素を削除する
+a = 1,aを1とする
+for j in sl:,slを先頭から順にjとして、以下を繰り返す
+a *= j,aをj倍にする
+m = max(m, a),mをmとaの最大値とする
+return m,mが関数出力となる
+def euler008_all_product(l):,関数euler008_all_product(l)は、以下の通り定義される
+ret = 1,retを1とする
+for x in l:,lを先頭から順にxとして、以下を繰り返す
+ret *= x,retをx倍にする
+return ret,retが関数出力となる
+def euler008_list_slice(l, s, c):,関数euler008_list_slice(l, s, c)は、以下の通り定義される
+ret = [],retを空のリストとする
+for i in range(c):,{{0からc未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret.append(l[s + i]),retにlの{{sにiを加えた値}}番目を追加する
+return ret,retが関数出力となる
+def euler008_elem_max(a, b):,関数euler008_elem_max(a, b)は、以下の通り定義される
+return b if a < b else a,{{もし{{aがbより小さいか}}のときb、そうでなければa}}が関数出力となる
+def euler008_elem_max_a(a, b):,関数euler008_elem_max_a(a, b)は、以下の通り定義される
+return max(a, b),aとbの最大値が関数出力となる
+def euler008_list_add(l, a):,関数euler008_list_add(l, a)は、以下の通り定義される
+tmp = [a],tmpをaのリストとする
+l += tmp,lをtmpだけ増加させる
+return l,lが関数出力となる
+def euler008_list_add_a(l, a):,関数euler008_list_add_a(l, a)は、以下の通り定義される
+l.append(a),lにaを追加する
+return l,lが関数出力となる
+def euler005():,関数euler005()は、以下の通り定義される
+prime = [],primeを空のリストとする
+for i in range(2, 20):,{{2から20未満までの数列}}を先頭から順にiとして、以下を繰り返す
+l = [],lを空のリストとする
+for y in prime:,primeを先頭から順にyとして、以下を繰り返す
+l.append(y),lにyを追加する
+if len(l) == 0:,もしlの長さが0と等しいとき、
+prime.append(i),primeにiを追加する
+a = 1,aを1とする
+for p in prime:,primeを先頭から順にpとして、以下を繰り返す
+for i in range(int(20**(1/p))):,{{0から{{20を{{1をpで割った値}}乗した値}}の整数値未満までの数列}}を先頭から順にiとして、以下を繰り返す
+a = a * p,aを{{aにpを掛けた値}}とする
+return a,aが関数出力となる
+def euler005_enum_prime(n):,関数euler005_enum_prime(n)は、以下の通り定義される
+prime = [],primeを空のリストとする
+for i in range(2, n + 1):,{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+f = True,fを真とする
+for j in prime:,primeを先頭から順にjとして、以下を繰り返す
+if i % j == 0:,もし{{iをjで割った余り}}が0と等しいとき、以下のとおり
+f = False,fを偽とする
+break,この繰り返しを中断する
+if f:,もしfのとき、
+prime.append(i),primeにiを追加する
+return prime,primeが関数出力となる
+def euler005_enum_prime_a(n):,関数euler005_enum_prime_a(n)は、以下の通り定義される
+primes = [],primesを空のリストとする
+for i in range(2, n + 1):,{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+if i == 2:,もしiが2と等しいとき、
+primes.append(i),primesにiを追加する
+もしそうでなければ、,なければ、
+for j in range(2, int(i**0.5) + 1):,2から{{{{iを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す
+if i % j == 0:,もし{{iをjで割った余り}}が0と等しいとき、
+break,この繰り返しを中断する
+return primes,primesが関数出力となる
+def euler005_enum_prime_b(n):,関数euler005_enum_prime_b(n)は、以下の通り定義される
+primes = [True] * (n + 1),primesを真のリストの{{nに1を加えた値}}倍とする
+ret = [],retを空のリストとする
+for i in range(2, int(n**0.5) + 1):,2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す
+if primes[i]:,もしprimesのi番目のとき、
+for j in range(i + i, n + 1, i):,{{{{iにiを加えた値}}から{{nに1を加えた値}}未満までのi間隔の数列}}を先頭から順にjとして、以下を繰り返す
+primes[j] = False,primesのj番目を偽とする
+for i in range(2, n + 1):,{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+if primes[i]:,もしprimesのi番目のとき、
+ret.append(i),retにiを追加する
+return ret,retが関数出力となる
+def euler005_expmax(p, n):,関数euler005_expmax(p, n)は、以下の通り定義される
+a = 1,aを1とする
+while a < n:,もしaがnより小さいとき、以下を繰り返す
+a *= p,aをp倍にする
+return int(a / p),{{aをpで割った値}}の整数値が関数出力となる
+def euler005_expmax_a(p, n):,関数euler005_expmax_a(p, n)は、以下の通り定義される
+return p**int(n**(1/p)),{{pを{{nを{{1をpで割った値}}乗した値}}の整数値乗した値}}が関数出力となる
+def euler004():,関数euler004()は、以下の通り定義される
+ans = 0,ansを0とする
+for j in range(999, 99, -1):,{{999から99未満までの-1間隔の数列}}を先頭から順にjとして、以下を繰り返す
+for i in range(999, 99, -1):,{{999から99未満までの-1間隔の数列}}を先頭から順にiとして、以下を繰り返す
+s = (str)(j * i),sを(str)({{jにiを掛けた値}})とする
+a = "",aを""とする
+b = "",bを""とする
+sep = (int)(len(s) / 2) + (len(s) % 2),sepを{{(int)({{sの長さを2で割った値}})に{{sの長さを2で割った余り}}を加えた値}}とする
+for k in range(sep):,{{0からsep未満までの数列}}を先頭から順にkとして、以下を繰り返す
+a += s[k],aをsのk番目だけ増加させる
+b += s[len(s) - k - 1],bをsの{{{{sの長さからkを引いた値}}から1を引いた値}}番目だけ増加させる
+if a == b:,もしaがbと等しいとき、
+ans = max(ans, i * j),ansをansと{{iにjを掛けた値}}の最大値とする
+return ans,ansが関数出力となる
+def euler004_n_slice(s, n):,関数euler004_n_slice(s, n)は、以下の通り定義される
+ret = "",retを""とする
+for i in range(n):,{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret += s[i],retをsのi番目だけ増加させる
+return ret,retが関数出力となる
+def euler004_n_bslice(s, n):,関数euler004_n_bslice(s, n)は、以下の通り定義される
+ret = "",retを""とする
+for i in range(n):,{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret += s[len(s) - 1 - i],retをsの{{{{sの長さから1を引いた値}}からiを引いた値}}番目だけ増加させる
+return ret,retが関数出力となる
+def euler004_is_equal(a, b):,関数euler004_is_equal(a, b)は、以下の通り定義される
+return a == b,{{aがbと等しいか}}が関数出力となる
+def euler004_half_digit(n):,関数euler004_half_digit(n)は、以下の通り定義される
+s = (str)(n),sを(str)(n)とする
+a = len(s),aをsの長さとする
+return (int)(a / 2) + (a % 2),{{(int)({{aを2で割った値}})に{{aを2で割った余り}}を加えた値}}が関数出力となる
+def euler004_multiple(a, b):,関数euler004_multiple(a, b)は、以下の通り定義される
+return a * b,{{aにbを掛けた値}}が関数出力となる
+def euler004_multiple_a(a, b):,関数euler004_multiple_a(a, b)は、以下の通り定義される
+res = 0,resを0とする
+for i in range(b):,{{0からb未満までの数列}}を先頭から順にiとして、以下を繰り返す
+res += a,resをaだけ増加させる
+return res,resが関数出力となる
+def euler004_string_reverse(s):,関数euler004_string_reverse(s)は、以下の通り定義される
+ret = "",retを""とする
+for ch in reversed(s):,{{sを反転した列}}を先頭から順にchとして、以下を繰り返す
+ret += ch,retをchだけ増加させる
+return ret,retが関数出力となる
+def euler004_is_palindromic(s):,関数euler004_is_palindromic(s)は、以下の通り定義される
+rs = "",rsを""とする
+for ch in reversed(s):,{{sを反転した列}}を先頭から順にchとして、以下を繰り返す
+rs += ch,rsをchだけ増加させる
+return s == rs,{{sがrsと等しいか}}が関数出力となる
+def euler006():,関数euler006()は、以下の通り定義される
+sumofsq = 0,sumofsqを0とする
+for i in range(100):,{{0から100未満までの数列}}を先頭から順にiとして、以下を繰り返す
+sumofsq += (i + 1) * (i + 1),sumofsqを{{{{iに1を加えた値}}に{{iに1を加えた値}}を掛けた値}}だけ増加させる
+sqofsum = 101 * 50,sqofsumを{{101に50を掛けた値}}とする
+return sumofsq - sqofsum,{{sumofsqからsqofsumを引いた値}}が関数出力となる
+def euler006_make_common_diff_sequence(s, d, n):,関数euler006_make_common_diff_sequence(s, d, n)は、以下の通り定義される
+ret = [s],retをsのリストとする
+for i in range(n - 1):,{{0から{{nから1を引いた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret.append(ret[-1] + d),retに{{retの-1番目にdを加えた値}}を追加する
+return ret,retが関数出力となる
+def euler006_make_common_diff_sequence_a(s, d, n):,関数euler006_make_common_diff_sequence_a(s, d, n)は、以下の通り定義される
+ret = [],retを空のリストとする
+for i in range(s, s + (d * n), d):,{{sから{{sに{{dにnを掛けた値}}を加えた値}}未満までのd間隔の数列}}を先頭から順にiとして、以下を繰り返す
+ret.append(i),retにiを追加する
+return ret,retが関数出力となる
+def euler006_n_square(n):,関数euler006_n_square(n)は、以下の通り定義される
+return n * n,{{nにnを掛けた値}}が関数出力となる
+def euler006_n_square_a(n):,関数euler006_n_square_a(n)は、以下の通り定義される
+ret = 0,retを0とする
+for i in range(n):,{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す
+ret += n,retをnだけ増加させる
+return ret,retが関数出力となる
+def euler006_sum_a_to_b(a, b):,関数euler006_sum_a_to_b(a, b)は、以下の通り定義される
+s = 0,sを0とする
+while a < b:,もしaがbより小さいとき、以下を繰り返す
+s += a,sをaだけ増加させる
+a += 1,aを1だけ増加させる
+return s,sが関数出力となる
+def euler006_sum_a_to_b_a(a, b):,関数euler006_sum_a_to_b_a(a, b)は、以下の通り定義される
+return sum(range(a, b)),{{aからb未満までの数列}}の総和が関数出力となる
+@TODO [#ListForExpr append: [#Name 'i'][#ForExpr each: [#Name 'i']list: [#ApplyExpr name: [#Name 'range']params: [#Arguments [#Int '2'][#Infix left: [#ApplyExpr name: [#Name 'int']params: [#Arguments [#MethodExpr recv: [#Name 'math']name: [#Name 'sqrt']params: [#Arguments [#Name 'p']]]]]name: [#Name '+']right: [#Int '1']]]]cond: [#Infix left: [#Infix left: [#Name 'p']name: [#Name '%']right: [#Name 'i']]name: [#Name '==']right: [#Int '0']]]], [#ListForExpr append: [#Name 'i'][#ForExpr each: [#Name 'i']list: [#ApplyExpr name: [#Name 'range']params: [#Arguments [#Int '2'][#Infix left: [#ApplyExpr name: [#Name 'int']params: [#Arguments [#MethodExpr recv: [#Name 'math']name: [#Name 'sqrt']params: [#Arguments [#Name 'p']]]]]name: [#Name '+']right: [#Int '1']]]]cond: [#Infix left: [#Infix left: [#Name 'p']name: [#Name '%']right: [#Name 'i']]name: [#Name '==']right: [#Int '0']]]]
+def euler007():,関数euler007()は、以下の通り定義される
+count = 0,countを0とする
+p = 1,pを1とする
+pl = [],plを空のリストとする
+while count < 10001:,もしcountが10001より小さいとき、以下を繰り返す
+p += 1,pを1だけ増加させる
+l = [ i for i in range(2, int(math.sqrt(p)) + 1) if p % i == 0 ],lを[#ListForExpr append: [#Name 'i'][#ForExpr each: [#Name 'i']list: [#ApplyExpr name: [#Name 'range']params: [#Arguments [#Int '2'][#Infix left: [#ApplyExpr name: [#Name 'int']params: [#Arguments [#MethodExpr recv: [#Name 'math']name: [#Name 'sqrt']params: [#Arguments [#Name 'p']]]]]name: [#Name '+']right: [#Int '1']]]]cond: [#Infix left: [#Infix left: [#Name 'p']name: [#Name '%']right: [#Name 'i']]name: [#Name '==']right: [#Int '0']]]]とする
+if len(l) == 0:,もしlの長さが0と等しいとき、
+count += 1,countを1だけ増加させる
+return p,pが関数出力となる
+def euler007_n_division(a, n):,関数euler007_n_division(a, n)は、以下の通り定義される
+return a % n == 0,{{{{aをnで割った余り}}が0と等しいか}}が関数出力となる
+def euler007_n_division_a(a, n):,関数euler007_n_division_a(a, n)は、以下の通り定義される
+while a > 0:,もしaが0より大きいとき、以下を繰り返す
+a -= n,aをnだけ減少させる
+return a == 0,{{aが0と等しいか}}が関数出力となる
+def euler007_is_prime(a):,関数euler007_is_prime(a)は、以下の通り定義される
+dl = [],dlを空のリストとする
+for i in range(2, a):,{{2からa未満までの数列}}を先頭から順にiとして、以下を繰り返す
+if a % i == 0:,もし{{aをiで割った余り}}が0と等しいとき、
+dl.append(i),dlにiを追加する
+return len(dl) == 0,{{dlの長さが0と等しいか}}が関数出力となる
+def euler007_is_prime_a(a):,関数euler007_is_prime_a(a)は、以下の通り定義される
+if a < 2:,もしaが2より小さいとき、
+return False,偽が関数出力となる
+elif a == 2:,もしそうでなく、aが2と等しいとき、
+return True,真が関数出力となる
+もしそうでなければ、,なければ、
+for i in range(2, int(a**0.5) + 1):,2から{{{{aを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す
+if a % i == 0:,もし{{aをiで割った余り}}が0と等しいとき、
+return False,偽が関数出力となる
+return True,真が関数出力となる
+def euler007_succ(a):,関数euler007_succ(a)は、以下の通り定義される
+return a + 1,{{aに1を加えた値}}が関数出力となる
+def euler007_is_less(a, b):,関数euler007_is_less(a, b)は、以下の通り定義される
+return a < b,{{aがbより小さいか}}が関数出力となる
+def euler007_is_equale_zero(a):,関数euler007_is_equale_zero(a)は、以下の通り定義される
+return a == 0,{{aが0と等しいか}}が関数出力となる
+def euler003():,関数euler003()は、以下の通り定義される
+n = 600851475143,nを600851475143とする
+i = 2,iを2とする
+while i * i < n:,もし{{iにiを掛けた値}}がnより小さいとき、以下を繰り返す
+while n % i == 0:,もし{{nをiで割った余り}}が0と等しいとき、以下を繰り返す
+n = n / i,nを{{nをiで割った値}}とする
+i = i + 1,iを{{iに1を加えた値}}とする
+return int(n),nの整数値が関数出力となる
+def euler003_n_morethan_square(a, n):,関数euler003_n_morethan_square(a, n)は、以下の通り定義される
+return a * a < n,{{{{aにaを掛けた値}}がnより小さいか}}が関数出力となる
+def euler003_n_divide_a(n, a):,関数euler003_n_divide_a(n, a)は、以下の通り定義される
+while n % a == 0:,もし{{nをaで割った余り}}が0と等しいとき、以下を繰り返す
+n /= a,nをa分の一にする
+return int(n),nの整数値が関数出力となる
+def euler002():,関数euler002()は、以下の通り定義される
+fib = [1, 2],fibを1と2のリストとする
+while fib[-1] < 4000000:,もしfibの-1番目が4000000より小さいとき、以下を繰り返す
+fib.append(fib[-1] + fib[-2]),fibに{{fibの-1番目にfibの-2番目を加えた値}}を追加する
+s = 0,sを0とする
+for x in fib:,fibを先頭から順にxとして、以下を繰り返す
+if x % 2 == 0:,もし{{xを2で割った余り}}が0と等しいとき、
+s += x,sをxだけ増加させる
+return s,sが関数出力となる
+def euler002_divide_2(n):,関数euler002_divide_2(n)は、以下の通り定義される
+return n % 2 == 0,{{{{nを2で割った余り}}が0と等しいか}}が関数出力となる
+def euler002_add_param(a, b):,関数euler002_add_param(a, b)は、以下の通り定義される
+return a + b,{{aにbを加えた値}}が関数出力となる
+def euler002_sum_list(l):,関数euler002_sum_list(l)は、以下の通り定義される
+s = 0,sを0とする
+for x in l:,lを先頭から順にxとして、以下を繰り返す
+s += x,sをxだけ増加させる
+return s,sが関数出力となる
+def euler002_sum_list_a(l):,関数euler002_sum_list_a(l)は、以下の通り定義される
+return sum(l),lの総和が関数出力となる
+def euler002_n_fibnocci_sequence(n):,関数euler002_n_fibnocci_sequence(n)は、以下の通り定義される
+fibs = [0, 1],fibsを0と1のリストとする
+a = n - 2,aを{{nから2を引いた値}}とする
+if n == 1:,もしnが1と等しいとき、
+return [0],0のリストが関数出力となる
+もしそうでなければ、,なければ、
+while a > 0:,もしaが0より大きいとき、以下を繰り返す
+fibs.append(fibs[-1] + fibs[-2]),fibsに{{fibsの-1番目にfibsの-2番目を加えた値}}を追加する
+a -= 1,aを1だけ減少させる
+return fibs,fibsが関数出力となる
+def euler002_n_fibnocci_number(n):,関数euler002_n_fibnocci_number(n)は、以下の通り定義される
+fibs = [0, 1],fibsを0と1のリストとする
+if 0 < n <= 2:,もし{{0がnより小さいか}}が2以下のとき、
+return fibs[n - 1],fibsの{{nから1を引いた値}}番目が関数出力となる
+もしそうでなければ、,なければ、
+a = n - 2 ,aを{{nから2を引いた値}}とする
+while a > 0:,もしaが0より大きいとき、以下を繰り返す
+fibs.append(fibs[-1] + fibs[-2]),fibsに{{fibsの-1番目にfibsの-2番目を加えた値}}を追加する
+a -= 1,aを1だけ減少させる
+return fibs[-1],fibsの-1番目が関数出力となる
+def euler020():,関数euler020()は、以下の通り定義される
+fact = 1,factを1とする
+for i in range(100):,{{0から100未満までの数列}}を先頭から順にiとして、以下を繰り返す
+fact *= (i + 1),factを{{iに1を加えた値}}倍にする
+s = str(fact),sをfactの文字列とする
+q = [],qを空のリストとする
+for ch in s:,sを先頭から順にchとして、以下を繰り返す
+q.append(int(ch)),qにchの整数値を追加する
+return sum(q),qの総和が関数出力となる
+def euler020_factorial(n):,関数euler020_factorial(n)は、以下の通り定義される
+ret = 1,retを1とする
+for x in range(n):,{{0からn未満までの数列}}を先頭から順にxとして、以下を繰り返す
+ret *= (x + 1),retを{{xに1を加えた値}}倍にする
+return ret,retが関数出力となる
+def euler020_digit_sum(n):,関数euler020_digit_sum(n)は、以下の通り定義される
+q = str(n),qをnの文字列とする
+s = 0,sを0とする
+for x in q:,qを先頭から順にxとして、以下を繰り返す
+s += int(x),sをxの整数値だけ増加させる
+return s,sが関数出力となる
+def euler019():,関数euler019()は、以下の通り定義される
+d = 365,dを365とする
+for y in range(1901, 2001):,{{1901から2001未満までの数列}}を先頭から順にyとして、以下を繰り返す
+for i, day in enumerate(days):,{{daysに番号をつける}}を先頭から順にiとdayとして、以下を繰り返す
+if d % 7 == 6:,もし{{dを7で割った余り}}が6と等しいとき、
+sd += 1,sdを1だけ増加させる
+d += day ,dをdayだけ増加させる
+if (y % 400 == 0 or ((not y % 100 == 0) and y % 4 == 0)) and i == 1:,もし{{{{yを400で割った余り}}が0と等しいか}}、または{{{{yを100で割った余り}}が0と等しいか}}の反対、かつ{{{{yを4で割った余り}}が0と等しいか}}、かつ{{iが1と等しいか}}のとき、
+d += 1,dを1だけ増加させる
+return sd,sdが関数出力となる
+def euler019_is_leap_year(y):,関数euler019_is_leap_year(y)は、以下の通り定義される
+return y % 400 == 0 or ((not y % 100 == 0) and y % 4 == 0),{{{{yを400で割った余り}}が0と等しいか}}、または{{{{yを100で割った余り}}が0と等しいか}}の反対、かつ{{{{yを4で割った余り}}が0と等しいか}}が関数出力となる
+def euler019_names_of_the_day(y, m, d):,関数euler019_names_of_the_day(y, m, d)は、以下の通り定義される
+if m <= 2:,もしmが2以下のとき、以下のとおり
+m += 12,mを12だけ増加させる
+y -= 1,yを1だけ減少させる
+gamma = 0,gammaを0とする
+if 1582 <= y:,もし1582がy以下のとき、
+gamma = -2 * int(y / 100) + int( int(y / 100) / 4 ),gammaを{{{{-2に{{yを100で割った値}}の整数値を掛けた値}}に{{{{yを100で割った値}}の整数値を4で割った値}}の整数値を加えた値}}とする
+もしそうでなければ、,なければ、
+gamma = -1 * int(y / 100) + 5,gammaを{{{{-1に{{yを100で割った値}}の整数値を掛けた値}}に5を加えた値}}とする
+h = (d + int(26 * (m + 1) / 10) + (y % 100) + int((y % 100) / 4) + gamma) % 7,hを{{dに{{{{26に{{mに1を加えた値}}を掛けた値}}を10で割った値}}の整数値を加えた値}}に{{yを100で割った余り}}を加えた値に{{{{yを100で割った余り}}を4で割った値}}の整数値を加えた値にgammaを加えた値を7で割った余りとする
+return name[h],nameのh番目が関数出力となる
+def euler018():,関数euler018()は、以下の通り定義される
+for i in reversed(range(len(tri) - 1)):,{{{{0から{{triの長さから1を引いた値}}未満までの数列}}を反転した列}}を先頭から順にiとして、以下を繰り返す
+for j in range(len(tri[i])):,{{0からtriのi番目の長さ未満までの数列}}を先頭から順にjとして、以下を繰り返す
+tri[i][j] += max(tri[i + 1][j], tri[i + 1][j + 1]),triのi番目のj番目をtriの{{iに1を加えた値}}番目のj番目とtriの{{iに1を加えた値}}番目の{{jに1を加えた値}}番目の最大値だけ増加させる
+return tri[0][0],triの先頭の先頭が関数出力となる
