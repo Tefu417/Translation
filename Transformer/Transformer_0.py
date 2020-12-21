@@ -43,61 +43,6 @@ from torchtext.vocab import Vocab
 
 import sentencepiece as spm
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'train-euler-corpus.txt'
-SOS_token = 0
-EOS_token = 1
-flg = 0     # Py2Pj
-# flg = 1     # Pj2Py
-
-
-train_df = pd.read_csv(txt,  header=None, sep='<tab>')
-train_df.columns = ['Python', 'PJ']
-train_df['Python'] = train_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
-train_df['PJ'] = train_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
-
-test_df = pd.read_csv('test-euler-corpus.txt',  header=None, sep='<tab>')
-test_df.columns = ['Python', 'PJ']
-test_df['Python'] = test_df['Python'].replace(r'^<SOS>(.*)$', r'\1', regex=True)
-test_df['PJ'] = test_df['PJ'].replace(r'^(.*)<EOS>$', r'\1', regex=True)
-
-# Python : 空白で単語分割
-class Lang(object):
-    def tokenize(self, sentence):
-        sentence = Normalize().normalizeString(sentence)
-        l = []
-        for word in sentence.split(' '):
-            l.append(word)
-        return l
-
-# PJ(日本語) : SentencePieceで単語分割
-class JLang(Lang):
-    def Jtokenize(self, sentence):
-        sp = spm.SentencePieceProcessor()
-        sp.load('prog8k/prog8k.model')
-        sentence = Normalize().normalizeString(sentence)
-        return [tok.text for tok in sp.EncodeAsPieces(sentence)]
-
-# 正規化
-class Normalize(object):
-    def normalizeString(self, s):
-        s = re.sub(r"\n", r" ", s)
-        s = re.sub(r"\t+", r" ", s)
-        # + 1回以上の繰り返し
-        s = re.sub(r"<SOS>", r"", s)
-        s = re.sub(r"\(", r" ( ", s)
-        s = re.sub(r"\)", r" ) ", s)
-        s = re.sub(r"\{", r" { ", s)
-        s = re.sub(r"\}", r" } ", s)
-        s = re.sub(r"\[", r" [ ", s)
-        s = re.sub(r"\]", r" ] ", s)
-        s = re.sub(r"\:", r" : ", s)
-        s = re.sub(r"\,", r" , ", s)
-        s = re.sub(r"\"", r" \" ", s)
-        s = re.sub(r"\'", r" ' ", s)
-        s = re.sub(r" {2,}", r" ", s)
-        # {x, y} x回以上、y回以下の繰り返し
-        return s
 
 class EncoderDecoder(nn.Module):
     """
@@ -547,30 +492,34 @@ src_mask = Variable(torch.ones(1, 1, 10) )
 # print(greedy_decode(model, src, src_mask, max_len=10, start_symbol=1))
 
 # Translation-Task(en-de)
+from torchtext import data, datasets
+
 if True:
-    BOS_WORD = '<SOS>'
-    EOS_WORD = '<EOS>'
+    import spacy
+    spacy_de = spacy.load('de')
+    spacy_en = spacy.load('en')
+
+    def tokenize_de(text):
+        return [tok.text for tok in spacy_de.tokenizer(text)]
+
+    def tokenize_en(text):
+        return [tok.text for tok in spacy_en.tokenizer(text)]
+
+    BOS_WORD = '<s>'
+    EOS_WORD = '</s>'
     BLANK_WORD = "<blank>"
+    SRC = data.Field(tokenize=tokenize_de, pad_token=BLANK_WORD)
+    TGT = data.Field(tokenize=tokenize_en, init_token = BOS_WORD,
+                     eos_token = EOS_WORD, pad_token=BLANK_WORD)
 
-    # データの分割
-    train, valid = train_test_split(train_df, test_size=0.3, shuffle=True, random_state=123)
-    train.reset_index(drop=True, inplace=True)
-    valid.reset_index(drop=True, inplace=True)
-
-    def build_vocab(filepath, tokenizer):
-        counter = Counter()
-        for i in range(len(filepath)):
-            counter.update(tokenizer(filepath[i]))
-        return Vocab(counter, specials=[BOS_WORD, EOS_WORD, BLANK_WORD])
-
-    # Py2Pj
-    if flg == 0:
-        SRC_vocab = build_vocab(train['Python'], Lang().tokenize)
-        TGT_vocab = build_vocab(train['PJ'], JLang().tokenize)
-    # Pj2Py
-    else :
-        SRC_vocab = build_vocab(train['PJ'], JLang().tokenize)
-        TGT_vocab = build_vocab(train['Python'], Lang().tokenize)
+    MAX_LEN = 100
+    train, val, test = datasets.IWSLT.splits(
+        exts=('.de', '.en'), fields=(SRC, TGT),
+        filter_pred=lambda x: len(vars(x)['src']) <= MAX_LEN and
+            len(vars(x)['trg']) <= MAX_LEN)
+    MIN_FREQ = 2
+    SRC.build_vocab(train.src, min_freq=MIN_FREQ)
+    TGT.build_vocab(train.trg, min_freq=MIN_FREQ)
 
 class MyIterator(data.Iterator):
     def create_batches_(self):
@@ -657,17 +606,17 @@ class MultiGPULossCompute:
 # GPUs to use
 devices = [0, 1, 2, 3]
 
-pad_idx = TGT_vocab.stoi["<blank>"]
-model = make_model(len(SRC_vocab), len(TGT_vocab), N=8)
+pad_idx = TGT.vocab.stoi["<blank>"]
+model = make_model(len(SRC.vocab), len(TGT.vocab), N=8)
 model.cuda()
-criterion = LabelSmoothing(size=len(TGT_vocab), padding_idx=pad_idx, smoothing=0.1)
+criterion = LabelSmoothing(size=len(TGT.vocab), padding_idx=pad_idx, smoothing=0.1)
 criterion.cuda()
 BATCH_SIZE = 12000
 
-train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=device,
+train_iter = MyIterator(train, batch_size=BATCH_SIZE, device=0,
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                         batch_size_fn=batch_size_fn, train=True)
-valid_iter = MyIterator(valid, batch_size=BATCH_SIZE, device=device,
+valid_iter = MyIterator(val, batch_size=BATCH_SIZE, device=0,
                         repeat=False, sort_key=lambda x: (len(x.src), len(x.trg)),
                         batch_size_fn=batch_size_fn, train=False)
 
@@ -690,19 +639,19 @@ for epoch in range(10):
 
 for i, batch in enumerate(valid_iter):
     src = batch.src.transpose(0, 1)[:1]
-    src_mask = (src != SRC_vocab.stoi["<blank>"]).unsqueeze(-2)
+    src_mask = (src != SRC.build_vocabvocab.stoi["<blank>"]).unsqueeze(-2)
     out = greedy_decode(model, src, src_mask,
-                        max_len=60, start_symbol=TGT_vocab.stoi["<SOS>"])
+                        max_len=60, start_symbol=TGT.vocab.stoi["<SOS>"])
     print("Translation:", end="\t")
     for i in range(1, out.size(1)):
-        sym = TGT_vocab.itos[out[0, i]]
+        sym = TGT.vocab.itos[out[0, i]]
         if sym == "<EOS>":
             break
         print(sym, end =" ")
     print()
     print("Target:", end="\t")
     for i in range(1, batch.trg.size(0)):
-        sym = TGT_vocab.itos[batch.trg.data[i, 0]]
+        sym = TGT.vocab.itos[batch.trg.data[i, 0]]
         if sym == "<EOS>":
             break
         print(sym, end =" ")
