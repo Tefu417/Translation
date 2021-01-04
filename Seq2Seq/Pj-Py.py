@@ -440,7 +440,7 @@ s_list = list(map(str, input().split('<sep>')))
 print('準備中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'train-euler-corpus.txt'
+txt = 'train_corpus.txt'
 SOS_token = 0
 EOS_token = 1
 

@@ -1,0 +1,515 @@
+<SOS>print("Hello World")<tab>"Hello World"を出力する<EOS>
+<SOS>x = int(input())<tab>入力された文字列の整数値をxとする<EOS>
+<SOS>print(x ** 3)<tab>xの3乗を出力する<EOS>
+<SOS>W = int(input())<tab>入力された文字列の整数値をWとする<EOS>
+<SOS>print(W * 32)<tab>Wに32を掛けた値を出力する<EOS>
+<SOS>F = int(input())<tab>入力された文字列の整数値をFとする<EOS>
+<SOS>print((F - 30) // 2)<tab>({{Fから30を引いた値}})の組を2で割った商を出力する<EOS>
+<SOS>p, m, c  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にp、m、cとする<EOS>
+<SOS>print(p + m + c)<tab>{{pにmを加えた値}}にcを加えた値を出力する<EOS>
+<SOS>a, b  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にaとbとする<EOS>
+<SOS>s = a * b<tab>aにbを掛けた値をsとする<EOS>
+<SOS>l = a * 2 + b * 2<tab>aに2を掛けた値にbに2を掛けた値を加えた値をlとする<EOS>
+<SOS>print(s, l)<tab>sとlを出力する<EOS>
+<SOS>a, b  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にaとbとする<EOS>
+<SOS>if a == b  :<tab>aがbのとき、<EOS>
+<SOS>print("a == b")<tab>"a == b"を出力する<EOS>
+<SOS>elif a < b  :<tab>('aがbより小さい',)<EOS>
+<SOS>print("a < b")<tab>"a < b"を出力する<EOS>
+<SOS>a, b, c  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にa、b、cとする<EOS>
+<SOS>if a < b and b < c  :<tab>aがbより小さく、かつbがcより小さいとき、<EOS>
+<SOS>print("Yes")<tab>"Yes"を出力する<EOS>
+<SOS>a, b  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にaとbとする<EOS>
+<SOS>print((a + b) // 2)<tab>({{aにbを加えた値}})の組を2で割った商を出力する<EOS>
+<SOS>x1, x2  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にx1とx2とする<EOS>
+<SOS>print(abs(x1 - x2))<tab>{{x1からx2を引いた値}}の絶対値を出力する<EOS>
+<SOS>B = input()<tab>入力された文字列をBとする<EOS>
+<SOS>O = ["1 1 0", "0 0 1"]<tab>("1 1 0"と"0 0 1")からなる列をOとする<EOS>
+<SOS>if B in O  :<tab>BがOに含まれるとき、<EOS>
+<SOS>print("Open")<tab>"Open"を出力する<EOS>
+<SOS>S = int(input())<tab>入力された文字列の整数値をSとする<EOS>
+<SOS>h = S // 3600<tab>Sを3600で割った商をhとする<EOS>
+<SOS>m = (S - h * 3600) // 60<tab>({{Sから{{hに3600を掛けた値}}を引いた値}})の組を60で割った商をmとする<EOS>
+<SOS>s = S - (h * 3600 + m * 60)<tab>Sから({{{{hに3600を掛けた値}}に{{mに60を掛けた値}}を加えた値}})の組を引いた値をsとする<EOS>
+<SOS>print(h, ":", m, ":", s, sep = "")<tab>h、":"、m、":"、s、((sep, ""))からなる辞書を出力する<EOS>
+<SOS>a, b, c  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にa、b、cとする<EOS>
+<SOS>if a < b  :<tab>aがbより小さいとき、<EOS>
+<SOS>if b < c  :<tab>bがcより小さいとき、<EOS>
+<SOS>print(a, b, c)<tab>a、b、cを出力する<EOS>
+<SOS>elif a < c  :<tab>('aがcより小さい',)<EOS>
+<SOS>print(a, c, b)<tab>a、c、bを出力する<EOS>
+<SOS>elif b < a  :<tab>('bがaより小さい',)<EOS>
+<SOS>if a < c  :<tab>aがcより小さいとき、<EOS>
+<SOS>print(b, a, c)<tab>b、a、cを出力する<EOS>
+<SOS>elif b < c  :<tab>('bがcより小さい',)<EOS>
+<SOS>print(b, c, a)<tab>b、c、aを出力する<EOS>
+<SOS>W, H, x, y, r  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にW、H、x、y、rとする<EOS>
+<SOS>if x - r >= 0 and y - r >= 0  :<tab>{{xからrを引いた値}}が0以上、かつ{{yからrを引いた値}}が0以上のとき、<EOS>
+<SOS>if x + r <= W and y + r <= H  :<tab>{{xにrを加えた値}}がW以下、かつ{{yにrを加えた値}}がH以下のとき、<EOS>
+<SOS>print("Yes")<tab>"Yes"を出力する<EOS>
+<SOS>e1, e2, e3, e4  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にe1、e2、e3、e4とする<EOS>
+<SOS>E = [e1, e2, e3, e4]<tab>(e1、e2、e3、e4)からなる列をEとする<EOS>
+<SOS>e = set(E)<tab>Eの集合をeとする<EOS>
+<SOS>e_list = list(e)<tab>'eのリストをe_listとする<EOS>
+<SOS>if len(e) == 2  :<tab>eの長さが2のとき、<EOS>
+<SOS>if E.count(e_list[0]) == 2  :<tab>E内のe_listの最初値の出現をカウントした整数が2のとき、<EOS>
+<SOS>print("yes")<tab>"yes"を出力する<EOS>
+<SOS>N, A, B, C, D  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にN、A、B、C、Dとする<EOS>
+<SOS>a = N // A<tab>NをAで割った商をaとする<EOS>
+<SOS>c = N // C<tab>NをCで割った商をcとする<EOS>
+<SOS>if a * A < N  :<tab>aにAを掛けた値がNより小さいとき、<EOS>
+<SOS>if c * C < N  :<tab>cにCを掛けた値がNより小さいとき、<EOS>
+<SOS>b = a * B<tab>aにBを掛けた値をbとする<EOS>
+<SOS>d = c * D<tab>cにDを掛けた値をdとする<EOS>
+<SOS>if b < d  :<tab>bがdより小さいとき、<EOS>
+<SOS>print(b)<tab>bを出力する<EOS>
+<SOS>for i  in range(1000)  :<tab>'0から1000未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print("Hello World")<tab>"Hello World"を出力する<EOS>
+<SOS>dic = {1 : 6000, 2 : 4000, 3 : 3000, 4 : 2000}<tab>((1, 6000)、(2, 4000)、(3, 3000)、(4, 2000))からなる辞書をdicとする<EOS>
+<SOS>for i  in range(4)  :<tab>'0から4未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>t, n  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にtとnとする<EOS>
+<SOS>print(dic[t] * n)<tab>dic(t)にnを掛けた値を出力する<EOS>
+<SOS>for i  in range(7)  :<tab>'0から7未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>a, b  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にaとbとする<EOS>
+<SOS>print(a - b)<tab>aからbを引いた値を出力する<EOS>
+<SOS>for i  in range(9)  :<tab>'0から9未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>e, a, b  = map(str, input().split())<tab>map(str,入力された文字列を空白で分割した列)を展開し順にe、a、bとする<EOS>
+<SOS>a = int(a)<tab>aの整数値をaとする<EOS>
+<SOS>b = int(b)<tab>bの整数値をbとする<EOS>
+<SOS>print(e, a + b, a * 200 + b * 300)<tab>e、aにbを加えた値、{{aに200を掛けた値}}に{{bに300を掛けた値}}を加えた値を出力する<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>for i  in range(10)  :<tab>'0から10未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print(s)<tab>sを出力する<EOS>
+<SOS>i = 0<tab>0をiとする<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>x = int(input())<tab>入力された文字列の整数値をxとする<EOS>
+<SOS>if x == 0  :<tab>xが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>x, y  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にxとyとする<EOS>
+<SOS>if x == 0 and y == 0  :<tab>xが0、かつyが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>N = int(input())<tab>入力された文字列の整数値をNとする<EOS>
+<SOS>for i  in range(N)  :<tab>'0からN未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>a, b, c  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にa、b、cとする<EOS>
+<SOS>L = [a, b, c]<tab>(a、b、c)からなる列をLとする<EOS>
+<SOS>m = L.pop(L.index(max(L)))<tab>L.pop(L.index(max(L)))をmとする<EOS>
+<SOS>s = L[0] ** 2 + L[1] ** 2<tab>L(0)の2乗にL(1)の2乗を加えた値をsとする<EOS>
+<SOS>if m ** 2 == s  :<tab>mの2乗がsのとき、<EOS>
+<SOS>print("YES")<tab>"YES"を出力する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>s = 100000<tab>100000をsとする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>m = s % 1000<tab>sを1000で割った余りをmとする<EOS>
+<SOS>if m != 0  :<tab>mが0と等しくないとき、<EOS>
+<SOS>s = s - m + 1000<tab>sからmを引いた値に1000を加えた値をsとする<EOS>
+<SOS>print(int(s))<tab>sの整数値を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>print(s)<tab>sを出力する<EOS>
+<SOS>a, b, c  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にa、b、cとする<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>for i  in range(a, b + 1)  :<tab>'aからbに1を加えた値未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if c % i == 0  :<tab>cをiで割った余りが0のとき、<EOS>
+<SOS>print(s)<tab>sを出力する<EOS>
+<SOS>for i  in range(1, 10)  :<tab>'1から10未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>for j  in range(1, 10)  :<tab>'1から10未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>print(i, "x", j, "=", i * j, sep = "")<tab>i、"x"、j、"="、iにjを掛けた値、((sep, ""))からなる辞書を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>H,W = map(int,input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にHとWとする<EOS>
+<SOS>if H==0 and W==0 :<tab>Hが0、かつWが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>for i  in range(H) :<tab>'0からH未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>for j  in range(W) :<tab>'0からW未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>print("#",end="")<tab>"#"と((end, ""))からなる辞書を出力する<EOS>
+<SOS>print()<tab>空行を出力する<EOS>
+<SOS>print()<tab>空行を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>H, W  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にHとWとする<EOS>
+<SOS>if H == 0  :<tab>Hが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>H, W  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にHとWとする<EOS>
+<SOS>if H == 0  :<tab>Hが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>a, op, b  = map(str, input().split())<tab>map(str,入力された文字列を空白で分割した列)を展開し順にa、op、bとする<EOS>
+<SOS>a = int(a)<tab>aの整数値をaとする<EOS>
+<SOS>b = int(b)<tab>bの整数値をbとする<EOS>
+<SOS>if op == "?"  :<tab>opが"?"のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>A = [int(a) for a in input().split()]<tab>{{入力された文字列を空白で分割した列}}の各要素をaとし、aの整数値の列をAとする<EOS>
+<SOS>print(min(A), max(A), sum(A))<tab>Aの最小値、Aの最大値、Aの総和を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>P = []<tab>空列をPとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>A = [int(a) for a in input().split()]<tab>{{入力された文字列を空白で分割した列}}の各要素をaとし、aの整数値の列をAとする<EOS>
+<SOS>for i  in range(n - 1, -1, -1)  :<tab>'nから1を引いた値から-1未満までの-1間隔の数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if i == 0  :<tab>iが0のとき、<EOS>
+<SOS>print(A[i])<tab>A(i)を出力する<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>for i  in range(5)  :<tab>'0から5未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>p = int(input())<tab>入力された文字列の整数値をpとする<EOS>
+<SOS>if p < 40  :<tab>pが40より小さいとき、<EOS>
+<SOS>print(s // 5)<tab>sを5で割った商を出力する<EOS>
+<SOS>Si = []<tab>空列をSiとする<EOS>
+<SOS>So = []<tab>空列をSoとする<EOS>
+<SOS>for i  in range(4)  :<tab>'0から4未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>p = int(input())<tab>入力された文字列の整数値をpとする<EOS>
+<SOS>Si.append(p)<tab>Si.append(p)<EOS>
+<SOS>for j  in range(2)  :<tab>'0から2未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>p = int(input())<tab>入力された文字列の整数値をpとする<EOS>
+<SOS>So.append(p)<tab>So.append(p)<EOS>
+<SOS>s = sum(Si) - min(Si) + sum(So) - min(So)<tab>{{Siの総和からSiの最小値を引いた値}}にSoの総和を加えた値からSoの最小値を引いた値をsとする<EOS>
+<SOS>print(s)<tab>sを出力する<EOS>
+<SOS>W = []<tab>空列をWとする<EOS>
+<SOS>K = []<tab>空列をKとする<EOS>
+<SOS>for i  in range(10)  :<tab>'0から10未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>W.append(int(input()))<tab>W.append(int(input()))<EOS>
+<SOS>for j  in range(10)  :<tab>'0から10未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>K.append(int(input()))<tab>K.append(int(input()))<EOS>
+<SOS>Ws = sorted(W, reverse = True)<tab>Wと((reverse, 真))からなる辞書をソートした列をWsとする<EOS>
+<SOS>Ks = sorted(K, reverse = True)<tab>Kと((reverse, 真))からなる辞書をソートした列をKsとする<EOS>
+<SOS>w = 0<tab>0をwとする<EOS>
+<SOS>k = 0<tab>0をkとする<EOS>
+<SOS>for i  in range(3)  :<tab>'0から3未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print(w, k)<tab>wとkを出力する<EOS>
+<SOS>A = [i for i in range(1, 31)]<tab>{{'1から31未満までの数列}}の各要素をiとし、iの列をAとする<EOS>
+<SOS>N = []<tab>空列をNとする<EOS>
+<SOS>for i  in range(28)  :<tab>'0から28未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>N.append(n)<tab>N.append(n)<EOS>
+<SOS>R = list(set(A) - set(N))<tab>'Aの集合からNの集合を引いた値のリストをRとする<EOS>
+<SOS>print(min(R))<tab>Rの最小値を出力する<EOS>
+<SOS>print(max(R))<tab>Rの最大値を出力する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>X = [int(x) for x in input().split()]<tab>{{入力された文字列を空白で分割した列}}の各要素をxとし、xの整数値の列をXとする<EOS>
+<SOS>sub = max(X) - min(X)<tab>Xの最大値からXの最小値を引いた値をsubとする<EOS>
+<SOS>if sub % 2 == 0  :<tab>subを2で割った余りが0のとき、<EOS>
+<SOS>print(sub // 2)<tab>subを2で割った商を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n, k  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にnとkとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>M = []<tab>空列をMとする<EOS>
+<SOS>for i  in range(10)  :<tab>'0から10未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>M.append(int(input()))<tab>M.append(int(input()))<EOS>
+<SOS>Ms = sorted(M, reverse = True)<tab>Mと((reverse, 真))からなる辞書をソートした列をMsとする<EOS>
+<SOS>for j  in range(3)  :<tab>'0から3未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>print(Ms[j])<tab>Ms(j)を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>print(input().upper())<tab>入力された文字列を英大文字に変換した文字列を出力する<EOS>
+<SOS>print(input().swapcase())<tab>入力された文字列の英大文字を英小文字、英小文字を英大文字に変換した文字列を出力する<EOS>
+<SOS>a = "abcdefghijklmnopqrstuvwxyz"<tab>"abcdefghijklmnopqrstuvwxyz"をaとする<EOS>
+<SOS>A = [0 for i in range(26)]<tab>{{'0から26未満までの数列}}の各要素をiとし、0の列をAとする<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>for j  in range(26)  :<tab>'0から26未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>print(a[j], ":", A[j])<tab>a(j)、":"、A(j)を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = input()<tab>入力された文字列をnとする<EOS>
+<SOS>if n == "0"  :<tab>nが"0"のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>n = input()<tab>入力された文字列をnとする<EOS>
+<SOS>KUPC = ["K", "U", "P", "C"]<tab>("K"、"U"、"P"、"C")からなる列をKUPCとする<EOS>
+<SOS>kupc = [0 for i in range(4)]<tab>{{'0から4未満までの数列}}の各要素をiとし、0の列をkupcとする<EOS>
+<SOS>for i  in range(len(n))  :<tab>'0からnの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if n[i] in KUPC  :<tab>n(i)がKUPCに含まれるとき、<EOS>
+<SOS>print(min(kupc))<tab>kupcの最小値を出力する<EOS>
+<SOS>W = input()<tab>入力された文字列をWとする<EOS>
+<SOS>cnt = 0<tab>0をcntとする<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>t = input()<tab>入力された文字列をtとする<EOS>
+<SOS>if t == "END_OF_TEXT"  :<tab>tが"END_OF_TEXT"のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>print(cnt)<tab>cntを出力する<EOS>
+<SOS>s = input()<tab>入力された文字列をsとする<EOS>
+<SOS>p = input()<tab>入力された文字列をpとする<EOS>
+<SOS>S = s * 2<tab>sに2を掛けた値をSとする<EOS>
+<SOS>if p in S  :<tab>pがSに含まれるとき、<EOS>
+<SOS>print("Yes")<tab>"Yes"を出力する<EOS>
+<SOS>T = input()<tab>入力された文字列をTとする<EOS>
+<SOS>P = input()<tab>入力された文字列をPとする<EOS>
+<SOS>l = len(P)<tab>Pの長さをlとする<EOS>
+<SOS>for i  in range(len(T) - l + 1)  :<tab>'0から{{Tの長さからlを引いた値}}に1を加えた値未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if T[i : i + l] == P  :<tab>Tの位置iから位置{{iにlを加えた値}}までの部分がPのとき、<EOS>
+<SOS>print(i)<tab>iを出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>C = input()<tab>入力された文字列をCとする<EOS>
+<SOS>if C == "-"  :<tab>Cが"-"のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>t = 0<tab>0をtとする<EOS>
+<SOS>h = 0<tab>0をhとする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>T, H  = map(str, input().split())<tab>map(str,入力された文字列を空白で分割した列)を展開し順にTとHとする<EOS>
+<SOS>if T > H  :<tab>TがHより大きいとき、<EOS>
+<SOS>elif T < H  :<tab>('TがHより小さい',)<EOS>
+<SOS>print(t, h)<tab>tとhを出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>d1 = input()<tab>入力された文字列をd1とする<EOS>
+<SOS>if d1 == "0"  :<tab>d1が"0"のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>m, f, r  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にm、f、rとする<EOS>
+<SOS>if m == -1 and f == -1 and r == -1  :<tab>{{mが-1}}、かつ{{fが-1かどうか}}、かつrが-1のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n, x  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にnとxとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>S = [i for i in range(1, 14)]<tab>{{'1から14未満までの数列}}の各要素をiとし、iの列をSとする<EOS>
+<SOS>H = [i for i in range(1, 14)]<tab>{{'1から14未満までの数列}}の各要素をiとし、iの列をHとする<EOS>
+<SOS>C = [i for i in range(1, 14)]<tab>{{'1から14未満までの数列}}の各要素をiとし、iの列をCとする<EOS>
+<SOS>D = [i for i in range(1, 14)]<tab>{{'1から14未満までの数列}}の各要素をiとし、iの列をDとする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>m, r  = map(str, input().split())<tab>map(str,入力された文字列を空白で分割した列)を展開し順にmとrとする<EOS>
+<SOS>if m == "S"  :<tab>mが"S"のとき、<EOS>
+<SOS>S.remove(int(r))<tab>Sからrの整数値を取り除いた集まり<EOS>
+<SOS>elif m == "H"  :<tab>('mが"H"の',)<EOS>
+<SOS>H.remove(int(r))<tab>Hからrの整数値を取り除いた集まり<EOS>
+<SOS>elif m == "C"  :<tab>('mが"C"の',)<EOS>
+<SOS>C.remove(int(r))<tab>Cからrの整数値を取り除いた集まり<EOS>
+<SOS>if len(S) > 0  :<tab>Sの長さが0より大きいとき、<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print("S", S[i])<tab>"S"とS(i)を出力する<EOS>
+<SOS>if len(H) > 0  :<tab>Hの長さが0より大きいとき、<EOS>
+<SOS>for i  in range(len(H))  :<tab>'0からHの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print("H", H[i])<tab>"H"とH(i)を出力する<EOS>
+<SOS>if len(C) > 0  :<tab>Cの長さが0より大きいとき、<EOS>
+<SOS>for i  in range(len(C))  :<tab>'0からCの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print("C", C[i])<tab>"C"とC(i)を出力する<EOS>
+<SOS>if len(D) > 0  :<tab>Dの長さが0より大きいとき、<EOS>
+<SOS>for i  in range(len(D))  :<tab>'0からDの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print("D", D[i])<tab>"D"とD(i)を出力する<EOS>
+<SOS>n, m  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にnとmとする<EOS>
+<SOS>A = []<tab>空列をAとする<EOS>
+<SOS>B = []<tab>空列をBとする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>A.append([int(a) for a in input().split()])<tab>A.append([int(a) for a in input().split()])<EOS>
+<SOS>for j  in range(m)  :<tab>'0からm未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>B.append(int(input()))<tab>B.append(int(input()))<EOS>
+<SOS>C = []<tab>空列をCとする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>c = 0<tab>0をcとする<EOS>
+<SOS>for j  in range(m)  :<tab>'0からm未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>C.append(c)<tab>C.append(c)<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>print(C[i])<tab>C(i)を出力する<EOS>
+<SOS>n, m, l  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にn、m、lとする<EOS>
+<SOS>A = []<tab>空列をAとする<EOS>
+<SOS>B = []<tab>空列をBとする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>A.append([int(a) for a in input().split()])<tab>A.append([int(a) for a in input().split()])<EOS>
+<SOS>for j  in range(m)  :<tab>'0からm未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>B.append([int(b) for b in input().split()])<tab>B.append([int(b) for b in input().split()])<EOS>
+<SOS>C = []<tab>空列をCとする<EOS>
+<SOS>L = []<tab>空列をLとする<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>for i  in range(l)  :<tab>'0からl未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>for j  in range(n)  :<tab>'0からn未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>for k  in range(m)  :<tab>'0からm未満までの数列の各要素を順にkとして、繰り返す<EOS>
+<SOS>L.append(s)<tab>L.append(s)<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>C.append(L[i * n : i * n + n])<tab>C.append(L[i * n : i * n + n])<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>for j  in range(l)  :<tab>'0からl未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>if j == l - 1  :<tab>jがlから1を引いた値のとき、<EOS>
+<SOS>print(C[j][i])<tab>C(j)(i)を出力する<EOS>
+<SOS>r, c  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にrとcとする<EOS>
+<SOS>A = []<tab>空列をAとする<EOS>
+<SOS>for i  in range(r)  :<tab>'0からr未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>A.append([int(a) for a in input().split()])<tab>A.append([int(a) for a in input().split()])<EOS>
+<SOS>A[i].append(sum(A[i]))<tab>A[i].append(sum(A[i]))<EOS>
+<SOS>S = []<tab>空列をSとする<EOS>
+<SOS>for i  in range(c + 1)  :<tab>'0からcに1を加えた値未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>s = 0<tab>0をsとする<EOS>
+<SOS>for j  in range(r)  :<tab>'0からr未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>S.append(s)<tab>S.append(s)<EOS>
+<SOS>A.append(S)<tab>A.append(S)<EOS>
+<SOS>for i  in range(r + 1)  :<tab>'0からrに1を加えた値未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>for j  in range(c + 1)  :<tab>'0からcに1を加えた値未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>if j == c  :<tab>jがcのとき、<EOS>
+<SOS>print(A[i][j])<tab>A(i)(j)を出力する<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>nn = n<tab>nをnnとする<EOS>
+<SOS>N = []<tab>空列をNとする<EOS>
+<SOS>print(n, ":", sep = "", end = " ")<tab>n、":"、((sep, "")と(end, " "))からなる辞書を出力する<EOS>
+<SOS>if n % 2 == 0  :<tab>nを2で割った余りが0のとき、<EOS>
+<SOS>while n % 2 == 0  :<tab>nを2で割った余りが0の間、繰り返す<EOS>
+<SOS>N.append(2)<tab>N.append(2)<EOS>
+<SOS>for i  in range(3, int(nn ** (1 / 2)) + 1, 2)  :<tab>'3からnnの(1 / 2)の組乗の整数値に1を加えた値未満までの2間隔の数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>while n % i == 0  :<tab>nをiで割った余りが0の間、繰り返す<EOS>
+<SOS>N.append(i)<tab>N.append(i)<EOS>
+<SOS>if n != 1  :<tab>nが1と等しくないとき、<EOS>
+<SOS>N.append(n)<tab>N.append(n)<EOS>
+<SOS>if len(N) == 0  :<tab>Nの長さが0のとき、<EOS>
+<SOS>print(n)<tab>nを出力する<EOS>
+<SOS>m, n  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にmとnとする<EOS>
+<SOS>mod = 1000000007<tab>1000000007をmodとする<EOS>
+<SOS>print(pow(m, n, mod))<tab>mのn乗に対するmodの剰余を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>a, b  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にaとbとする<EOS>
+<SOS>if a == 0  :<tab>aが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>import math<tab>mathモジュールを用いる<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>A = [int(a) for a in input().split()]<tab>{{入力された文字列を空白で分割した列}}の各要素をaとし、aの整数値の列をAとする<EOS>
+<SOS>ans = A[0]<tab>Aの最初値をansとする<EOS>
+<SOS>for i  in range(1, n)  :<tab>'1からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>ans = ans * A[i] // math.gcd(ans, A[i])<tab>ansにA(i)を掛けた値をmath.gcd(ans, A[i])で割った商をansとする<EOS>
+<SOS>print(ans)<tab>ansを出力する<EOS>
+<SOS>import math<tab>mathモジュールを用いる<EOS>
+<SOS>x, y  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にxとyとする<EOS>
+<SOS>print(math.gcd(x, y))<tab>math.gcd(x, y)を出力する<EOS>
+<SOS>import math<tab>mathモジュールを用いる<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>cnt = 0<tab>0をcntとする<EOS>
+<SOS>for i  in range(2, int(math.sqrt(a)) + 1)  :<tab>'2からmath.sqrt(a)の整数値に1を加えた値未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if a % i == 0  :<tab>aをiで割った余りが0のとき、<EOS>
+<SOS>return False<tab>偽を関数出力とする<EOS>
+<SOS>return True<tab>真を関数出力とする<EOS>
+<SOS>for i  in range(n)  :<tab>'0からn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if prime(int(input()))  :<tab>prime(入力された文字列の整数値)のとき、<EOS>
+<SOS>print(cnt)<tab>cntを出力する<EOS>
+<SOS>import re<tab>reモジュールを用いる<EOS>
+<SOS>I = input().split()<tab>入力された文字列を空白で分割した列をIとする<EOS>
+<SOS>S = []<tab>空列をSとする<EOS>
+<SOS>for i  in range(len(I))  :<tab>'0からIの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>I[i]  = re.split("[,.]", I[i])<tab>文字列I(i)を正規表現"[,.]"で分割した文字列リストをI[i] にする<EOS>
+<SOS>if 2 < len(I[i][0]) and len(I[i][0]) < 7  :<tab>2がI(i)の最初値の長さより小さく、かつI(i)の最初値の長さが7より小さいとき、<EOS>
+<SOS>S.append(I[i][0])<tab>S.append(I[i][0])<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if i == len(S) - 1  :<tab>iがSの長さから1を引いた値のとき、<EOS>
+<SOS>print(S[i])<tab>S(i)を出力する<EOS>
+<SOS>S = input()<tab>入力された文字列をSとする<EOS>
+<SOS>cnt = -1<tab>-1をcntとする<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if i == len(S) - 1  :<tab>iがSの長さから1を引いた値のとき、<EOS>
+<SOS>print(S[0])<tab>Sの最初値を出力する<EOS>
+<SOS>A = [chr(i) for i in range(65, 65 + 26)]<tab>{{'65から{{65に26を加えた値}}未満までの数列}}の各要素をiとし、文字コードiの文字の列をAとする<EOS>
+<SOS>D = [chr(i) for i in range(68, 68 + 23)]<tab>{{'68から{{68に23を加えた値}}未満までの数列}}の各要素をiとし、文字コードiの文字の列をDとする<EOS>
+<SOS>D.append("A")<tab>D.append("A")<EOS>
+<SOS>D.append("B")<tab>D.append("B")<EOS>
+<SOS>D.append("C")<tab>D.append("C")<EOS>
+<SOS>n = input()<tab>入力された文字列をnとする<EOS>
+<SOS>ANS = []<tab>空列をANSとする<EOS>
+<SOS>for i  in range(len(n))  :<tab>'0からnの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>ANS.append(A[D.index(n[i])])<tab>ANS.append(A[D.index(n[i])])<EOS>
+<SOS>for i  in range(len(ANS))  :<tab>'0からANSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if i == len(ANS) - 1  :<tab>iがANSの長さから1を引いた値のとき、<EOS>
+<SOS>print(ANS[i])<tab>ANS(i)を出力する<EOS>
+<SOS>S = input().split()<tab>入力された文字列を空白で分割した列をSとする<EOS>
+<SOS>l = 0<tab>0をlとする<EOS>
+<SOS>n = 0<tab>0をnとする<EOS>
+<SOS>L = "a"<tab>"a"をLとする<EOS>
+<SOS>N = "a"<tab>"a"をNとする<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if S.count(S[i]) > n  :<tab>S内のS(i)の出現をカウントした整数がnより大きいとき、<EOS>
+<SOS>n = S.count(S[i])<tab>S内のS(i)の出現をカウントした整数をnとする<EOS>
+<SOS>N = S[i]<tab>S(i)をNとする<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if len(S[i]) > l  :<tab>S(i)の長さがlより大きいとき、<EOS>
+<SOS>l = len(S[i])<tab>S(i)の長さをlとする<EOS>
+<SOS>L = S[i]<tab>S(i)をLとする<EOS>
+<SOS>print(N, L)<tab>NとLを出力する<EOS>
+<SOS>s = input()<tab>入力された文字列をsとする<EOS>
+<SOS>S = []<tab>空列をSとする<EOS>
+<SOS>a = "apple"<tab>"apple"をaとする<EOS>
+<SOS>p = "peach"<tab>"peach"をpとする<EOS>
+<SOS>A = []<tab>空列をAとする<EOS>
+<SOS>P = []<tab>空列をPとする<EOS>
+<SOS>for i  in range(len(s))  :<tab>'0からsの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>S.append(s[i])<tab>S.append(s[i])<EOS>
+<SOS>for i  in range(5)  :<tab>'0から5未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>A.append(a[i])<tab>A.append(a[i])<EOS>
+<SOS>P.append(p[i])<tab>P.append(p[i])<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if S[i : i + 5] == A  :<tab>Sの位置iから位置{{iに5を加えた値}}までの部分がAのとき、<EOS>
+<SOS>S[i : i + 5]  = P<tab>PをS[i : i + 5] にする<EOS>
+<SOS>elif S[i : i + 5] == P  :<tab>('Sの位置iから位置{{iに5を加えた値}}までの部分がPの',)<EOS>
+<SOS>S[i : i + 5]  = A<tab>AをS[i : i + 5] にする<EOS>
+<SOS>for i  in range(len(S))  :<tab>'0からSの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if i == len(S) - 1  :<tab>iがSの長さから1を引いた値のとき、<EOS>
+<SOS>print(S[i])<tab>S(i)を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>x, y, s  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にx、y、sとする<EOS>
+<SOS>if x == 0  :<tab>xが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n, m  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にnとmとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>import math<tab>mathモジュールを用いる<EOS>
+<SOS>P = []<tab>空列をPとする<EOS>
+<SOS>Max = 123456 * 2<tab>123456に2を掛けた値をMaxとする<EOS>
+<SOS>D = list(range(2, Max))<tab>''2からMax未満までの数列のリストをDとする<EOS>
+<SOS>limit = math.sqrt(Max)<tab>math.sqrt(Max)をlimitとする<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>p = D[0]<tab>Dの最初値をpとする<EOS>
+<SOS>if limit <= p  :<tab>limitがp以下のとき、<EOS>
+<SOS>return P<tab>Pを関数出力とする<EOS>
+<SOS>P.append(p)<tab>P.append(p)<EOS>
+<SOS>D = [d for d in D if d % p != 0]<tab>Dの各要素をdとし、{{{{dをpで割った余り}}が0と等しくない}}ときのdの列をDとする<EOS>
+<SOS>e = Era(P, Max)<tab>Era(P,Max)をeとする<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>n = int(input())<tab>入力された文字列の整数値をnとする<EOS>
+<SOS>if n == 0  :<tab>nが0のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>N, T, E  = map(int, input().split())<tab>map(整数,入力された文字列を空白で分割した列)を展開し順にN、T、Eとする<EOS>
+<SOS>X = list(map(int, input().split()))<tab>'map(整数,{{入力された文字列を空白で分割した列}})のリストをXとする<EOS>
+<SOS>time = [i for i in range(T - E, T + E + 1)]<tab>'{{TからEを引いた値}}から{{{{TにEを加えた値}}に1を加えた値}}未満までの数列の各要素をiとし、iの列をtimeとする<EOS>
+<SOS>clock = -2<tab>-2をclockとする<EOS>
+<SOS>for i  in range(len(X))  :<tab>'0からXの長さ未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>for j  in range(len(time))  :<tab>'0からtimeの長さ未満までの数列の各要素を順にjとして、繰り返す<EOS>
+<SOS>if time[j] % X[i] == 0  :<tab>time(j)をX(i)で割った余りが0のとき、<EOS>
+<SOS>clock = X.index(X[i])<tab>X.index(X[i])をclockとする<EOS>
+<SOS>print(clock + 1)<tab>clockに1を加えた値を出力する<EOS>
+<SOS>while True :<tab>真の間、繰り返す<EOS>
+<SOS>hantei1 = hantei2=  hantei3 = 0<tab>0をhantei3をhantei2とするとするをhantei1とする<EOS>
+<SOS>n = input()<tab>入力された文字列をnとする<EOS>
+<SOS>if n == '.' :<tab>nが'.'のとき、<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>l_n = list(n)<tab>'nのリストをl_nとする<EOS>
+<SOS>lenn = len(l_n)<tab>l_nの長さをlennとする<EOS>
+<SOS>kakko = []<tab>空列をkakkoとする<EOS>
+<SOS>lenkakko = len(kakko)<tab>kakkoの長さをlenkakkoとする<EOS>
+<SOS>for i  in range(lenn) :<tab>'0からlenn未満までの数列の各要素を順にiとして、繰り返す<EOS>
+<SOS>if l_n.count('(') != l_n.count(')') or l_n.count('[') != l_n.count(']') :<tab>{{l_n内の'('の出現をカウントした整数}}が{{l_n内の')'の出現をカウントした整数}}と等しくなく、または{{l_n内の'['の出現をカウントした整数}}が{{l_n内の']'の出現をカウントした整数}}と等しくないとき、<EOS>
+<SOS>print('no')<tab>'no'を出力する<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>if l_n[i] == '(' :<tab>l_n(i)が'('のとき、<EOS>
+<SOS>kakko.append('maru')<tab>kakko.append('maru')<EOS>
+<SOS>if l_n[i] == '[' :<tab>l_n(i)が'['のとき、<EOS>
+<SOS>kakko.append('shikaku')<tab>kakko.append('shikaku')<EOS>
+<SOS>if len(kakko) != 0 :<tab>kakkoの長さが0と等しくないとき、<EOS>
+<SOS>if kakko[-1] == 'maru' :<tab>kakko(-1)が'maru'のとき、<EOS>
+<SOS>if l_n[i] == ']' :<tab>l_n(i)が']'のとき、<EOS>
+<SOS>print('no')<tab>'no'を出力する<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>if kakko[-1] == 'shikaku' :<tab>kakko(-1)が'shikaku'のとき、<EOS>
+<SOS>if l_n[i] == ')' :<tab>l_n(i)が')'のとき、<EOS>
+<SOS>print('no')<tab>'no'を出力する<EOS>
+<SOS>break<tab>繰り返すのを中断する<EOS>
+<SOS>if l_n[i] == ')' or l_n[i] == ']' :<tab>l_n(i)が')'、またはl_n(i)が']'のとき、<EOS>
+<SOS>kakko.pop(-1)<tab>kakko.pop(-1)<EOS>
+<SOS>if hantei1 == 0 :<tab>hantei1が0のとき、<EOS>
+<SOS>print('yes')<tab>'yes'を出力する<EOS>
