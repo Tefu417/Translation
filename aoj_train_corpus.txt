@@ -1,0 +1,1772 @@
+<SOS>print ( A + ( 31 - B ) * 50 )<tab>A に 3 1 から B を 引 いた 値に 50 を 掛 け た 値 を加えた 値 を出力する<EOS>
+<SOS>return - A <= B and B <= A<tab>- A が B 以下 かつ B が A 以下 かどうか を返す<EOS>
+<SOS>for A in range ( B [ C ] , D , E [ C ] ) :<tab>B の C 番 目 から D 未 満 までの E の C 番 目 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = 0 if B == '+' else 1<tab>B が ' + ' と 等 しい とき 0 、 そうでなければ 1 を A とする<EOS>
+<SOS>return False<tab>偽 を返す<EOS>
+<SOS>unite ( A * 12 + B , C * 12 + D )<tab>un it e ( A * 12 + B , C * 12 + D )<EOS>
+<SOS>print ( 1 if topological_sort ( A , B ) else 0 )<tab>to po log ical _ s ort ( A , B ) の とき 1 、 そうでなければ 0 を出力する<EOS>
+<SOS>if EQ ( A [ B ] . imag , 4 ) and EQ ( A [ C ] . imag , 4 ) :<tab>E Q ( A [ B ] . im ag , 4 ) かつ E Q ( A [ C ] . im ag , 4 ) の とき 、<EOS>
+<SOS>A [ 1 ] = [ 0 ] * B<tab>( 0 ) からなる 列 の B 回 分 の 列 を A の 1 番 目 にする<EOS>
+<SOS>for A in range ( B - 1 , 0 , - 1 ) :<tab>B から 1 を 引 いた 値 から 0 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = C [ 0 ] , B - C [ 0 ]<tab>C の先頭 、 B から C の先頭 を 引 いた 値を A 、 B とする<EOS>
+<SOS>A [ B ] = A [ B + 1 ] = C<tab>C を A の B に 1 を加えた 値 番 目 とする を A の B 番 目 にする<EOS>
+<SOS>A = complex ( B [ 2 ] , B [ 3 ] )<tab>B の 2 番 目 を 実 部 、 B の 3 番 目 を 虚 部 とした 複素数 を A とする<EOS>
+<SOS>A = B + C + ( B * D ) // 100 + ( C * D ) // 100<tab>B に C を加えた 値に B に D を 掛 け た 値を 100 で 割 った 商 を加えた 値に C に D を 掛 け た 値を 100 で 割 った 商 を加えた 値を A とする<EOS>
+<SOS>A , B = list ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>A = 1<tab>1 を A とする<EOS>
+<SOS>if A . find ( B ) >= 0 :<tab>A の先頭 から B を 探 して 見つかった 位置 が 0 以上の とき 、<EOS>
+<SOS>A >>= 1<tab>A を 1 だけ 右 シフト する<EOS>
+<SOS>A = bisect_left ( B , B [ C ] - B [ D ] ) - 1<tab>b is ect _ left ( B , B [ C ]- B [ D ] ) から 1 を 引 いた 値を A とする<EOS>
+<SOS>A [ B ] = int ( input ( ) )<tab>入力された 文字列 の 整数値 を A の B 番 目 にする<EOS>
+<SOS>if A == 2 and B == 2 :<tab>A が 2 と 等 しく かつ B が 2 と 等 しい とき 、<EOS>
+<SOS>A += [ B + ( C << 18 ) for C in range ( D ) ]<tab>A を 0 から D 未 満 までの 数 列 の 各要素 を C とし 、 B に C を 18 だけ 左 シフト した 値 を加えた 値の 列 だけ 増加 させる<EOS>
+<SOS>for A in range ( 0 , 10 ) :<tab>0 から 10 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . ws [ B ] = C<tab>C を A の w s の B 番 目 にする<EOS>
+<SOS>print ( 'Data ' , A + 1 , ':' , sep = '' )<tab>区切り なしで ' Data ▁ ' 、 A に 1 を加えた 値 、 ' : ' を出力する<EOS>
+<SOS>A = [ 0 ] * 10<tab>( 0 ) からなる 列 の 10 回 分 の 列 を A とする<EOS>
+<SOS>check ( A , B [ C ] [ 1 ] )<tab>ch ec k ( A , B [ C ] [ 1 ] )<EOS>
+<SOS>A = A . replace ( 'apple' , '_____' )<tab>A 内の ' app le ' を ' _ __ __ ' で 置き換え た 文字列を A とする<EOS>
+<SOS>A = [ [ 0 , 1 ] , [ 1 , 0 ] , [ 0 , - 1 ] , [ - 1 , 0 ] ]<tab>( ( 0 、 1 ) からなる 列 、 ( 1 、 0 ) からなる 列 、 ( 0 、 -1 ) からなる 列 、 ( -1 、 0 ) からなる 列 ) からなる 列 を A とする<EOS>
+<SOS>A , B , C , D = list ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>for A in D [ B [ C ] ] :<tab>辞書 の B の C 番 目 番目の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] [ C ] |= 4<tab>A の B 番目の C 番 目 を 4 と の 論理 和 にする<EOS>
+<SOS>A = False<tab>偽 を A とする<EOS>
+<SOS>if A [ B ] <= A [ C [ D - 1 ] ] :<tab>A の B 番 目 が A の C の D から 1 を 引 いた 値 番 目 番 目 以下の とき 、<EOS>
+<SOS>A = ( B + C ) / 2<tab>B に C を加えた 値を 2 で 割 った 値を A とする<EOS>
+<SOS>A , B = [ ] , [ ]<tab>空 列 、 空 列 を A 、 B とする<EOS>
+<SOS>A . append ( A [ 0 ] )<tab>A の 末 尾 に A の先頭 を追加する<EOS>
+<SOS>A = B [ input ( ) . strip ( ) ]<tab>B の 入力された 文字列 の 両 端 から 空白 改行 を取り 除 いた 文字列 番 目 を A とする<EOS>
+<SOS>A += B * C<tab>A を B に C を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>if A [ B ] [ C ] [ D ] < E :<tab>A の B 番目の C 番目の D 番 目 が E より 小さい とき 、<EOS>
+<SOS>A . sort ( key = lambda x : ( - B [ 0 ] , B [ 1 ] ) )<tab>key を x を パラメータ として ( - B の先頭 、 x の 1 番 目 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>A += 12<tab>A を 12 だけ 増加 させる<EOS>
+<SOS>A , B = calc ( )<tab>c al c () を 展開 し 順に A 、 B とする<EOS>
+<SOS>print ( A , B , C , D )<tab>A 、 B 、 C 、 D を出力する<EOS>
+<SOS>for A , B in C [ : : - 1 ] :<tab>C の 逆 順 の 各要素 を 順に A 、 B として 、 繰り返す<EOS>
+<SOS>A = [ B ] * 2<tab>( B ) からなる 列 の 2 回 分 の 列 を A とする<EOS>
+<SOS>A = B [ C - 1 ]<tab>B の C から 1 を 引 いた 値 番 目 を A とする<EOS>
+<SOS>A , B = list ( map ( int , C . split ( ) ) )<tab>C を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>if prev_permutation ( A ) :<tab>pre v _ per m u t ation ( A ) の とき 、<EOS>
+<SOS>print ( * sorted ( list ( set ( A ) ) ) )<tab>A の集合 の リストを ソート した 列 を 展開 して を出力する<EOS>
+<SOS>A = bisect_left ( B , C , 0 , D )<tab>b is ect _ left ( B , C , 0 , D ) を A とする<EOS>
+<SOS>if A . par [ B ] < 0 :<tab>A の p ar の B 番 目 が 0 より 小さい とき 、<EOS>
+<SOS>A = [ [ [ B for C in range ( D + 1 ) ] for E in range ( D + 1 ) ] for F in range ( G + 1 ) ]<tab>0 から G に 1 を加えた 値 未 満 までの 数 列 の 各要素 を F とし 、 0 から D に 1 を加えた 値 未 満 までの 数 列 の 各要素 を E とし 、 0 から D に 1 を加えた 値 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 の 列 を A とする<EOS>
+<SOS>A , B = 0 , True<tab>0 、 真 を A 、 B とする<EOS>
+<SOS>A [ B ] [ C ] = A [ D ] [ C ]<tab>A の D 番目の C 番 目 を A の B 番目の C 番 目 にする<EOS>
+<SOS>print ( * [ A // B for A in C ] )<tab>C の 各要素 を A とし 、 A を B で 割 った 商 の 列 を 展開 して を出力する<EOS>
+<SOS>B = ( A - 61 ) // 20 + 1<tab>A から 6 1 を 引 いた 値を 20 で 割 った 商 に 1 を加えた 値を そうでなければ 、 とする<EOS>
+<SOS>if A < 5 :<tab>A が 5 より 小さい とき 、<EOS>
+<SOS>A = [ [ 0 , 1 , 2 , 3 , 4 , 5 , 6 ] , [ 0 , 2 , 6 , 3 , 4 , 1 , 5 ] , [ 0 , 4 , 2 , 1 , 6 , 5 , 3 ] , [ 0 , 3 , 2 , 6 , 1 , 5 , 4 ] , [ 0 , 5 , 1 , 3 , 4 , 6 , 2 ] ]<tab>( ( 0 、 1 、 2 、 3 、 4 、 5 、 6 ) からなる 列 、 ( 0 、 2 、 6 、 3 、 4 、 1 、 5 ) からなる 列 、 ( 0 、 4 、 2 、 1 、 6 、 5 、 3 ) からなる 列 、 ( 0 、 3 、 2 、 6 、 1 、 5 、 4 ) からなる 列 、 ( 0 、 5 、 1 、 3 、 4 、 6 、 2 ) からなる 列 ) からなる 列 を A とする<EOS>
+<SOS>C = 0<tab>0 を C とする<EOS>
+<SOS>A , B = C . popleft ( )<tab>C . p op left () を 展開 し 順に A 、 B とする<EOS>
+<SOS>print ( math . factorial ( int ( input ( ) ) ) )<tab>math . factorial ( int ( in put () ) ) を出力する<EOS>
+<SOS>A = { 0 : 'IDENTICAL' , 1 : 'CLOSE' , 2 : 'DIFFERENT' }<tab>( ( 0 , ▁ ' IDE N T IC AL ' ) 、 ( 1, ▁ ' CL OS E ' ) 、 ( 2 , ▁ ' D IF F E RE N T ' ) ) からなる 辞書 を A とする<EOS>
+<SOS>B = A<tab>A を そうでなければ 、 とする<EOS>
+<SOS>A = 2 if B > C else - 2<tab>B が C より 大きい とき 2 、 そうでなければ -2 を A とする<EOS>
+<SOS>A = dijkstra ( B , C , D )<tab>d i j k st ra ( B , C , D ) を A とする<EOS>
+<SOS>A , B = 0 , 31<tab>0 、 3 1 を A 、 B とする<EOS>
+<SOS>rec ( 0 , 0 )<tab>re c ( 0 , 0 )<EOS>
+<SOS>A [ B ] [ 2 * C - 1 - D - B ] = E<tab>E を A の B 番目の 2 に C を 掛 け た 値 から 1 を 引 いた 値 から D を 引 いた 値 から B を 引 いた 値 番 目 にする<EOS>
+<SOS>B [ C ] = 1<tab>1 を B の C 番 目 にする<EOS>
+<SOS>A *= 3<tab>A を 3 倍 にする<EOS>
+<SOS>A . append ( complex ( B , C ) )<tab>A の 末 尾 に B を 実 部 、 C を 虚 部 とした 複素数 を追加する<EOS>
+<SOS>A = max ( - B [ C - D ] , E [ C - D ] )<tab>- B の C から D を 引 いた 値 番 目 、 E の C から D を 引 いた 値 番目の 最大 値を A とする<EOS>
+<SOS>A = B = C<tab>C を B とする を A とする<EOS>
+<SOS>A , B , C = 0 , - 1 , 0<tab>0 、 -1 、 0 を A 、 B 、 C とする<EOS>
+<SOS>while A < len ( B ) and B [ A ] == ']' :<tab>A が B の長さ より 小さく かつ B の A 番 目 が ' ] ' と 等 しい 間 、 以下 を 繰り返す<EOS>
+<SOS>A [ 1 ] = 0<tab>0 を A の 1 番 目 にする<EOS>
+<SOS>A [ chr ( ord ( 'A' ) + B ) ] = C<tab>C を A の 文字コード ' A ' の 順序 数 に B を加えた 値の 文字 番 目 にする<EOS>
+<SOS>rec ( A + 1 , B - C , C )<tab>re c ( A + 1, B - C , C )<EOS>
+<SOS>A = 10 ** len ( B )<tab>10 の B の長さ 乗 を A とする<EOS>
+<SOS>print ( ( A [ B ] * C [ B ] ) / C [ 0 ] )<tab>A の B 番 目 に C の B 番 目 を 掛 け た 値を C の先頭 で 割 った 値 を出力する<EOS>
+<SOS>A = B * C - ( C * ( C + 1 ) ) // 2<tab>B に C を 掛 け た 値 から C に C に 1 を加えた 値を 掛 け た 値を 2 で 割 った 商 を 引 いた 値を A とする<EOS>
+<SOS>A , B = [ 0 ] * 202 , [ 0 ] * 202<tab>( 0 ) からなる 列 の 20 2 回 分 の 列 、 ( 0 ) からなる 列 の 20 2 回 分 の 列 を A 、 B とする<EOS>
+<SOS>insort_left ( A , B )<tab>in s ort _ left ( A , B )<EOS>
+<SOS>if A [ B ] [ C - 1 ] < D :<tab>A の B 番目の C から 1 を 引 いた 値 番 目 が D より 小さい とき 、<EOS>
+<SOS>if A [ B ] == C [ D ] :<tab>A の B 番 目 が C の D 番 目 と 等 しい とき 、<EOS>
+<SOS>if A & 1 == 0 :<tab>[MASK] が 0 と 等 しい とき 、<EOS>
+<SOS>A = max ( A , B - C )<tab>A 、 B から C を 引 いた 値の 最大 値を A とする<EOS>
+<SOS>B -= 1<tab>B を 1 だけ 減少 させる<EOS>
+<SOS>A , B = C . find ( A ) , C . find ( B )<tab>C の先頭 から A を 探 して 見つかった 位置 、 C の先頭 から B を 探 して 見つかった 位置 を A 、 B とする<EOS>
+<SOS>if A != 0 and B != 0 and C != 0 :<tab>A が 0 と 等 しく なく かつ B が 0 と 等 しく なく かつ C が 0 と 等 しく ない とき 、<EOS>
+<SOS>if A == 'R' :<tab>A が ' R ' と 等 しい とき 、<EOS>
+<SOS>A , B , C = [ ] , set ( ) , set ( )<tab>空 列 、 集合 、 集合 を A 、 B 、 C とする<EOS>
+<SOS>if A [ B ] >= 'a' and A [ B ] <= 'z' :<tab>A の B 番 目 が ' a ' 以上 かつ A の B 番 目 が ' z ' 以下の とき 、<EOS>
+<SOS>if A [ B ] [ C ] > D :<tab>A の B 番目の C 番 目 が D より 大きい とき 、<EOS>
+<SOS>print ( 1 + A * ( A + 1 ) // 2 )<tab>1 に A に A に 1 を加えた 値を 掛 け た 値を 2 で 割 った 商 を加えた 値 を出力する<EOS>
+<SOS>print ( A - 2 * B )<tab>A から 2 に B を 掛 け た 値を 引 いた 値 を出力する<EOS>
+<SOS>A = B . replace ( 'X' , str ( C ) )<tab>B 内の ' X ' を C の 文字列 で 置き換え た 文字列を A とする<EOS>
+<SOS>A = [ [ ] for B in range ( 8 ) ]<tab>0 から 8 未 満 までの 数 列 の 各要素 を B とし 、 空 列 の 列 を A とする<EOS>
+<SOS>A += str ( B )<tab>A を B の 文字列 だけ 増加 させる<EOS>
+<SOS>A += 60 * B [ C ] + B [ C + 1 ]<tab>A を 60 に B の C 番 目 を 掛 け た 値に B の C に 1 を加えた 値 番 目 を加えた 値 だけ 増加 させる<EOS>
+<SOS>A , B = 0 , 0<tab>0 、 0 を A 、 B とする<EOS>
+<SOS>A [ B ] [ C ] [ D ] [ E ] += A [ B ] [ C - 1 ] [ D ] [ D ]<tab>A の B 番目の C 番目の D 番目の E 番 目 を A の B 番目の C から 1 を 引 いた 値 番目の D 番目の D 番 目 だけ 増加 させる<EOS>
+<SOS>A += B * C + D<tab>A を B に C を 掛 け た 値に D を加えた 値 だけ 増加 させる<EOS>
+<SOS>print ( A , '{:d}.{:02d}' . format ( B // 100 , B % 100 ) )<tab>A 、 ' { : d } . { : 0 2 d } ' . form at ( B / / 100 , B % 100 ) を出力する<EOS>
+<SOS>A , B , C = [ ] , [ ] , { }<tab>空 列 、 空 列 、 空 辞書 を A 、 B 、 C とする<EOS>
+<SOS>A [ B + C ] [ 1 ] = 17 * ( D & 1 ) + 3 * ( D % 3 ) + 19<tab>17 に [MASK] を 掛 け た 値に 3 に D を 3 で 割 った 余 り を 掛 け た 値 を加えた 値に 19 を加えた 値を A の B に C を加えた 値 番目の 1 番 目 にする<EOS>
+<SOS>A . iter = [ 0 ] * B<tab>( 0 ) からなる 列 の B 回 分 の 列 を A の it er にする<EOS>
+<SOS>A , B , C , D = map ( float , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に float を適用した 列 を 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>print ( min ( A ) , max ( A ) )<tab>A の 最小 値 、 A の 最大 値 を出力する<EOS>
+<SOS>A = list ( map ( int , input ( ) . split ( ) ) ) + [ - 1 ]<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 のリスト に ( -1 ) からなる 列 を加えた 値を A とする<EOS>
+<SOS>for A , B , C in D :<tab>D の 各要素 を 順に A 、 B 、 C として 、 繰り返す<EOS>
+<SOS>for A in range ( 5 - len ( B ) ) :<tab>0 から 5 から B の長さ を 引 いた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A [ B ] == '[' :<tab>A の B 番 目 が ' [ ' と 等 しい とき 、<EOS>
+<SOS>while len ( A ) :<tab>A の長さ の 間 、 以下 を 繰り返す<EOS>
+<SOS>A , B = map ( int , C . split ( ) )<tab>C を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>print ( len ( A ) )<tab>A の長さ を出力する<EOS>
+<SOS>if A == 1 or B == 1 :<tab>A が 1 と 等 しく または B が 1 と 等 しい とき 、<EOS>
+<SOS>A += ')'<tab>A を ' ) ' だけ 増加 させる<EOS>
+<SOS>setcontext ( Context ( prec = A , rounding = B ) )<tab>set con text ( C on text ( pre c = A , r ound ing = B ) )<EOS>
+<SOS>A [ B + 1 ] [ C + 1 ] = min ( A [ B + 1 ] [ C + 1 ] , A [ B ] [ C ] + D [ B ] * E [ C ] )<tab>A の B に 1 を加えた 値 番目の C に 1 を加えた 値 番 目 、 A の B 番目の C 番 目 に D の B 番 目 に E の C 番 目 を 掛 け た 値 を加えた 値の 最小 値を A の B に 1 を加えた 値 番目の C に 1 を加えた 値 番 目 にする<EOS>
+<SOS>A . size [ B ] += A . size [ C ]<tab>A の s ize の B 番 目 を A の s ize の C 番 目 だけ 増加 させる<EOS>
+<SOS>if A == 'X' :<tab>A が ' X ' と 等 しい とき 、<EOS>
+<SOS>A [ B ] [ C ] = D<tab>D を A の B 番目の C 番 目 にする<EOS>
+<SOS>if A . par [ B ] < A . par [ C ] :<tab>A の p ar の B 番 目 が A の p ar の C 番 目 より 小さい とき 、<EOS>
+<SOS>A [ B ] [ C ] [ D ] = E<tab>E を A の B 番目の C 番目の D 番 目 にする<EOS>
+<SOS>A = 2 - ( B & 1 )<tab>2 から [MASK] を 引 いた 値を A とする<EOS>
+<SOS>A [ B ] = A [ B - 1 ] + C<tab>A の B から 1 を 引 いた 値 番 目 に C を加えた 値を A の B 番 目 にする<EOS>
+<SOS>while A > 1 and cross ( B [ A - 1 ] - B [ A - 2 ] , C [ D ] - B [ A - 1 ] ) < 0 :<tab>A が 1 より 大きく かつ c ro s s ( B [ A -1 ]- B [ A -2 ] , C [ D ]- B [ A -1 ] ) が 0 より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A -= 3 * B<tab>A を 3 に B を 掛 け た 値 だけ 減少 させる<EOS>
+<SOS>if A <= B and C [ A ] == 0 :<tab>A が B 以下 かつ C の A 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A = { 'I' : 1 , 'V' : 5 , 'X' : 10 , 'L' : 50 , 'C' : 100 , 'D' : 500 , 'M' : 1000 }<tab>( ( ' I ' , ▁1 ) 、 ( ' V ' , ▁5 ) 、 ( ' X ' , ▁10 ) 、 ( ' L ' , ▁ 50 ) 、 ( ' C ' , ▁ 100 ) 、 ( ' D ' , ▁ 500 ) 、 ( ' M ' , ▁ 1000 ) ) からなる 辞書 を A とする<EOS>
+<SOS>A . append ( [ B , C , C - B ] )<tab>A の 末 尾 に ( B 、 C 、 C から B を 引 いた 値 ) からなる 列 を追加する<EOS>
+<SOS>A , B = C [ ord ( D [ E ] ) - F ] , G [ ord ( D [ E ] ) - F ]<tab>C の D の E 番目の 順序 数 から F を 引 いた 値 番 目 、 G の D の E 番目の 順序 数 から F を 引 いた 値 番 目 を A 、 B とする<EOS>
+<SOS>A [ B + C ] . append ( ( B + D , E [ C - D - 1 ] ) )<tab>A の B に C を加えた 値 番目の 末 尾 に ( B に D を加えた 値 、 E の C から D を 引 いた 値 から 1 を 引 いた 値 番 目 ) の 組 を追加する<EOS>
+<SOS>A , B = { } , [ ]<tab>空 辞書 、 空 列 を A 、 B とする<EOS>
+<SOS>A . power [ B ] += C<tab>A の p ow er の B 番 目 を C だけ 増加 させる<EOS>
+<SOS>for A in range ( 2 , B , 2 ) :<tab>2 から B 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( 0 , B , 2 ) :<tab>0 から B 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B [ A ] [ int ( C ) ]<tab>B の A 番目の C の 整数値 番 目 を A とする<EOS>
+<SOS>A = [ '' ] * 100<tab>( 空文字列 ) からなる 列 の 100 回 分 の 列 を A とする<EOS>
+<SOS>print ( * list ( str ( A [ B ] ) ) )<tab>A の B 番目の 文字列 の リストを 展開 して を出力する<EOS>
+<SOS>if A [ B ] > C [ D ] :<tab>A の B 番 目 が C の D 番 目 より 大きい とき 、<EOS>
+<SOS>print ( A - 1 )<tab>A から 1 を 引 いた 値 を出力する<EOS>
+<SOS>A = [ [ '' for B in range ( 5 ) ] for C in range ( 8 ) ]<tab>0 から 8 未 満 までの 数 列 の 各要素 を C とし 、 0 から 5 未 満 までの 数 列 の 各要素 を B とし 、 空文字列 の 列 の 列 を A とする<EOS>
+<SOS>A += ( B [ C ] . real - B [ C + 1 ] . real ) * ( B [ C ] . imag + B [ C + 1 ] . imag )<tab>A を B の C 番目の re al から B の C に 1 を加えた 値 番目の re al を 引 いた 値に B の C 番目の im ag に B の C に 1 を加えた 値 番目の im ag を加えた 値を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>if A >= 1 :<tab>A が 1 以上の とき 、<EOS>
+<SOS>for A in range ( int ( input ( ) ) ) :<tab>0 から 入力された 文字列 の 整数値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] [ 0 ] [ 0 ] = 0<tab>0 を A の B 番目の 先頭 の 0 番 目 にする<EOS>
+<SOS>A , B = list ( C . split ( '+' ) )<tab>C を ' + ' で 分割 した 字句 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>A = ( B * C ) // ( C + D )<tab>B に C を 掛 け た 値を C に D を加えた 値 で 割 った 商 を A とする<EOS>
+<SOS>A . sort ( key = lambda x : ( B [ 1 ] , B [ 0 ] ) )<tab>key を x を パラメータ として ( x の 1 番 目 、 x の先頭 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>A -= 2<tab>A を 2 だけ 減少 させる<EOS>
+<SOS>if A [ B ] [ 2 ] < C :<tab>A の B 番目の 2 番 目 が C より 小さい とき 、<EOS>
+<SOS>for A in range ( B + 1 , 2 * C + 1 ) :<tab>B に 1 を加えた 値 から 2 に C を 掛 け た 値に 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B : ] = 1<tab>1 を A の B 番 目 から 末 尾 までの 部分 列 にする<EOS>
+<SOS>B = C [ 0 ]<tab>C の先頭 を B とする<EOS>
+<SOS>return A<tab>A を返す<EOS>
+<SOS>for A in re . findall ( '[0-9]+' , B ) :<tab>B が 正規表現 ' [ 0 - 9 ] + ' に マッチ した 文字列 の 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>while A >= 0 and B [ A ] >= B [ A + 1 ] :<tab>A が 0 以上 かつ B の A 番 目 が B の A に 1 を加えた 値 番 目 以上の 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ 0 , 1 , 0 , - 1 ]<tab>( 0 、 1 、 0 、 -1 ) からなる 列 を A とする<EOS>
+<SOS>return - 1 if A <= 0 else 1<tab>A が 0 以下の とき -1 、 そうでなければ 1 を返す<EOS>
+<SOS>A , B = C , 0<tab>C 、 0 を A 、 B とする<EOS>
+<SOS>if re . match ( A , B ) :<tab>正規表現 A を B に マッチ させた 結果 の とき 、<EOS>
+<SOS>if A [ B + 2 ] == '[' :<tab>A の B に 2 を加えた 値 番 目 が ' [ ' と 等 しい とき 、<EOS>
+<SOS>A , B = d2t ( C [ D ] ) , d2t ( C [ D + 1 ] )<tab>d 2 t ( C [ D ] ) 、 d 2 t ( C [ D + 1 ] ) を A 、 B とする<EOS>
+<SOS>A = [ [ 0 for B in range ( C + 2 ) ] for D in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を D とし 、 0 から C に 2 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>print ( B [ A ] if A in B else 0 )<tab>A が 辞書 に含まれる とき 辞書 の A 番 目 、 そうでなければ 0 を出力する<EOS>
+<SOS>if len ( A ) > 1 and A [ 0 ] == '_' :<tab>A の長さ が 1 より 大きく かつ A の 0 番 目 が ' _ ' と 等 しい とき 、<EOS>
+<SOS>if ( A < B ) or ( A == B and C < D ) :<tab>A が B より 小さく または A が B と 等 しく かつ C が D より 小さい とき 、<EOS>
+<SOS>for A , B , C , D , E in F :<tab>F の 各要素 を 順に A 、 B 、 C 、 D 、 E として 、 繰り返す<EOS>
+<SOS>if len ( A ) == 4 and A in B :<tab>A の長さ が 4 と 等 しく かつ A が B に含まれる とき 、<EOS>
+<SOS>A , B = C . pop ( ) , C . pop ( )<tab>C の先頭 を取り 出した 値 、 C の先頭 を取り 出した 値を A 、 B とする<EOS>
+<SOS>A , B = factor ( B + 1 )<tab>f act or ( B + 1 ) を 展開 し 順に A 、 B とする<EOS>
+<SOS>A , B , C = 0 , 0 , 0<tab>0 、 0 、 0 を A 、 B 、 C とする<EOS>
+<SOS>A [ B ] -= 1<tab>A の B 番 目 を 1 だけ 減少 させる<EOS>
+<SOS>[ A . append ( B ) for B in range ( 0 , C + 1 ) ]<tab>0 から C に 1 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 A の 末 尾 に B を追加する の 列<EOS>
+<SOS>A = 0.01745329251994329576923690768489<tab>0.0 17 4 5 32 9 25 1994 32 9 5 7 6 9 2 36 90 7 68 4 89 を A とする<EOS>
+<SOS>for A in range ( 0 , len ( B ) , 5 ) :<tab>0 から B の長さ 未 満 までの 5 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = ( C - 1 ) // D + 1 , ( E - 1 ) // F + 1<tab>C から 1 を 引 いた 値を D で 割 った 商 に 1 を加えた 値 、 E から 1 を 引 いた 値を F で 割 った 商 に 1 を加えた 値を A 、 B とする<EOS>
+<SOS>if A < 10 and B [ C ] < 3 :<tab>A が 10 より 小さく かつ B の C 番 目 が 3 より 小さい とき 、<EOS>
+<SOS>print ( 31 )<tab>3 1 を出力する<EOS>
+<SOS>if A == B + 1 or A == B - 1 :<tab>A が B に 1 を加えた 値 と 等 しく または A が B から 1 を 引 いた 値 と 等 しい とき 、<EOS>
+<SOS>parse ( A , B [ C ] [ 0 ] )<tab>pars e ( A , B [ C ] [ 0 ] )<EOS>
+<SOS>A . heappush ( B , ( ( - C << D ) | E , E , C ) )<tab>A . he ap push ( B , ( ( - C < < D )| E , E , C ) )<EOS>
+<SOS>if A [ B ] [ C ] == 0 :<tab>A の B 番目の C 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>if A <= 1 :<tab>A が 1 以下の とき 、<EOS>
+<SOS>if A + 1 < B and C [ D ] [ A ] == C [ D ] [ A + 1 ] :<tab>A に 1 を加えた 値が B より 小さく かつ C の D 番目の A 番 目 が C の D 番目の A に 1 を加えた 値 番 目 と 等 しい とき 、<EOS>
+<SOS>if A [ 0 ] == '0' :<tab>A の 0 番 目 が ' 0 ' と 等 しい とき 、<EOS>
+<SOS>A [ B ] = 1<tab>1 を A の B 番 目 にする<EOS>
+<SOS>if A > B [ C ] :<tab>A が B の C 番 目 より 大きい とき 、<EOS>
+<SOS>return ( A + A // 4 - A // 100 + A // 400 + ( 13 * B + 8 ) // 5 + C ) % 7<tab>A + A / / 4 から A / / 100 を 引 いた 値に A を 400 で 割 った 商 を加えた 値に 13 * B に 8 を加えた 値を 5 で 割 った 商 を加えた 値に C を加えた 値を 7 で 割 った 余 り を返す<EOS>
+<SOS>A = [ 0 ] * 3<tab>( 0 ) からなる 列 の 3 回 分 の 列 を A とする<EOS>
+<SOS>A [ B ] [ C ] , A [ C ] [ B ] = D , D<tab>D 、 D を A の B 番目の C 番 目 、 A の C 番目の B 番 目 とする<EOS>
+<SOS>A , B = [ [ 0 for C in range ( 16 ) ] for D in range ( 20 ) ] , 0<tab>0 から 20 未 満 までの 数 列 の 各要素 を D とし 、 0 から 16 未 満 までの 数 列 の 各要素 を C とし 、 0 の 列 の 列 、 0 を A 、 B とする<EOS>
+<SOS>A = dijkstra ( B , C , D , E , F )<tab>d i j k st ra ( B , C , D , E , F ) を A とする<EOS>
+<SOS>if len ( set ( A ) ) == 1 :<tab>A の集合 の長さ が 1 と 等 しい とき 、<EOS>
+<SOS>if A > 20 :<tab>A が 20 より 大きい とき 、<EOS>
+<SOS>if A [ B ] > A [ B + 1 ] :<tab>A の B 番 目 が A の B に 1 を加えた 値 番 目 より 大きい とき 、<EOS>
+<SOS>A [ B ] [ C ] = A [ D ] [ E ] + F<tab>A の D 番目の E 番 目 に F を加えた 値を A の B 番目の C 番 目 にする<EOS>
+<SOS>A , B = map ( float , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に float を適用した 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>A [ 1 ] = 1.0<tab>1.0 を A の 1 番 目 にする<EOS>
+<SOS>if A [ B ] == 'Y' :<tab>A の B 番 目 が ' Y ' と 等 しい とき 、<EOS>
+<SOS>A = ( 1 , 5 , 10 , 50 , 100 , 500 )<tab>( 1 、 5 、 10 、 50 、 100 、 500 ) の 組 を A とする<EOS>
+<SOS>print ( A if A <= 0 else A - ( B - C ) )<tab>A が 0 以下の とき A 、 そうでなければ A から B から C を 引 いた 値を 引 いた 値 を出力する<EOS>
+<SOS>for A in range ( 1000 ) :<tab>0 から 1000 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = [ [ 0 for B in range ( 45 ) ] for C in range ( 45 ) ]<tab>0 から 4 5 未 満 までの 数 列 の 各要素 を C とし 、 0 から 4 5 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A , B , C = int ( A ) , int ( B ) , int ( C )<tab>A の 整数値 、 B の 整数値 、 C の 整数値 を A 、 B 、 C とする<EOS>
+<SOS>A . edge [ B ] . append ( [ C , D , E ] )<tab>A の ed ge の B 番目の 末 尾 に ( C 、 D 、 E ) からなる 列 を追加する<EOS>
+<SOS>if A == B [ C - 1 ] :<tab>A が B の C から 1 を 引 いた 値 番 目 と 等 しい とき 、<EOS>
+<SOS>A = [ [ 0.0 for B in range ( C ) ] for D in range ( E ) ]<tab>0 から E 未 満 までの 数 列 の 各要素 を D とし 、 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 0.0 の 列 の 列 を A とする<EOS>
+<SOS>A = 0x7ffffffffffffff<tab>0 x 7 ff ff ff ff ff ff ff を A とする<EOS>
+<SOS>A = bisector ( B [ C ] , B [ D ] )<tab>b is ect or ( B [ C ] , B [ D ] ) を A とする<EOS>
+<SOS>A = sorted ( B . items ( ) , key = lambda x : A [ 1 ] )<tab>x を パラメータ として x の 1 番 目 を返す関数 を キー として B の キー と 値 の集まり を ソート した 列 を A とする<EOS>
+<SOS>if A <= 3 :<tab>A が 3 以下の とき 、<EOS>
+<SOS>if - A < B < A :<tab>- A が B より 小さい かどうか が A より 小さい とき 、<EOS>
+<SOS>A [ B ] [ C ] [ 7 - D ] = A [ B - 1 ] [ D ] [ C ]<tab>A の B から 1 を 引 いた 値 番目の D 番目の C 番 目 を A の B 番目の C 番目の 7 から D を 引 いた 値 番 目 にする<EOS>
+<SOS>print ( len ( A & B ) )<tab>[MASK] の長さ を出力する<EOS>
+<SOS>A [ B ] += A [ C ]<tab>A の B 番 目 を A の C 番 目 だけ 増加 させる<EOS>
+<SOS>A . extend ( A )<tab>A を追加し て A を拡張する<EOS>
+<SOS>A , B = list ( input ( ) . split ( '=' ) )<tab>入力された 文字列を ' = ' で 分割 した 字句 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>A += B // 3<tab>A を B を 3 で 割 った 商 だけ 増加 させる<EOS>
+<SOS>A = input ( )<tab>入力された 文字列を A とする<EOS>
+<SOS>A , B = A - 1 , B + 1<tab>A から 1 を 引 いた 値 、 B に 1 を加えた 値を A 、 B とする<EOS>
+<SOS>A = A * 2 - B * B<tab>A に 2 を 掛 け た 値 から B に B を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>B = ( A - 1 ) // 5 + 1<tab>A から 1 を 引 いた 値を 5 で 割 った 商 に 1 を加えた 値を そうでなければ 、 とする<EOS>
+<SOS>A , B = ( 30 * C + ( D // 2 ) ) * 2 , ( 6 * D ) * 2<tab>30 に C を 掛 け た 値に D を 2 で 割 った 商 を加えた 値に 2 を 掛 け た 値 、 6 に D を 掛 け た 値に 2 を 掛 け た 値を A 、 B とする<EOS>
+<SOS>A = sorted ( list ( map ( int , input ( ) . split ( ) ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを ソート した 列 を A とする<EOS>
+<SOS>A = ( B ** 2 + C ** 2 ) ** 0.5<tab>B の 2 乗 に C の 2 乗 を加えた 値の 0.5 乗 を A とする<EOS>
+<SOS>if calc ( A , B , C , D , 0 ) [ 0 ] == E :<tab>c al c ( A , B , C , D , 0 ) の 0 番 目 が E と 等 しい とき 、<EOS>
+<SOS>A , B , C , D = E . split ( )<tab>E を 空白 で 分割 した 字句 列 を 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>A = int ( input ( ) ) + int ( input ( ) )<tab>入力された 文字列 の 整数値 に 入力された 文字列 の 整数値 を加えた 値を A とする<EOS>
+<SOS>A [ B ] [ C ] = max ( A [ B ] [ C ] , A [ B - 1 ] [ D ] * E [ D ] [ C ] )<tab>A の B 番目の C 番 目 、 A の B から 1 を 引 いた 値 番目の D 番 目 に E の D 番目の C 番 目 を 掛 け た 値の 最大 値を A の B 番目の C 番 目 にする<EOS>
+<SOS>A = 1 - A<tab>1 から A を 引 いた 値を A とする<EOS>
+<SOS>for A in range ( 9 , - 1 , - 1 ) :<tab>9 から -1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . edge [ B ] [ C ] [ 1 ] -= D<tab>A の ed ge の B 番目の C 番目の 1 番 目 を D だけ 減少 させる<EOS>
+<SOS>for A in range ( 1001 - B ) :<tab>0 から 100 1 から B を 引 いた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = bisect_right ( B , C [ 2 ] , D )<tab>b is ect _ right ( B , C [ 2 ] , D ) を A とする<EOS>
+<SOS>if A >= 0 and A < B and C >= 0 and C < B and D [ A ] [ C ] == E :<tab>A が 0 以上 かつ A が B より 小さく かつ C が 0 以上 かつ C が B より 小さく かつ D の A 番目の C 番 目 が E と 等 しい とき 、<EOS>
+<SOS>return True<tab>真 を返す<EOS>
+<SOS>A = len ( B [ 0 ] )<tab>B の先頭 の長さ を A とする<EOS>
+<SOS>A = [ list ( input ( ) ) for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 のリスト の 列 を A とする<EOS>
+<SOS>if A [ B ] < C and C <= A [ B + 1 ] :<tab>A の B 番 目 が C より 小さく かつ C が A の B に 1 を加えた 値 番 目 以下の とき 、<EOS>
+<SOS>A = B + ( C << 18 )<tab>B に C を 18 だけ 左 シフト した 値 を加えた 値を A とする<EOS>
+<SOS>if A [ B ] - A [ B - 1 ] < C :<tab>A の B 番 目 から A の B から 1 を 引 いた 値 番 目 を 引 いた 値が C より 小さい とき 、<EOS>
+<SOS>if A + 1 < B and C [ A ] [ D ] == C [ A + 1 ] [ D ] :<tab>A に 1 を加えた 値が B より 小さく かつ C の A 番目の D 番 目 が C の A に 1 を加えた 値 番目の D 番 目 と 等 しい とき 、<EOS>
+<SOS>if A [ 0 ] != ',' :<tab>A の 0 番 目 が ' , ' と 等 しく ない とき 、<EOS>
+<SOS>import bisect<tab>b is ect モジュール を用いる<EOS>
+<SOS>if A [ B ] < 0 :<tab>A の B 番 目 が 0 より 小さい とき 、<EOS>
+<SOS>A = bisect_right ( B , int ( C [ 2 ] ) , D )<tab>b is ect _ right ( B , int ( C [ 2 ] ) , D ) を A とする<EOS>
+<SOS>A = [ int ( input ( ) ) for B in range ( 5 ) ]<tab>0 から 5 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 整数値 の 列 を A とする<EOS>
+<SOS>A = int ( input ( ) ) * 2<tab>入力された 文字列 の 整数値 に 2 を 掛 け た 値を A とする<EOS>
+<SOS>A = [ 0 ] * 105<tab>( 0 ) からなる 列 の 10 5 回 分 の 列 を A とする<EOS>
+<SOS>A -= B<tab>A を B だけ 減少 させる<EOS>
+<SOS>print ( A - 1 - B )<tab>A から 1 を 引 いた 値 から B を 引 いた 値 を出力する<EOS>
+<SOS>if A < 0 and B < 0 :<tab>A が 0 より 小さく かつ B が 0 より 小さい とき 、<EOS>
+<SOS>if A < 0 or B == A :<tab>A が 0 より 小さく または B が A と 等 しい とき 、<EOS>
+<SOS>print ( A [ B ] [ 0 ] )<tab>A の B 番目の 先頭 を出力する<EOS>
+<SOS>A . items . append ( B )<tab>A の キー と 値 の集まり の 末 尾 に B を追加する<EOS>
+<SOS>A = 'D'<tab>' D ' を A とする<EOS>
+<SOS>if A [ B - 1 ] [ C - 1 ] :<tab>A の B から 1 を 引 いた 値 番目の C から 1 を 引 いた 値 番目の とき 、<EOS>
+<SOS>A = B [ C ] - D<tab>B の C 番 目 から D を 引 いた 値を A とする<EOS>
+<SOS>A = [ [ 0 for B in range ( C + 2 ) ] for D in range ( C + 2 ) ]<tab>0 から C に 2 を加えた 値 未 満 までの 数 列 の 各要素 を D とし 、 0 から C に 2 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = B [ 0 ] [ 1 ]<tab>B の先頭 の 1 番 目 を A とする<EOS>
+<SOS>if A [ B ] [ C ] <= 40 and ( ( 1730 <= D and D <= 1930 ) or ( 1730 <= E and E <= 1930 ) ) :<tab>A の B 番目の C 番 目 が 40 以下 かつ 17 30 が D 以下 かつ D が 19 30 以下 または 17 30 が E 以下 かつ E が 19 30 以下の とき 、<EOS>
+<SOS>return A [ 0 ] + B * ( cross ( C , D [ 0 ] - A [ 0 ] ) / cross ( C , B ) )<tab>A の 0 番 目 に B に c ro s s ( C , D [ 0 ]- A [ 0 ] ) を c ro s s ( C , B ) で 割 った 値を 掛 け た 値 を加えた 値を返す<EOS>
+<SOS>A , B = 0 , [ 0 ] * 1002<tab>0 、 ( 0 ) からなる 列 の 100 2 回 分 の 列 を A 、 B とする<EOS>
+<SOS>print ( B if A == 0 else A )<tab>A が 0 と 等 しい とき B 、 そうでなければ A を出力する<EOS>
+<SOS>A . append ( [ B , C , 0 , D ] )<tab>A の 末 尾 に ( B 、 C 、 0 、 D ) からなる 列 を追加する<EOS>
+<SOS>A = { }<tab>空 辞書 を 辞書 とする<EOS>
+<SOS>A = [ 0 ] * 6<tab>( 0 ) からなる 列 の 6 回 分 の 列 を A とする<EOS>
+<SOS>A += B [ C ] - B [ D - 1 ] - 1<tab>A を B の C 番 目 から B の D から 1 を 引 いた 値 番 目 を 引 いた 値 から 1 を 引 いた 値 だけ 増加 させる<EOS>
+<SOS>print ( A * B / 3.305785 )<tab>A に B を 掛 け た 値を 3. 30 5 78 5 で 割 った 値 を出力する<EOS>
+<SOS>A = B [ C ] [ 1 ] - 10080 if B [ C ] [ 1 ] >= 10080 else 0<tab>B の C 番目の 1 番 目 が 100 80 以上の とき B の C 番目の 1 番 目 から 100 80 を 引 いた 値 、 そうでなければ 0 を A とする<EOS>
+<SOS>if A in B :<tab>A が B に含まれる とき 、<EOS>
+<SOS>A = [ B for B in range ( C + 1 ) ]<tab>0 から C に 1 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 B の 列 を A とする<EOS>
+<SOS>B = A . readline<tab>A から 読み 込 んだ 一行 を 入力された 文字列 とする<EOS>
+<SOS>A . append ( A [ - 1 ] + B - C )<tab>A の 末 尾 に A の 末 尾 に B を加えた 値 から C を 引 いた 値 を追加する<EOS>
+<SOS>A . append ( complex ( B [ 2 ] , B [ 3 ] ) )<tab>A の 末 尾 に B の 2 番 目 を 実 部 、 B の 3 番 目 を 虚 部 とした 複素数 を追加する<EOS>
+<SOS>for A in range ( 19 , - 1 , - 1 ) :<tab>19 から -1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . level = [ - 1 ] * A . V<tab>( -1 ) からなる 列 の A の V 回 分 の 列 を A の l evel にする<EOS>
+<SOS>A = [ [ 0 , - 1 ] , [ - 1 , 0 ] , [ 0 , 1 ] , [ 1 , 0 ] ]<tab>( ( 0 、 -1 ) からなる 列 、 ( -1 、 0 ) からなる 列 、 ( 0 、 1 ) からなる 列 、 ( 1 、 0 ) からなる 列 ) からなる 列 を A とする<EOS>
+<SOS>print ( calc ( input ( ) ) )<tab>c al c ( in put () ) を出力する<EOS>
+<SOS>A = [ 0 for B in range ( 30001 ) ]<tab>0 から 300 01 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 を A とする<EOS>
+<SOS>for A in sorted ( B , key = lambda x : ( - C [ 2 ] , C [ 3 ] , C [ 1 ] ) ) :<tab>x を パラメータ として ( - C の 2 番 目 、 x の 3 番 目 、 x の 1 番 目 ) の 組 を返す関数 を キー として B を ソート した 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] = 2<tab>2 を A の B 番 目 にする<EOS>
+<SOS>if A [ B ] < 10 :<tab>A の B 番 目 が 10 より 小さい とき 、<EOS>
+<SOS>if A [ B ] > 0 :<tab>A の B 番 目 が 0 より 大きい とき 、<EOS>
+<SOS>A , B = C . heappop ( D )<tab>C . he app op ( D ) を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = ( B - C ) * ( B - C ) + ( D - E ) * ( D - E )<tab>B から C を 引 いた 値に B から C を 引 いた 値を 掛 け た 値に D から E を 引 いた 値に D から E を 引 いた 値を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>if A [ B - C - 1 ] > 0 :<tab>A の B から C を 引 いた 値 から 1 を 引 いた 値 番 目 が 0 より 大きい とき 、<EOS>
+<SOS>A = A + C if B == '+' else A * C<tab>B が ' + ' と 等 しい とき A に C を加えた 値 、 そうでなければ A に C を 掛 け た 値を A とする<EOS>
+<SOS>A = format ( B , 'o' )<tab>書式 B を ' o ' で フォーマット した 文字列を A とする<EOS>
+<SOS>A . append ( complex ( B [ 0 ] , B [ 1 ] ) )<tab>A の 末 尾 に B の先頭 を 実 部 、 B の 1 番 目 を 虚 部 とした 複素数 を追加する<EOS>
+<SOS>A [ B [ 0 ] ] . append ( B )<tab>A の B の先頭 番目の 末 尾 に B を追加する<EOS>
+<SOS>if A > 1000000 :<tab>A が 100 0000 より 大きい とき 、<EOS>
+<SOS>A , B , C , D = list ( input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の リストを 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>return A . items == [ ]<tab>A の キー と 値 の集まり が 空 列 と 等 しい かどうか を返す<EOS>
+<SOS>print ( A [ B >> 1 ] )<tab>A の B を 1 だけ 右 シフト した 値 番 目 を出力する<EOS>
+<SOS>A [ B ] = C if A [ B - 1 ] + C < C else A [ B - 1 ] + C<tab>A の B から 1 を 引 いた 値 番 目 に C を加えた 値が C より 小さい とき C 、 そうでなければ A の B から 1 を 引 いた 値 番 目 に C を加えた 値を A の B 番 目 にする<EOS>
+<SOS>A = B [ C ] [ 1 ] * D [ C ] + B [ C ] [ 2 ]<tab>B の C 番目の 1 番 目 に D の C 番 目 を 掛 け た 値に B の C 番目の 2 番 目 を加えた 値を A とする<EOS>
+<SOS>if A < 165 :<tab>A が 16 5 より 小さい とき 、<EOS>
+<SOS>A , B = C [ D ] [ 0 ] , C [ D ] [ 1 ]<tab>C の D 番目の 先頭 、 C の D 番目の 1 番 目 を A 、 B とする<EOS>
+<SOS>print ( A if A >= B else B )<tab>A が B 以上の とき A 、 そうでなければ B を出力する<EOS>
+<SOS>A += B [ 1 - ( C & 1 ) ] [ 1 ]<tab>A を B の 1 から [MASK] を 引 いた 値 番目の 1 番 目 だけ 増加 させる<EOS>
+<SOS>if EQ ( A [ B ] . real , 0 ) :<tab>E Q ( A [ B ] . re al , 0 ) の とき 、<EOS>
+<SOS>A = nlcm ( B , C )<tab>n l c m ( B , C ) を A とする<EOS>
+<SOS>A = tuple ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の 組 を A とする<EOS>
+<SOS>rec ( 0 , 0 , 0 )<tab>re c ( 0 , 0 , 0 )<EOS>
+<SOS>for A in range ( B . iter [ C ] , len ( B . edge [ C ] ) ) :<tab>B の it er の C 番 目 から B の ed ge の C 番目の 長さ 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A <= B and A <= C :<tab>A が B 以下 かつ A が C 以下の とき 、<EOS>
+<SOS>return math . hypot ( A . real - B . real , A . imag - B . imag )<tab>math . h y p ot ( A . re al - B . re al , A . im ag - B . im ag ) を返す<EOS>
+<SOS>A = math . sqrt ( B * B + C * C - 2 * B * C * math . cos ( D - math . fabs ( E ) ) )<tab>B に B を 掛 け た 値に C に C を 掛 け た 値 を加えた 値 から 2 に B を 掛 け た 値に C を 掛 け た 値に math . co s ( D - math . f abs ( E ) ) を 掛 け た 値を 引 いた 値の 平 方 根 を A とする<EOS>
+<SOS>A = ( ( 1 , 4 ) , ( 0 , 2 , 5 ) , ( 1 , 3 , 6 ) , ( 2 , 7 ) , ( 0 , 5 ) , ( 1 , 4 , 6 ) , ( 2 , 5 , 7 ) , ( 3 , 6 ) )<tab>( ( 1 、 4 ) の 組 、 ( 0 、 2 、 5 ) の 組 、 ( 1 、 3 、 6 ) の 組 、 ( 2 、 7 ) の 組 、 ( 0 、 5 ) の 組 、 ( 1 、 4 、 6 ) の 組 、 ( 2 、 5 、 7 ) の 組 、 ( 3 、 6 ) の 組 ) の 組 を A とする<EOS>
+<SOS>for A in range ( 1 , 11 ) :<tab>1 から 11 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = set ( input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の集合 を A とする<EOS>
+<SOS>if same ( A , B ) :<tab>s am e ( A , B ) の とき 、<EOS>
+<SOS>A [ B ] [ C + 1 ] |= 8<tab>A の B 番目の C に 1 を加えた 値 番 目 を 8 と の 論理 和 にする<EOS>
+<SOS>A = B = C = D = E = 0<tab>0 を E を D を C を B とする とする とする とする を A とする<EOS>
+<SOS>A [ B [ 0 ] [ 0 ] ] = C = 1<tab>1 を C とする を A の B の先頭 の先頭 番 目 にする<EOS>
+<SOS>print ( 'YES' if A >= 4 else 'NO' )<tab>A が 4 以上の とき ' Y E S ' 、 そうでなければ ' N O ' を出力する<EOS>
+<SOS>A , B , C = 1 , 1 , 0<tab>1 、 1 、 0 を A 、 B 、 C とする<EOS>
+<SOS>if A > 0 and B . level [ C ] < B . level [ D ] :<tab>A が 0 より 大きく かつ B の l evel の C 番 目 が B の l evel の D 番 目 より 小さい とき 、<EOS>
+<SOS>if A < B [ C ] :<tab>A が B の C 番 目 より 小さい とき 、<EOS>
+<SOS>A . find ( B )<tab>A の先頭 から B を 探 して 見つかった 位置<EOS>
+<SOS>while A [ B - 1 ] != C :<tab>A の B から 1 を 引 いた 値 番 目 が C と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ [ B - 1 ] if B > 0 else [ [ ] for B in range ( C ) ] ]<tab>( B が 0 より 大きい とき ( B から 1 を 引 いた 値 ) からなる 列 、 そうでなければ 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 空 列 の 列 ) からなる 列 を A とする<EOS>
+<SOS>A [ B ] = A [ B - 1 ] + math . atan ( 1 / C [ B - 1 ] )<tab>A の B から 1 を 引 いた 値 番 目 に math . at an ( 1 / C [ B -1 ] ) を加えた 値を A の B 番 目 にする<EOS>
+<SOS>A [ B ] . append ( ( C , D , E ) )<tab>A の B 番目の 末 尾 に ( C 、 D 、 E ) の 組 を追加する<EOS>
+<SOS>if ( A [ 1 ] | A [ 2 ] ) == 0 :<tab>A の 1 番 目 と A の 2 番目の 論理 和 が 0 と 等 しい とき 、<EOS>
+<SOS>A = B [ C ] [ 1 ]<tab>B の C 番目の 1 番 目 を A とする<EOS>
+<SOS>A , B = [ 0 ] * 27 , [ 0 ] * 27<tab>( 0 ) からなる 列 の 27 回 分 の 列 、 ( 0 ) からなる 列 の 27 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A , B = root ( C ) , root ( D )<tab>ro ot ( C ) 、 ro ot ( D ) を A 、 B とする<EOS>
+<SOS>init ( 12 * 12 )<tab>in it ( 12 * 12 )<EOS>
+<SOS>A [ int ( input ( ) ) ] += 1<tab>A の 入力された 文字列 の 整数値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A = B [ C ] [ D ]<tab>B の C 番目の D 番 目 を A とする<EOS>
+<SOS>return chr ( ( A * B + C ) % D + E )<tab>文字コード A に B を 掛 け た 値に C を加えた 値を D で 割 った 余 り に E を加えた 値の 文字 を返す<EOS>
+<SOS>A , B = C<tab>C を 展開 し 順に A 、 B とする<EOS>
+<SOS>A , B = C , - 1<tab>C 、 -1 を A 、 B とする<EOS>
+<SOS>A = 1e-7<tab>1 e - 7 を A とする<EOS>
+<SOS>for A in range ( B - 1 , - 1 , - 1 ) :<tab>B から 1 を 引 いた 値 から -1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A [ B : C ] != D [ E : F ] :<tab>A の B 番 目 から C 番 目 までの 部分 列 が D の E 番 目 から F 番 目 までの 部分 列 と 等 しく ない とき 、<EOS>
+<SOS>A = [ 0 ] * B<tab>( 0 ) からなる 列 の B 回 分 の 列 を A とする<EOS>
+<SOS>return A % 4 == 0 and ( A % 100 != 0 or A % 400 == 0 )<tab>A を 4 で 割 った 余 り が 0 と 等 しく かつ A を 100 で 割 った 余 り が 0 と 等 しく なく または A を 400 で 割 った 余 り が 0 と 等 しい かどうか を返す<EOS>
+<SOS>B [ A ] = 1<tab>1 を 辞書 の A 番 目 にする<EOS>
+<SOS>if A == B + 4 :<tab>A が B に 4 を加えた 値 と 等 しい とき 、<EOS>
+<SOS>A , B = A - 1 , B - 1<tab>A から 1 を 引 いた 値 、 B から 1 を 引 いた 値を A 、 B とする<EOS>
+<SOS>print ( * [ ( '{}:{:02}' . format ( * A ) ) for A in sorted ( B ) ] )<tab>B を ソート した 列 の 各要素 を A とし 、 ' { } : { : 0 2 } ' . form at ( * A ) の 列 を 展開 して を出力する<EOS>
+<SOS>print ( 'OK' if ( 2 * A ) ** 2 > B else 'NA' )<tab>2 に A を 掛 け た 値の 2 乗 が B より 大きい とき ' O K ' 、 そうでなければ ' NA ' を出力する<EOS>
+<SOS>A , B = C [ 1 ] , C [ 2 ]<tab>C の 1 番 目 、 C の 2 番 目 を A 、 B とする<EOS>
+<SOS>A = B * ( B - 1 ) >> 1<tab>B に B から 1 を 引 いた 値を 掛 け た 値を 1 だけ 右 シフト した 値を A とする<EOS>
+<SOS>A += 7 * B<tab>A を 7 に B を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>A = int ( input ( ) ) + 1<tab>入力された 文字列 の 整数値 に 1 を加えた 値を A とする<EOS>
+<SOS>A [ 0 ] , A [ 1 ] = 2 , 3<tab>2 、 3 を A の先頭 、 A の 1 番 目 とする<EOS>
+<SOS>A = 1<tab>1 を そうでなければ 、 とする<EOS>
+<SOS>A = max ( A , B * ( C - 1 - D ) )<tab>A 、 B に C から 1 を 引 いた 値 から D を 引 いた 値を 掛 け た 値の 最大 値を A とする<EOS>
+<SOS>if A [ B ] [ C ] and D . root ( id ( B , C ) ) == id ( B , C ) :<tab>A の B 番目の C 番 目 かつ D . ro ot ( id ( B , C ) ) が B 、 C の オブジェクト 識別子 と 等 しい とき 、<EOS>
+<SOS>A = [ [ ] for B in range ( 100 ) ]<tab>0 から 100 未 満 までの 数 列 の 各要素 を B とし 、 空 列 の 列 を A とする<EOS>
+<SOS>A = [ ]<tab>空 列 を A とする<EOS>
+<SOS>print ( 'Hello World' )<tab>' Hello ▁ World ' を出力する<EOS>
+<SOS>A [ B + 1 ] [ C + D ] += A [ B ] [ C ]<tab>A の B に 1 を加えた 値 番目の C に D を加えた 値 番 目 を A の B 番目の C 番 目 だけ 増加 させる<EOS>
+<SOS>A . sort ( key = lambda x : ( - B [ 1 ] , B [ 0 ] ) )<tab>key を x を パラメータ として ( - B の 1 番 目 、 x の先頭 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>A = crossPointLL ( B , C )<tab>c ro s s Point LL ( B , C ) を A とする<EOS>
+<SOS>if A [ B ] or C > D [ E ] :<tab>A の B 番 目 または C が D の E 番 目 より 大きい とき 、<EOS>
+<SOS>A [ B . index ( C ) ] += 1<tab>A の B の C と 等 しい 要素 の最初の 位置 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>if A [ B ] + C [ D ] < E :<tab>A の B 番 目 に C の D 番 目 を加えた 値が E より 小さい とき 、<EOS>
+<SOS>for A in range ( B ** 2 , 300 ) :<tab>B の 2 乗 から 300 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>import re<tab>re モジュール を用いる<EOS>
+<SOS>A , B = [ 0 ] * 31 , [ ]<tab>( 0 ) からなる 列 の 3 1 回 分 の 列 、 空 列 を A 、 B とする<EOS>
+<SOS>A = list ( input ( ) )<tab>入力された 文字列 の リストを A とする<EOS>
+<SOS>A . append ( B [ C ] )<tab>A の 末 尾 に B の C 番 目 を追加する<EOS>
+<SOS>for A in range ( B - 1 , C - 2 , - 1 ) :<tab>B から 1 を 引 いた 値 から C から 2 を 引 いた 値 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>return 'A'<tab>' A ' を返す<EOS>
+<SOS>A = B * 60 + C<tab>B に 60 を 掛 け た 値に C を加えた 値を A とする<EOS>
+<SOS>[ A . append ( B ) for B in range ( 5 , 0 , - 1 ) ]<tab>5 から 0 未 満 までの -1 間隔 の 数 列 の 各要素 を B とし 、 A の 末 尾 に B を追加する の 列<EOS>
+<SOS>A = [ [ ] for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 空 列 の 列 を A とする<EOS>
+<SOS>A [ B + 1 ] [ C - 1 ] += 1<tab>A の B に 1 を加えた 値 番目の C から 1 を 引 いた 値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A = 3 + B // 4 - B // 100 + B // 400<tab>3 に B を 4 で 割 った 商 を加えた 値 から B を 100 で 割 った 商 を 引 いた 値に B を 400 で 割 った 商 を加えた 値を A とする<EOS>
+<SOS>A [ 1 ] [ B ] = 1<tab>1 を A の 1 番目の B 番 目 にする<EOS>
+<SOS>A += 'R'<tab>A を ' R ' だけ 増加 させる<EOS>
+<SOS>A = gcd ( A , B [ C ] )<tab>g c d ( A , B [ C ] ) を A とする<EOS>
+<SOS>if A <= 160 and B <= 25 :<tab>A が 1 60 以下 かつ B が 25 以下の とき 、<EOS>
+<SOS>A = 1000 - int ( input ( ) )<tab>1000 から 入力された 文字列 の 整数値 を 引 いた 値を A とする<EOS>
+<SOS>A . ws [ B ] += A . ws [ A . par [ B ] ]<tab>A の w s の B 番 目 を A の w s の A の p ar の B 番 目 番 目 だけ 増加 させる<EOS>
+<SOS>for A in range ( B - 1 , len ( C ) ) :<tab>B から 1 を 引 いた 値 から C の長さ 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>return 0<tab>0 を返す<EOS>
+<SOS>A = 1 + min ( B [ C - 1 ] [ D - 1 ] , B [ C ] [ D - 1 ] , B [ C - 1 ] [ D ] )<tab>1 に B の C から 1 を 引 いた 値 番目の D から 1 を 引 いた 値 番 目 、 B の C 番目の D から 1 を 引 いた 値 番 目 、 B の C から 1 を 引 いた 値 番目の D 番目の 最小 値 を加えた 値を A とする<EOS>
+<SOS>A [ 21 ] , A [ 22 ] , A [ 23 ] , A [ 24 ] , A [ 25 ] = 'f' , 'g' , 'h' , 'i' , 'j'<tab>' f ' 、 ' g ' 、 ' h ' 、 ' i ' 、 ' j ' を A の 21 番 目 、 A の 22 番 目 、 A の 23 番 目 、 A の 24 番 目 、 A の 25 番 目 とする<EOS>
+<SOS>return abs ( A - B ) + abs ( C - D )<tab>A から B を 引 いた 値の 絶対 値に C から D を 引 いた 値の 絶対 値 を加えた 値を返す<EOS>
+<SOS>A = dot ( B [ 1 ] - B [ 0 ] , C [ 1 ] - C [ 0 ] )<tab>do t ( B [ 1 ]- B [ 0 ] , C [ 1 ]- C [ 0 ] ) を A とする<EOS>
+<SOS>A [ B + 1 ] = A [ B ] + ( C [ B ] == 'J' )<tab>A の B 番 目 に C の B 番 目 が ' J ' と 等 しい かどうか を加えた 値を A の B に 1 を加えた 値 番 目 にする<EOS>
+<SOS>A >>= 2<tab>A を 2 だけ 右 シフト する<EOS>
+<SOS>A [ B [ C ] ] += 1<tab>A の B の C 番 目 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A = int ( A )<tab>A の 整数値 を A とする<EOS>
+<SOS>A . append ( ( int ( B [ 0 ] ) , int ( B [ 1 ] ) , B [ 2 ] , int ( B [ 3 ] ) , B [ 4 ] ) )<tab>A の 末 尾 に ( B の先頭 の 整数値 、 B の 1 番目の 整数値 、 B の 2 番 目 、 B の 3 番目の 整数値 、 B の 4 番 目 ) の 組 を追加する<EOS>
+<SOS>return [ A , B + 1 ]<tab>( A 、 B に 1 を加えた 値 ) からなる 列 を返す<EOS>
+<SOS>A = ( B << 9 ) + ( C << 18 )<tab>B を 9 だけ 左 シフト した 値に C を 18 だけ 左 シフト した 値 を加えた 値を A とする<EOS>
+<SOS>if A [ B - 1 ] [ C ] > D :<tab>A の B から 1 を 引 いた 値 番目の C 番 目 が D より 大きい とき 、<EOS>
+<SOS>if A [ B - C ] > A [ C ] + D :<tab>A の B から C を 引 いた 値 番 目 が A の C 番 目 に D を加えた 値 より 大きい とき 、<EOS>
+<SOS>A [ B ] [ 1 ] -= 1<tab>A の B 番目の 1 番 目 を 1 だけ 減少 させる<EOS>
+<SOS>A , B , C , D , E = map ( int , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B 、 C 、 D 、 E とする<EOS>
+<SOS>A , B = A - 1 , C - 1<tab>A から 1 を 引 いた 値 、 C から 1 を 引 いた 値を A 、 B とする<EOS>
+<SOS>A = B . imag - C . imag<tab>B の im ag から C の im ag を 引 いた 値を A とする<EOS>
+<SOS>A , B = [ 0 ] * C , [ 0 ] * C<tab>( 0 ) からなる 列 の C 回 分 の 列 、 ( 0 ) からなる 列 の C 回 分 の 列 を A 、 B とする<EOS>
+<SOS>while A :<tab>A の 間 、 以下 を 繰り返す<EOS>
+<SOS>print ( sum ( [ A * B ** 2 for B in range ( A , 600 , A ) ] ) )<tab>A から 600 未 満 までの A 間隔 の 数 列 の 各要素 を B とし 、 A に B の 2 乗 を 掛 け た 値の 列 の 総 和 を出力する<EOS>
+<SOS>A . bfs ( B )<tab>A . b f s ( B )<EOS>
+<SOS>if A == '=' :<tab>A が ' = ' と 等 しい とき 、<EOS>
+<SOS>for A in range ( B - C + 1 ) :<tab>0 から B から C を 引 いた 値に 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( 3 , 11 ) :<tab>3 から 11 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B [ C + 1 ]<tab>B の C に 1 を加えた 値 番 目 を A とする<EOS>
+<SOS>A , B , C , D = list ( map ( int , input ( ) . split ( ',' ) ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>return [ True , A ]<tab>( 真 、 A ) からなる 列 を返す<EOS>
+<SOS>if next_permutation ( A ) :<tab>next _ per m u t ation ( A ) の とき 、<EOS>
+<SOS>print ( 1 if A [ B ] == C else 0 )<tab>A の B 番 目 が C と 等 しい とき 1 、 そうでなければ 0 を出力する<EOS>
+<SOS>if A [ B ] == '-' and C and A [ B + 1 ] >= '0' and A [ B + 1 ] <= '9' :<tab>A の B 番 目 が ' - ' と 等 しく かつ C かつ A の B に 1 を加えた 値 番 目 が ' 0 ' 以上 かつ A の B に 1 を加えた 値 番 目 が ' 9 ' 以下の とき 、<EOS>
+<SOS>A = ( 1440 * B + C * 60 + D ) % 10080<tab>14 40 に B を 掛 け た 値に C に 60 を 掛 け た 値 を加えた 値に D を加えた 値を 100 80 で 割 った 余 り を A とする<EOS>
+<SOS>A = D [ E ]<tab>D の E 番 目 を A とする<EOS>
+<SOS>if A [ B ] == 1 :<tab>A の B 番 目 が 1 と 等 しい とき 、<EOS>
+<SOS>if A >= 0 and B >= 0 :<tab>A が 0 以上 かつ B が 0 以上の とき 、<EOS>
+<SOS>A = - 1<tab>-1 を A とする<EOS>
+<SOS>A [ B ] = A [ C ] = A [ D ] = False<tab>偽 を A の D 番 目 を A の C 番 目 とする とする を A の B 番 目 にする<EOS>
+<SOS>if A > 10 or B < C [ A ] or B > D [ A ] :<tab>A が 10 より 大きく または B が C の A 番 目 より 小さく または B が D の A 番 目 より 大きい とき 、<EOS>
+<SOS>A = B - ( C . imag - D . imag ) * 100<tab>B から C の im ag から D の im ag を 引 いた 値に 100 を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>A = B . find ( B . par [ C ] )<tab>B の先頭 から B の p ar の C 番 目 を 探 して 見つかった 位置 を A とする<EOS>
+<SOS>A = max ( B [ C ] - D , E - F [ C ] )<tab>B の C 番 目 から D を 引 いた 値 、 E から F の C 番 目 を 引 いた 値の 最大 値を A とする<EOS>
+<SOS>A = [ complex ( * map ( int , input ( ) . split ( ) ) ) for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 in put () を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 して の 複素数 の 列 を A とする<EOS>
+<SOS>if A == B [ C ] :<tab>A が B の C 番 目 と 等 しい とき 、<EOS>
+<SOS>if A [ B ] [ C ] != D :<tab>A の B 番目の C 番 目 が D と 等 しく ない とき 、<EOS>
+<SOS>if A < B [ C ] [ D ] [ E ] :<tab>A が B の C 番目の D 番目の E 番 目 より 小さい とき 、<EOS>
+<SOS>A , B , C , D = E . heappop ( F )<tab>E . he app op ( F ) を 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>A = str ( B ** C ) [ : : - 1 ]<tab>B の C 乗 の 文字列 の 逆 順 を A とする<EOS>
+<SOS>if A == '' :<tab>A が 空文字列 と 等 しい とき 、<EOS>
+<SOS>return [ A , B ]<tab>( A 、 B ) からなる 列 を返す<EOS>
+<SOS>if A & ( 1 << B ) :<tab>[MASK] の とき 、<EOS>
+<SOS>A = B [ : : - 1 ]<tab>B の 逆 順 を A とする<EOS>
+<SOS>return factorial ( A ) // factorial ( A - B ) // factorial ( B )<tab>factorial ( A ) を factorial ( A - B ) で 割 った 商 を factorial ( B ) で 割 った 商 を返す<EOS>
+<SOS>A = 1000<tab>1000 を A とする<EOS>
+<SOS>A = [ 'lunch' , 'dinner' , 'midnight' ]<tab>( ' l un ch ' 、 ' d in n er ' 、 ' m id n ight ' ) からなる 列 を A とする<EOS>
+<SOS>A , B = int ( A ) , int ( B )<tab>A の 整数値 、 B の 整数値 を A 、 B とする<EOS>
+<SOS>A = [ input ( ) . strip ( ) for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 両 端 から 空白 改行 を取り 除 いた 文字列 の 列 を A とする<EOS>
+<SOS>A = [ 'pre-meiji' , 'meiji' , 'taisho' , 'showa' , 'heisei' ]<tab>( ' pre - me i j i ' 、 ' me i j i ' 、 ' ta is ho ' 、 ' sh ow a ' 、 ' he is e i ' ) からなる 列 を A とする<EOS>
+<SOS>A = A + C * 60 if A >= B else A + ( C + 1 ) * 60<tab>A が B 以上の とき A に C に 60 を 掛 け た 値 を加えた 値 、 そうでなければ A に C に 1 を加えた 値に 60 を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>A = B [ C // 2 : ]<tab>B の C を 2 で 割 った 商 から 末 尾 までの 部分 列 を A とする<EOS>
+<SOS>for A in B [ 1 : ] :<tab>B の先頭 を 除 いた 部分 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A [ B ] == '=' :<tab>A の B 番 目 が ' = ' と 等 しい とき 、<EOS>
+<SOS>A [ B ] [ C ] |= 2<tab>A の B 番目の C 番 目 を 2 と の 論理 和 にする<EOS>
+<SOS>A = cross ( B - C , D [ 0 ] - C )<tab>c ro s s ( B - C , D [ 0 ]- C ) を A とする<EOS>
+<SOS>A [ B ] += 1<tab>A の B 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>if A [ B [ C ] ] == 1 :<tab>A の B の C 番 目 番 目 が 1 と 等 しい とき 、<EOS>
+<SOS>if re :<tab>re の とき 、<EOS>
+<SOS>A , B , C , D = 0 , True , 0 , 0<tab>0 、 真 、 0 、 0 を A 、 B 、 C 、 D とする<EOS>
+<SOS>A [ B ] [ C - 1 - B ] = D<tab>D を A の B 番目の C から 1 を 引 いた 値 から B を 引 いた 値 番 目 にする<EOS>
+<SOS>import math<tab>math モジュール を用いる<EOS>
+<SOS>A = 1e-5<tab>1 e - 5 を A とする<EOS>
+<SOS>A = [ 0 ] * ( B + max ( C , D ) + 1 )<tab>( 0 ) からなる 列 の B に C 、 D の 最大 値 を加えた 値に 1 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>B = int ( A )<tab>A の 整数値 を そうでなければ 、 とする<EOS>
+<SOS>A . append ( B + C )<tab>A の 末 尾 に B に C を加えた 値 を追加する<EOS>
+<SOS>A , B , C = D . pop ( )<tab>D の先頭 を取り 出した 値を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A , B , C , D = list ( map ( float , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に float を適用した 列 の リストを 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>A , B = C * D , E<tab>C に D を 掛 け た 値 、 E を A 、 B とする<EOS>
+<SOS>A = str ( int ( B [ C : C + 4 ] [ : : - 1 ] ) )<tab>B の C 番 目 から C に 4 を加えた 値 までの 部分 列 の 逆 順 の 整数値 の 文字列を A とする<EOS>
+<SOS>A = circumscribed_circle ( B , C , D )<tab>c ir c um s c r i b ed _ c ir c le ( B , C , D ) を A とする<EOS>
+<SOS>if A [ 0 ] == 'E' :<tab>A の 0 番 目 が ' E ' と 等 しい とき 、<EOS>
+<SOS>print ( A [ 0 ] [ B + 1 ] - 1 )<tab>A の先頭 の B に 1 を加えた 値 番 目 から 1 を 引 いた 値 を出力する<EOS>
+<SOS>print ( dijkstra ( A , B , C , D ) )<tab>d i j k st ra ( A , B , C , D ) を出力する<EOS>
+<SOS>if A == 0 :<tab>A が 0 と 等 しい とき 、<EOS>
+<SOS>A = B % 10<tab>B を 10 で 割 った 余 り を A とする<EOS>
+<SOS>A = [ B ] * ( C + 1 )<tab>( B ) からなる 列 の C に 1 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>if A == 'A' :<tab>A が ' A ' と 等 しい とき 、<EOS>
+<SOS>A = [ [ 0 for B in range ( 2 ) ] for C in range ( D ) ]<tab>0 から D 未 満 までの 数 列 の 各要素 を C とし 、 0 から 2 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = [ [ 0 for B in range ( 3 ) ] for C in range ( D ) ]<tab>0 から D 未 満 までの 数 列 の 各要素 を C とし 、 0 から 3 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A , B = C [ 0 ] - 1 , C [ 1 ]<tab>C の先頭 から 1 を 引 いた 値 、 C の 1 番 目 を A 、 B とする<EOS>
+<SOS>A = WeightedUnionSet ( B + 1 )<tab>W e ight ed U n ion S et ( B + 1 ) を A とする<EOS>
+<SOS>if A == 'L' :<tab>A が ' L ' と 等 しい とき 、<EOS>
+<SOS>A = B << 1<tab>B を 1 だけ 左 シフト した 値を A とする<EOS>
+<SOS>A = max ( B [ C ] - D , E [ C ] - F )<tab>B の C 番 目 から D を 引 いた 値 、 E の C 番 目 から F を 引 いた 値の 最大 値を A とする<EOS>
+<SOS>if A [ B ] > A [ C ] :<tab>A の B 番 目 が A の C 番 目 より 大きい とき 、<EOS>
+<SOS>A [ B ] . append ( ( C , D ) )<tab>A の B 番目の 末 尾 に ( C 、 D ) の 組 を追加する<EOS>
+<SOS>for A in range ( 2 , 18 ) :<tab>2 から 18 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . unite ( B , C , D )<tab>A . un it e ( B , C , D )<EOS>
+<SOS>A , B , C = int ( 100 * A ) , int ( 100 * B ) , int ( 100 * C )<tab>100 に A を 掛 け た 値の 整数値 、 100 に B を 掛 け た 値の 整数値 、 100 に C を 掛 け た 値の 整数値 を A 、 B 、 C とする<EOS>
+<SOS>if A < 0 or A >= 3 or B < 0 or B >= 3 or 3 * A + B == C :<tab>A が 0 より 小さく または A が 3 以上 または B が 0 より 小さく または B が 3 以上 または 3 に A を 掛 け た 値に B を加えた 値が C と 等 しい とき 、<EOS>
+<SOS>A [ B + 1 ] [ C ] += 1<tab>A の B に 1 を加えた 値 番目の C 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>print ( A [ 0 ] )<tab>A の先頭 を出力する<EOS>
+<SOS>A = B | ( C << ( D * 3 ) ) | ( E << ( F - 1 ) * 3 )<tab>B と C を D に 3 を 掛 け た 値 だけ 左 シフト した 値の 論理 和 と E を F から 1 を 引 いた 値 だけ 左 シフト した 値に 3 を 掛 け た 値の 論理 和 を A とする<EOS>
+<SOS>A = B [ 1 ]<tab>B の 1 番 目 を A とする<EOS>
+<SOS>if A [ B + C ] [ 0 ] >= 0 :<tab>A の B に C を加えた 値 番目の 0 番 目 が 0 以上の とき 、<EOS>
+<SOS>if A [ B : 9 : 3 ] . count ( C ) == 3 or A [ 3 * B : 3 * B + 3 ] . count ( C ) == 3 :<tab>A の B 番 目 から 9 番 目 までの 3 間隔 による 部分 列 内の C の 出現 回数 が 3 と 等 しく または A の 3 に B を 掛 け た 値 から 3 * B に 3 を加えた 値 までの 部分 列 内の C の 出現 回数 が 3 と 等 しい とき 、<EOS>
+<SOS>A [ B ] , C [ B ] = D , E<tab>D 、 E を A の B 番 目 、 C の B 番 目 とする<EOS>
+<SOS>A = prime_factor ( B )<tab>pr im e _ f act or ( B ) を A とする<EOS>
+<SOS>A , B , C , D = [ 0 ] * E , [ 0 ] * E , [ 0 ] * E , [ 0 ] * E<tab>( 0 ) からなる 列 の E 回 分 の 列 、 ( 0 ) からなる 列 の E 回 分 の 列 、 ( 0 ) からなる 列 の E 回 分 の 列 、 ( 0 ) からなる 列 の E 回 分 の 列 を A 、 B 、 C 、 D とする<EOS>
+<SOS>return A . real * B . real + A . imag * B . imag<tab>A の re al に B の re al を 掛 け た 値に A の im ag に B の im ag を 掛 け た 値 を加えた 値を返す<EOS>
+<SOS>del A [ B [ 1 ] [ 0 ] ]<tab>A の B の 1 番目の 先頭 番 目 を削除する<EOS>
+<SOS>A = [ [ 0 for B in range ( 4 ) ] for C in range ( 4 ) ]<tab>0 から 4 未 満 までの 数 列 の 各要素 を C とし 、 0 から 4 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>print ( A * B )<tab>A に B を 掛 け た 値 を出力する<EOS>
+<SOS>A , B = A + 1 , B + 1<tab>A に 1 を加えた 値 、 B に 1 を加えた 値を A 、 B とする<EOS>
+<SOS>print ( A [ B // 100 ] )<tab>A の B を 100 で 割 った 商 番 目 を出力する<EOS>
+<SOS>A = [ A [ B [ C [ D ] ] [ E ] ] for E in range ( 7 ) ]<tab>0 から 7 未 満 までの 数 列 の 各要素 を E とし 、 A の B の C の D 番 目 番目の E 番 目 番目の 列 を A とする<EOS>
+<SOS>A = str ( A ) [ : B + 2 ]<tab>A の 文字列 の先頭 から B に 2 を加えた 値 までの 部分 列 を A とする<EOS>
+<SOS>A , B = [ 0 ] * 7 , [ 0 ] * 7<tab>( 0 ) からなる 列 の 7 回 分 の 列 、 ( 0 ) からなる 列 の 7 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A = len ( B [ 2 ] )<tab>B の 2 番目の 長さ を A とする<EOS>
+<SOS>if A [ B ] [ C ] == '*' :<tab>A の B 番目の C 番 目 が ' * ' と 等 しい とき 、<EOS>
+<SOS>A = 32770<tab>32 77 0 を A とする<EOS>
+<SOS>for A in range ( B - 1 , C - 1 , - 1 ) :<tab>B から 1 を 引 いた 値 から C から 1 を 引 いた 値 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = [ 600 , 800 , 1000 , 1200 , 1400 , 1600 ]<tab>( 600 、 800 、 1000 、 1 200 、 1 400 、 1 600 ) からなる 列 を A とする<EOS>
+<SOS>A = B / ( C / 100 ) ** 2<tab>B を C を 100 で 割 った 値の 2 乗 で 割 った 値を A とする<EOS>
+<SOS>A = list ( sorted ( A ) )<tab>A を ソート した 列 の リストを A とする<EOS>
+<SOS>A = calc ( B [ C ] [ 2 ] ) if B [ C ] [ 2 ] > 0 else 1<tab>B の C 番目の 2 番 目 が 0 より 大きい とき c al c ( B [ C ] [ 2 ] ) 、 そうでなければ 1 を A とする<EOS>
+<SOS>A , B = 0 , 3<tab>0 、 3 を A 、 B とする<EOS>
+<SOS>A , B = '' , list ( B )<tab>空文字列 、 B の リストを A 、 B とする<EOS>
+<SOS>A = B * C - D<tab>B に C を 掛 け た 値 から D を 引 いた 値を A とする<EOS>
+<SOS>A = B % C<tab>B を C で 割 った 余 り を A とする<EOS>
+<SOS>A , B = [ 0 ] * 128 , [ 0 ] * 128<tab>( 0 ) からなる 列 の 1 28 回 分 の 列 、 ( 0 ) からなる 列 の 1 28 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A [ B - 1 ] [ C - 1 ] += 1<tab>A の B から 1 を 引 いた 値 番目の C から 1 を 引 いた 値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>C . append ( B )<tab>C の 末 尾 に B を追加する<EOS>
+<SOS>dijkstra ( A , B , C , D )<tab>d i j k st ra ( A , B , C , D )<EOS>
+<SOS>A = [ '' ] * B<tab>( 空文字列 ) からなる 列 の B 回 分 の 列 を A とする<EOS>
+<SOS>A = 10 * A + int ( B [ C ] )<tab>10 に A を 掛 け た 値に B の C 番目の 整数値 を加えた 値を A とする<EOS>
+<SOS>A , B , C = True , D , E<tab>真 、 D 、 E を A 、 B 、 C とする<EOS>
+<SOS>A , B = C + D [ E ] , F + G [ E ]<tab>C に D の E 番 目 を加えた 値 、 F に G の E 番 目 を加えた 値を A 、 B とする<EOS>
+<SOS>A . sort ( reverse = True )<tab>逆 順に A を ソート する<EOS>
+<SOS>print ( format ( A [ 0 ] . real + B , '.3f' ) , format ( A [ 0 ] . imag + B , '.3f' ) , format ( A [ 1 ] + B , '.3f' ) )<tab>書式 A の先頭 の re al に B を加えた 値を ' . 3 f ' で フォーマット した 文字列 、 書式 A の先頭 の im ag に B を加えた 値を ' . 3 f ' で フォーマット した 文字列 、 書式 A の 1 番 目 に B を加えた 値を ' . 3 f ' で フォーマット した 文字列 を出力する<EOS>
+<SOS>A = palindrome ( B , C )<tab>p al in d ro me ( B , C ) を A とする<EOS>
+<SOS>A = ''<tab>空文字列 を A とする<EOS>
+<SOS>A += B<tab>A を B だけ 増加 させる<EOS>
+<SOS>A += B * C [ D - E - 1 ]<tab>A を B に C の D から E を 引 いた 値 から 1 を 引 いた 値 番 目 を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>if int ( A ) + int ( B ) == int ( C ) :<tab>A の 整数値 に B の 整数値 を加えた 値が C の 整数値 と 等 しい とき 、<EOS>
+<SOS>print ( sum ( A ) )<tab>A の 総 和 を出力する<EOS>
+<SOS>for A in range ( B - 1 , 1 , - 1 ) :<tab>B から 1 を 引 いた 値 から 1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A == B + 2 :<tab>A が B に 2 を加えた 値 と 等 しい とき 、<EOS>
+<SOS>A . heappush ( B , ( 0 , C ) )<tab>A . he ap push ( B , ( 0 , C ) )<EOS>
+<SOS>if A + B <= C or B + C <= A or C + A <= B :<tab>A に B を加えた 値が C 以下 または B に C を加えた 値が A 以下 または C に A を加えた 値が B 以下の とき 、<EOS>
+<SOS>A , B = 0 , C [ D ] [ E ]<tab>0 、 C の D 番目の E 番 目 を A 、 B とする<EOS>
+<SOS>A = [ 'Sunday' , 'Monday' , 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' ]<tab>( ' S un d ay ' 、 ' M on d ay ' 、 ' T u es d ay ' 、 ' W ed ne s d ay ' 、 ' T h ur s d ay ' 、 ' F r id ay ' 、 ' S at ur d ay ' ) からなる 列 を A とする<EOS>
+<SOS>A = [ B for B in range ( 1 , C + 1 ) ]<tab>1 から C に 1 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 B の 列 を A とする<EOS>
+<SOS>A . par = [ - 1 ] * B<tab>( -1 ) からなる 列 の B 回 分 の 列 を A の p ar にする<EOS>
+<SOS>if A [ 0 ] == '#' :<tab>A の 0 番 目 が ' # ' と 等 しい とき 、<EOS>
+<SOS>print ( 'NA' if A == B else A )<tab>A が B と 等 しい とき ' NA ' 、 そうでなければ A を出力する<EOS>
+<SOS>A = int ( B [ C ] [ D ] )<tab>B の C 番目の D 番目の 整数値 を A とする<EOS>
+<SOS>A -= 2 * B<tab>A を 2 に B を 掛 け た 値 だけ 減少 させる<EOS>
+<SOS>return min ( A , B [ C ] [ 0 ] )<tab>A 、 B の C 番目の 先頭 の 最小 値を返す<EOS>
+<SOS>A [ B [ 0 ] - 1 ] += C<tab>A の B の先頭 から 1 を 引 いた 値 番 目 を C だけ 増加 させる<EOS>
+<SOS>break<tab>繰り返し を 中断 する<EOS>
+<SOS>continue<tab>最初から もう 一度 、 繰り返す<EOS>
+<SOS>A , B , C = int ( D [ 1 ] ) , int ( D [ 2 ] ) , int ( D [ 3 ] )<tab>D の 1 番目の 整数値 、 D の 2 番目の 整数値 、 D の 3 番目の 整数値 を A 、 B 、 C とする<EOS>
+<SOS>A [ B ] [ C ] = - 1 if D < 0 else C - D<tab>D が 0 より 小さい とき -1 、 そうでなければ C から D を 引 いた 値を A の B 番目の C 番 目 にする<EOS>
+<SOS>A = False<tab>偽 を そうでなければ 、 とする<EOS>
+<SOS>A = 1e-11<tab>1 e - 11 を A とする<EOS>
+<SOS>topological_sort ( A , B )<tab>to po log ical _ s ort ( A , B )<EOS>
+<SOS>print ( A + 2 )<tab>A に 2 を加えた 値 を出力する<EOS>
+<SOS>A , B = 0 , B + 1<tab>0 、 B に 1 を加えた 値を A 、 B とする<EOS>
+<SOS>print ( A / 2 )<tab>A を 2 で 割 った 値 を出力する<EOS>
+<SOS>def PPeQ ( a , b ) return EQ ( A . real , B . real ) and EQ ( A . imag , B . imag )<tab>関数 P P e Q を a 、 b を パラメータ として 定義 する<EOS>
+<SOS>if A > 0 :<tab>A が 0 より 大きい とき 、<EOS>
+<SOS>A = B [ C ] [ 2 ] * D / E + B [ C ] [ 0 ]<tab>B の C 番目の 2 番 目 に D を 掛 け た 値を E で 割 った 値に B の C 番目の 先頭 を加えた 値を A とする<EOS>
+<SOS>A = B [ 0 ] // C * B [ 1 ]<tab>B の 0 番 目 を C で 割 った 商 に B の 1 番 目 を 掛 け た 値を A とする<EOS>
+<SOS>print ( A + 1 , B + 1 )<tab>A に 1 を加えた 値 、 B に 1 を加えた 値 を出力する<EOS>
+<SOS>if A + B < C :<tab>A に B を加えた 値が C より 小さい とき 、<EOS>
+<SOS>A = B * 100 + C<tab>B に 100 を 掛 け た 値に C を加えた 値を A とする<EOS>
+<SOS>A , B , C , D = set ( ) , True , [ 0 ] , 1<tab>集合 、 真 、 ( 0 ) からなる 列 、 1 を A 、 B 、 C 、 D とする<EOS>
+<SOS>rec ( 0 , A , A )<tab>re c ( 0 , A , A )<EOS>
+<SOS>A = 1150<tab>11 50 を A とする<EOS>
+<SOS>A [ 0 ] , A [ 1 ] = B , C<tab>B 、 C を A の先頭 、 A の 1 番 目 とする<EOS>
+<SOS>A [ 2 ] = B = 1<tab>1 を B とする を A の 2 番 目 にする<EOS>
+<SOS>A . append ( 1 << 62 )<tab>A の 末 尾 に 1 を 6 2 だけ 左 シフト した 値 を追加する<EOS>
+<SOS>A = max ( A , B [ C ] - B [ D ] )<tab>A 、 B の C 番 目 から B の D 番 目 を 引 いた 値の 最大 値を A とする<EOS>
+<SOS>A [ B ] += C<tab>A の B 番 目 を C だけ 増加 させる<EOS>
+<SOS>A = [ [ - 1 for B in range ( C ) ] for D in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を D とし 、 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 -1 の 列 の 列 を A とする<EOS>
+<SOS>for A in range ( 8 ) :<tab>0 から 8 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = C // 2 + 1 , C // 2<tab>C を 2 で 割 った 商 に 1 を加えた 値 、 C を 2 で 割 った 商 を A 、 B とする<EOS>
+<SOS>for A in range ( 1 , 7 ) :<tab>1 から 7 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if ( A & 1 ) or B >= ( 1 << ( A >> 1 ) ) :<tab>[MASK] または B が 1 を A を 1 だけ 右 シフト した 値 だけ 左 シフト した 値 以上の とき 、<EOS>
+<SOS>A = B . Counter ( C )<tab>B . C o un ter ( C ) を A とする<EOS>
+<SOS>for A , B , C in D [ E ] :<tab>D の E 番目の 各要素 を 順に A 、 B 、 C として 、 繰り返す<EOS>
+<SOS>if A == B and C == 1 :<tab>A が B と 等 しく かつ C が 1 と 等 しい とき 、<EOS>
+<SOS>print ( A [ B ] [ C // 3 ] [ C % 3 ] )<tab>A の B 番目の C を 3 で 割 った 商 番目の C を 3 で 割 った 余 り 番 目 を出力する<EOS>
+<SOS>A = [ B ] * C<tab>( B ) からなる 列 の C 回 分 の 列 を A とする<EOS>
+<SOS>if A in B [ C ] :<tab>A が B の C 番 目 に含まれる とき 、<EOS>
+<SOS>A = [ '' ] * 7<tab>( 空文字列 ) からなる 列 の 7 回 分 の 列 を A とする<EOS>
+<SOS>A = ord ( 'A' )<tab>' A ' の 順序 数 を A とする<EOS>
+<SOS>if A [ B - 1 ] [ C ] [ D ] < E :<tab>A の B から 1 を 引 いた 値 番目の C 番目の D 番 目 が E より 小さい とき 、<EOS>
+<SOS>A , B = 0 , C + D<tab>0 、 C に D を加えた 値を A 、 B とする<EOS>
+<SOS>A = [ [ B for C in range ( D ) ] for E in range ( D ) ]<tab>0 から D 未 満 までの 数 列 の 各要素 を E とし 、 0 から D 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 を A とする<EOS>
+<SOS>A . append ( list ( map ( int , input ( ) . split ( ) ) ) )<tab>A の 末 尾 に 入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 のリスト を追加する<EOS>
+<SOS>if abs ( A . real ) > B or abs ( A . imag ) > B :<tab>A の re al の 絶対 値が B より 大きく または A の im ag の 絶対 値が B より 大きい とき 、<EOS>
+<SOS>print ( 'no' if A * B & 1 else 'yes' )<tab>[MASK] の とき ' no ' 、 そうでなければ ' y es ' を出力する<EOS>
+<SOS>if A < B - 1 :<tab>A が B から 1 を 引 いた 値 より 小さい とき 、<EOS>
+<SOS>A [ B ] = math . sqrt ( A [ B - 1 ] ** 2 + 1 )<tab>A の B から 1 を 引 いた 値 番目の 2 乗 に 1 を加えた 値の 平 方 根 を A の B 番 目 にする<EOS>
+<SOS>for A in range ( 6 ) :<tab>0 から 6 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ 0 ] [ 2 ] = 1<tab>1 を A の先頭 の 2 番 目 にする<EOS>
+<SOS>B = C<tab>C を B とする<EOS>
+<SOS>while A != 0 :<tab>A が 0 と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>for A in range ( 2 , len ( B ) ) :<tab>2 から B の長さ 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>print ( max ( A - B , max ( C >> 1 , D [ 0 ] - 1 ) ) )<tab>A から B を 引 いた 値 、 C を 1 だけ 右 シフト した 値 、 D の先頭 から 1 を 引 いた 値の 最大 値の 最大 値 を出力する<EOS>
+<SOS>A , B = C . pop ( 0 )<tab>C の 0 を取り 出した 値を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = 2 * int ( input ( ) )<tab>2 に 入力された 文字列 の 整数値 を 掛 け た 値を A とする<EOS>
+<SOS>if A [ B - 2 ] [ C ] == '#' or A [ B - 1 ] [ C ] == '#' or A [ B - 1 ] [ C + 1 ] == '#' :<tab>A の B -2 番目の C 番 目 が ' # ' と 等 しく または A の B -1 番目の C 番 目 が ' # ' と 等 しく または A の B から 1 を 引 いた 値 番目の C に 1 を加えた 値 番 目 が ' # ' と 等 しい とき 、<EOS>
+<SOS>A += B [ C ]<tab>A を B の C 番 目 だけ 増加 させる<EOS>
+<SOS>A [ B ] %= C<tab>A の B 番 目 を C で 割 った 余 り にする<EOS>
+<SOS>A , B , C = - D + E , - D - E , F << 1<tab>- D に E を加えた 値 、 - D から E を 引 いた 値 、 F を 1 だけ 左 シフト した 値を A 、 B 、 C とする<EOS>
+<SOS>A = [ B ** 3 for B in range ( 1111 ) ]<tab>0 から 11 11 未 満 までの 数 列 の 各要素 を B とし 、 B の 3 乗 の 列 を A とする<EOS>
+<SOS>A = int ( B . pop ( 0 ) )<tab>B の 0 を取り 出した 値の 整数値 を A とする<EOS>
+<SOS>A = B * ( B + 1 ) * ( B + 2 ) // 6<tab>B に B に 1 を加えた 値を 掛 け た 値に B に 2 を加えた 値を 掛 け た 値を 6 で 割 った 商 を A とする<EOS>
+<SOS>if A == '#' :<tab>A が ' # ' と 等 しい とき 、<EOS>
+<SOS>if A * B > C :<tab>A に B を 掛 け た 値が C より 大きい とき 、<EOS>
+<SOS>A = [ 2 ]<tab>( 2 ) からなる 列 を A とする<EOS>
+<SOS>if A [ B ] == '"' :<tab>A の B 番 目 が ' " ' と 等 しい とき 、<EOS>
+<SOS>A = [ 1 ] * 5<tab>(1) からなる 列 の 5 回 分 の 列 を A とする<EOS>
+<SOS>print ( A , int ( B ) + int ( C ) , 200 * int ( B ) + 300 * int ( C ) )<tab>A 、 B の 整数値 に C の 整数値 を加えた 値 、 200 に B の 整数値 を 掛 け た 値に 300 に C の 整数値 を 掛 け た 値 を加えた 値 を出力する<EOS>
+<SOS>print ( ( A [ B ] [ C ] [ D ] [ D ] + A [ B ] [ C ] [ E ] [ E ] ) % 100000 )<tab>A [ B ] [ C ] の D 番目の D 番 目 に A [ B ] [ C ] の E 番目の E 番 目 を加えた 値を 10 0000 で 割 った 余 り を出力する<EOS>
+<SOS>A . heappop ( B )<tab>A . he app op ( B )<EOS>
+<SOS>A = [ [ 0 for B in range ( B + 1 ) ] for C in range ( C + 1 ) ]<tab>0 から C に 1 を加えた 値 未 満 までの 数 列 の 各要素 を C とし 、 0 から B に 1 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>print ( 'Yes' if A else 'No' )<tab>A の とき ' Y es ' 、 そうでなければ ' N o ' を出力する<EOS>
+<SOS>A = 3.1415926535897932384626433832795<tab>3.1 4 15 9 26 5 3 5 89 79 32 38 4 6 2 64 3 38 32 79 5 を A とする<EOS>
+<SOS>if A > 0 and B . level [ C ] < 0 :<tab>A が 0 より 大きく かつ B の l evel の C 番 目 が 0 より 小さい とき 、<EOS>
+<SOS>A , B = term ( )<tab>ter m () を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = min ( A , B + C [ D - E ] )<tab>A 、 B に C の D から E を 引 いた 値 番 目 を加えた 値の 最小 値を A とする<EOS>
+<SOS>A [ B ] = max ( A [ B ] , C )<tab>A の B 番 目 、 C の 最大 値を A の B 番 目 にする<EOS>
+<SOS>A [ B ] = ( C , D [ 2 : ] )<tab>( C 、 D の 2 番 目 から 末 尾 までの 部分 列 ) の 組 を A の B 番 目 にする<EOS>
+<SOS>if len ( A ) :<tab>A の長さ の とき 、<EOS>
+<SOS>A = int ( ( B * C ) ** 0.5 )<tab>B に C を 掛 け た 値の 0.5 乗 の 整数値 を A とする<EOS>
+<SOS>if len ( A [ B ] [ 1 ] ) > 0 :<tab>A の B 番目の 1 番目の 長さ が 0 より 大きい とき 、<EOS>
+<SOS>A = [ - 1 ] * B<tab>( -1 ) からなる 列 の B 回 分 の 列 を A とする<EOS>
+<SOS>A , B = int ( C [ 1 ] ) , int ( C [ 2 ] )<tab>C の 1 番目の 整数値 、 C の 2 番目の 整数値 を A 、 B とする<EOS>
+<SOS>if A == 'D' :<tab>A が ' D ' と 等 しい とき 、<EOS>
+<SOS>A = B [ 1 ] = 2<tab>2 を B の 1 番 目 とする を A とする<EOS>
+<SOS>A = convex_cut ( B , A )<tab>con ve x _ c u t ( B , A ) を A とする<EOS>
+<SOS>for A in range ( 101 ) :<tab>0 から 10 1 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A >= 0 and A < 5 and B >= 0 and B < 5 and C >= 0 and C < 5 :<tab>A > = 0 かつ A < 5 かつ B が 0 以上 かつ B が 5 より 小さく かつ C が 0 以上 かつ C が 5 より 小さい とき 、<EOS>
+<SOS>A [ B + 1 ] [ C ] |= 1<tab>A の B に 1 を加えた 値 番目の C 番 目 を 1 と の 論理 和 にする<EOS>
+<SOS>A = B [ 0 ] * B [ 5 ] - B [ 3 ] * B [ 2 ]<tab>B の 先頭に B の 5 番 目 を 掛 け た 値 から B の 3 番 目 に B の 2 番 目 を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>C = A ^ B<tab>A と B の 排 他 論理 和 を そうでなければ 、 とする<EOS>
+<SOS>A = ( B + C [ D ] ) / ( E + F )<tab>B に C の D 番 目 を加えた 値を E に F を加えた 値 で 割 った 値を A とする<EOS>
+<SOS>A = D [ 0 ] if B + 1 == C else D [ B + 1 ]<tab>B に 1 を加えた 値が C と 等 しい とき D の 0 番 目 、 そうでなければ D の B に 1 を加えた 値 番 目 を A とする<EOS>
+<SOS>if A [ B ] [ C ] >= '0' and A [ B ] [ C ] <= '9' :<tab>A の B 番目の C 番 目 が ' 0 ' 以上 かつ A の B 番目の C 番 目 が ' 9 ' 以下の とき 、<EOS>
+<SOS>A = [ [ [ [ 0 for B in range ( 5 ) ] for C in range ( 5 ) ] for D in range ( 5 ) ] for E in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を E とし 、 0 から 5 未 満 までの 数 列 の 各要素 を D とし 、 0 から 5 未 満 までの 数 列 の 各要素 を C とし 、 0 から 5 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 の 列 の 列 を A とする<EOS>
+<SOS>A [ F ( 't' ) + F ( 'h' ) + F ( 'i' ) + F ( 's' ) ] = ( B , C )<tab>( B 、 C ) の 組 を A の F ( ' t ' ) に F ( ' h ' ) を加えた 値に F ( ' i ' ) を加えた 値に F ( ' s ' ) を加えた 値 番 目 にする<EOS>
+<SOS>input ( )<tab>入力された 文字列<EOS>
+<SOS>print ( A + max ( B , C , D ) )<tab>A に B 、 C 、 D の 最大 値 を加えた 値 を出力する<EOS>
+<SOS>while len ( A ) > 0 :<tab>A の長さ が 0 より 大きい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ 1 ] * ( 2 * B + 1 )<tab>(1) からなる 列 の 2 に B を 掛 け た 値に 1 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>print ( '{:02d}:{:02d}:{:02d}' . format ( A // 3600 , ( A % 3600 ) // 60 , A % 60 ) )<tab>' { : 0 2 d } : { : 0 2 d } : { : 0 2 d } ' . form at ( A / /3 600 , ( A % 3 600 ) / / 60 , A % 60 ) を出力する<EOS>
+<SOS>A += C [ B ] if B in C else B<tab>A を B が C に含まれる とき C の B 番 目 、 そうでなければ B だけ 増加 させる<EOS>
+<SOS>A , B , C = list ( map ( int , input ( ) . split ( ',' ) ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A . par [ B ] += A . par [ C ]<tab>A の p ar の B 番 目 を A の p ar の C 番 目 だけ 増加 させる<EOS>
+<SOS>A += '('<tab>A を ' ( ' だけ 増加 させる<EOS>
+<SOS>A , B = [ 0 ] * C , 0<tab>( 0 ) からなる 列 の C 回 分 の 列 、 0 を A 、 B とする<EOS>
+<SOS>while len ( A ) or len ( B ) :<tab>A の長さ または B の長さ の 間 、 以下 を 繰り返す<EOS>
+<SOS>move ( A [ B ] [ C ] )<tab>m o ve ( A [ B ] [ C ] )<EOS>
+<SOS>A = UnionSet ( B + 1 )<tab>U n ion S et ( B + 1 ) を A とする<EOS>
+<SOS>A , B [ 0 ] , C [ 0 ] = 0 , 1 , int ( input ( ) )<tab>0 、 1 、 入力された 文字列 の 整数値 を A 、 B の先頭 、 C の 0 番 目 とする<EOS>
+<SOS>A , B = [ 0 ] * ( C + 1 ) , 0<tab>( 0 ) からなる 列 の C に 1 を加えた 値 回 分 の 列 、 0 を A 、 B とする<EOS>
+<SOS>if A > B or A <= 0 :<tab>A が B より 大きく または A が 0 以下の とき 、<EOS>
+<SOS>while A <= B :<tab>A が B 以下の 間 、 以下 を 繰り返す<EOS>
+<SOS>A = 240 * B<tab>2 40 に B を 掛 け た 値を A とする<EOS>
+<SOS>A = sorted ( A )<tab>A を ソート した 列 を A とする<EOS>
+<SOS>return 1<tab>1 を返す<EOS>
+<SOS>A = B + 1<tab>B に 1 を加えた 値を A とする<EOS>
+<SOS>A = B + int ( C [ 1 ] ) * D [ E ] [ 1 ]<tab>B に C の 1 番目の 整数値 に D の E 番目の 1 番 目 を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>A [ B ] = min ( - C [ D ] , A [ B ] ) + E [ F ]<tab>- C の D 番 目 、 A の B 番目の 最小 値に E の F 番 目 を加えた 値を A の B 番 目 にする<EOS>
+<SOS>A = ( ( - 1 , 0 ) , ( 0 , 1 ) , ( 1 , 0 ) , ( 0 , - 1 ) )<tab>( ( -1 、 0 ) の 組 、 ( 0 、 1 ) の 組 、 ( 1 、 0 ) の 組 、 ( 0 、 -1 ) の 組 ) の 組 を A とする<EOS>
+<SOS>if A < 0 or A >= 4 or B < 0 or B >= 4 or C [ B ] [ A ] :<tab>A が 0 より 小さく または A が 4 以上 または B が 0 より 小さく または B が 4 以上 または C の B 番目の A 番目の とき 、<EOS>
+<SOS>if A [ B ] and A [ C ] :<tab>A の B 番 目 かつ A の C 番目の とき 、<EOS>
+<SOS>print ( A ** 3 - len ( set ( B ) ) )<tab>A の 3 乗 から B の集合 の長さ を 引 いた 値 を出力する<EOS>
+<SOS>A = [ False ] * B<tab>( 偽 ) からなる 列 の B 回 分 の 列 を A とする<EOS>
+<SOS>while A < B or C < D :<tab>A が B より 小さく または C が D より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = len ( B )<tab>B の長さ を A とする<EOS>
+<SOS>for A in list ( B . keys ( ) ) :<tab>B の キー の集まり のリスト の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( 0 , len ( B ) , 4 ) :<tab>0 から B の長さ 未 満 までの 4 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>return 'null'<tab>' null ' を返す<EOS>
+<SOS>for A in range ( 13 ) :<tab>0 から 13 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( 5 , B - 1 , - 1 ) :<tab>5 から B から 1 を 引 いた 値 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B [ C ] = A + 1 , B [ C ] + 1<tab>A に 1 を加えた 値 、 B の C 番 目 に 1 を加えた 値を A 、 B の C 番 目 とする<EOS>
+<SOS>if A % B :<tab>A を B で 割 った 余 り の とき 、<EOS>
+<SOS>return [ 1 , A . ws [ B ] - A . ws [ C ] ]<tab>( 1 、 A の w s の B 番 目 から A の w s の C 番 目 を 引 いた 値 ) からなる 列 を返す<EOS>
+<SOS>print ( C if A > ( B >> 1 ) else 'NO COLOR' )<tab>A が B を 1 だけ 右 シフト した 値 より 大きい とき C 、 そうでなければ ' N O ▁C OL OR ' を出力する<EOS>
+<SOS>A , B , C = D . heappop ( E )<tab>D . he app op ( E ) を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>if A < B [ C ] and D < E [ C ] :<tab>A が B の C 番 目 より 小さく かつ D が E の C 番 目 より 小さい とき 、<EOS>
+<SOS>A = ( B == 0 or B == 2 )<tab>B が 0 と 等 しく または B が 2 と 等 しい かどうか を A とする<EOS>
+<SOS>A , B = [ 0 ] * 12 , [ 0 ] * 12<tab>( 0 ) からなる 列 の 12 回 分 の 列 、 ( 0 ) からなる 列 の 12 回 分 の 列 を A 、 B とする<EOS>
+<SOS>while A != [ ] and A [ 0 ] . isupper ( ) == False :<tab>A が 空 列 と 等 しく なく かつ A の先頭 の 全て が 英 大文字 かどうか が 偽 と 等 しい 間 、 以下 を 繰り返す<EOS>
+<SOS>A , B = 0 , 1000000000.0<tab>0 、 1 0000 0000 0.0 を A 、 B とする<EOS>
+<SOS>if ( A > 0 and B < 0 ) or ( A < 0 and B > 0 ) :<tab>A が 0 より 大きく かつ B が 0 より 小さく または A が 0 より 小さく かつ B が 0 より 大きい とき 、<EOS>
+<SOS>A //= 10<tab>A を 10 分 の 一 にする<EOS>
+<SOS>A [ B ] [ C ] [ D ] [ D ] += A [ B ] [ C - 1 ] [ D ] [ D ] + A [ B ] [ C - 1 ] [ E ] [ D ]<tab>A の B 番目の C 番目の D 番目の D 番 目 を A の B 番目の C から 1 を 引 いた 値 番目の D 番目の D 番 目 に A の B 番目の C から 1 を 引 いた 値 番目の E 番目の D 番 目 を加えた 値 だけ 増加 させる<EOS>
+<SOS>A = [ [ 0 for B in range ( 3 ) ] for C in range ( 210 ) ]<tab>0 から 2 10 未 満 までの 数 列 の 各要素 を C とし 、 0 から 3 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = A - ( A - 1 ) % 5<tab>A から A から 1 を 引 いた 値を 5 で 割 った 余 り を 引 いた 値を A とする<EOS>
+<SOS>A = A + ( A * 5 ) // 100<tab>A に A に 5 を 掛 け た 値を 100 で 割 った 商 を加えた 値を A とする<EOS>
+<SOS>print ( * A [ : B ] )<tab>A の先頭 から B 番 目 までの 部分 列 を 展開 して を出力する<EOS>
+<SOS>A = ( B * B + C * C ) ** 0.5<tab>B に B を 掛 け た 値に C に C を 掛 け た 値 を加えた 値の 0.5 乗 を A とする<EOS>
+<SOS>A . heappush ( B , ( 0 , C , 0 ) )<tab>A . he ap push ( B , ( 0 , C , 0 ) )<EOS>
+<SOS>print ( A . replace ( 'Hoshino' , 'Hoshina' ) )<tab>A 内の ' H os hi no ' を ' H o sh in a ' で 置き換え た 文字列 を出力する<EOS>
+<SOS>A = 7200 - ( 3600 * B + 60 * C + D )<tab>7 200 から 3 600 に B を 掛 け た 値に 60 に C を 掛 け た 値 を加えた 値に D を加えた 値を 引 いた 値を A とする<EOS>
+<SOS>A , B = A // C , B // C<tab>A を C で 割 った 商 、 B を C で 割 った 商 を A 、 B とする<EOS>
+<SOS>print ( abs ( A - B ) )<tab>A から B を 引 いた 値の 絶対 値 を出力する<EOS>
+<SOS>for A in range ( 2 , B ) :<tab>2 から B 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A % 3 :<tab>A を 3 で 割 った 余 り の とき 、<EOS>
+<SOS>A = re . split ( '[., ]' , input ( ) )<tab>入力された 文字列を 正規表現 ' [ . , ▁ ] ' で 分割 した 文字列 リストを A とする<EOS>
+<SOS>if A > B - A :<tab>A が B から A を 引 いた 値 より 大きい とき 、<EOS>
+<SOS>while A < B and C [ A ] == ' ' :<tab>A が B より 小さく かつ C の A 番 目 が 空白 文字 と 等 しい 間 、 以下 を 繰り返す<EOS>
+<SOS>while A < B and C [ A ] . isalpha ( ) :<tab>A が B より 小さく かつ C の A 番 目 が 全て アルファベット の 間 、 以下 を 繰り返す<EOS>
+<SOS>print ( 'YES' if isOrthogonalLL ( [ A , B ] , [ C , D ] ) else 'NO' )<tab>is O r th o g onal LL ( [ A , B ] , [ C , D ] ) の とき ' Y E S ' 、 そうでなければ ' N O ' を出力する<EOS>
+<SOS>print ( A [ B ] * math . cos ( C [ B ] ) , A [ B ] * math . sin ( C [ B ] ) , sep = '\n' )<tab>改行 文字 を 区切り として A の B 番 目 に math . co s ( C [ B ] ) を 掛 け た 値 、 A の B 番 目 に math . s in ( C [ B ] ) を 掛 け た 値 を出力する<EOS>
+<SOS>while A < len ( B ) and B [ A ] == C :<tab>A が B の長さ より 小さく かつ B の A 番 目 が C と 等 しい 間 、 以下 を 繰り返す<EOS>
+<SOS>A += B [ 2 ]<tab>A を B の 2 番 目 だけ 増加 させる<EOS>
+<SOS>A = str ( input ( ) )<tab>入力された 文字列 の 文字列を A とする<EOS>
+<SOS>return A . ws [ B ]<tab>A の w s の B 番 目 を返す<EOS>
+<SOS>A += B . pop ( 0 ) . upper ( )<tab>A を B の 0 を取り 出した 値を 英 大文字 に変換し た 文字列 だけ 増加 させる<EOS>
+<SOS>A = int ( B [ 1 ] )<tab>B の 1 番目の 整数値 を A とする<EOS>
+<SOS>A = [ [ 1 , 2 , 4 , 8 ] , [ 4 , 8 , 1 , 2 ] , [ 8 , 1 , 2 , 4 ] , [ 2 , 4 , 8 , 1 ] ]<tab>( ( 1 、 2 、 4 、 8 ) からなる 列 、 ( 4 、 8 、 1 、 2 ) からなる 列 、 ( 8 、 1 、 2 、 4 ) からなる 列 、 ( 2 、 4 、 8 、 1 ) からなる 列 ) からなる 列 を A とする<EOS>
+<SOS>if A [ B ] [ C ] != '.' :<tab>A の B 番目の C 番 目 が ' . ' と 等 しく ない とき 、<EOS>
+<SOS>A , B , C = list ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A = convex_hull ( B )<tab>con ve x _ h ul l ( B ) を A とする<EOS>
+<SOS>A [ B ] [ C + 1 ] [ D + 1 ] = min ( A [ B ] [ C + 1 ] [ D + 1 ] , max ( E [ D + 1 ] - E [ C ] , A [ B - 1 ] [ F ] [ C ] ) )<tab>A の B 番目の C に 1 を加えた 値 番目の D に 1 を加えた 値 番 目 、 E の D に 1 を加えた 値 番 目 から E の C 番 目 を 引 いた 値 、 A の B -1 番目の F 番目の C 番目の 最大 値の 最小 値を A の B 番目の C に 1 を加えた 値 番目の D に 1 を加えた 値 番 目 にする<EOS>
+<SOS>A = [ True ] * ( B + 1 )<tab>( 真 ) からなる 列 の B に 1 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>return A [ 0 ] + B * C<tab>A の 0 番 目 に B に C を 掛 け た 値 を加えた 値を返す<EOS>
+<SOS>return A . items [ len ( A . items ) - 1 ]<tab>A の キー と 値 の集まり の A の キー と 値 の集まり の長さ から 1 を 引 いた 値 番 目 を返す<EOS>
+<SOS>A = [ 2 ] * ( B + 1 )<tab>( 2 ) からなる 列 の B に 1 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>A [ B ] = ( int ( C ) , [ ] )<tab>( C の 整数値 、 空 列 ) の 組 を A の B 番 目 にする<EOS>
+<SOS>is_atSameSide ( A , B , [ C , D ] )<tab>is _ at S am e S ide ( A , B , [ C , D ] )<EOS>
+<SOS>if check ( A , B ) :<tab>ch ec k ( A , B ) の とき 、<EOS>
+<SOS>A = [ 0 ] * 26<tab>( 0 ) からなる 列 の 26 回 分 の 列 を A とする<EOS>
+<SOS>A = complex ( B [ 6 ] , B [ 7 ] )<tab>B の 6 番 目 を 実 部 、 B の 7 番 目 を 虚 部 とした 複素数 を A とする<EOS>
+<SOS>A , B = factor ( B )<tab>f act or ( B ) を 展開 し 順に A 、 B とする<EOS>
+<SOS>return A // gcd ( A , B ) * B<tab>A を g c d ( A , B ) で 割 った 商 に B を 掛 け た 値を返す<EOS>
+<SOS>A [ ( 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 ) ] = 0<tab>0 を A の ( 0 、 1 、 2 、 3 、 4 、 5 、 6 、 7 ) の 組 番 目 にする<EOS>
+<SOS>A = 15<tab>15 を A とする<EOS>
+<SOS>if A == 'xy' :<tab>A が ' x y ' と 等 しい とき 、<EOS>
+<SOS>A [ B ] = - getInt ( )<tab>- get In t () を A の B 番 目 にする<EOS>
+<SOS>A = [ True for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 真 の 列 を A とする<EOS>
+<SOS>print ( 1 )<tab>1 を出力する<EOS>
+<SOS>print ( A - sum ( B [ C : A + 1 ] ) )<tab>A から B の C 番 目 から A に 1 を加えた 値 までの 部分 列 の 総 和 を 引 いた 値 を出力する<EOS>
+<SOS>A = swap ( B , C , D )<tab>swap ( B , C , D ) を A とする<EOS>
+<SOS>if A [ B & 1 ] [ C ] == A [ B & 1 ] [ C - 1 ] :<tab>A の [MASK] 番目の C 番 目 が A の [MASK] 番目の C から 1 を 引 いた 値 番 目 と 等 しい とき 、<EOS>
+<SOS>if A [ B ] == C [ B ] :<tab>A の B 番 目 が C の B 番 目 と 等 しい とき 、<EOS>
+<SOS>print ( 'Open' if A == 1 or A == 6 else 'Close' )<tab>A が 1 と 等 しく または A が 6 と 等 しい とき ' Open ' 、 そうでなければ ' C lo se ' を出力する<EOS>
+<SOS>A , B , C = [ 0 ] , [ 0 ] , [ 0 ]<tab>( 0 ) からなる 列 、 ( 0 ) からなる 列 、 ( 0 ) からなる 列 を A 、 B 、 C とする<EOS>
+<SOS>A = min ( A , calc ( B ) + 1 )<tab>A 、 c al c ( B ) に 1 を加えた 値の 最小 値を A とする<EOS>
+<SOS>A += B [ 0 ]<tab>A を B の先頭 だけ 増加 させる<EOS>
+<SOS>combi ( A , 20 )<tab>com b i ( A , 20 )<EOS>
+<SOS>A = 25<tab>25 を A とする<EOS>
+<SOS>if A [ B ] [ C ] == 1 :<tab>A の B 番目の C 番 目 が 1 と 等 しい とき 、<EOS>
+<SOS>A [ B + 1 ] [ C + 1 ] += 1<tab>A の B に 1 を加えた 値 番目の C に 1 を加えた 値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>print ( ( A - B - C ) // ( D - 2 ) )<tab>A から B を 引 いた 値 から C を 引 いた 値を D から 2 を 引 いた 値 で 割 った 商 を出力する<EOS>
+<SOS>A = B + 6<tab>B に 6 を加えた 値を A とする<EOS>
+<SOS>A = [ 0 ] * 60<tab>( 0 ) からなる 列 の 60 回 分 の 列 を A とする<EOS>
+<SOS>if A < 2 :<tab>A が 2 より 小さい とき 、<EOS>
+<SOS>A = [ B [ C : C + 3 ] for C in range ( len ( B ) - 2 ) ]<tab>0 から B の長さ から 2 を 引 いた 値 未 満 までの 数 列 の 各要素 を C とし 、 B の C 番 目 から C に 3 を加えた 値 までの 部分 列 の 列 を A とする<EOS>
+<SOS>A = 720 - B<tab>7 20 から B を 引 いた 値を A とする<EOS>
+<SOS>A = B - C<tab>B から C を 引 いた 値を A とする<EOS>
+<SOS>if A [ 0 ] == 1 :<tab>A の 0 番 目 が 1 と 等 しい とき 、<EOS>
+<SOS>if A [ 2 ] == 2 :<tab>A の 2 番 目 が 2 と 等 しい とき 、<EOS>
+<SOS>if A and A . group ( 1 ) == A . group ( 2 ) :<tab>A かつ A . group (1) が A . group ( 2 ) と 等 しい とき 、<EOS>
+<SOS>A = [ 'A' , 'B' , 'AB' , 'O' ]<tab>( ' A ' 、 ' B ' 、 ' A B ' 、 ' O ' ) からなる 列 を A とする<EOS>
+<SOS>for A in range ( B * B , C , B ) :<tab>B に B を 掛 け た 値 から C 未 満 までの B 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B , C = int ( input ( ) ) , int ( input ( ) ) , int ( input ( ) )<tab>入力された 文字列 の 整数値 、 入力された 文字列 の 整数値 、 入力された 文字列 の 整数値 を A 、 B 、 C とする<EOS>
+<SOS>A . heappush ( B , ( - C , D ) )<tab>A . he ap push ( B , ( - C , D ) )<EOS>
+<SOS>print ( A , B , C )<tab>A 、 B 、 C を出力する<EOS>
+<SOS>A = 1000004<tab>10 0000 4 を A とする<EOS>
+<SOS>A = B<tab>B を A とする<EOS>
+<SOS>print ( A - B + 1 , C - D + 1 )<tab>A から B を 引 いた 値に 1 を加えた 値 、 C から D を 引 いた 値に 1 を加えた 値 を出力する<EOS>
+<SOS>A = [ 0.0 ] * 2<tab>( 0.0 ) からなる 列 の 2 回 分 の 列 を A とする<EOS>
+<SOS>A = 50025<tab>500 25 を A とする<EOS>
+<SOS>print ( 1 + A . index ( max ( A ) ) )<tab>1 に A の A の 最大 値 と 等 しい 要素 の最初の 位置 を加えた 値 を出力する<EOS>
+<SOS>A , B , C = map ( int , input ( ) . split ( ',' ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>if A [ 0 ] == 'FORWARD' :<tab>A の 0 番 目 が ' FOR W AR D ' と 等 しい とき 、<EOS>
+<SOS>A , B , C , D = [ 0 ] * 1002 , [ 0 ] * 1002 , [ 0 ] * 1002 , [ 0 ] * 1002<tab>( 0 ) からなる 列 の 100 2 回 分 の 列 、 ( 0 ) からなる 列 の 100 2 回 分 の 列 、 ( 0 ) からなる 列 の 100 2 回 分 の 列 、 ( 0 ) からなる 列 の 100 2 回 分 の 列 を A 、 B 、 C 、 D とする<EOS>
+<SOS>if A [ B ] [ C ] == 'c' :<tab>A の B 番目の C 番 目 が ' c ' と 等 しい とき 、<EOS>
+<SOS>A [ B % 3 ] [ C + 1 ] = min ( A [ B % 3 ] [ C + 1 ] , A [ B // 3 ] [ C ] + D [ B // 3 ] [ B % 3 ] [ E [ 0 ] [ C ] ] [ E [ 1 ] [ C ] ] + 1 )<tab>A の B を 3 で 割 った 余 り 番目の C に 1 を加えた 値 番 目 、 A の B / /3 番目の C 番 目 に D [ B / /3 ] [ B % 3 ] の E [ 0 ] [ C ] 番目の E [ 1 ] の C 番 目 番 目 を加えた 値に 1 を加えた 値の 最小 値を A の B を 3 で 割 った 余 り 番目の C に 1 を加えた 値 番 目 にする<EOS>
+<SOS>def vabs ( a ) return math . hypot ( A . real , A . imag )<tab>関数 v abs を a を パラメータ として 定義 する<EOS>
+<SOS>for A in range ( 2 , B + 1 ) :<tab>2 から B に 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>print ( A if A < B else 'Impossible' )<tab>A が B より 小さい とき A 、 そうでなければ ' Imp os si ble ' を出力する<EOS>
+<SOS>if A [ B ] != A [ B - 1 ] + 1 :<tab>A の B 番 目 が A の B から 1 を 引 いた 値 番 目 に 1 を加えた 値 と 等 しく ない とき 、<EOS>
+<SOS>A = [ [ 0 for B in range ( 3 ) ] for C in range ( 101 ) ]<tab>0 から 10 1 未 満 までの 数 列 の 各要素 を C とし 、 0 から 3 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = B / Decimal ( C )<tab>B を D ec im al ( C ) で 割 った 値を A とする<EOS>
+<SOS>print ( - 1 if A < 0 else A + B * C )<tab>A が 0 より 小さい とき -1 、 そうでなければ A に B に C を 掛 け た 値 を加えた 値 を出力する<EOS>
+<SOS>A = [ [ 0 for B in range ( 4 ) ] for C in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 4 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A += B [ C ] // 3<tab>A を B の C 番 目 を 3 で 割 った 商 だけ 増加 させる<EOS>
+<SOS>A = bisect_left ( B , int ( C [ 1 ] ) )<tab>b is ect _ left ( B , int ( C [ 1 ] ) ) を A とする<EOS>
+<SOS>if A [ B ] and A [ B - 2 ] :<tab>A の B 番 目 かつ A の B から 2 を 引 いた 値 番目の とき 、<EOS>
+<SOS>A . extend ( B )<tab>B を追加し て A を拡張する<EOS>
+<SOS>print ( 'OK' if A ^ B else 'NG' )<tab>A と B の 排 他 論理 和 の とき ' O K ' 、 そうでなければ ' N G ' を出力する<EOS>
+<SOS>A = sum ( B )<tab>B の 総 和 を A とする<EOS>
+<SOS>if len ( str ( A ) ) <= 80 :<tab>A の 文字列 の長さ が 80 以下の とき 、<EOS>
+<SOS>print ( bisect_left ( A , B ) )<tab>b is ect _ left ( A , B ) を出力する<EOS>
+<SOS>A , B = [ 0 ] * 100003 , [ 0 ] * 100003<tab>( 0 ) からなる 列 の 1 0000 3 回 分 の 列 、 ( 0 ) からなる 列 の 1 0000 3 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A , B = C [ D ] , 1<tab>C の D 番 目 、 1 を A 、 B とする<EOS>
+<SOS>A = [ - 1 for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 -1 の 列 を A とする<EOS>
+<SOS>if A and B != 5 :<tab>A かつ B が 5 と 等 しく ない とき 、<EOS>
+<SOS>if A [ B ] >= 1000000 :<tab>A の B 番 目 が 100 0000 以上の とき 、<EOS>
+<SOS>A = sorted ( B . items ( ) , key = lambda x : C [ 1 ] , reverse = True )<tab>x を パラメータ として x の 1 番 目 を返す関数 を キー として 逆 順に B の キー と 値 の集まり を ソート した 列 を A とする<EOS>
+<SOS>A [ B [ C + 1 ] ] = C + 1<tab>C に 1 を加えた 値を A の B の C に 1 を加えた 値 番 目 番 目 にする<EOS>
+<SOS>if A > 2 :<tab>A が 2 より 大きい とき 、<EOS>
+<SOS>if A [ 0 ] == 'STOP' :<tab>A の 0 番 目 が ' ST OP ' と 等 しい とき 、<EOS>
+<SOS>A = [ 0 ] * 31<tab>( 0 ) からなる 列 の 3 1 回 分 の 列 を A とする<EOS>
+<SOS>A = [ - 1 , 0 , 1 , 0 ]<tab>( -1 、 0 、 1 、 0 ) からなる 列 を A とする<EOS>
+<SOS>A [ 61 ] , A [ 62 ] , A [ 63 ] , A [ 64 ] , A [ 65 ] = 'z' , '.' , '?' , '!' , ' '<tab>' z ' 、 ' . ' 、 ' ? ' 、 ' ! ' 、 空白 文字 を A の 6 1 番 目 、 A の 6 2 番 目 、 A の 6 3 番 目 、 A の 64 番 目 、 A の 6 5 番 目 とする<EOS>
+<SOS>print ( A [ 1 ] )<tab>A の 1 番 目 を出力する<EOS>
+<SOS>A = max ( A , B [ C ] + B [ D ] )<tab>A 、 B の C 番 目 に B の D 番 目 を加えた 値の 最大 値を A とする<EOS>
+<SOS>A = B . bisect_left ( C , D )<tab>B . b is ect _ left ( C , D ) を A とする<EOS>
+<SOS>A = ( 3600 * B + 60 * C + D ) - ( 3600 * E + 60 * F + G )<tab>3 600 に B を 掛 け た 値に 60 に C を 掛 け た 値 を加えた 値に D を加えた 値 から 3 600 に E を 掛 け た 値に 60 に F を 掛 け た 値 を加えた 値に G を加えた 値を 引 いた 値を A とする<EOS>
+<SOS>A = B = C = 0<tab>0 を C を B とする とする を A とする<EOS>
+<SOS>print ( A + 1 , ':' , '*' * B [ A ] , sep = '' )<tab>区切り なしで A に 1 を加えた 値 、 ' : ' 、 ' * ' に B の A 番 目 を 掛 け た 値 を出力する<EOS>
+<SOS>A = [ int ( input ( ) ) for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 整数値 の 列 を A とする<EOS>
+<SOS>A = [ [ - 1 , 0 ] , [ 0 , 1 ] , [ 1 , 0 ] , [ 0 , - 1 ] ]<tab>( ( -1 、 0 ) からなる 列 、 ( 0 、 1 ) からなる 列 、 ( 1 、 0 ) からなる 列 、 ( 0 、 -1 ) からなる 列 ) からなる 列 を A とする<EOS>
+<SOS>A , B = A + 1 , True<tab>A に 1 を加えた 値 、 真 を A 、 B とする<EOS>
+<SOS>A = B . bisect_left ( C , D >> 1 , 0 , E )<tab>B . b is ect _ left ( C , D > > 1, 0 , E ) を A とする<EOS>
+<SOS>if A > 255 :<tab>A が 25 5 より 大きい とき 、<EOS>
+<SOS>if A != '0' :<tab>A が ' 0 ' と 等 しく ない とき 、<EOS>
+<SOS>A . append ( complex ( B + C * D , E - C * F ) )<tab>A の 末 尾 に B に C に D を 掛 け た 値 を加えた 値を 実 部 、 E から C に F を 掛 け た 値を 引 いた 値を 虚 部 とした 複素数 を追加する<EOS>
+<SOS>A = [ 0 , 1 , 2 , 4 , 6 , 16 , 12 , 64 , 24 , 36 , 48 , 1024 , 60 ]<tab>( 0 、 1 、 2 、 4 、 6 、 16 、 12 、 64 、 24 、 36 、 4 8 、 10 24 、 60 ) からなる 列 を A とする<EOS>
+<SOS>A = B + C<tab>B に C を加えた 値を A とする<EOS>
+<SOS>A = dijkstra ( B , C , 0 )<tab>d i j k st ra ( B , C , 0 ) を A とする<EOS>
+<SOS>while 1 :<tab>1 の 間 、 以下 を 繰り返す<EOS>
+<SOS>if A [ B ] >= C and A [ B ] > A [ D ] :<tab>A の B 番 目 が C 以上 かつ A の B 番 目 が A の D 番 目 より 大きい とき 、<EOS>
+<SOS>if A [ B ] >= '0' and A [ B ] <= '9' :<tab>A の B 番 目 が ' 0 ' 以上 かつ A の B 番 目 が ' 9 ' 以下の とき 、<EOS>
+<SOS>for A in range ( int ( B ) ) :<tab>0 から B の 整数値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = 323<tab>32 3 を A とする<EOS>
+<SOS>A = B [ 2 ] * B [ 4 ] - B [ 5 ] * B [ 1 ]<tab>B の 2 番 目 に B の 4 番 目 を 掛 け た 値 から B の 5 番 目 に B の 1 番 目 を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>if PPeQ ( A , 0 ) :<tab>P P e Q ( A , 0 ) の とき 、<EOS>
+<SOS>A , B = list ( C ) , list ( C )<tab>C のリスト 、 C の リストを A 、 B とする<EOS>
+<SOS>for A in range ( 6 , - 1 , - 1 ) :<tab>6 から -1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B ^ C [ D ] [ E ] [ F ] [ G ]<tab>B と C の D 番目の E 番目の F 番目の G 番目の 排 他 論理 和 を A とする<EOS>
+<SOS>A = B . split ( '&' )<tab>B を ' & ' で 分割 した 字句 列 を A とする<EOS>
+<SOS>A , B = map ( int , input ( ) . split ( ',' ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>return tuple ( A )<tab>A の 組 を返す<EOS>
+<SOS>A . sort ( key = lambda x : ( B [ 0 ] , B [ 1 ] ) )<tab>key を x を パラメータ として ( x の先頭 、 x の 1 番 目 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>if A == 0 or B [ A ] >= 0 :<tab>A が 0 と 等 しく または B の A 番 目 が 0 以上の とき 、<EOS>
+<SOS>A = [ B for B in range ( 7 ) ]<tab>0 から 7 未 満 までの 数 列 の 各要素 を B とし 、 B の 列 を A とする<EOS>
+<SOS>combi ( A + 1 , B , C + D [ E ] [ 2 ] )<tab>com b i ( A + 1, B , C + D [ E ] [ 2 ] )<EOS>
+<SOS>A [ B ] = C [ D ]<tab>C の D 番 目 を A の B 番 目 にする<EOS>
+<SOS>A , B = int ( input ( ) ) , int ( input ( ) )<tab>入力された 文字列 の 整数値 、 入力された 文字列 の 整数値 を A 、 B とする<EOS>
+<SOS>A += [ B + C for C in range ( D ) ]<tab>A を 0 から D 未 満 までの 数 列 の 各要素 を C とし 、 B に C を加えた 値の 列 だけ 増加 させる<EOS>
+<SOS>for A in range ( 26 - 3 ) :<tab>0 から 26 から 3 を 引 いた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . append ( ( B + C ) * D )<tab>A の 末 尾 に B に C を加えた 値に D を 掛 け た 値 を追加する<EOS>
+<SOS>A = 3 - A<tab>3 から A を 引 いた 値を A とする<EOS>
+<SOS>A . power = [ 0 ] * B<tab>( 0 ) からなる 列 の B 回 分 の 列 を A の p ow er にする<EOS>
+<SOS>A = sum ( B [ C : D ] )<tab>B の C 番 目 から D 番 目 までの 部分 列 の 総 和 を A とする<EOS>
+<SOS>A = Stack ( )<tab>S t ack () を A とする<EOS>
+<SOS>A [ re ] = 1<tab>1 を A の re 番 目 にする<EOS>
+<SOS>for A in sys . stdin :<tab>s y s の std in の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A , B in C :<tab>C の 各要素 を 順に A 、 B として 、 繰り返す<EOS>
+<SOS>if A > B [ C + 1 ] :<tab>A が B の C に 1 を加えた 値 番 目 より 大きい とき 、<EOS>
+<SOS>if A [ B - 1 ] == 0 :<tab>A の B から 1 を 引 いた 値 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>if A [ B ] + A [ C - 1 ] > D :<tab>A の B 番 目 に A の C から 1 を 引 いた 値 番 目 を加えた 値が D より 大きい とき 、<EOS>
+<SOS>A = [ 0 ] * 300005<tab>( 0 ) からなる 列 の 3 0000 5 回 分 の 列 を A とする<EOS>
+<SOS>A = [ [ B for C in range ( D + 1 ) ] for E in range ( F + 1 ) ]<tab>0 から F に 1 を加えた 値 未 満 までの 数 列 の 各要素 を E とし 、 0 から D に 1 を加えた 値 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 を A とする<EOS>
+<SOS>A = [ 0 , 9 , 26 , 50 , 80 , 115 , 154 , 196 , 240 , 285 , 330 ]<tab>( 0 、 9 、 26 、 50 、 80 、 1 15 、 15 4 、 196 、 2 40 、 28 5 、 3 30 ) からなる 列 を A とする<EOS>
+<SOS>C [ A ] . append ( int ( B [ 2 ] ) )<tab>辞書 の A 番目の 末 尾 に B の 2 番目の 整数値 を追加する<EOS>
+<SOS>A = [ [ B for C in range ( D + 2 ) ] for E in range ( 3 ) ]<tab>0 から 3 未 満 までの 数 列 の 各要素 を E とし 、 0 から D に 2 を加えた 値 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 を A とする<EOS>
+<SOS>if A + 1 > B :<tab>A に 1 を加えた 値が B より 大きい とき 、<EOS>
+<SOS>A . append ( ( B , C ) )<tab>A の 末 尾 に ( B 、 C ) の 組 を追加する<EOS>
+<SOS>for A in range ( 1 , 8 , 2 ) :<tab>1 から 8 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] = complex ( C , D )<tab>C を 実 部 、 D を 虚 部 とした 複素数 を A の B 番 目 にする<EOS>
+<SOS>for A in range ( 3 ) :<tab>0 から 3 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ 'A' ] , A [ 'B' ] , A [ 'C' ] = 'X' , 'Y' , 'Z'<tab>' X ' 、 ' Y ' 、 ' Z ' を A の ' A ' 番 目 、 A の ' B ' 番 目 、 A の ' C ' 番 目 とする<EOS>
+<SOS>print ( A [ B ] + ' ' , end = '' )<tab>改行 せずに A の B 番 目 に 空白 文字 を加えた 値 を出力する<EOS>
+<SOS>A , B = C [ D ] , E [ F ]<tab>C の D 番 目 、 E の F 番 目 を A 、 B とする<EOS>
+<SOS>print ( A [ B & 1 ] [ C ] )<tab>A の [MASK] 番目の C 番 目 を出力する<EOS>
+<SOS>A += [ B + ( C << 9 ) for C in range ( D ) ]<tab>A を 0 から D 未 満 までの 数 列 の 各要素 を C とし 、 B に C を 9 だけ 左 シフト した 値 を加えた 値の 列 だけ 増加 させる<EOS>
+<SOS>A = B [ C ] + D<tab>B の C 番 目 に D を加えた 値を A とする<EOS>
+<SOS>if A <= 0 :<tab>A が 0 以下の とき 、<EOS>
+<SOS>A = B [ C ] - 1<tab>B の C 番 目 から 1 を 引 いた 値を A とする<EOS>
+<SOS>A . id [ B ] = A . id [ A . id [ B ] ]<tab>A の id の A の id の B 番 目 番 目 を A の id の B 番 目 にする<EOS>
+<SOS>if len ( set ( A ) ) == 1 or len ( set ( A ) ) == 3 :<tab>A の集合 の長さ が 1 と 等 しく または A の集合 の長さ が 3 と 等 しい とき 、<EOS>
+<SOS>A = [ int ( input ( ) ) for B in range ( C ) ] [ : : - 1 ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 整数値 の 列 の 逆 順 を A とする<EOS>
+<SOS>for A in range ( 1 , 2 * B [ 0 ] , 2 ) :<tab>1 から 2 に B の先頭 を 掛 け た 値 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] += math . sin ( C * D ) * math . cos ( C * D )<tab>A の B 番 目 を math . s in ( C * D ) に math . co s ( C * D ) を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>A = True<tab>真 を A とする<EOS>
+<SOS>A [ 51 ] , A [ 52 ] , A [ 53 ] , A [ 54 ] , A [ 55 ] = 'u' , 'v' , 'w' , 'x' , 'y'<tab>' u ' 、 ' v ' 、 ' w ' 、 ' x ' 、 ' y ' を A の 5 1 番 目 、 A の 5 2 番 目 、 A の 5 3 番 目 、 A の 5 4 番 目 、 A の 5 5 番 目 とする<EOS>
+<SOS>if ( A % B ) == 0 :<tab>A を B で 割 った 余 り が 0 と 等 しい とき 、<EOS>
+<SOS>A = [ [ [ [ 0 for B in range ( 2 ) ] for C in range ( 2 ) ] for D in range ( E + 1 ) ] for F in range ( G + 1 ) ]<tab>0 から G に 1 を加えた 値 未 満 までの 数 列 の 各要素 を F とし 、 0 から E に 1 を加えた 値 未 満 までの 数 列 の 各要素 を D とし 、 0 から 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 2 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 の 列 の 列 を A とする<EOS>
+<SOS>if A > B or ( C <= D and E [ C ] == 0 ) :<tab>A が B より 大きく または C が D 以下 かつ E の C 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A [ B ] = C + 1<tab>C に 1 を加えた 値を A の B 番 目 にする<EOS>
+<SOS>if A [ B ] % C > A [ B + 1 ] % C :<tab>A の B 番 目 を C で 割 った 余 り が A の B に 1 を加えた 値 番 目 を C で 割 った 余 り より 大きい とき 、<EOS>
+<SOS>A = B + C / D<tab>B に C を D で 割 った 値 を加えた 値を A とする<EOS>
+<SOS>if abs ( A [ 1 ] - A [ 0 ] ) <= B :<tab>A の 1 番 目 から A の先頭 を 引 いた 値の 絶対 値が B 以下の とき 、<EOS>
+<SOS>if A >= 4 :<tab>A が 4 以上の とき 、<EOS>
+<SOS>A = B [ 0 ] [ C ]<tab>B の先頭 の C 番 目 を A とする<EOS>
+<SOS>A = list ( B . split ( ) )<tab>B を 空白 で 分割 した 字句 列 の リストを A とする<EOS>
+<SOS>if A - B <= 8 :<tab>A から B を 引 いた 値が 8 以下の とき 、<EOS>
+<SOS>while A != B . id [ A ] :<tab>A が B の id の A 番 目 と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ 0 ] * 1001<tab>( 0 ) からなる 列 の 100 1 回 分 の 列 を A とする<EOS>
+<SOS>for A in range ( 1 , 16 ) :<tab>1 から 16 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>print ( max ( A , key = A . count ) , max ( A , key = B ) )<tab>key を A 内の [MASK] の 出現 回数 として A の 最大 値 、 key を B として A の 最大 値 を出力する<EOS>
+<SOS>A = [ [ 0 for B in range ( 21 ) ] for C in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 21 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = bisect_left ( B , C [ 1 ] )<tab>b is ect _ left ( B , C [ 1 ] ) を A とする<EOS>
+<SOS>if A [ B ] == '@' :<tab>A の B 番 目 が ' @ ' と 等 しい とき 、<EOS>
+<SOS>re = A [ B ]<tab>A の B 番 目 を re とする<EOS>
+<SOS>return A . items . pop ( )<tab>A の キー と 値 の集まり の先頭 を取り 出した 値を返す<EOS>
+<SOS>A = 1003<tab>100 3 を A とする<EOS>
+<SOS>return A . real * B . imag - A . imag * B . real<tab>A の re al に B の im ag を 掛 け た 値 から A の im ag に B の re al を 掛 け た 値を 引 いた 値を返す<EOS>
+<SOS>if A == 6 :<tab>A が 6 と 等 しい とき 、<EOS>
+<SOS>D = A + ( B - 1 ) * C<tab>A に B から 1 を 引 いた 値に C を 掛 け た 値 を加えた 値を そうでなければ 、 とする<EOS>
+<SOS>A [ int ( B [ 1 ] ) ] += 1<tab>A の B の 1 番目の 整数値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A = B [ C ] [ D ] + E + B [ F ] [ G ]<tab>B の C 番目の D 番 目 に E を加えた 値に B の F 番目の G 番 目 を加えた 値を A とする<EOS>
+<SOS>if A < 19 :<tab>A が 19 より 小さい とき 、<EOS>
+<SOS>A += 2<tab>A を 2 だけ 増加 させる<EOS>
+<SOS>if A [ B ] == '1' :<tab>A の B 番 目 が ' 1 ' と 等 しい とき 、<EOS>
+<SOS>A . append ( [ B , C ] )<tab>A の 末 尾 に ( B 、 C ) からなる 列 を追加する<EOS>
+<SOS>A = B / 2<tab>B を 2 で 割 った 値を A とする<EOS>
+<SOS>A = [ 1 , 2 , 1 , 0 ]<tab>( 1 、 2 、 1 、 0 ) からなる 列 を A とする<EOS>
+<SOS>while A != [ ] :<tab>A が 空 列 と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>for A in range ( B , 11 ) :<tab>B から 11 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = 10000<tab>1 0000 を A とする<EOS>
+<SOS>print ( int ( '' . join ( sorted ( A , reverse = True ) ) ) - int ( '' . join ( sorted ( A ) ) ) )<tab>空文字列 を 間 に 入れ て 逆 順に A を ソート した 列 を 連結 した 文字列 の 整数値 から 空文字列 を 間 に 入れ て A を ソート した 列 を 連結 した 文字列 の 整数値 を 引 いた 値 を出力する<EOS>
+<SOS>print ( sum ( list ( map ( int , input ( ) . split ( ) ) ) ) // ( A - 1 ) )<tab>in put () . s pl it () の 各要素 に int を適用した 列 のリスト の 総 和 を A から 1 を 引 いた 値 で 割 った 商 を出力する<EOS>
+<SOS>A [ B ] [ C ] [ D ] [ D ] += A [ B - 1 ] [ C ] [ D ] [ D ] + A [ B - 1 ] [ C ] [ E ] [ D ]<tab>A の B 番目の C 番目の D 番目の D 番 目 を A の B -1 番目の C 番目の D 番目の D 番 目 に A の B -1 番目の C 番目の E 番目の D 番 目 を加えた 値 だけ 増加 させる<EOS>
+<SOS>A , B = 1 , [ 0 ] * C<tab>1 、 ( 0 ) からなる 列 の C 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A = 22.0<tab>2 2.0 を A とする<EOS>
+<SOS>A , B = C + D [ E << 1 ] , F + D [ ( E << 1 ) + 1 ]<tab>C に D の E を 1 だけ 左 シフト した 値 番 目 を加えた 値 、 F に D の E を 1 だけ 左 シフト した 値に 1 を加えた 値 番 目 を加えた 値を A 、 B とする<EOS>
+<SOS>A = E if B and C [ D + 1 ] else 0<tab>B かつ C の D に 1 を加えた 値 番目の とき E 、 そうでなければ 0 を A とする<EOS>
+<SOS>if A [ B ] == 0 or C > D [ B ] :<tab>A の B 番 目 が 0 と 等 しく または C が D の B 番 目 より 大きい とき 、<EOS>
+<SOS>A [ B + 1 ] = A [ B ] = C<tab>C を A の B 番 目 とする を A の B に 1 を加えた 値 番 目 にする<EOS>
+<SOS>while A and len ( B ) :<tab>A かつ B の長さ の 間 、 以下 を 繰り返す<EOS>
+<SOS>A [ B - 2 ] [ C ] += 1<tab>A の B から 2 を 引 いた 値 番目の C 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A += ','<tab>A を ' , ' だけ 増加 させる<EOS>
+<SOS>if A [ B ] [ 0 ] == 0 :<tab>A の B 番目の 0 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A *= 1 + B<tab>A を 1 に B を加えた 値 倍 にする<EOS>
+<SOS>A [ 1 ] = True<tab>真 を A の 1 番 目 にする<EOS>
+<SOS>if A == 3 :<tab>A が 3 と 等 しい とき 、<EOS>
+<SOS>print ( A [ B - 1 ] )<tab>A の B から 1 を 引 いた 値 番 目 を出力する<EOS>
+<SOS>A = B . root ( C )<tab>B . ro ot ( C ) を A とする<EOS>
+<SOS>A , B = [ ] , { }<tab>空 列 、 空 辞書 を A 、 B とする<EOS>
+<SOS>if A [ B ] > C :<tab>A の B 番 目 が C より 大きい とき 、<EOS>
+<SOS>A , B = B , C<tab>B 、 C を A 、 B とする<EOS>
+<SOS>while A < B and C [ A ] . isdigit ( ) :<tab>A が B より 小さく かつ C の A 番 目 が 全て 数字 の 間 、 以下 を 繰り返す<EOS>
+<SOS>print ( calc ( A ) )<tab>c al c ( A ) を出力する<EOS>
+<SOS>A , B , C = 3 , 4 , 1<tab>3 、 4 、 1 を A 、 B 、 C とする<EOS>
+<SOS>for A in range ( 1 , B ) :<tab>1 から B 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = calc ( )<tab>c al c () を A とする<EOS>
+<SOS>if A [ B ] < C [ B ] :<tab>A の B 番 目 が C の B 番 目 より 小さい とき 、<EOS>
+<SOS>if A [ B ] != C [ D ] :<tab>A の B 番 目 が C の D 番 目 と 等 しく ない とき 、<EOS>
+<SOS>if A > B + 4 * C :<tab>A が B に 4 に C を 掛 け た 値 を加えた 値 より 大きい とき 、<EOS>
+<SOS>for A in range ( B - C , B ) :<tab>B から C を 引 いた 値 から B 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = ord ( B ) - C<tab>B の 順序 数 から C を 引 いた 値を A とする<EOS>
+<SOS>for A in range ( 2 ) :<tab>0 から 2 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( B - C ) :<tab>0 から B から C を 引 いた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B + 2 ] [ C ] += 1<tab>A の B に 2 を加えた 値 番目の C 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A [ 0 ] [ B ] = list ( input ( ) )<tab>入力された 文字列 の リストを A の先頭 の B 番 目 にする<EOS>
+<SOS>A = [ 0 ] * ( B + 1 )<tab>( 0 ) からなる 列 の B に 1 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>if A < len ( B ) :<tab>A が B の長さ より 小さい とき 、<EOS>
+<SOS>A = set ( list ( map ( int , input ( ) . split ( ) ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 のリスト の集合 を A とする<EOS>
+<SOS>A [ B + 1 ] = A [ B ] + C [ B ]<tab>A の B 番 目 に C の B 番 目 を加えた 値を A の B に 1 を加えた 値 番 目 にする<EOS>
+<SOS>print ( A , B )<tab>A 、 B を出力する<EOS>
+<SOS>A [ 0 ] [ 0 ] = 1<tab>1 を A の先頭 の 0 番 目 にする<EOS>
+<SOS>if A [ B ] + C [ B ] == C [ 0 ] :<tab>A の B 番 目 に C の B 番 目 を加えた 値が C の先頭 と 等 しい とき 、<EOS>
+<SOS>print ( 'OK' )<tab>' O K ' を出力する<EOS>
+<SOS>if not A :<tab>A でない とき 、<EOS>
+<SOS>print ( A [ B ] [ C ] + 1 if A [ B ] [ C ] < D else 'NA' )<tab>A の B 番目の C 番 目 が D より 小さい とき A の B 番目の C 番 目 に 1 を加えた 値 、 そうでなければ ' NA ' を出力する<EOS>
+<SOS>A , B = [ int ( input ( ) ) for C in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を C とし 、 入力された 文字列 の 整数値 の 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = B // C<tab>B を C で 割 った 商 を A とする<EOS>
+<SOS>if not A [ B ] and not A [ C ] :<tab>A の B 番 目 で なく かつ A の C 番 目 でない とき 、<EOS>
+<SOS>if A [ B ] and C + B <= 20 :<tab>A の B 番 目 かつ C に B を加えた 値が 20 以下の とき 、<EOS>
+<SOS>A = Decimal ( 1 )<tab>D ec im al (1) を A とする<EOS>
+<SOS>A , B = [ C ] * D , [ 0 ] * D<tab>( C ) からなる 列 の D 回 分 の 列 、 ( 0 ) からなる 列 の D 回 分 の 列 を A 、 B とする<EOS>
+<SOS>if A [ 0 ] == '.' :<tab>A の 0 番 目 が ' . ' と 等 しい とき 、<EOS>
+<SOS>A = 50<tab>50 を A とする<EOS>
+<SOS>A [ B ] = C [ ord ( D [ B ] ) - ord ( 'a' ) + E ]<tab>C の D の B 番目の 順序 数 から ' a ' の 順序 数 を 引 いた 値に E を加えた 値 番 目 を A の B 番 目 にする<EOS>
+<SOS>if len ( A ) < B + 2 :<tab>A の長さ が B に 2 を加えた 値 より 小さい とき 、<EOS>
+<SOS>return A [ 0 : B - 1 ]<tab>A の先頭 から B から 1 を 引 いた 値 までの 部分 列 を返す<EOS>
+<SOS>if A [ 0 ] == 'i' :<tab>A の 0 番 目 が ' i ' と 等 しい とき 、<EOS>
+<SOS>if factor ( 0 ) [ 0 ] == 2 :<tab>f act or ( 0 ) の 0 番 目 が 2 と 等 しい とき 、<EOS>
+<SOS>A = deque ( )<tab>de que () を A とする<EOS>
+<SOS>A = 'L'<tab>' L ' を A とする<EOS>
+<SOS>if A [ B ] [ C ] == D :<tab>A の B 番目の C 番 目 が D と 等 しい とき 、<EOS>
+<SOS>for A in range ( 26 ) :<tab>0 から 26 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A . isdigit ( ) :<tab>A が 全て 数字 の とき 、<EOS>
+<SOS>for A in range ( B , 21 ) :<tab>B から 21 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = math . sqrt ( 4 * B * B + C * C ) + C<tab>4 に B を 掛 け た 値に B を 掛 け た 値に C に C を 掛 け た 値 を加えた 値の 平 方 根 に C を加えた 値を A とする<EOS>
+<SOS>print ( A [ B ] - 2 , A [ B ] )<tab>A の B 番 目 から 2 を 引 いた 値 、 A の B 番 目 を出力する<EOS>
+<SOS>if A [ B ] [ C + 2 ] == '#' or A [ B ] [ C + 1 ] == '#' or A [ B + 1 ] [ C + 1 ] == '#' :<tab>A の B 番目の C に 2 を加えた 値 番 目 が ' # ' と 等 しく または A の B 番目の C に 1 を加えた 値 番 目 が ' # ' と 等 しく または A の B に 1 を加えた 値 番目の C に 1 を加えた 値 番 目 が ' # ' と 等 しい とき 、<EOS>
+<SOS>if A [ B ] > A [ C - B ] + D :<tab>A の B 番 目 が A の C から B を 引 いた 値 番 目 に D を加えた 値 より 大きい とき 、<EOS>
+<SOS>if A [ B [ C ] [ D ] ] [ D ] == 1 :<tab>A の B の C 番目の D 番 目 番目の D 番 目 が 1 と 等 しい とき 、<EOS>
+<SOS>A , B = d2t ( A ) , d2t ( B )<tab>d 2 t ( A ) 、 d 2 t ( B ) を A 、 B とする<EOS>
+<SOS>A = [ 4 , 1 , 4 , 1 , 2 , 1 , 2 , 1 , 4 , 1 , 4 , 1 , 2 , 1 , 2 , 1 ]<tab>( 4 、 1 、 4 、 1 、 2 、 1 、 2 、 1 、 4 、 1 、 4 、 1 、 2 、 1 、 2 、 1 ) からなる 列 を A とする<EOS>
+<SOS>A , B = [ 0 ] * 100005 , [ 0 ] * 100005<tab>( 0 ) からなる 列 の 1 0000 5 回 分 の 列 、 ( 0 ) からなる 列 の 1 0000 5 回 分 の 列 を A 、 B とする<EOS>
+<SOS>for A in range ( 1 , B + 1 , 1 + ( B & 1 ) ) :<tab>1 から B に 1 を加えた 値 未 満 までの 1 に [MASK] を加えた 値 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B : ] = A [ : B - 1 : - 1 ]<tab>A の先頭 から B から 1 を 引 いた 値 までの -1 間隔 による 部分 列 を A の B 番 目 から 末 尾 までの 部分 列 にする<EOS>
+<SOS>A = 50000<tab>5 0000 を A とする<EOS>
+<SOS>if A [ B ] == 'O' :<tab>A の B 番 目 が ' O ' と 等 しい とき 、<EOS>
+<SOS>A = [ 1 , 2 , 4 , 8 , 16 , 32 , 64 , 128 , 256 , 512 ]<tab>( 1 、 2 、 4 、 8 、 16 、 32 、 64 、 1 28 、 25 6 、 5 12 ) からなる 列 を A とする<EOS>
+<SOS>A , B , C = 1 , 0 , D<tab>1 、 0 、 D を A 、 B 、 C とする<EOS>
+<SOS>print ( * sorted ( map ( int , A [ B ] ) ) )<tab>A の B 番目の 各要素 に 整数 を適用した 列 を ソート した 列 を 展開 して を出力する<EOS>
+<SOS>A . append ( [ B , C , 0 ] )<tab>A の 末 尾 に ( B 、 C 、 0 ) からなる 列 を追加する<EOS>
+<SOS>print ( B + A + 1 if A > 0 else 'NA' )<tab>A が 0 より 大きい とき B に A を加えた 値に 1 を加えた 値 、 そうでなければ ' NA ' を出力する<EOS>
+<SOS>A = complex ( B [ 4 ] , B [ 5 ] )<tab>B の 4 番 目 を 実 部 、 B の 5 番 目 を 虚 部 とした 複素数 を A とする<EOS>
+<SOS>if ( A | B ) == 0 :<tab>A と B の 論理 和 が 0 と 等 しい とき 、<EOS>
+<SOS>A = B [ C : D ]<tab>B の C 番 目 から D 番 目 までの 部分 列 を A とする<EOS>
+<SOS>import sys<tab>s y s モジュール を用いる<EOS>
+<SOS>A = [ [ 0 for B in range ( C ) ] for D in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を D とし 、 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>if A [ 0 ] == '-' :<tab>A の 0 番 目 が ' - ' と 等 しい とき 、<EOS>
+<SOS>for A in sorted ( B , key = lambda x : ( - C [ 2 ] , C [ 1 ] ) ) :<tab>x を パラメータ として ( - C の 2 番 目 、 x の 1 番 目 ) の 組 を返す関数 を キー として B を ソート した 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A += B - C<tab>A を B から C を 引 いた 値 だけ 増加 させる<EOS>
+<SOS>print ( 'Case ' , A , ':' , sep = '' )<tab>区切り なしで ' C as e ▁ ' 、 A 、 ' : ' を出力する<EOS>
+<SOS>A , B = list ( map ( float , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に float を適用した 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>A = B // C [ D ]<tab>B を C の D 番 目 で 割 った 商 を A とする<EOS>
+<SOS>print ( 'Yes' )<tab>' Y es ' を出力する<EOS>
+<SOS>for A in range ( B - 2 , - 1 , - 1 ) :<tab>B から 2 を 引 いた 値 から -1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B = C >> 1<tab>C を 1 だけ 右 シフト した 値を B とする を A とする<EOS>
+<SOS>A = 0<tab>0 を そうでなければ 、 とする<EOS>
+<SOS>print ( 1 if A == 0 else A )<tab>A が 0 と 等 しい とき 1 、 そうでなければ A を出力する<EOS>
+<SOS>print ( A . maxFlow ( B - 1 , C - 1 ) )<tab>A . max F l ow ( B - 1, C -1 ) を出力する<EOS>
+<SOS>if len ( A ) and A [ 0 ] == B :<tab>A の長さ かつ A の 0 番 目 が B と 等 しい とき 、<EOS>
+<SOS>A , B = len ( C ) , D<tab>C の長さ 、 D を A 、 B とする<EOS>
+<SOS>while A [ 0 ] > 0 and A [ 1 ] > 0 :<tab>A の 0 番 目 が 0 より 大きく かつ A の 1 番 目 が 0 より 大きい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = B ** 2 - 4 * C * D<tab>B の 2 乗 から 4 に C を 掛 け た 値に D を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>if A [ 0 ] == '(' :<tab>A の 0 番 目 が ' ( ' と 等 しい とき 、<EOS>
+<SOS>return max ( abs ( A - B ) , abs ( C - D ) )<tab>A から B を 引 いた 値の 絶対 値 、 C から D を 引 いた 値の 絶対 値の 最大 値を返す<EOS>
+<SOS>A = min ( len ( B ) , 5 )<tab>B の長さ 、 5 の 最小 値を A とする<EOS>
+<SOS>A += 'D'<tab>A を ' D ' だけ 増加 させる<EOS>
+<SOS>while A [ 99 ] == 0 :<tab>A の 99 番 目 が 0 と 等 しい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = abs ( B - C )<tab>B から C を 引 いた 値の 絶対 値を A とする<EOS>
+<SOS>A , B = [ 0 ] * 8 , [ 0 ] * 8<tab>( 0 ) からなる 列 の 8 回 分 の 列 、 ( 0 ) からなる 列 の 8 回 分 の 列 を A 、 B とする<EOS>
+<SOS>if A >= 0 and B >= 0 and A <= 9 and B <= 9 and C [ D ] [ A ] [ B ] :<tab>A が 0 以上 かつ B が 0 以上 かつ A が 9 以下 かつ B が 9 以下 かつ C の D 番目の A 番目の B 番目の とき 、<EOS>
+<SOS>A = [ 0 ] * 126<tab>( 0 ) からなる 列 の 12 6 回 分 の 列 を A とする<EOS>
+<SOS>A = len ( B [ 1 ] )<tab>B の 1 番目の 長さ を A とする<EOS>
+<SOS>if combi ( A , B - 2 ) :<tab>com b i ( A , B -2 ) の とき 、<EOS>
+<SOS>A = A [ : B ] + A [ C : D ] + A [ E : C ] + A [ B : E ] + A [ D : ]<tab>A の先頭 から B 番 目 までの 部分 列 に A の C 番 目 から D 番 目 までの 部分 列 を加えた 値に A の E 番 目 から C 番 目 までの 部分 列 を加えた 値に A の B 番 目 から E 番 目 までの 部分 列 を加えた 値に A の D 番 目 から 末 尾 までの 部分 列 を加えた 値を A とする<EOS>
+<SOS>if A < 0 or A >= B or C < 0 or C >= D :<tab>A が 0 より 小さく または A が B 以上 または C が 0 より 小さく または C が D 以上の とき 、<EOS>
+<SOS>if A . root ( B ) == B :<tab>A . ro ot ( B ) が B と 等 しい とき 、<EOS>
+<SOS>A = 100000<tab>10 0000 を A とする<EOS>
+<SOS>A . sort ( key = lambda x : ( len ( B [ 0 ] ) , B [ 0 ] ) )<tab>key を x を パラメータ として ( B の先頭 の長さ 、 x の先頭 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>A , B , C = B , C , 1<tab>B 、 C 、 1 を A 、 B 、 C とする<EOS>
+<SOS>if A [ B ] == C :<tab>A の B 番 目 が C と 等 しい とき 、<EOS>
+<SOS>A = B + C / D [ E ]<tab>B に C を D の E 番 目 で 割 った 値 を加えた 値を A とする<EOS>
+<SOS>if A [ 0 ] == 0 :<tab>A の 0 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A = '(J*)(O*)(I*)'<tab>' ( J * ) ( O * ) ( I * ) ' を A とする<EOS>
+<SOS>print ( min ( A , B ) )<tab>A 、 B の 最小 値 を出力する<EOS>
+<SOS>if A != B [ C ] [ 0 ] :<tab>A が B の C 番目の 先頭 と 等 しく ない とき 、<EOS>
+<SOS>A = [ [ 0 for B in range ( 51 ) ] for C in range ( 51 ) ]<tab>0 から 5 1 未 満 までの 数 列 の 各要素 を C とし 、 0 から 5 1 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A += B * C - D<tab>A を B に C を 掛 け た 値 から D を 引 いた 値 だけ 増加 させる<EOS>
+<SOS>A = B [ C ] [ 0 ] * D [ C ]<tab>B の C 番目の 0 番 目 に D の C 番 目 を 掛 け た 値を A とする<EOS>
+<SOS>A . append ( [ B , C , 3 * int ( D ) + int ( E ) ] )<tab>A の 末 尾 に ( B 、 C 、 3 に D の 整数値 を 掛 け た 値に E の 整数値 を加えた 値 ) からなる 列 を追加する<EOS>
+<SOS>A += ( B [ C ] - B [ D + 1 ] ) * E [ D ]<tab>A を B の C 番 目 から B の D に 1 を加えた 値 番 目 を 引 いた 値に E の D 番 目 を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>pushBack ( A + B , A + C )<tab>push B ack ( A + B , A + C )<EOS>
+<SOS>for A in range ( - 1 , 2 ) :<tab>-1 から 2 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A == 'HIT' :<tab>A が ' H IT ' と 等 しい とき 、<EOS>
+<SOS>return [ A , dist ( A , B ) ]<tab>( A 、 d ist ( A , B ) ) からなる 列 を返す<EOS>
+<SOS>while A < B and C [ A ] == C [ A - 1 ] + 1 :<tab>A が B より 小さく かつ C の A 番 目 が C の A から 1 を 引 いた 値 番 目 に 1 を加えた 値 と 等 しい 間 、 以下 を 繰り返す<EOS>
+<SOS>A [ B + C + D + E ] += 1<tab>A の B に C を加えた 値に D を加えた 値に E を加えた 値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A , B = [ ] , len ( C )<tab>空 列 、 C の長さ を A 、 B とする<EOS>
+<SOS>print ( A + 1 )<tab>A に 1 を加えた 値 を出力する<EOS>
+<SOS>A += 3<tab>A を 3 だけ 増加 させる<EOS>
+<SOS>A [ 0 ] [ 0 ] = 0<tab>0 を A の先頭 の 0 番 目 にする<EOS>
+<SOS>A , B = C [ D ] - 1 , C [ D + 1 ] - 1<tab>C の D 番 目 から 1 を 引 いた 値 、 C の D に 1 を加えた 値 番 目 から 1 を 引 いた 値を A 、 B とする<EOS>
+<SOS>A = 100<tab>100 を A とする<EOS>
+<SOS>A . extend ( list ( map ( int , input ( ) . split ( ) ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 のリスト を追加し て A を拡張する<EOS>
+<SOS>for A in range ( B , 10 ) :<tab>B から 10 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>print ( A . real , A . imag )<tab>A の re al 、 A の im ag を出力する<EOS>
+<SOS>if A * B < 0 :<tab>A に B を 掛 け た 値が 0 より 小さい とき 、<EOS>
+<SOS>A = 250000<tab>25 0000 を A とする<EOS>
+<SOS>A //= - B<tab>A を - B 分 の 一 にする<EOS>
+<SOS>A , B = map ( float , input ( ) . split ( ',' ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に float を適用した 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>return A + calc ( B >> 1 , C >> 1 )<tab>A に c al c ( B > > 1, C > > 1 ) を加えた 値を返す<EOS>
+<SOS>for A in range ( 47 ) :<tab>0 から 4 7 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( B , 5 ) :<tab>B から 5 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>while A >= 0 and B [ A ] <= B [ A + 1 ] :<tab>A が 0 以上 かつ B の A 番 目 が B の A に 1 を加えた 値 番 目 以下の 間 、 以下 を 繰り返す<EOS>
+<SOS>A = 1001<tab>100 1 を A とする<EOS>
+<SOS>A = list ( B . split ( '|' ) )<tab>B を ' | ' で 分割 した 字句 列 の リストを A とする<EOS>
+<SOS>print ( 'LOOP' )<tab>' L O OP ' を出力する<EOS>
+<SOS>if A >= 60 :<tab>A が 60 以上の とき 、<EOS>
+<SOS>try :<tab>以下は 例外 に関する 条件 がある<EOS>
+<SOS>A , B = 0 , 1<tab>0 、 1 を A 、 B とする<EOS>
+<SOS>if A < 60 :<tab>A が 60 より 小さい とき 、<EOS>
+<SOS>print ( A [ B : C ] . count ( D ) )<tab>A の B 番 目 から C 番 目 までの 部分 列 内の D の 出現 回数 を出力する<EOS>
+<SOS>A , B , C = 0 , 90 * D , 0<tab>0 、 90 に D を 掛 け た 値 、 0 を A 、 B 、 C とする<EOS>
+<SOS>return A <= B and B <= C and D <= E and E <= F<tab>A が B 以下 かつ B が C 以下 かつ D が E 以下 かつ E が F 以下 かどうか を返す<EOS>
+<SOS>print ( int ( A * math . cos ( B ) ) , int ( A * math . sin ( B ) ) , sep = '\n' )<tab>改行 文字 を 区切り として A に math . co s ( B ) を 掛 け た 値の 整数値 、 A に math . s in ( B ) を 掛 け た 値の 整数値 を出力する<EOS>
+<SOS>A = [ 0 ] * 4<tab>( 0 ) からなる 列 の 4 回 分 の 列 を A とする<EOS>
+<SOS>import heapq<tab>he ap q モジュール を用いる<EOS>
+<SOS>A = 'U'<tab>' U ' を A とする<EOS>
+<SOS>for A in range ( 4 ) :<tab>0 から 4 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] , A [ C ] = A [ C ] , A [ B ]<tab>A の C 番 目 、 A の B 番 目 を A の B 番 目 、 A の C 番 目 とする<EOS>
+<SOS>return complex ( ( A [ 0 ] . real * B - A [ 1 ] . real * C ) / ( B - C ) , ( A [ 0 ] . imag * B - A [ 1 ] . imag * C ) / ( B - C ) )<tab>A [ 0 ] の re al に B を 掛 け た 値 から A [ 1 ] の re al に C を 掛 け た 値を 引 いた 値を B から C を 引 いた 値 で 割 った 値を 実 部 、 A [ 0 ] の im ag に B を 掛 け た 値 から A [ 1 ] の im ag に C を 掛 け た 値を 引 いた 値を B から C を 引 いた 値 で 割 った 値を 虚 部 とした 複素数 を返す<EOS>
+<SOS>if len ( A ) == 0 :<tab>A の長さ が 0 と 等 しい とき 、<EOS>
+<SOS>for A in range ( 1 , 6 ) :<tab>1 から 6 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>print ( A [ 0 ] , A [ 1 ] )<tab>A の先頭 、 A の 1 番 目 を出力する<EOS>
+<SOS>A = symmetric_Point ( B , C )<tab>s y m me tri c _ Point ( B , C ) を A とする<EOS>
+<SOS>if A [ B ] >= 3 :<tab>A の B 番 目 が 3 以上の とき 、<EOS>
+<SOS>print ( A - B + 1 )<tab>A から B を 引 いた 値に 1 を加えた 値 を出力する<EOS>
+<SOS>B = sorted ( B )<tab>B を ソート した 列 を B とする<EOS>
+<SOS>A = [ '0' , '90' , '180' , '270' ]<tab>( ' 0 ' 、 ' 90 ' 、 ' 1 80 ' 、 ' 2 70 ' ) からなる 列 を A とする<EOS>
+<SOS>A [ B ] [ C ] = '0'<tab>' 0 ' を A の B 番目の C 番 目 にする<EOS>
+<SOS>A [ B + 1 ] = A [ B ] + ( C [ B ] == 'I' )<tab>A の B 番 目 に C の B 番 目 が ' I ' と 等 しい かどうか を加えた 値を A の B に 1 を加えた 値 番 目 にする<EOS>
+<SOS>if A == 0 and B == 0 and C == 0 :<tab>A が 0 と 等 しく かつ B が 0 と 等 しく かつ C が 0 と 等 しい とき 、<EOS>
+<SOS>A += 15 * B + ( 15 - 2 ) * 3 * B<tab>A を 15 に B を 掛 け た 値に 15 から 2 を 引 いた 値に 3 を 掛 け た 値に B を 掛 け た 値 を加えた 値 だけ 増加 させる<EOS>
+<SOS>A = B [ A ]<tab>B の A 番 目 を A とする<EOS>
+<SOS>A = [ 0 , 4 , 13 , 27 , 45 , 67 , 94 , 126 , 162 , 202 , 247 ]<tab>( 0 、 4 、 13 、 27 、 4 5 、 6 7 、 9 4 、 12 6 、 16 2 、 20 2 、 24 7 ) からなる 列 を A とする<EOS>
+<SOS>if A <= 30 :<tab>A が 30 以下の とき 、<EOS>
+<SOS>A , B = [ 0 ] * ( C + 1 ) , [ 0 ] * ( C + 1 )<tab>( 0 ) からなる 列 の C に 1 を加えた 値 回 分 の 列 、 ( 0 ) からなる 列 の C に 1 を加えた 値 回 分 の 列 を A 、 B とする<EOS>
+<SOS>print ( A - sum ( [ int ( input ( ) ) for B in range ( 9 ) ] ) )<tab>A から 0 から 9 未 満 までの 数 列 の 各要素 を B とし 、 in put () の 整数値 の 列 の 総 和 を 引 いた 値 を出力する<EOS>
+<SOS>A = ord ( B ) - ord ( 'A' )<tab>B の 順序 数 から ' A ' の 順序 数 を 引 いた 値を A とする<EOS>
+<SOS>A = list ( map ( int , B ) )<tab>B の 各要素 に 整数 を適用した 列 の リストを A とする<EOS>
+<SOS>if A [ B ] == 2 :<tab>A の B 番 目 が 2 と 等 しい とき 、<EOS>
+<SOS>if A [ B + 2 ] == 'a' :<tab>A の B に 2 を加えた 値 番 目 が ' a ' と 等 しい とき 、<EOS>
+<SOS>print ( * [ A [ B ] [ 1 ] for B in range ( C ) ] )<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 A の B 番目の 1 番目の 列 を 展開 して を出力する<EOS>
+<SOS>A . heappush ( B , ( 0 , 0 , 0 , 1 ) )<tab>A . he ap push ( B , ( 0 , 0 , 0 , 1 ) )<EOS>
+<SOS>combi ( 2 )<tab>com b i ( 2 )<EOS>
+<SOS>if A % B > ( B - 1 ) // 2 :<tab>A を B で 割 った 余 り が B から 1 を 引 いた 値を 2 で 割 った 商 より 大きい とき 、<EOS>
+<SOS>A [ B ] += C [ D ]<tab>A の B 番 目 を C の D 番 目 だけ 増加 させる<EOS>
+<SOS>if A [ B - 1 ] [ C ] == 0 :<tab>A の B から 1 を 引 いた 値 番目の C 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>while A < B :<tab>A が B より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ [ 0 for B in range ( 102 ) ] for C in range ( 102 ) ]<tab>0 から 10 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 10 2 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = [ [ 0 for B in range ( 15 ) ] for C in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 15 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A , B = C [ D ]<tab>C の D 番 目 を 展開 し 順に A 、 B とする<EOS>
+<SOS>act ( 0 , 2 if A == 'i' else 1 )<tab>act ( 0 , 2 if A == ' i ' else 1 )<EOS>
+<SOS>A += B // C<tab>A を B を C で 割 った 商 だけ 増加 させる<EOS>
+<SOS>if A == 2 * B :<tab>A が 2 に B を 掛 け た 値 と 等 しい とき 、<EOS>
+<SOS>A , B = len ( C . edge [ D ] ) , len ( C . edge [ E ] )<tab>C の ed ge の D 番目の 長さ 、 C の ed ge の E 番目の 長さ を A 、 B とする<EOS>
+<SOS>A = int ( '' . join ( input ( ) . split ( ) ) , 2 )<tab>2 進 数 文字列 空文字列 を 間 に 入れ て 入力された 文字列を 空白 で 分割 した 字句 列 を 連結 した 文字列 の 整数値 を A とする<EOS>
+<SOS>A [ 11 ] , A [ 12 ] , A [ 13 ] , A [ 14 ] , A [ 15 ] = 'a' , 'b' , 'c' , 'd' , 'e'<tab>' a ' 、 ' b ' 、 ' c ' 、 ' d ' 、 ' e ' を A の 11 番 目 、 A の 12 番 目 、 A の 13 番 目 、 A の 14 番 目 、 A の 15 番 目 とする<EOS>
+<SOS>A = [ 0 for B in range ( C + 2 ) ]<tab>0 から C に 2 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 を A とする<EOS>
+<SOS>A , B = map ( int , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>A [ B ] [ C ] = 1<tab>1 を A の B 番目の C 番 目 にする<EOS>
+<SOS>A [ B + 1 ] [ C ] = 1 - E if D == 2 else E<tab>D が 2 と 等 しい とき 1 から E を 引 いた 値 、 そうでなければ E を A の B に 1 を加えた 値 番目の C 番 目 にする<EOS>
+<SOS>print ( A [ B ] - C )<tab>A の B 番 目 から C を 引 いた 値 を出力する<EOS>
+<SOS>while A > 0 :<tab>A が 0 より 大きい 間 、 以下 を 繰り返す<EOS>
+<SOS>A . par [ B ] = C<tab>C を A の p ar の B 番 目 にする<EOS>
+<SOS>A = B + 30<tab>B に 30 を加えた 値を A とする<EOS>
+<SOS>A . sort ( key = lambda x : ( - B [ 1 ] ) )<tab>key を x を パラメータ として - x の 1 番 目 を返す関数 として A を ソート する<EOS>
+<SOS>if A * A + B * B == C * C :<tab>A に A を 掛 け た 値に B に B を 掛 け た 値 を加えた 値が C に C を 掛 け た 値 と 等 しい とき 、<EOS>
+<SOS>A , B = C / D , D<tab>C を D で 割 った 値 、 D を A 、 B とする<EOS>
+<SOS>for A in range ( 9 ) :<tab>0 から 9 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = [ [ 0 for B in range ( C ) ] for D in range ( E + 1 ) ]<tab>0 から E に 1 を加えた 値 未 満 までの 数 列 の 各要素 を D とし 、 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A . append ( 0 )<tab>A の 末 尾 に 0 を追加する<EOS>
+<SOS>A = min ( A , B )<tab>A 、 B の 最小 値を A とする<EOS>
+<SOS>A = 360 - B [ C ]<tab>3 60 から B の C 番 目 を 引 いた 値を A とする<EOS>
+<SOS>A [ B ] = [ C for C in range ( D ) ]<tab>0 から D 未 満 までの 数 列 の 各要素 を C とし 、 C の 列 を A の B 番 目 にする<EOS>
+<SOS>if A - B * C < 0 :<tab>A から B に C を 掛 け た 値を 引 いた 値が 0 より 小さい とき 、<EOS>
+<SOS>if A [ B ] == '(' :<tab>A の B 番 目 が ' ( ' と 等 しい とき 、<EOS>
+<SOS>A = 37<tab>3 7 を A とする<EOS>
+<SOS>A . heappush ( B , ( C , D , E , F ) )<tab>A . he ap push ( B , ( C , D , E , F ) )<EOS>
+<SOS>while next_permutation ( A ) :<tab>next _ per m u t ation ( A ) の 間 、 以下 を 繰り返す<EOS>
+<SOS>print ( calc_area ( A ) )<tab>c al c _ a re a ( A ) を出力する<EOS>
+<SOS>A = 'A'<tab>' A ' を A とする<EOS>
+<SOS>print ( rec ( A , B , 0 ) )<tab>re c ( A , B , 0 ) を出力する<EOS>
+<SOS>while A < B * B :<tab>A が B に B を 掛 け た 値 より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>for A in list ( input ( ) . split ( ) ) :<tab>入力された 文字列を 空白 で 分割 した 字句 列 のリスト の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = [ 0 , 0 , 1 , 4 , 10 , 20 , 35 , 56 , 84 , 120 , 165 ]<tab>( 0 、 0 、 1 、 4 、 10 、 20 、 3 5 、 5 6 、 8 4 、 1 20 、 16 5 ) からなる 列 を A とする<EOS>
+<SOS>while A * A < B :<tab>A に A を 掛 け た 値が B より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ 41412121 , 14121214 , 41212141 , 12121414 , 21214141 , 12141412 , 21414121 , 14141212 ]<tab>( 4 14 12 12 1 、 14 12 12 14 、 4 12 12 14 1 、 12 12 14 14 、 2 12 14 14 1 、 12 14 14 12 、 2 14 14 12 1 、 14 14 12 12 ) からなる 列 を A とする<EOS>
+<SOS>if A [ B ] [ 1 ] > 0 :<tab>A の B 番目の 1 番 目 が 0 より 大きい とき 、<EOS>
+<SOS>A , B , C , D = map ( int , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>A = 104729<tab>10 4 7 29 を A とする<EOS>
+<SOS>A = A . replace ( 'peach' , 'apple' )<tab>A 内の ' p e ach ' を ' app le ' で 置き換え た 文字列を A とする<EOS>
+<SOS>if A == B - 1 and C == D - 1 :<tab>A が B から 1 を 引 いた 値 と 等 しく かつ C が D から 1 を 引 いた 値 と 等 しい とき 、<EOS>
+<SOS>A = { PLUS : 2 , MINUS : 2 , MUL : 3 , DIV : 3 , LEFT : 1 , RIGHT : 1 }<tab>( ( B , ▁2 ) 、 ( C , ▁2 ) 、 ( D , ▁3 ) 、 ( E , ▁3 ) 、 ( F , ▁1 ) 、 ( G , ▁1 ) ) からなる 辞書 を A とする<EOS>
+<SOS>A = 3 * 0xff ** 2<tab>3 に 0 x ff の 2 乗 を 掛 け た 値を A とする<EOS>
+<SOS>A , B = map ( int , C . split ( ':' ) )<tab>C を ' : ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>return A [ 0 ]<tab>A の先頭 を返す<EOS>
+<SOS>A = [ 0 ] * 128<tab>( 0 ) からなる 列 の 1 28 回 分 の 列 を A とする<EOS>
+<SOS>return root ( A ) == root ( B )<tab>ro ot ( A ) が ro ot ( B ) と 等 しい かどうか を返す<EOS>
+<SOS>A . append ( 1000000001 )<tab>A の 末 尾 に 1000 0000 01 を追加する<EOS>
+<SOS>A , B , C = sorted ( list ( map ( int , input ( ) . split ( ) ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを ソート した 列 を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>for A in range ( 1 , B + 1 ) :<tab>1 から B に 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B * C - D * E - F * G - H * I<tab>B に C を 掛 け た 値 から D に E を 掛 け た 値を 引 いた 値 から F に G を 掛 け た 値を 引 いた 値 から H に I を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>A = B + 2<tab>B に 2 を加えた 値を A とする<EOS>
+<SOS>A . sort ( )<tab>A を ソート する<EOS>
+<SOS>if ( A [ 1 ] & 1 ) and ( A [ 2 ] & 1 ) :<tab>[MASK] かつ [MASK] の とき 、<EOS>
+<SOS>A , B = C [ 3 : ] . split ( )<tab>C の 3 番 目 から 末 尾 までの 部分 列 を 空白 で 分割 した 字句 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = 0.00001 * B<tab>0 . 0000 1 に B を 掛 け た 値を A とする<EOS>
+<SOS>return A [ B ]<tab>A の B 番 目 を返す<EOS>
+<SOS>print ( 'No\n' )<tab>' N o \ n ' を出力する<EOS>
+<SOS>A . add ( C )<tab>A に C を追加した 集 ま り<EOS>
+<SOS>( A [ B ] , A [ C ] ) = ( A [ C ] , A [ B ] )<tab>( A の C 番 目 、 A の B 番 目 ) の 組 を ( A の B 番 目 、 A の C 番 目 ) の 組 とする<EOS>
+<SOS>A , B = dijkstra ( C , D , C - 1 )<tab>d i j k st ra ( C , D , C -1 ) を 展開 し 順に A 、 B とする<EOS>
+<SOS>if A [ 0 ] > 0 :<tab>A の 0 番 目 が 0 より 大きい とき 、<EOS>
+<SOS>A . heappush ( B , ( C [ 1 ] , C [ 0 ] ) )<tab>A . he ap push ( B , ( C [ 1 ] , C [ 0 ] ) )<EOS>
+<SOS>C += D<tab>C を D だけ 増加 させる<EOS>
+<SOS>if A * B >= 0 :<tab>A に B を 掛 け た 値が 0 以上の とき 、<EOS>
+<SOS>print ( * A [ 1 ] )<tab>A の 1 番 目 を 展開 して を出力する<EOS>
+<SOS>for A in range ( 5 , B , 2 ) :<tab>5 から B 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A -= B [ 0 ]<tab>A を B の先頭 だけ 減少 させる<EOS>
+<SOS>A = B // gcd ( B , C ) * C<tab>B を g c d ( B , C ) で 割 った 商 に C を 掛 け た 値を A とする<EOS>
+<SOS>A = 0.00872664625997164788461845384244<tab>0.0 0 8 7 26 64 6 25 99 7 1 64 7 88 4 6 18 4 5 38 4 24 4 を A とする<EOS>
+<SOS>if EQ ( A , 4 ) :<tab>E Q ( A , 4 ) の とき 、<EOS>
+<SOS>print ( gcd ( A [ 0 ] , A [ 1 ] ) , lcm ( A [ 0 ] , A [ 1 ] ) )<tab>g c d ( A [ 0 ] , A [ 1 ] ) 、 l c m ( A [ 0 ] , A [ 1 ] ) を出力する<EOS>
+<SOS>A = [ [ 0 for B in range ( 1001 ) ] for C in range ( 11 ) ]<tab>0 から 11 未 満 までの 数 列 の 各要素 を C とし 、 0 から 100 1 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>for A in B :<tab>B の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . id [ B ] = C<tab>C を A の id の B 番 目 にする<EOS>
+<SOS>if A [ B ] :<tab>A の B 番目の とき 、<EOS>
+<SOS>A . append ( B - C )<tab>A の 末 尾 に B から C を 引 いた 値 を追加する<EOS>
+<SOS>if A - B [ C ] - B [ D ] >= E :<tab>A から B の C 番 目 を 引 いた 値 から B の D 番 目 を 引 いた 値が E 以上の とき 、<EOS>
+<SOS>A , B , C , D = E - F , G - F , E + F , G + F<tab>E から F を 引 いた 値 、 G から F を 引 いた 値 、 E に F を加えた 値 、 G に F を加えた 値を A 、 B 、 C 、 D とする<EOS>
+<SOS>A = [ B , B + ( C - D ) * complex ( 0 , 1 ) ]<tab>( B 、 B に C から D を 引 いた 値に 0 を 実 部 、 1 を 虚 部 とした 複素数 を 掛 け た 値 を加えた 値 ) からなる 列 を A とする<EOS>
+<SOS>A [ B ] [ 2 ] += 1<tab>A の B 番目の 2 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>for A in range ( 225 , B + 1 , 2 ) :<tab>2 25 から B に 1 を加えた 値 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = 0 , C - 1<tab>0 、 C から 1 を 引 いた 値を A 、 B とする<EOS>
+<SOS>print ( input ( ) . upper ( ) )<tab>入力された 文字列を 英 大文字 に変換し た 文字列 を出力する<EOS>
+<SOS>if A . level [ B ] < 0 :<tab>A の l evel の B 番 目 が 0 より 小さい とき 、<EOS>
+<SOS>for A in range ( 5 * B ) :<tab>0 から 5 に B を 掛 け た 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] [ 1 ] [ C ] [ C ] = A [ 1 ] [ D ] [ E ] [ E ] = 0<tab>0 を A の 1 番目の D 番目の E 番目の E 番 目 とする を A の B 番目の 1 番目の C 番目の C 番 目 にする<EOS>
+<SOS>if clause ( A [ 1 : - 1 ] ) :<tab>c la use ( A [ 1 : -1 ] ) の とき 、<EOS>
+<SOS>print ( A [ 0 : 8 ] , sep = '' )<tab>区切り なしで A の先頭 から 8 番 目 までの 部分 列 を出力する<EOS>
+<SOS>for A in range ( 12 ) :<tab>0 から 12 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A *= B<tab>A を B 倍 にする<EOS>
+<SOS>for A in range ( 21 - B ) :<tab>0 から 21 から B を 引 いた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = 0.0001<tab>0.0 00 1 を A とする<EOS>
+<SOS>if A + 1 >= len ( B ) :<tab>A に 1 を加えた 値が B の長さ 以上の とき 、<EOS>
+<SOS>A , B = A + C , B + 1<tab>A に C を加えた 値 、 B に 1 を加えた 値を A 、 B とする<EOS>
+<SOS>A = [ 10 , 12 , 15 ]<tab>( 10 、 12 、 15 ) からなる 列 を A とする<EOS>
+<SOS>A = [ [ 0 for B in range ( 1002 ) ] for C in range ( 1002 ) ]<tab>0 から 100 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 100 2 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A [ 0 ] [ 0 ] [ 1 ] = 0<tab>0 を A の先頭 の先頭 の 1 番 目 にする<EOS>
+<SOS>print ( 'YES' if A ** 2 + B ** 2 == C ** 2 else 'NO' )<tab>A の 2 乗 に B の 2 乗 を加えた 値が C の 2 乗 と 等 しい とき ' Y E S ' 、 そうでなければ ' N O ' を出力する<EOS>
+<SOS>while A >= B :<tab>A が B 以上の 間 、 以下 を 繰り返す<EOS>
+<SOS>rec ( A + 1 , B + C , D + E )<tab>re c ( A + 1, B + C , D + E )<EOS>
+<SOS>if A > B :<tab>A が B より 大きい とき 、<EOS>
+<SOS>A , B = ( C . real + D . real ) / 2 , ( C . imag + D . imag ) / 2<tab>C の re al に D の re al を加えた 値を 2 で 割 った 値 、 C の im ag に D の im ag を加えた 値を 2 で 割 った 値を A 、 B とする<EOS>
+<SOS>A = { "North" : 1 , "East" : 2 , "West" : 3 , "South" : 4 , "Right" : 5 , "Left" : 6 }<tab>( ( ' N or th ' , ▁1 ) 、 ( ' E a st ' , ▁2 ) 、 ( ' W est ' , ▁3 ) 、 ( ' S out h ' , ▁4 ) 、 ( ' R ight ' , ▁5 ) 、 ( ' L e f t ' , ▁6 ) ) からなる 辞書 を A とする<EOS>
+<SOS>A [ 0 ] [ B // 3 ] [ B % 3 ] = 1<tab>1 を A の先頭 の B を 3 で 割 った 商 番目の B を 3 で 割 った 余 り 番 目 にする<EOS>
+<SOS>if A [ B ] < A [ C ] :<tab>A の B 番 目 が A の C 番 目 より 小さい とき 、<EOS>
+<SOS>print ( 'myon' * calc ( A ) )<tab>' my on ' に c al c ( A ) を 掛 け た 値 を出力する<EOS>
+<SOS>for A in range ( 21 ) :<tab>0 から 21 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B & 1 ] = 1<tab>1 を A の [MASK] 番 目 にする<EOS>
+<SOS>print ( 'OK' if A <= B else 'NA' )<tab>A が B 以下の とき ' O K ' 、 そうでなければ ' NA ' を出力する<EOS>
+<SOS>print ( '' . join ( A [ 1 : B + 1 ] ) )<tab>空文字列 を 間 に 入れ て A の 1 番 目 から B に 1 を加えた 値 までの 部分 列 を 連結 した 文字列 を出力する<EOS>
+<SOS>if A [ B ] in C :<tab>A の B 番 目 が C に含まれる とき 、<EOS>
+<SOS>A . ws = [ 0 ] * B<tab>( 0 ) からなる 列 の B 回 分 の 列 を A の w s にする<EOS>
+<SOS>if 3 <= len ( A ) <= 6 :<tab>3 が A の長さ 以下 かどうか が 6 以下の とき 、<EOS>
+<SOS>print ( sum ( A [ B : C + 1 ] ) )<tab>A の B 番 目 から C に 1 を加えた 値 までの 部分 列 の 総 和 を出力する<EOS>
+<SOS>A , B , C , D , E , F = list ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B 、 C 、 D 、 E 、 F とする<EOS>
+<SOS>A = ngcd ( B , C )<tab>ng c d ( B , C ) を A とする<EOS>
+<SOS>if A >= B and C >= B :<tab>A が B 以上 かつ C が B 以上の とき 、<EOS>
+<SOS>print ( A >> 1 )<tab>A を 1 だけ 右 シフト した 値 を出力する<EOS>
+<SOS>A [ 2 * B - 1 - C - D ] [ D ] = E<tab>E を A の 2 * B から 1 を 引 いた 値 から C を 引 いた 値 から D を 引 いた 値 番目の D 番 目 にする<EOS>
+<SOS>A = A + A<tab>A に A を加えた 値を A とする<EOS>
+<SOS>A . append ( complex ( B - C * D , E + C * F ) )<tab>A の 末 尾 に B から C に D を 掛 け た 値を 引 いた 値を 実 部 、 E に C に F を 掛 け た 値 を加えた 値を 虚 部 とした 複素数 を追加する<EOS>
+<SOS>A = [ 0 ] * 100<tab>( 0 ) からなる 列 の 100 回 分 の 列 を A とする<EOS>
+<SOS>print ( 'YES' if judge ( A , B , C , D , E , F , G , H ) else 'NO' )<tab>j u d ge ( A , B , C , D , E , F , G , H ) の とき ' Y E S ' 、 そうでなければ ' N O ' を出力する<EOS>
+<SOS>A = input ( ) . split ( )<tab>入力された 文字列を 空白 で 分割 した 字句 列 を A とする<EOS>
+<SOS>print ( A . replace ( '_____' , 'peach' ) )<tab>A 内の ' __ __ _ ' を ' p e ach ' で 置き換え た 文字列 を出力する<EOS>
+<SOS>A = max ( A , B [ C ] [ D ] )<tab>A 、 B の C 番目の D 番目の 最大 値を A とする<EOS>
+<SOS>while A >= B [ C ] :<tab>A が B の C 番 目 以上の 間 、 以下 を 繰り返す<EOS>
+<SOS>A = B [ C ] - B [ C + 1 ]<tab>B の C 番 目 から B の C に 1 を加えた 値 番 目 を 引 いた 値を A とする<EOS>
+<SOS>A . size = [ 1 ] * B<tab>(1) からなる 列 の B 回 分 の 列 を A の s ize にする<EOS>
+<SOS>if A [ 0 ] != ')' :<tab>A の 0 番 目 が ' ) ' と 等 しく ない とき 、<EOS>
+<SOS>A , B , C = list ( input ( ) . split ( ',' ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の リストを 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A . append ( ( ( 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 ) , 0 ) )<tab>A の 末 尾 に ( ( 0 、 1 、 2 、 3 、 4 、 5 、 6 、 7 ) の 組 、 0 ) の 組 を追加する<EOS>
+<SOS>if A in [ '+' , '-' , '*' , '/' ] :<tab>A が ( ' + ' 、 ' - ' 、 ' * ' 、 ' / ' ) からなる 列 に含まれる とき 、<EOS>
+<SOS>A = B * B<tab>B に B を 掛 け た 値を A とする<EOS>
+<SOS>A = B = C - D + 1<tab>C から D を 引 いた 値に 1 を加えた 値を B とする を A とする<EOS>
+<SOS>print ( 196666 - A - B )<tab>1966 6 6 から A を 引 いた 値 から B を 引 いた 値 を出力する<EOS>
+<SOS>A , B = list ( map ( int , input ( ) . split ( ',' ) ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>if A [ B ] != '' :<tab>A の B 番 目 が 空文字列 と 等 しく ない とき 、<EOS>
+<SOS>A += 100<tab>A を 100 だけ 増加 させる<EOS>
+<SOS>print ( * A [ 0 ] )<tab>A の先頭 を 展開 して を出力する<EOS>
+<SOS>A = [ B for B in range ( 1 , 31 ) ]<tab>1 から 3 1 未 満 までの 数 列 の 各要素 を B とし 、 B の 列 を A とする<EOS>
+<SOS>print ( A [ 0 ] [ B - 1 ] )<tab>A の先頭 の B から 1 を 引 いた 値 番 目 を出力する<EOS>
+<SOS>A , B = list ( map ( int , input ( ) . split ( ':' ) ) )<tab>入力された 文字列を ' : ' で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>A *= 2<tab>A を 2 倍 にする<EOS>
+<SOS>A [ B ] = list ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを A の B 番 目 にする<EOS>
+<SOS>for A in range ( B + 1 , C + 1 ) :<tab>B に 1 を加えた 値 から C に 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A += 'U'<tab>A を ' U ' だけ 増加 させる<EOS>
+<SOS>A = B [ 0 ] * B [ 4 ] - B [ 3 ] * B [ 1 ]<tab>B の 先頭に B の 4 番 目 を 掛 け た 値 から B の 3 番 目 に B の 1 番 目 を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>for A in range ( 7 ) :<tab>0 から 7 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . unite ( B [ 0 ] , B [ 1 ] )<tab>A . un it e ( B [ 0 ] , B [ 1 ] )<EOS>
+<SOS>A , B , C = list ( input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の リストを 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A [ B ] [ C ] [ D ] [ D ] %= 100000<tab>A の B 番目の C 番目の D 番目の D 番 目 を 10 0000 で 割 った 余 り にする<EOS>
+<SOS>if A [ B + C ] == 'Y' :<tab>A の B に C を加えた 値 番 目 が ' Y ' と 等 しい とき 、<EOS>
+<SOS>A *= 5<tab>A を 5 倍 にする<EOS>
+<SOS>A , B , C = D . edge [ E ] [ F ]<tab>D の ed ge の E 番目の F 番 目 を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>print ( 'yes' if A else 'no' )<tab>A の とき ' y es ' 、 そうでなければ ' no ' を出力する<EOS>
+<SOS>if A > ( B + C ) * ( B + C ) :<tab>A が B に C を加えた 値に B に C を加えた 値を 掛 け た 値 より 大きい とき 、<EOS>
+<SOS>A = len ( B ) - 1<tab>B の長さ から 1 を 引 いた 値を A とする<EOS>
+<SOS>A = B = C = D = 0<tab>0 を D を C を B とする とする とする を A とする<EOS>
+<SOS>if ( A <= 50 and B [ A ] == 0 ) or B [ A ] > C :<tab>A が 50 以下 かつ B の A 番 目 が 0 と 等 しく または B の A 番 目 が C より 大きい とき 、<EOS>
+<SOS>A = complex ( 0 , 1 )<tab>0 を 実 部 、 1 を 虚 部 とした 複素数 を A とする<EOS>
+<SOS>print ( A [ B ] )<tab>A の B 番 目 を出力する<EOS>
+<SOS>A = { 1 : 6000 , 2 : 4000 , 3 : 3000 , 4 : 2000 }<tab>( ( 1, ▁ 600 0 ) 、 ( 2 , ▁ 400 0 ) 、 ( 3 , ▁ 300 0 ) 、 ( 4 , ▁ 2000 ) ) からなる 辞書 を A とする<EOS>
+<SOS>A [ B ] . append ( sum ( A [ B ] ) )<tab>A の B 番目の 末 尾 に A の B 番目の 総 和 を追加する<EOS>
+<SOS>A = [ 71.0 , 77.0 , 83.0 , 89.0 , 105.0 , 116.0 , 148.0 , 1000.0 ]<tab>( 7 1.0 、 7 7.0 、 8 3.0 、 89 . 0 、 10 5.0 、 11 6.0 、 14 8.0 、 100 0.0 ) からなる 列 を A とする<EOS>
+<SOS>if A >= 0 and B >= 0 and A <= 9 and B <= 9 :<tab>A が 0 以上 かつ B が 0 以上 かつ A が 9 以下 かつ B が 9 以下の とき 、<EOS>
+<SOS>def connected ( self , x , y ) return A . find ( B ) == A . find ( C )<tab>関数 con n ect ed を self 、 x 、 y を パラメータ として 定義 する<EOS>
+<SOS>A = 0x7fffffff<tab>0 x 7 ff ff ff f を A とする<EOS>
+<SOS>A += shortpath ( B , C , D , E )<tab>A を sh ort p a th ( B , C , D , E ) だけ 増加 させる<EOS>
+<SOS>def connected ( self , p , q ) return A . root ( B ) == A . root ( C )<tab>関数 con n ect ed を self 、 p 、 q を パラメータ として 定義 する<EOS>
+<SOS>A += min ( B , C )<tab>A を B 、 C の 最小 値 だけ 増加 させる<EOS>
+<SOS>A [ 0 ] = input ( ) . strip ( )<tab>入力された 文字列 の 両 端 から 空白 改行 を取り 除 いた 文字列を A の 0 番 目 にする<EOS>
+<SOS>A [ B ] , C [ B ] , D [ B ] , E [ B ] = map ( int , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A の B 番 目 、 C の B 番 目 、 D の B 番 目 、 E の B 番 目 とする<EOS>
+<SOS>print ( A if A <= B else - 1 )<tab>A が B 以下の とき A 、 そうでなければ -1 を出力する<EOS>
+<SOS>if leap_year ( A ) :<tab>le ap _ y ear ( A ) の とき 、<EOS>
+<SOS>A = 2002<tab>2002 を A とする<EOS>
+<SOS>A = 2 - A<tab>2 から A を 引 いた 値を A とする<EOS>
+<SOS>print ( get ( A ) )<tab>get ( A ) を出力する<EOS>
+<SOS>print ( A if abs ( A - B ) <= C or A <= B else 'impossible' )<tab>A - B の 絶対 値が C 以下 または A が B 以下の とき A 、 そうでなければ ' im po s si ble ' を出力する<EOS>
+<SOS>for A in range ( 1 , 126 ) :<tab>1 から 12 6 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B + C + D<tab>B に C を加えた 値に D を加えた 値を A とする<EOS>
+<SOS>if A == B - 1 :<tab>A が B から 1 を 引 いた 値 と 等 しい とき 、<EOS>
+<SOS>A [ 1 ] , A [ 2 ] = 1 , 2<tab>1 、 2 を A の 1 番 目 、 A の 2 番 目 とする<EOS>
+<SOS>for A in range ( B [ 0 ] ) :<tab>0 から B の先頭 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A . push ( B )<tab>A . push ( B )<EOS>
+<SOS>for A in range ( 1 + ( B >> 1 ) ) :<tab>0 から 1 に B を 1 だけ 右 シフト した 値 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = set ( )<tab>集合 を A とする<EOS>
+<SOS>A [ B ] [ C + 1 ] += 1<tab>A の B 番目の C に 1 を加えた 値 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A = 10 * B + C<tab>10 に B を 掛 け た 値に C を加えた 値を A とする<EOS>
+<SOS>print ( A // 3600 , ( A % 3600 ) // 60 , A % 60 )<tab>A を 3 600 で 割 った 商 、 A を 3 600 で 割 った 余 り を 60 で 割 った 商 、 A を 60 で 割 った 余 り を出力する<EOS>
+<SOS>A , B [ 0 ] = 0 , 1<tab>0 、 1 を A 、 B の 0 番 目 とする<EOS>
+<SOS>A = [ [ 0 for B in range ( 105 ) ] for C in range ( 105 ) ]<tab>0 から 10 5 未 満 までの 数 列 の 各要素 を C とし 、 0 から 10 5 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = re . match ( B , C )<tab>正規表現 B を C に マッチ させた 結果を A とする<EOS>
+<SOS>A = ( B . imag - C . imag ) / 2<tab>B の im ag から C の im ag を 引 いた 値を 2 で 割 った 値を A とする<EOS>
+<SOS>A = B [ : 2 ]<tab>B の先頭 から 2 番 目 までの 部分 列 を A とする<EOS>
+<SOS>A -= B . power [ C ] + B . weight ( C )<tab>A を B の p ow er の C 番 目 に B . w e ight ( C ) を加えた 値 だけ 減少 させる<EOS>
+<SOS>print ( 'YES' if isParallelLL ( [ A , B ] , [ C , D ] ) else 'NO' )<tab>is P ar all el LL ( [ A , B ] , [ C , D ] ) の とき ' Y E S ' 、 そうでなければ ' N O ' を出力する<EOS>
+<SOS>if A [ B ] [ C ] == '1' :<tab>A の B 番目の C 番 目 が ' 1 ' と 等 しい とき 、<EOS>
+<SOS>A = list ( B )<tab>B の リストを A とする<EOS>
+<SOS>if EQ ( A [ B ] . imag , 0 ) and EQ ( A [ C ] . imag , 0 ) :<tab>E Q ( A [ B ] . im ag , 0 ) かつ E Q ( A [ C ] . im ag , 0 ) の とき 、<EOS>
+<SOS>A . heappush ( B , ( 0 , C , - 1 , 0 ) )<tab>A . he ap push ( B , ( 0 , C , - 1, 0 ) )<EOS>
+<SOS>print ( A [ B ] [ int ( input ( ) ) ] )<tab>A の B 番目の 入力された 文字列 の 整数値 番 目 を出力する<EOS>
+<SOS>print ( 4280 - A )<tab>4 2 80 から A を 引 いた 値 を出力する<EOS>
+<SOS>A , B , C = [ 0 ] * 3 , [ 0 ] * 3 , [ 0 ] * 3<tab>( 0 ) からなる 列 の 3 回 分 の 列 、 ( 0 ) からなる 列 の 3 回 分 の 列 、 ( 0 ) からなる 列 の 3 回 分 の 列 を A 、 B 、 C とする<EOS>
+<SOS>if A [ B ] != '0' :<tab>A の B 番 目 が ' 0 ' と 等 しく ない とき 、<EOS>
+<SOS>if A + 1 < len ( B ) and C [ B [ A ] ] < C [ B [ A + 1 ] ] :<tab>A に 1 を加えた 値が B の長さ より 小さく かつ C の B の A 番 目 番 目 が C の B の A に 1 を加えた 値 番 目 番 目 より 小さい とき 、<EOS>
+<SOS>A [ B + 1 ] [ C ] = max ( A [ B + 1 ] [ C ] , A [ B ] [ C ] )<tab>A の B に 1 を加えた 値 番目の C 番 目 、 A の B 番目の C 番目の 最大 値を A の B に 1 を加えた 値 番目の C 番 目 にする<EOS>
+<SOS>A , B = list ( input ( ) ) , 0<tab>入力された 文字列 のリスト 、 0 を A 、 B とする<EOS>
+<SOS>for A in range ( B + 4 ) :<tab>0 から B に 4 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = C + 1 , 2<tab>C に 1 を加えた 値 、 2 を A 、 B とする<EOS>
+<SOS>A = calc ( B [ C ] [ 3 ] ) if B [ C ] [ 3 ] > 0 else 1<tab>B の C 番目の 3 番 目 が 0 より 大きい とき c al c ( B [ C ] [ 3 ] ) 、 そうでなければ 1 を A とする<EOS>
+<SOS>A , B = C [ 10 ] , C [ 11 ]<tab>C の 10 番 目 、 C の 11 番 目 を A 、 B とする<EOS>
+<SOS>A [ B ] [ C ] = D = 1<tab>1 を D とする を A の B 番目の C 番 目 にする<EOS>
+<SOS>A , B = [ 1 ] * 16 , [ 0 ] * 16<tab>(1) からなる 列 の 16 回 分 の 列 、 ( 0 ) からなる 列 の 16 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A [ B ] = - 1<tab>-1 を A の B 番 目 にする<EOS>
+<SOS>print ( sum ( [ int ( input ( ) ) for A in range ( B >> 2 ) ] ) )<tab>0 から B を 2 だけ 右 シフト した 値 未 満 までの 数 列 の 各要素 を A とし 、 入力された 文字列 の 整数値 の 列 の 総 和 を出力する<EOS>
+<SOS>A = [ [ 0 for B in range ( 27 ) ] for C in range ( 27 ) ]<tab>0 から 27 未 満 までの 数 列 の 各要素 を C とし 、 0 から 27 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>print ( ut2jd ( A , B , C ) - ut2jd ( D , E , F ) )<tab>u t 2 j d ( A , B , C ) から u t 2 j d ( D , E , F ) を 引 いた 値 を出力する<EOS>
+<SOS>print ( kruskal ( A , B ) )<tab>k ru s k al ( A , B ) を出力する<EOS>
+<SOS>A = ( A + B ) % C<tab>A に B を加えた 値を C で 割 った 余 り を A とする<EOS>
+<SOS>if not A . connected ( B [ 0 ] , B [ 1 ] ) :<tab>A . con n ect ed ( B [ 0 ] , B [ 1 ] ) でない とき 、<EOS>
+<SOS>A [ B ] . append ( C )<tab>A の B 番目の 末 尾 に C を追加する<EOS>
+<SOS>if A == '.' :<tab>A が ' . ' と 等 しい とき 、<EOS>
+<SOS>print ( '3C' , format ( A , '02d' ) , sep = '' )<tab>区切り なしで ' 3 C ' 、 書式 A を ' 0 2 d ' で フォーマット した 文字列 を出力する<EOS>
+<SOS>if A + 1 < B :<tab>A に 1 を加えた 値が B より 小さい とき 、<EOS>
+<SOS>A = B * C + D * E<tab>B に C を 掛 け た 値に D に E を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>A = [ [ 0 for B in range ( C ) ] for D in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を D とし 、 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A , B = list ( input ( ) . split ( ',' ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>A . append ( ( B // 100 - 1 , C , D ) )<tab>A の 末 尾 に ( B を 100 で 割 った 商 から 1 を 引 いた 値 、 C 、 D ) の 組 を追加する<EOS>
+<SOS>A . update ( B )<tab>B を追加し て A を 更新 する<EOS>
+<SOS>A [ B ] = A [ B - 1 ] - C [ B - 1 ]<tab>A の B から 1 を 引 いた 値 番 目 から C の B から 1 を 引 いた 値 番 目 を 引 いた 値を A の B 番 目 にする<EOS>
+<SOS>A . sort ( key = lambda x : ( B [ 0 ] , B [ 2 ] ) )<tab>key を x を パラメータ として ( x の先頭 、 x の 2 番 目 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>A = ( ( A - 1 ) // 1000 + 1 ) * 1000<tab>A から 1 を 引 いた 値を 1000 で 割 った 商 に 1 を加えた 値に 1000 を 掛 け た 値を A とする<EOS>
+<SOS>A , B = [ 0.0 ] * C , [ 0.0 ] * C<tab>( 0.0 ) からなる 列 の C 回 分 の 列 、 ( 0.0 ) からなる 列 の C 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A , B = 1 , 0<tab>1 、 0 を A 、 B とする<EOS>
+<SOS>A = A ** 0.5<tab>A の 0.5 乗 を A とする<EOS>
+<SOS>while A != [ ] and A [ 0 ] != '_' :<tab>A が 空 列 と 等 しく なく かつ A の 0 番 目 が ' _ ' と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>A , B = B , A<tab>A と B を 入れ替え る<EOS>
+<SOS>A , B = 1 , C [ 0 ]<tab>1 、 C の先頭 を A 、 B とする<EOS>
+<SOS>A = B + int ( C [ 1 ] ) * D [ E ] [ 0 ]<tab>B に C の 1 番目の 整数値 に D の E 番目の 先頭 を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>print ( A // 3600 , ':' , ( A % 3600 ) // 60 , ':' , A % 60 , sep = '' )<tab>区切り なしで A を 3 600 で 割 った 商 、 ' : ' 、 A を 3 600 で 割 った 余 り を 60 で 割 った 商 、 ' : ' 、 A を 60 で 割 った 余 り を出力する<EOS>
+<SOS>A = 20<tab>20 を A とする<EOS>
+<SOS>A = list ( map ( int , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを A とする<EOS>
+<SOS>if A [ B ] [ C ] . isdigit ( ) :<tab>A の B 番目の C 番 目 が 全て 数字 の とき 、<EOS>
+<SOS>for A in range ( 5 ) :<tab>0 から 5 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] , C [ B ] = 0 , 1<tab>0 、 1 を A の B 番 目 、 C の B 番 目 とする<EOS>
+<SOS>A = min ( B )<tab>B の 最小 値を A とする<EOS>
+<SOS>A = [ [ - 1 , - 1 ] , [ - 1 , 0 ] , [ - 1 , 1 ] , [ 0 , - 1 ] , [ 0 , 1 ] , [ 1 , - 1 ] , [ 1 , 0 ] , [ 1 , 1 ] ]<tab>( ( -1 、 -1 ) からなる 列 、 ( -1 、 0 ) からなる 列 、 ( -1 、 1 ) からなる 列 、 ( 0 、 -1 ) からなる 列 、 ( 0 、 1 ) からなる 列 、 ( 1 、 -1 ) からなる 列 、 ( 1 、 0 ) からなる 列 、 ( 1 、 1 ) からなる 列 ) からなる 列 を A とする<EOS>
+<SOS>print ( A - B )<tab>A から B を 引 いた 値 を出力する<EOS>
+<SOS>if A [ B ] [ C - 1 ] == 0 :<tab>A の B 番目の C から 1 を 引 いた 値 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>return A . real ** 2 + A . imag ** 2<tab>A の re al の 2 乗 に A の im ag の 2 乗 を加えた 値を返す<EOS>
+<SOS>print ( calc ( ) [ 15 ] )<tab>c al c () の 15 番 目 を出力する<EOS>
+<SOS>A = list ( map ( int , input ( ) ) )<tab>入力された 文字列 の 各要素 に 整数 を適用した 列 の リストを A とする<EOS>
+<SOS>A = list ( map ( float , input ( ) . split ( ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に float を適用した 列 の リストを A とする<EOS>
+<SOS>C = ( A / 100 + 1 ) ** B<tab>A を 100 で 割 った 値に 1 を加えた 値の B 乗 を そうでなければ 、 とする<EOS>
+<SOS>for A in B [ C ] :<tab>B の C 番目の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>while A [ B ] <= A [ C ] :<tab>A の B 番 目 が A の C 番 目 以下の 間 、 以下 を 繰り返す<EOS>
+<SOS>A , B = C [ D << 1 ] , C [ ( D << 1 ) + 1 ]<tab>C の D を 1 だけ 左 シフト した 値 番 目 、 C の D を 1 だけ 左 シフト した 値に 1 を加えた 値 番 目 を A 、 B とする<EOS>
+<SOS>A . level [ B ] = A . level [ C ] + 1<tab>A の l evel の C 番 目 に 1 を加えた 値を A の l evel の B 番 目 にする<EOS>
+<SOS>if A [ B + 2 ] [ C ] == '#' or A [ B + 1 ] [ C ] == '#' or A [ B + 1 ] [ C - 1 ] == '#' :<tab>A の B + 2 番目の C 番 目 が ' # ' と 等 しく または A の B + 1 番目の C 番 目 が ' # ' と 等 しく または A の B に 1 を加えた 値 番目の C から 1 を 引 いた 値 番 目 が ' # ' と 等 しい とき 、<EOS>
+<SOS>A = 10 * A + ( B % 10 )<tab>10 に A を 掛 け た 値に B を 10 で 割 った 余 り を加えた 値を A とする<EOS>
+<SOS>for A in range ( 3 , 31 ) :<tab>3 から 3 1 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = [ 0 ] * 62 , [ 0 ] * 62<tab>( 0 ) からなる 列 の 6 2 回 分 の 列 、 ( 0 ) からなる 列 の 6 2 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A , B = C [ 0 ] , D<tab>C の先頭 、 D を A 、 B とする<EOS>
+<SOS>A . level [ B ] = 0<tab>0 を A の l evel の B 番 目 にする<EOS>
+<SOS>if A < 0 :<tab>A が 0 より 小さい とき 、<EOS>
+<SOS>print ( 'yes' if A . connected ( B , C ) else 'no' )<tab>A . con n ect ed ( B , C ) の とき ' y es ' 、 そうでなければ ' no ' を出力する<EOS>
+<SOS>if A [ B ] . isdigit ( ) and A [ B + 1 ] . isdigit ( ) :<tab>A の B 番 目 が 全て 数字 かつ A の B に 1 を加えた 値 番 目 が 全て 数字 の とき 、<EOS>
+<SOS>A = B [ 0 ] = int ( input ( ) )<tab>入力された 文字列 の 整数値 を B の 0 番 目 とする を A とする<EOS>
+<SOS>A , B = - 1 , 0<tab>-1 、 0 を A 、 B とする<EOS>
+<SOS>A = 1000000010<tab>1000 0000 10 を A とする<EOS>
+<SOS>A = [ 0 ] * 5001<tab>( 0 ) からなる 列 の 500 1 回 分 の 列 を A とする<EOS>
+<SOS>if A >= B and C == 0 :<tab>A が B 以上 かつ C が 0 と 等 しい とき 、<EOS>
+<SOS>A = [ [ 0 for B in range ( 100 ) ] for C in range ( 100 ) ]<tab>0 から 100 未 満 までの 数 列 の 各要素 を C とし 、 0 から 100 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = dijkstra ( B , C , D , E )<tab>d i j k st ra ( B , C , D , E ) を A とする<EOS>
+<SOS>A , B = [ 0 ] * 3 , [ 0 ] * 3<tab>( 0 ) からなる 列 の 3 回 分 の 列 、 ( 0 ) からなる 列 の 3 回 分 の 列 を A 、 B とする<EOS>
+<SOS>A = B + int ( input ( ) )<tab>B に 入力された 文字列 の 整数値 を加えた 値を A とする<EOS>
+<SOS>A = [ 18680908 , 19120730 , 19261225 , 19890108 , 99999999 ]<tab>( 1 86 80 90 8 、 19 1 20 7 30 、 19 26 12 25 、 1989 0 10 8 、 99 99 99 99 ) からなる 列 を A とする<EOS>
+<SOS>A = B [ C - 1 ] [ 2 ] * D / E + B [ C - 1 ] [ 0 ]<tab>B の C -1 番目の 2 番 目 に D を 掛 け た 値を E で 割 った 値に B の C から 1 を 引 いた 値 番目の 先頭 を加えた 値を A とする<EOS>
+<SOS>A = 1000000<tab>100 0000 を A とする<EOS>
+<SOS>A , B = ord ( 'a' ) , ord ( 'z' ) + 1<tab>' a ' の 順序 数 、 ' z ' の 順序 数 に 1 を加えた 値を A 、 B とする<EOS>
+<SOS>print ( A + B + C , A , B , C )<tab>A に B を加えた 値に C を加えた 値 、 A 、 B 、 C を出力する<EOS>
+<SOS>A = min ( A , B [ C + D ] )<tab>A 、 B の C に D を加えた 値 番目の 最小 値を A とする<EOS>
+<SOS>print ( 'overflow' )<tab>' o ver f l ow ' を出力する<EOS>
+<SOS>if A == 1 :<tab>A が 1 と 等 しい とき 、<EOS>
+<SOS>for A in range ( 2 , 12 ) :<tab>2 から 12 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B . pop ( 0 )<tab>B の 0 を取り 出した 値を A とする<EOS>
+<SOS>A [ B * C ] = 1<tab>1 を A の B に C を 掛 け た 値 番 目 にする<EOS>
+<SOS>C = A [ B ]<tab>A の B 番 目 を そうでなければ 、 とする<EOS>
+<SOS>return 'd'<tab>' d ' を返す<EOS>
+<SOS>if A < 0 or B < 0 or C < 0 or D < 0 or E < 0 or F < 0 :<tab>A < 0 または B < 0 または C が 0 より 小さく または D が 0 より 小さく または E が 0 より 小さく または F が 0 より 小さい とき 、<EOS>
+<SOS>A = [ [ B for C in range ( 101 ) ] for D in range ( 101 ) ]<tab>0 から 10 1 未 満 までの 数 列 の 各要素 を D とし 、 0 から 10 1 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 を A とする<EOS>
+<SOS>A = B >> 1<tab>B を 1 だけ 右 シフト した 値を A とする<EOS>
+<SOS>if A < B and C == D [ A ] :<tab>A が B より 小さく かつ C が D の A 番 目 と 等 しい とき 、<EOS>
+<SOS>for A in range ( B , C + 1 , D ) :<tab>B から C に 1 を加えた 値 未 満 までの D 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A , B = 100000 , 1000000000<tab>10 0000 、 10 0000 0000 を A 、 B とする<EOS>
+<SOS>A , B = [ ] , '>'<tab>空 列 、 ' > ' を A 、 B とする<EOS>
+<SOS>if A < B :<tab>A が B より 小さい とき 、<EOS>
+<SOS>print ( A , len ( set ( B ) & set ( C ) ) - A )<tab>A 、 [MASK] の長さ から A を 引 いた 値 を出力する<EOS>
+<SOS>if A == '*' :<tab>A が ' * ' と 等 しい とき 、<EOS>
+<SOS>A . append ( ( B , - C ) )<tab>A の 末 尾 に ( B 、 - C ) の 組 を追加する<EOS>
+<SOS>A , B , C , D = map ( int , list ( E ) )<tab>E のリスト の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B 、 C 、 D とする<EOS>
+<SOS>for A in range ( 3 , 1 + ( B >> 1 ) , 2 ) :<tab>3 から 1 に B を 1 だけ 右 シフト した 値 を加えた 値 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = int ( B ** 0.5 )<tab>B の 0.5 乗 の 整数値 を A とする<EOS>
+<SOS>A , B , C = 0 , int ( D ) , C + 1<tab>0 、 D の 整数値 、 C に 1 を加えた 値を A 、 B 、 C とする<EOS>
+<SOS>A = 182<tab>18 2 を A とする<EOS>
+<SOS>A . append ( 1 )<tab>A の 末 尾 に 1 を追加する<EOS>
+<SOS>del A [ 0 ]<tab>A の先頭 を削除する<EOS>
+<SOS>A , B , C = 1 , 1 , 1<tab>1 、 1 、 1 を A 、 B 、 C とする<EOS>
+<SOS>A , B = C . split ( '.' )<tab>C を ' . ' で 分割 した 字句 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>if A [ B ] [ 1 ] == 0 :<tab>A の B 番目の 1 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A = [ 1520 , 1870 , 2244 ]<tab>( 15 20 、 18 70 、 2 24 4 ) からなる 列 を A とする<EOS>
+<SOS>if C [ A [ B ] ] > 0 :<tab>辞書 の A の B 番 目 番 目 が 0 より 大きい とき 、<EOS>
+<SOS>if A [ B - 1 ] >= C :<tab>A の B から 1 を 引 いた 値 番 目 が C 以上の とき 、<EOS>
+<SOS>if A < B and ( C < 0 or D [ A ] < C ) :<tab>A が B より 小さく かつ C が 0 より 小さく または D の A 番 目 が C より 小さい とき 、<EOS>
+<SOS>A = { 0 : '.' , 1 : 'E' }<tab>( ( 0 , ▁ ' . ' ) 、 ( 1, ▁ ' E ' ) ) からなる 辞書 を A とする<EOS>
+<SOS>print ( A * math . sin ( B / A ) * math . cos ( C * B / A ) / math . cos ( ( C - 1 ) * B / A ) )<tab>A に math . s in ( B / A ) を 掛 け た 値に math . co s ( C * B / A ) を 掛 け た 値を math . co s ( ( C -1 ) * B / A ) で 割 った 値 を出力する<EOS>
+<SOS>print ( calc ( 0 , 0 ) [ 0 ] )<tab>c al c ( 0 , 0 ) の先頭 を出力する<EOS>
+<SOS>A , B , C = 1 , D , D<tab>1 、 D 、 D を A 、 B 、 C とする<EOS>
+<SOS>A = [ True for B in range ( C + 2 ) ]<tab>0 から C に 2 を加えた 値 未 満 までの 数 列 の 各要素 を B とし 、 真 の 列 を A とする<EOS>
+<SOS>A = ( B * C ) % ( C + D )<tab>B に C を 掛 け た 値を C に D を加えた 値 で 割 った 余 り を A とする<EOS>
+<SOS>A [ 31 ] , A [ 32 ] , A [ 33 ] , A [ 34 ] , A [ 35 ] = 'k' , 'l' , 'm' , 'n' , 'o'<tab>' k ' 、 ' l ' 、 ' m ' 、 ' n ' 、 ' o ' を A の 3 1 番 目 、 A の 32 番 目 、 A の 3 3 番 目 、 A の 3 4 番 目 、 A の 3 5 番 目 とする<EOS>
+<SOS>for A in range ( B // 2 ) :<tab>0 から B を 2 で 割 った 商 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( B + 1 , 6 ) :<tab>B に 1 を加えた 値 から 6 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] [ C ] = max ( D , E , F )<tab>D 、 E 、 F の 最大 値を A の B 番目の C 番 目 にする<EOS>
+<SOS>A = [ [ [ B for C in range ( 31 ) ] for D in range ( E ) ] for F in range ( E ) ]<tab>0 から E 未 満 までの 数 列 の 各要素 を F とし 、 0 から E 未 満 までの 数 列 の 各要素 を D とし 、 0 から 3 1 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 の 列 を A とする<EOS>
+<SOS>A [ 0 ] = B [ 0 ] = C = D = E = F = 200<tab>200 を F を E を D を C を B [ 0 ] とする とする とする とする とする を A の 0 番 目 にする<EOS>
+<SOS>A = dot ( B - C [ 0 ] , D ) / norm ( D )<tab>do t ( B - C [ 0 ] , D ) を no r m ( D ) で 割 った 値を A とする<EOS>
+<SOS>print ( A % 3 + 1 )<tab>A を 3 で 割 った 余 り に 1 を加えた 値 を出力する<EOS>
+<SOS>A = format ( B , '08b' )<tab>書式 B を ' 0 8 b ' で フォーマット した 文字列を A とする<EOS>
+<SOS>if A >= B + C :<tab>A が B に C を加えた 値 以上の とき 、<EOS>
+<SOS>if float ( A ) / float ( B ) ** 2 >= 25 :<tab>A の 浮動小数点数 値を B の 浮動小数点数 値の 2 乗 で 割 った 値が 25 以上の とき 、<EOS>
+<SOS>A = B // C [ D ] * E [ D ] + ( B % C [ D ] ) // F [ D ] * G [ D ]<tab>B を C の D 番 目 で 割 った 商 に E の D 番 目 を 掛 け た 値に B を C の D 番 目 で 割 った 余 り を F の D 番 目 で 割 った 商 に G の D 番 目 を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>for A in range ( 1 , len ( B ) ) :<tab>1 から B の長さ 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>B [ A ] = [ ]<tab>空 列 を 辞書 の A 番 目 にする<EOS>
+<SOS>print ( 2 )<tab>2 を出力する<EOS>
+<SOS>A = B . dfs ( C , D , E )<tab>B . d f s ( C , D , E ) を A とする<EOS>
+<SOS>if A > B [ C ] [ D ] - B [ C ] [ E - 1 ] :<tab>A が B の C 番目の D 番 目 から B の C 番目の E から 1 を 引 いた 値 番 目 を 引 いた 値 より 大きい とき 、<EOS>
+<SOS>print ( * A [ : : - 1 ] )<tab>A の 逆 順 を 展開 して を出力する<EOS>
+<SOS>A = B = - 1<tab>-1 を B とする を A とする<EOS>
+<SOS>print ( min ( A , ( ( B * C + D * E ) * 4 ) // 5 ) )<tab>A 、 B * C に D * E を加えた 値に 4 を 掛 け た 値を 5 で 割 った 商 の 最小 値 を出力する<EOS>
+<SOS>if not A [ B ] [ C ] :<tab>A の B 番目の C 番 目 でない とき 、<EOS>
+<SOS>A = dcmp ( cross ( B [ 1 ] - B [ 0 ] , C [ D ] - B [ 0 ] ) )<tab>d c m p ( c ro s s ( B [ 1 ]- B [ 0 ] , C [ D ]- B [ 0 ] ) ) を A とする<EOS>
+<SOS>A = list ( sorted ( B . items ( ) , key = lambda x : A [ 1 ] ) )<tab>x を パラメータ として x の 1 番 目 を返す関数 を キー として B の キー と 値 の集まり を ソート した 列 の リストを A とする<EOS>
+<SOS>A = B [ 0 : ]<tab>B の先頭 から 末 尾 までの 部分 列 を A とする<EOS>
+<SOS>for A in range ( B , B + 1001 ) :<tab>B から B に 100 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = 2<tab>2 を そうでなければ 、 とする<EOS>
+<SOS>A = [ [ [ 0 for B in range ( 10 ) ] for C in range ( 10 ) ] for D in range ( 10 ) ]<tab>0 から 10 未 満 までの 数 列 の 各要素 を D とし 、 0 から 10 未 満 までの 数 列 の 各要素 を C とし 、 0 から 10 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 の 列 を A とする<EOS>
+<SOS>if A [ B ] and A [ C - B ] :<tab>A の B 番 目 かつ A の C から B を 引 いた 値 番目の とき 、<EOS>
+<SOS>A = 5 if ( B % 5 ) == 1 else 2<tab>B を 5 で 割 った 余 り が 1 と 等 しい とき 5 、 そうでなければ 2 を A とする<EOS>
+<SOS>for A in range ( B + 1 , C ) :<tab>B に 1 を加えた 値 から C 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = A [ : B ]<tab>A の先頭 から B 番 目 までの 部分 列 を A とする<EOS>
+<SOS>A = [ True ] * 11<tab>( 真 ) からなる 列 の 11 回 分 の 列 を A とする<EOS>
+<SOS>A , B = int ( A ) - 1 , int ( B ) - 1<tab>A の 整数値 から 1 を 引 いた 値 、 B の 整数値 から 1 を 引 いた 値を A 、 B とする<EOS>
+<SOS>if A [ B ] [ 0 ] <= C and C <= A [ B ] [ 1 ] :<tab>A の B 番目の 0 番 目 が C 以下 かつ C が A の B 番目の 1 番 目 以下の とき 、<EOS>
+<SOS>if A <= 60 :<tab>A が 60 以下の とき 、<EOS>
+<SOS>A = [ len ( input ( ) ) for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の長さ の 列 を A とする<EOS>
+<SOS>if inside ( A , B , C , D , E , F ) :<tab>in s ide ( A , B , C , D , E , F ) の とき 、<EOS>
+<SOS>A . unite ( B , C )<tab>A . un it e ( B , C )<EOS>
+<SOS>for A in range ( 1 , 4 ) :<tab>1 から 4 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B + C [ D ]<tab>B に C の D 番 目 を加えた 値を A とする<EOS>
+<SOS>A [ B ] [ C ] += 1<tab>A の B 番目の C 番 目 を 1 だけ 増加 させる<EOS>
+<SOS>A = gcd ( B [ 0 ] , B [ 1 ] )<tab>g c d ( B [ 0 ] , B [ 1 ] ) を A とする<EOS>
+<SOS>for A in range ( B , C + 1 , B ) :<tab>B から C に 1 を加えた 値 未 満 までの B 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = [ 0 ] + [ int ( input ( ) ) for B in range ( C ) ]<tab>( 0 ) からなる 列 に 0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 整数値 の 列 を加えた 値を A とする<EOS>
+<SOS>print ( 'impossible' if A < 0 else A )<tab>A が 0 より 小さい とき ' im po s si ble ' 、 そうでなければ A を出力する<EOS>
+<SOS>A , B = factor ( )<tab>f act or () を 展開 し 順に A 、 B とする<EOS>
+<SOS>print ( A - len ( convex_hull ( B ) ) )<tab>A から con ve x _ h ul l ( B ) の長さ を 引 いた 値 を出力する<EOS>
+<SOS>A += B [ C & 1 ] [ D ] [ E ] [ F ] & 1<tab>A を [MASK] だけ 増加 させる<EOS>
+<SOS>A = ( 500 , 100 , 50 , 10 , 5 , 1 )<tab>( 500 、 100 、 50 、 10 、 5 、 1 ) の 組 を A とする<EOS>
+<SOS>A = 17<tab>17 を A とする<EOS>
+<SOS>A , B = [ 0 ] * 200 , 0<tab>( 0 ) からなる 列 の 200 回 分 の 列 、 0 を A 、 B とする<EOS>
+<SOS>A = float ( input ( ) )<tab>入力された 文字列 の 浮動小数点数 値を A とする<EOS>
+<SOS>A = B | ( 1 << C )<tab>B と 1 を C だけ 左 シフト した 値の 論理 和 を A とする<EOS>
+<SOS>A = [ [ [ 0 for B in range ( 8 ) ] for C in range ( 8 ) ] for D in range ( 4 ) ]<tab>0 から 4 未 満 までの 数 列 の 各要素 を D とし 、 0 から 8 未 満 までの 数 列 の 各要素 を C とし 、 0 から 8 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 の 列 を A とする<EOS>
+<SOS>A = [ 0 ] * 2<tab>( 0 ) からなる 列 の 2 回 分 の 列 を A とする<EOS>
+<SOS>A , B [ C ] [ 0 ] , D , B [ C ] [ 1 ] = map ( int , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B の C 番目の 先頭 、 D 、 B の C 番目の 1 番 目 とする<EOS>
+<SOS>if ( A >= B and C <= D ) or ( A <= B and C >= D ) :<tab>A が B 以上 かつ C が D 以下 または A が B 以下 かつ C が D 以上の とき 、<EOS>
+<SOS>A [ B [ C ] - 1 ] += D<tab>A の B の C 番 目 から 1 を 引 いた 値 番 目 を D だけ 増加 させる<EOS>
+<SOS>return A * B + C<tab>A に B を 掛 け た 値に C を加えた 値を返す<EOS>
+<SOS>while A [ B ] != '0' :<tab>A の B 番 目 が ' 0 ' と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>A = get ( B )<tab>get ( B ) を A とする<EOS>
+<SOS>A = B + 4<tab>B に 4 を加えた 値を A とする<EOS>
+<SOS>A = B [ C + 2 ] - 1<tab>B の C に 2 を加えた 値 番 目 から 1 を 引 いた 値を A とする<EOS>
+<SOS>A = B + 3<tab>B に 3 を加えた 値を A とする<EOS>
+<SOS>A [ B + C ] [ 0 ] = D<tab>D を A の B に C を加えた 値 番目の 0 番 目 にする<EOS>
+<SOS>for A in range ( B - 1 ) :<tab>0 から B から 1 を 引 いた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = max ( - 3 , min ( 3 , B [ 1 ] - B [ 2 ] ) )<tab>-3 、 3 、 B の 1 番 目 から B の 2 番 目 を 引 いた 値の 最小 値の 最大 値を A とする<EOS>
+<SOS>if A < 0 or A >= B or C < 0 or C >= D or not E [ A ] [ C ] :<tab>A が 0 より 小さく または A が B 以上 または C が 0 より 小さく または C が D 以上 または E の A 番目の C 番 目 でない とき 、<EOS>
+<SOS>A , B = list ( map ( float , input ( ) . split ( ',' ) ) )<tab>入力された 文字列を ' , ' で 分割 した 字句 列 の 各要素 に float を適用した 列 の リストを 展開 し 順に A 、 B とする<EOS>
+<SOS>if A [ B ] == C - 1 :<tab>A の B 番 目 が C から 1 を 引 いた 値 と 等 しい とき 、<EOS>
+<SOS>print ( A // B + 1 )<tab>A を B で 割 った 商 に 1 を加えた 値 を出力する<EOS>
+<SOS>B = A + 1<tab>A に 1 を加えた 値を そうでなければ 、 とする<EOS>
+<SOS>A [ 0 ] , A [ B ] , A [ C ] = 1 , 1 , 1<tab>1 、 1 、 1 を A の先頭 、 A の B 番 目 、 A の C 番 目 とする<EOS>
+<SOS>A = B [ C ] + 1<tab>B の C 番 目 に 1 を加えた 値を A とする<EOS>
+<SOS>A -= 1<tab>A を 1 だけ 減少 させる<EOS>
+<SOS>A = MaxFlow ( B )<tab>Max F l ow ( B ) を A とする<EOS>
+<SOS>A , B = [ ] , 0<tab>空 列 、 0 を A 、 B とする<EOS>
+<SOS>A = 10e8<tab>10 e 8 を A とする<EOS>
+<SOS>A [ B ] , A [ B + 1 ] = A [ B + 1 ] , A [ B ]<tab>A の B に 1 を加えた 値 番 目 、 A の B 番 目 を A の B 番 目 、 A の B に 1 を加えた 値 番 目 とする<EOS>
+<SOS>A = 10001<tab>1000 1 を A とする<EOS>
+<SOS>A [ B ] = A [ B - 1 ] - 1<tab>A の B から 1 を 引 いた 値 番 目 から 1 を 引 いた 値を A の B 番 目 にする<EOS>
+<SOS>if A >= 2 :<tab>A が 2 以上の とき 、<EOS>
+<SOS>while A < B [ C ] :<tab>A が B の C 番 目 より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A , B , C , D , E , F = map ( int , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 を 展開 し 順に A 、 B 、 C 、 D 、 E 、 F とする<EOS>
+<SOS>for A in range ( B , 0 , - 1 ) :<tab>B から 0 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = A - B / ( 3 * C )<tab>A から B を 3 に C を 掛 け た 値 で 割 った 値を 引 いた 値を A とする<EOS>
+<SOS>A . iter = [ 0 ] * A . V<tab>( 0 ) からなる 列 の A の V 回 分 の 列 を A の it er にする<EOS>
+<SOS>A [ B ] = 0<tab>0 を A の B 番 目 にする<EOS>
+<SOS>pushBack ( A , B )<tab>push B ack ( A , B )<EOS>
+<SOS>A = 0<tab>0 を A とする<EOS>
+<SOS>A = 1e-8<tab>1 e -8 を A とする<EOS>
+<SOS>A = B [ C ] - B [ D - 1 ]<tab>B の C 番 目 から B の D から 1 を 引 いた 値 番 目 を 引 いた 値を A とする<EOS>
+<SOS>A . edge [ B ] [ C ] [ 1 ] += D<tab>A の ed ge の B 番目の C 番目の 1 番 目 を D だけ 増加 させる<EOS>
+<SOS>print ( A [ 1 - ( B & 1 ) ] )<tab>A の 1 から [MASK] を 引 いた 値 番 目 を出力する<EOS>
+<SOS>C += 1<tab>C を 1 だけ 増加 させる<EOS>
+<SOS>while A + 1 < B :<tab>A に 1 を加えた 値が B より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>if A + B > C :<tab>A に B を加えた 値が C より 大きい とき 、<EOS>
+<SOS>for A in B [ C ] [ 1 ] :<tab>B の C 番目の 1 番目の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = [ 0 ] * 7<tab>( 0 ) からなる 列 の 7 回 分 の 列 を A とする<EOS>
+<SOS>if A == '0' :<tab>A が ' 0 ' と 等 しい とき 、<EOS>
+<SOS>combi ( A + 1 )<tab>com b i ( A + 1 )<EOS>
+<SOS>A <<= 1<tab>A を 1 だけ 左 シフト する<EOS>
+<SOS>A , B = get ( C ) , get ( D )<tab>get ( C ) 、 get ( D ) を A 、 B とする<EOS>
+<SOS>if A > 30 :<tab>A が 30 より 大きい とき 、<EOS>
+<SOS>A = [ 500 , 100 , 50 , 10 , 5 , 1 ]<tab>( 500 、 100 、 50 、 10 、 5 、 1 ) からなる 列 を A とする<EOS>
+<SOS>A = B * 10000 + C * 100 + D<tab>B に 1 0000 を 掛 け た 値に C に 100 を 掛 け た 値 を加えた 値に D を加えた 値を A とする<EOS>
+<SOS>A . heappush ( B , ( C , D ) )<tab>A . he ap push ( B , ( C , D ) )<EOS>
+<SOS>if sum ( A ) == 0 :<tab>A の 総 和 が 0 と 等 しい とき 、<EOS>
+<SOS>print ( 'OK' if A else 'NG' )<tab>A の とき ' O K ' 、 そうでなければ ' N G ' を出力する<EOS>
+<SOS>if A == 9 :<tab>A が 9 と 等 しい とき 、<EOS>
+<SOS>A = [ 0 , 1 , 2 , 0 , 1 , 2 , 0 , 1 , 2 ]<tab>( 0 、 1 、 2 、 0 、 1 、 2 、 0 、 1 、 2 ) からなる 列 を A とする<EOS>
+<SOS>A %= B [ C ]<tab>A を B の C 番 目 で 割 った 余 り にする<EOS>
+<SOS>A = A + ( ( A + 1 ) >> 1 )<tab>A に A に 1 を加えた 値を 1 だけ 右 シフト した 値 を加えた 値を A とする<EOS>
+<SOS>A , B = 1 , 2<tab>1 、 2 を A 、 B とする<EOS>
+<SOS>A , B , C , D , E = input ( ) . split ( )<tab>入力された 文字列を 空白 で 分割 した 字句 列 を 展開 し 順に A 、 B 、 C 、 D 、 E とする<EOS>
+<SOS>A = sorted ( B , key = lambda x : ( C . imag , C . real ) )<tab>x を パラメータ として ( x の im ag 、 x の re al ) の 組 を返す関数 を キー として B を ソート した 列 を A とする<EOS>
+<SOS>A [ B ] [ C ] = '#'<tab>' # ' を A の B 番目の C 番 目 にする<EOS>
+<SOS>if abs ( A - 1.0 ) <= B or A <= 1.0 :<tab>A から 1.0 を 引 いた 値の 絶対 値が B 以下 または A が 1.0 以下の とき 、<EOS>
+<SOS>for A in range ( 20 ) :<tab>0 から 20 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>for A in range ( 0 , 51 - B , C [ D ] ) :<tab>0 から 5 1 から B を 引 いた 値 未 満 までの C の D 番 目 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B [ 3 ]<tab>B の 3 番 目 を A とする<EOS>
+<SOS>A = [ B + C for B in [ D for C in D if B <= C ] ]<tab>D の 各要素 を C とし 、 B が C 以下の とき の D の 列 の 各要素 を B とし 、 B に C を加えた 値の 列 を A とする<EOS>
+<SOS>print ( int ( 6378.1 * math . acos ( A ) + 0.5 ) )<tab>6 3 78 . 1 に math . ac os ( A ) を 掛 け た 値に 0.5 を加えた 値の 整数値 を出力する<EOS>
+<SOS>A = B . real - C . real<tab>B の re al から C の re al を 引 いた 値を A とする<EOS>
+<SOS>A = [ 0 ] * 32<tab>( 0 ) からなる 列 の 32 回 分 の 列 を A とする<EOS>
+<SOS>A = pay ( B )<tab>p ay ( B ) を A とする<EOS>
+<SOS>for A in range ( 1 , 100 ) :<tab>1 から 100 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = 12 * 12<tab>12 に 12 を 掛 け た 値を A とする<EOS>
+<SOS>while A != B [ A ] :<tab>A が B の A 番 目 と 等 しく ない 間 、 以下 を 繰り返す<EOS>
+<SOS>A = B [ C ]<tab>B の C 番 目 を A とする<EOS>
+<SOS>A = B = 1<tab>1 を B とする を A とする<EOS>
+<SOS>while A > 1 :<tab>A が 1 より 大きい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = [ [ B for C in range ( 1 << D ) ] for E in range ( D ) ]<tab>0 から D 未 満 までの 数 列 の 各要素 を E とし 、 0 から 1 を D だけ 左 シフト した 値 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 を A とする<EOS>
+<SOS>A [ B ] [ C ] [ D ] [ E ] %= 100000<tab>A の B 番目の C 番目の D 番目の E 番 目 を 10 0000 で 割 った 余 り にする<EOS>
+<SOS>print ( A . pop ( ) )<tab>A の先頭 を取り 出した 値 を出力する<EOS>
+<SOS>if A [ B ] > 2 :<tab>A の B 番 目 が 2 より 大きい とき 、<EOS>
+<SOS>if A == B [ C ] and D == 0 :<tab>A が B の C 番 目 と 等 しく かつ D が 0 と 等 しい とき 、<EOS>
+<SOS>A [ B ] [ C ] = min ( A [ B ] [ C ] , A [ B ] [ D ] + A [ D ] [ C ] )<tab>A の B 番目の C 番 目 、 A の B 番目の D 番 目 に A の D 番目の C 番 目 を加えた 値の 最小 値を A の B 番目の C 番 目 にする<EOS>
+<SOS>A . add_edge ( B , C , 1 )<tab>A . add _ ed ge ( B , C , 1 )<EOS>
+<SOS>for A in range ( 16 ) :<tab>0 から 16 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B [ 1 ] - B [ 0 ]<tab>B の 1 番 目 から B の先頭 を 引 いた 値を A とする<EOS>
+<SOS>A [ B ] = A [ B - 1 ] + C [ B ]<tab>A の B から 1 を 引 いた 値 番 目 に C の B 番 目 を加えた 値を A の B 番 目 にする<EOS>
+<SOS>while A < B and C < D :<tab>A が B より 小さく かつ C が D より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = max ( [ B [ C ] [ D ] for C in range ( E ) ] )<tab>0 から E 未 満 までの 数 列 の 各要素 を C とし 、 B の C 番目の D 番目の 列 の 最大 値を A とする<EOS>
+<SOS>A [ B ] , C = D , B<tab>D 、 B を A の B 番 目 、 C とする<EOS>
+<SOS>A [ B - 1 ] += A [ B ] + 1<tab>A の B から 1 を 引 いた 値 番 目 を A の B 番 目 に 1 を加えた 値 だけ 増加 させる<EOS>
+<SOS>A = [ [ 0 for B in range ( 6 ) ] for C in range ( 6 ) ]<tab>0 から 6 未 満 までの 数 列 の 各要素 を C とし 、 0 から 6 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>if A [ 1 ] [ B ] :<tab>A の 1 番目の B 番目の とき 、<EOS>
+<SOS>if abs ( A + 1 ) <= B :<tab>A に 1 を加えた 値の 絶対 値が B 以下の とき 、<EOS>
+<SOS>if - A <= B and B <= A :<tab>- A が B 以下 かつ B が A 以下の とき 、<EOS>
+<SOS>def cross ( a , b ) return A . real * B . imag - A . imag * B . real<tab>関数 c ro s s を a 、 b を パラメータ として 定義 する<EOS>
+<SOS>while A [ B ] - A [ C ] > D :<tab>A の B 番 目 から A の C 番 目 を 引 いた 値が D より 大きい 間 、 以下 を 繰り返す<EOS>
+<SOS>if A [ B ] > C or D [ B ] > E or F [ B ] > G or H > I :<tab>A の B 番 目 が C より 大きく または D の B 番 目 が E より 大きく または F の B 番 目 が G より 大きく または H が I より 大きい とき 、<EOS>
+<SOS>A = [ [ 0 for B in range ( 201 ) ] for C in range ( 201 ) ]<tab>0 から 20 1 未 満 までの 数 列 の 各要素 を C とし 、 0 から 20 1 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>if A [ B ] == 0 or A [ C ] == 0 :<tab>A の B 番 目 が 0 と 等 しく または A の C 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A [ B ] = getInt ( )<tab>get In t () を A の B 番 目 にする<EOS>
+<SOS>if A != [ ] and A [ 0 ] . isupper ( ) :<tab>A が 空 列 と 等 しく なく かつ A の先頭 の 全て が 英 大文字 の とき 、<EOS>
+<SOS>A = 1 - B<tab>1 から B を 引 いた 値を A とする<EOS>
+<SOS>A , B , C = '' , 0 , len ( D )<tab>空文字列 、 0 、 D の長さ を A 、 B 、 C とする<EOS>
+<SOS>A [ B ] [ C ] = '2'<tab>' 2 ' を A の B 番目の C 番 目 にする<EOS>
+<SOS>A . append ( [ 0 , B , C ] )<tab>A の 末 尾 に ( 0 、 B 、 C ) からなる 列 を追加する<EOS>
+<SOS>A [ B + 1 ] [ C - 1 ] = A [ B ] [ C - 2 ] + D [ C - 1 ]<tab>A の B 番目の C から 2 を 引 いた 値 番 目 に D の C から 1 を 引 いた 値 番 目 を加えた 値を A の B に 1 を加えた 値 番目の C から 1 を 引 いた 値 番 目 にする<EOS>
+<SOS>if A != '+' and A != '-' :<tab>A が ' + ' と 等 しく なく かつ A が ' - ' と 等 しく ない とき 、<EOS>
+<SOS>del A [ B [ 0 ] [ 0 ] ]<tab>A の B の先頭 の先頭 番 目 を削除する<EOS>
+<SOS>for A in range ( 1 , 13 ) :<tab>1 から 13 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A == - 1 and B == - 1 and C == - 1 and D == - 1 :<tab>A が -1 と 等 しく かつ B が -1 と 等 しく かつ C が -1 と 等 しく かつ D が -1 と 等 しい とき 、<EOS>
+<SOS>A ^= B<tab>A を B と の 排 他 的 論理 和 にする<EOS>
+<SOS>A [ 0 ] [ B [ 0 ] ] = 1<tab>1 を A の先頭 の B の先頭 番 目 にする<EOS>
+<SOS>if A > 10 :<tab>A が 10 より 大きい とき 、<EOS>
+<SOS>A [ 0 ] = B [ 0 ] = B [ 0 ] + C [ D ]<tab>B の 先頭に C の D 番 目 を加えた 値を B の 0 番 目 とする を A の 0 番 目 にする<EOS>
+<SOS>A . append ( ( B , C , D ) )<tab>A の 末 尾 に ( B 、 C 、 D ) の 組 を追加する<EOS>
+<SOS>A = [ True ] * B<tab>( 真 ) からなる 列 の B 回 分 の 列 を A とする<EOS>
+<SOS>if EQ ( A . imag , B . imag ) :<tab>E Q ( A . im ag , B . im ag ) の とき 、<EOS>
+<SOS>A = ( 31 << 9 ) + ( 5 << 5 ) + 1<tab>3 1 を 9 だけ 左 シフト した 値に 5 を 5 だけ 左 シフト した 値 を加えた 値に 1 を加えた 値を A とする<EOS>
+<SOS>A , B = C - 1 , 1<tab>C から 1 を 引 いた 値 、 1 を A 、 B とする<EOS>
+<SOS>A = [ ( 0 , 0 , 0 , 0 ) ]<tab>( ( 0 、 0 、 0 、 0 ) の 組 ) からなる 列 を A とする<EOS>
+<SOS>if A == 'END OF INPUT' :<tab>A が ' END ▁O F ▁ IN P UT ' と 等 しい とき 、<EOS>
+<SOS>if A >= B :<tab>A が B 以上の とき 、<EOS>
+<SOS>if A [ B ] [ C ] :<tab>A の B 番目の C 番目の とき 、<EOS>
+<SOS>print ( LIS ( A ) )<tab>L IS ( A ) を出力する<EOS>
+<SOS>A , B = min ( C ) , max ( C )<tab>C の 最小 値 、 C の 最大 値を A 、 B とする<EOS>
+<SOS>A , B = input ( ) . split ( )<tab>入力された 文字列を 空白 で 分割 した 字句 列 を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = [ [ [ B for C in range ( 4 ) ] for D in range ( E ) ] for F in range ( G ) ]<tab>0 から G 未 満 までの 数 列 の 各要素 を F とし 、 0 から E 未 満 までの 数 列 の 各要素 を D とし 、 0 から 4 未 満 までの 数 列 の 各要素 を C とし 、 B の 列 の 列 の 列 を A とする<EOS>
+<SOS>print ( judge ( sorted ( A ) , sorted ( B . items ( ) , key = lambda x : - C [ 1 ] ) ) )<tab>j u d ge ( s ort ed ( A ) , s ort ed ( B . it em s () , key = lambda x : - C [ 1 ] ) ) を出力する<EOS>
+<SOS>A [ 2 ] = False<tab>偽 を A の 2 番 目 にする<EOS>
+<SOS>A , B = 0 , - 1<tab>0 、 -1 を A 、 B とする<EOS>
+<SOS>A [ B + C ] . append ( ( B + D , E [ D - C - 1 ] ) )<tab>A の B に C を加えた 値 番目の 末 尾 に ( B に D を加えた 値 、 E の D から C を 引 いた 値 から 1 を 引 いた 値 番 目 ) の 組 を追加する<EOS>
+<SOS>if A :<tab>A の とき 、<EOS>
+<SOS>A . heappush ( B , ( C + vabs ( D [ E ] - D [ F ] ) , F , D [ F ] . real ) )<tab>A . he ap push ( B , ( C + v abs ( D [ E ]- D [ F ] ) , F , D [ F ] . re al ) )<EOS>
+<SOS>A , B , C , D , E = [ int ( input ( ) ) for F in range ( 5 ) ]<tab>0 から 5 未 満 までの 数 列 の 各要素 を F とし 、 入力された 文字列 の 整数値 の 列 を 展開 し 順に A 、 B 、 C 、 D 、 E とする<EOS>
+<SOS>A = [ B for B in C if B < D ]<tab>C の 各要素 を B とし 、 B が D より 小さい とき の B の 列 を A とする<EOS>
+<SOS>print ( 'Case ' , A + 1 , ':' , sep = '' )<tab>区切り なしで ' C as e ▁ ' 、 A に 1 を加えた 値 、 ' : ' を出力する<EOS>
+<SOS>for A , B in C [ D ] :<tab>C の D 番目の 各要素 を 順に A 、 B として 、 繰り返す<EOS>
+<SOS>A = B [ : C // 2 ]<tab>B の先頭 から C を 2 で 割 った 商 までの 部分 列 を A とする<EOS>
+<SOS>if A . find ( '.' ) < 0 :<tab>A の先頭 から ' . ' を 探 して 見つかった 位置 が 0 より 小さい とき 、<EOS>
+<SOS>while A < len ( B [ C ] ) and A < D :<tab>A が B の C 番目の 長さ より 小さく かつ A が D より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = list ( A )<tab>A の リストを A とする<EOS>
+<SOS>A += 'L'<tab>A を ' L ' だけ 増加 させる<EOS>
+<SOS>A = { 's' : 1 , 'w' : 2 , 'e' : 3 , 'n' : 4 }<tab>( ( ' s ' , ▁1 ) 、 ( ' w ' , ▁2 ) 、 ( ' e ' , ▁3 ) 、 ( ' n ' , ▁4 ) ) からなる 辞書 を A とする<EOS>
+<SOS>A . append ( str ( B & 3 ) )<tab>A の 末 尾 に [MASK] の 文字列 を追加する<EOS>
+<SOS>A -= B [ 0 ] [ 1 ]<tab>A を B の先頭 の 1 番 目 だけ 減少 させる<EOS>
+<SOS>D += 1<tab>D を 1 だけ 増加 させる<EOS>
+<SOS>A = [ 0 ] * 101<tab>( 0 ) からなる 列 の 10 1 回 分 の 列 を A とする<EOS>
+<SOS>A = B [ : C ]<tab>B の先頭 から C 番 目 までの 部分 列 を A とする<EOS>
+<SOS>A = max ( A , min ( B , C ) )<tab>A 、 B 、 C の 最小 値の 最大 値を A とする<EOS>
+<SOS>if A [ B ] [ 0 ] < A [ C ] [ 0 ] and A [ B ] [ 1 ] < A [ C ] [ 1 ] and D [ C ] > E :<tab>A の B 番目の 0 番 目 が A の C 番目の 0 番 目 より 小さく かつ A の B 番目の 1 番 目 が A の C 番目の 1 番 目 より 小さく かつ D の C 番 目 が E より 大きい とき 、<EOS>
+<SOS>A = math . acos ( ( B * B + C * C - D * D ) / ( 2 * B * C ) )<tab>math . ac os ( ( B * B + C * C - D * D ) / ( 2 * B * C ) ) を A とする<EOS>
+<SOS>A = [ 'AAA' , 'AA' , 'A' , 'B' , 'C' , 'D' , 'E' , 'NA' ]<tab>( ' A A A ' 、 ' A A ' 、 ' A ' 、 ' B ' 、 ' C ' 、 ' D ' 、 ' E ' 、 ' NA ' ) からなる 列 を A とする<EOS>
+<SOS>A = B * C + D * E - F * G + H * I<tab>B に C を 掛 け た 値に D に E を 掛 け た 値 を加えた 値 から F に G を 掛 け た 値を 引 いた 値に H に I を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>A [ B + 1 ] [ 0 ] = A [ B ] [ 0 ] + C [ 0 ]<tab>A の B 番目の 0 番 目 に C の先頭 を加えた 値を A の B に 1 を加えた 値 番目の 0 番 目 にする<EOS>
+<SOS>A . append ( B )<tab>A の 末 尾 に B を追加する<EOS>
+<SOS>print ( ( A + 1 ) >> 1 )<tab>A に 1 を加えた 値を 1 だけ 右 シフト した 値 を出力する<EOS>
+<SOS>A += 2 * B<tab>A を 2 に B を 掛 け た 値 だけ 増加 させる<EOS>
+<SOS>A = min ( B [ C ] , D - E )<tab>B の C 番 目 、 D から E を 引 いた 値の 最小 値を A とする<EOS>
+<SOS>A |= len ( B ) > 1<tab>A を B の長さ が 1 より 大きい かどうか と の 論理 和 にする<EOS>
+<SOS>A . level = [ 0 ] * B<tab>( 0 ) からなる 列 の B 回 分 の 列 を A の l evel にする<EOS>
+<SOS>sieve ( )<tab>s ie ve ()<EOS>
+<SOS>A = [ - 1 ] * 4001<tab>( -1 ) からなる 列 の 400 1 回 分 の 列 を A とする<EOS>
+<SOS>print ( 'YES' if A else 'NO' )<tab>A の とき ' Y E S ' 、 そうでなければ ' N O ' を出力する<EOS>
+<SOS>A . append ( B [ 1 ] )<tab>A の 末 尾 に B の 1 番 目 を追加する<EOS>
+<SOS>A , B = '' , True<tab>空文字列 、 真 を A 、 B とする<EOS>
+<SOS>A = sum ( B ) - sum ( C )<tab>B の 総 和 から C の 総 和 を 引 いた 値を A とする<EOS>
+<SOS>A = A [ : B ] + A [ B : C ] [ : : - 1 ] + A [ C : ]<tab>A の先頭 から B 番 目 までの 部分 列 に A の B 番 目 から C 番 目 までの 部分 列 の先頭 から 末 尾 までの -1 間隔 による 部分 列 を加えた 値に A の C 番 目 から 末 尾 までの 部分 列 を加えた 値を A とする<EOS>
+<SOS>if A > 2 * B :<tab>A が 2 に B を 掛 け た 値 より 大きい とき 、<EOS>
+<SOS>for A in range ( B , C + 1 ) :<tab>B から C に 1 を加えた 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B [ C ] [ D ] [ E ]<tab>B の C 番目の D 番目の E 番 目 を A とする<EOS>
+<SOS>if A > B >> 1 :<tab>A が B を 1 だけ 右 シフト した 値 より 大きい とき 、<EOS>
+<SOS>A = '' . join ( B [ C ] )<tab>空文字列 を 間 に 入れ て B の C 番 目 を 連結 した 文字列を A とする<EOS>
+<SOS>A = sum ( list ( map ( int , input ( ) . split ( ) ) ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 のリスト の 総 和 を A とする<EOS>
+<SOS>print ( A [ 0 ] [ 0 ] , A [ 1 ] [ 0 ] , A [ B - 2 ] [ 0 ] , sep = '\n' )<tab>改行 文字 を 区切り として A の先頭 の先頭 、 A の 1 番目の 先頭 、 A の B から 2 を 引 いた 値 番目の 先頭 を出力する<EOS>
+<SOS>return int ( A )<tab>A の 整数 値を返す<EOS>
+<SOS>for A in range ( 1 << B ) :<tab>0 から 1 を B だけ 左 シフト した 値 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>if A > 0 and B > A :<tab>A が 0 より 大きく かつ B が A より 大きい とき 、<EOS>
+<SOS>A [ B ] [ C ^ D ] += E<tab>A の B 番目の C と D の 排 他 論理 和 番 目 を E だけ 増加 させる<EOS>
+<SOS>A [ B [ 0 ] ] , A [ B [ 1 ] ] = A [ B [ 1 ] ] , A [ B [ 0 ] ]<tab>A の B の 1 番 目 番 目 、 A の B の先頭 番 目 を A の B の先頭 番 目 、 A の B の 1 番 目 番 目 とする<EOS>
+<SOS>A . append ( B [ 0 ] )<tab>A の 末 尾 に B の先頭 を追加する<EOS>
+<SOS>A , B = '' , 0<tab>空文字列 、 0 を A 、 B とする<EOS>
+<SOS>if 1 in A :<tab>1 が A に含まれる とき 、<EOS>
+<SOS>A , B , C = map ( float , input ( ) . split ( ) )<tab>入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に float を適用した 列 を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A = defaultdict ( B )<tab>def a ul t d ic t ( B ) を A とする<EOS>
+<SOS>A = [ '' ] * 2<tab>( 空文字列 ) からなる 列 の 2 回 分 の 列 を A とする<EOS>
+<SOS>if A - B [ C - 1 ] < D :<tab>A から B の C から 1 を 引 いた 値 番 目 を 引 いた 値が D より 小さい とき 、<EOS>
+<SOS>if A == 0 and B == 0 :<tab>A が 0 と 等 しく かつ B が 0 と 等 しい とき 、<EOS>
+<SOS>A . sort ( key = lambda x : ( - B [ 2 ] , B [ 3 ] , B [ 0 ] ) )<tab>key を x を パラメータ として ( - B の 2 番 目 、 x の 3 番 目 、 x の先頭 ) の 組 を返す関数 として A を ソート する<EOS>
+<SOS>A = B + C - D<tab>B に C を加えた 値 から D を 引 いた 値を A とする<EOS>
+<SOS>A = B * C + D * E + F * G<tab>B に C を 掛 け た 値に D に E を 掛 け た 値 を加えた 値に F に G を 掛 け た 値 を加えた 値を A とする<EOS>
+<SOS>if A - B > 3 :<tab>A から B を 引 いた 値が 3 より 大きい とき 、<EOS>
+<SOS>A = list ( map ( int , A . split ( ) ) )<tab>A を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを A とする<EOS>
+<SOS>if A == '>' :<tab>A が ' > ' と 等 しい とき 、<EOS>
+<SOS>A = 223<tab>2 23 を A とする<EOS>
+<SOS>A = B = C = 1<tab>1 を C を B とする とする を A とする<EOS>
+<SOS>A = (int) ( B * C )<tab>( int ) ( B * C ) を A とする<EOS>
+<SOS>if A [ B ] [ 1 ] == A [ B - 1 ] [ 1 ] :<tab>A の B 番目の 1 番 目 が A の B から 1 を 引 いた 値 番目の 1 番 目 と 等 しい とき 、<EOS>
+<SOS>A = ( A * A // 100 ) % 10000<tab>A に A を 掛 け た 値を 100 で 割 った 商 を 1 0000 で 割 った 余 り を A とする<EOS>
+<SOS>A [ B - 1 - C ] [ C ] = D<tab>D を A の B から 1 を 引 いた 値 から C を 引 いた 値 番目の C 番 目 にする<EOS>
+<SOS>A [ 1 ] = False<tab>偽 を A の 1 番 目 にする<EOS>
+<SOS>if A [ B ] [ 0 ] > 0 :<tab>A の B 番目の 0 番 目 が 0 より 大きい とき 、<EOS>
+<SOS>A = max ( - B [ C ] , D [ C ] )<tab>- B の C 番 目 、 D の C 番目の 最大 値を A とする<EOS>
+<SOS>A = [ ord ( B ) - C for B in A ]<tab>A の 各要素 を B とし 、 B の 順序 数 から C を 引 いた 値の 列 を A とする<EOS>
+<SOS>A [ 41 ] , A [ 42 ] , A [ 43 ] , A [ 44 ] , A [ 45 ] = 'p' , 'q' , 'r' , 's' , 't'<tab>' p ' 、 ' q ' 、 ' r ' 、 ' s ' 、 ' t ' を A の 4 1 番 目 、 A の 4 2 番 目 、 A の 4 3 番 目 、 A の 4 4 番 目 、 A の 4 5 番 目 とする<EOS>
+<SOS>A = [ [ 0 for B in range ( 5 ) ] for C in range ( 5 ) ]<tab>0 から 5 未 満 までの 数 列 の 各要素 を C とし 、 0 から 5 未 満 までの 数 列 の 各要素 を B とし 、 0 の 列 の 列 を A とする<EOS>
+<SOS>A = UnionSet ( B * C )<tab>U n ion S et ( B * C ) を A とする<EOS>
+<SOS>A = B [ 11 ]<tab>B の 11 番 目 を A とする<EOS>
+<SOS>for A in range ( 997 , B , 2 ) :<tab>99 7 から B 未 満 までの 2 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>print ( A [ 0 ] [ B ] , A [ 1 ] [ B ] )<tab>A の先頭 の B 番 目 、 A の 1 番目の B 番 目 を出力する<EOS>
+<SOS>if C [ A [ B ] ] == 1 :<tab>辞書 の A の B 番 目 番 目 が 1 と 等 しい とき 、<EOS>
+<SOS>A [ B - C ] = ( D >> ( B - C ) ) & 1<tab>[MASK] を A の B から C を 引 いた 値 番 目 にする<EOS>
+<SOS>A = 10<tab>10 を A とする<EOS>
+<SOS>print ( ( A + B ) << 3 )<tab>A に B を加えた 値を 3 だけ 左 シフト した 値 を出力する<EOS>
+<SOS>A = [ list ( map ( int , input ( ) . split ( ) ) ) for B in range ( C ) ]<tab>0 から C 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 のリスト の 列 を A とする<EOS>
+<SOS>A , B , C = 3 , 3 , D - 2<tab>3 、 3 、 D から 2 を 引 いた 値を A 、 B 、 C とする<EOS>
+<SOS>A [ B ] [ 0 ] = C<tab>C を A の B 番目の 0 番 目 にする<EOS>
+<SOS>A += B [ C ] - B [ D + 1 ]<tab>A を B の C 番 目 から B の D に 1 を加えた 値 番 目 を 引 いた 値 だけ 増加 させる<EOS>
+<SOS>A [ B ] [ C ] [ D ] [ E ] += A [ B - 1 ] [ C ] [ D ] [ D ]<tab>A の B 番目の C 番目の D 番目の E 番 目 を A の B から 1 を 引 いた 値 番目の C 番目の D 番目の D 番 目 だけ 増加 させる<EOS>
+<SOS>if A [ B - C ] == 0 :<tab>A の B から C を 引 いた 値 番 目 が 0 と 等 しい とき 、<EOS>
+<SOS>A , B , C = list ( map ( int , D . split ( ) ) )<tab>D を 空白 で 分割 した 字句 列 の 各要素 に 整数 を適用した 列 の リストを 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A -= 5 * B<tab>A を 5 に B を 掛 け た 値 だけ 減少 させる<EOS>
+<SOS>A . append ( float ( input ( ) ) )<tab>A の 末 尾 に 入力された 文字列 の 浮動小数点数 値 を追加する<EOS>
+<SOS>if A [ B ] == 'a' :<tab>A の B 番 目 が ' a ' と 等 しい とき 、<EOS>
+<SOS>return - 1 if A > 0 else B<tab>A が 0 より 大きい とき -1 、 そうでなければ B を返す<EOS>
+<SOS>while A > B and cross ( C [ A - 1 ] - C [ A - 2 ] , D [ E ] - C [ A - 1 ] ) < 0 :<tab>A が B より 大きく かつ c ro s s ( C [ A -1 ]- C [ A -2 ] , D [ E ]- C [ A -1 ] ) が 0 より 小さい 間 、 以下 を 繰り返す<EOS>
+<SOS>A = { }<tab>空 辞書 を A とする<EOS>
+<SOS>A , B = dijkstra ( C , D , 0 )<tab>d i j k st ra ( C , D , 0 ) を 展開 し 順に A 、 B とする<EOS>
+<SOS>A = len ( B ) - 2<tab>B の長さ から 2 を 引 いた 値を A とする<EOS>
+<SOS>print ( A [ 0 ] [ 0 ] , A [ 0 ] [ 1 ] )<tab>A の先頭 の先頭 、 A の先頭 の 1 番 目 を出力する<EOS>
+<SOS>A //= 100<tab>A を 100 分 の 一 にする<EOS>
+<SOS>A [ B - 1 ] . append ( C - 1 )<tab>A の B から 1 を 引 いた 値 番目の 末 尾 に C から 1 を 引 いた 値 を追加する<EOS>
+<SOS>A , B , C = D [ 0 ] , D [ 1 ] , E [ 0 ]<tab>D の先頭 、 D の 1 番 目 、 E の先頭 を A 、 B 、 C とする<EOS>
+<SOS>A = B - 2 * A<tab>B から 2 に A を 掛 け た 値を 引 いた 値を A とする<EOS>
+<SOS>A = dict ( sorted ( A . items ( ) ) )<tab>辞書 を A とする<EOS>
+<SOS>print ( (int) ( A ** 2 / 19.6 ) // 5 + 2 )<tab>( int ) ( A * * 2 / 19 . 6 ) を 5 で 割 った 商 に 2 を加えた 値 を出力する<EOS>
+<SOS>if A < B [ C ] [ 1 ] or B [ C ] [ 0 ] < A :<tab>A が B の C 番目の 1 番 目 より 小さく または B の C 番目の 0 番 目 が A より 小さい とき 、<EOS>
+<SOS>A [ B ] = False<tab>偽 を A の B 番 目 にする<EOS>
+<SOS>print ( A * B [ C ] )<tab>A に B の C 番 目 を 掛 け た 値 を出力する<EOS>
+<SOS>A = 500<tab>500 を A とする<EOS>
+<SOS>A = ( B + C ) >> 1<tab>B に C を加えた 値を 1 だけ 右 シフト した 値を A とする<EOS>
+<SOS>A += B . power [ C ] + B . weight ( C )<tab>A を B の p ow er の C 番 目 に B . w e ight ( C ) を加えた 値 だけ 増加 させる<EOS>
+<SOS>if A [ B ] [ C ] + D >= A [ B ] [ E ] :<tab>A の B 番目の C 番 目 に D を加えた 値が A の B 番目の E 番 目 以上の とき 、<EOS>
+<SOS>A , B = C [ D ] , E [ D ]<tab>C の D 番 目 、 E の D 番 目 を A 、 B とする<EOS>
+<SOS>combi ( 2 , A , B [ C ] [ 2 ] )<tab>com b i ( 2 , A , B [ C ] [ 2 ] )<EOS>
+<SOS>if A + 1 < B and C [ A : A + 2 ] == 'IO' :<tab>A に 1 を加えた 値が B より 小さく かつ C の A 番 目 から A に 2 を加えた 値 までの 部分 列 が ' IO ' と 等 しい とき 、<EOS>
+<SOS>A = [ 380 , 550 , 850 ]<tab>( 3 80 、 5 50 、 8 50 ) からなる 列 を A とする<EOS>
+<SOS>A = bisect_left ( B , C , 0 ) - 1<tab>b is ect _ left ( B , C , 0 ) から 1 を 引 いた 値を A とする<EOS>
+<SOS>A , B , C = D<tab>D を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A += 1<tab>A を 1 だけ 増加 させる<EOS>
+<SOS>A = B [ C [ D ] ]<tab>B の C の D 番 目 番 目 を A とする<EOS>
+<SOS>A %= B<tab>A を B で 割 った 余 り にする<EOS>
+<SOS>A = [ [ ] for B in range ( 45 ) ]<tab>0 から 4 5 未 満 までの 数 列 の 各要素 を B とし 、 空 列 の 列 を A とする<EOS>
+<SOS>A = [ 1 , 5 , 25 , 125 , 625 , 3125 , 15625 , 78125 ]<tab>( 1 、 5 、 25 、 1 25 、 6 25 、 3 1 25 、 15 6 25 、 78 1 25 ) からなる 列 を A とする<EOS>
+<SOS>A = [ 0 ] + [ int ( input ( ) ) for B in range ( C - 1 ) ] + [ D ]<tab>( 0 ) からなる 列 に 0 から C から 1 を 引 いた 値 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 整数値 の 列 を加えた 値に ( D ) からなる 列 を加えた 値を A とする<EOS>
+<SOS>if A == 2 :<tab>A が 2 と 等 しい とき 、<EOS>
+<SOS>if A [ B ] - A [ B - 1 ] >= C :<tab>A の B 番 目 から A の B から 1 を 引 いた 値 番 目 を 引 いた 値が C 以上の とき 、<EOS>
+<SOS>A = [ [ B for B in range ( 7 ) ] for C in range ( 2 ) ]<tab>0 から 2 未 満 までの 数 列 の 各要素 を C とし 、 0 から 7 未 満 までの 数 列 の 各要素 を B とし 、 B の 列 の 列 を A とする<EOS>
+<SOS>A = [ [ '' ] for B in range ( 1002 ) ]<tab>0 から 100 2 未 満 までの 数 列 の 各要素 を B とし 、 ( 空文字列 ) からなる 列 の 列 を A とする<EOS>
+<SOS>if ( A & 1 ) == 1 :<tab>[MASK] が 1 と 等 しい とき 、<EOS>
+<SOS>parse ( A , B [ C ] [ 1 ] )<tab>pars e ( A , B [ C ] [ 1 ] )<EOS>
+<SOS>A = str ( int ( B ) - int ( C ) ) . zfill ( 4 )<tab>B の 整数値 から C の 整数値 を 引 いた 値の 文字列を 長さ 4 になる ように ' 0 ' 左 詰 め した 文字列を A とする<EOS>
+<SOS>A = ( B >> ( C * 3 ) ) & 7<tab>[MASK] を A とする<EOS>
+<SOS>if A [ B ] [ 1 ] :<tab>A の B 番目の 1 番目の とき 、<EOS>
+<SOS>A //= - 10<tab>A を -10 分 の 一 にする<EOS>
+<SOS>A , B = gcd ( C , D ) , gcd ( E , D )<tab>g c d ( C , D ) 、 g c d ( E , D ) を A 、 B とする<EOS>
+<SOS>if A [ B ] [ C - 2 ] == '#' or A [ B ] [ C - 1 ] == '#' or A [ B - 1 ] [ C - 1 ] == '#' :<tab>A の B 番目の C から 2 を 引 いた 値 番 目 が ' # ' と 等 しく または A の B 番目の C から 1 を 引 いた 値 番 目 が ' # ' と 等 しく または A の B から 1 を 引 いた 値 番目の C から 1 を 引 いた 値 番 目 が ' # ' と 等 しい とき 、<EOS>
+<SOS>if ( A | B | C | D | E | F ) == 0 :<tab>A | B と C の 論理 和 と D の 論理 和 と E の 論理 和 と F の 論理 和 が 0 と 等 しい とき 、<EOS>
+<SOS>A = ( B . real - C . real ) / 2<tab>B の re al から C の re al を 引 いた 値を 2 で 割 った 値を A とする<EOS>
+<SOS>A = sum ( [ int ( input ( ) ) for B in range ( 4 ) ] )<tab>0 から 4 未 満 までの 数 列 の 各要素 を B とし 、 入力された 文字列 の 整数値 の 列 の 総 和 を A とする<EOS>
+<SOS>E = F - A<tab>F から A を 引 いた 値を E とする<EOS>
+<SOS>if A in B and B [ A ] + C == 0 :<tab>A が B に 含まれ かつ B の A 番 目 に C を加えた 値が 0 と 等 しい とき 、<EOS>
+<SOS>for A in range ( B , C ) :<tab>B から C 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ F ( 't' ) + F ( 'h' ) + F ( 'a' ) + F ( 't' ) ] = ( B , C )<tab>( B 、 C ) の 組 を A の F ( ' t ' ) に F ( ' h ' ) を加えた 値に F ( ' a ' ) を加えた 値に F ( ' t ' ) を加えた 値 番 目 にする<EOS>
+<SOS>if A [ B ] >= 0 :<tab>A の B 番 目 が 0 以上の とき 、<EOS>
+<SOS>A = ( - 1 , 0 , 1 , 0 )<tab>( -1 、 0 、 1 、 0 ) の 組 を A とする<EOS>
+<SOS>A , B , C = D [ 0 ]<tab>D の 0 番 目 を 展開 し 順に A 、 B 、 C とする<EOS>
+<SOS>A , B , C = ord ( D ) - ord ( 'A' ) , ord ( E ) - ord ( 'A' ) , ord ( F ) - ord ( 'A' )<tab>D の 順序 数 から ' A ' の 順序 数 を 引 いた 値 、 E の 順序 数 から ' A ' の 順序 数 を 引 いた 値 、 F の 順序 数 から ' A ' の 順序 数 を 引 いた 値を A 、 B 、 C とする<EOS>
+<SOS>A = ( ( B [ C ] + D [ C ] ) << 2 ) + ( E [ C ] << 3 ) + E [ C ]<tab>B の C 番 目 に D の C 番 目 を加えた 値を 2 だけ 左 シフト した 値に E の C 番 目 を 3 だけ 左 シフト した 値 を加えた 値に E の C 番 目 を加えた 値を A とする<EOS>
+<SOS>for A in range ( B [ C ] [ 1 ] , - 1 , - 1 ) :<tab>B の C 番目の 1 番 目 から -1 未 満 までの -1 間隔 の 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A [ B ] [ 1 ] = C<tab>C を A の B 番目の 1 番 目 にする<EOS>
+<SOS>def EQ ( a , b ) return abs ( B - C ) < A<tab>関数 E Q を a 、 b を パラメータ として 定義 する<EOS>
+<SOS>A = B + 5<tab>B に 5 を加えた 値を A とする<EOS>
+<SOS>A = [ B ] * ( C + 2 )<tab>( B ) からなる 列 の C に 2 を加えた 値 回 分 の 列 を A とする<EOS>
+<SOS>A [ 1 - ( B & 1 ) ] += str ( C ) + A [ B & 1 ] [ D - 1 ]<tab>A の 1 から [MASK] を 引 いた 値 番 目 を C の 文字列 に A の [MASK] 番目の D から 1 を 引 いた 値 番 目 を加えた 値 だけ 増加 させる<EOS>
+<SOS>A , B = [ 0 ] * 120 , 0<tab>( 0 ) からなる 列 の 1 20 回 分 の 列 、 0 を A 、 B とする<EOS>
+<SOS>for A in range ( B ) :<tab>0 から B 未 満 までの 数 列 の 各要素 を 順に A として 、 繰り返す<EOS>
+<SOS>A = B . id [ A ]<tab>B の id の A 番 目 を A とする<EOS>
