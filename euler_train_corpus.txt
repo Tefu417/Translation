@@ -1,0 +1,703 @@
+<SOS>def euler015():<tab>関数euler015()は、以下の通り定義される<EOS>
+<SOS>facts = [1] * 21<tab>factsを1のリストの21倍とする<EOS>
+<SOS>for i in range(20):<tab>{{0から20未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>facts[i + 1] = facts[i] * (i + 1)<tab>factsの{{iに1を加えた値}}番目を{{factsのi番目に{{iに1を加えた値}}を掛けた値}}とする<EOS>
+<SOS>dinomials = [0] * 21<tab>dinomialsを0のリストの21倍とする<EOS>
+<SOS>for i in range(21):<tab>{{0から21未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>dinomials[i] = int(facts[20] / (facts[i] * facts[20 - i]))<tab>dinomialsのi番目を{{factsの20番目を{{factsのi番目にfactsの{{20からiを引いた値}}番目を掛けた値}}で割った値}}の整数値とする<EOS>
+<SOS>for i in range(20):<tab>{{0から20未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>for j in range(20):<tab>{{0から20未満までの数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>dinomials[j] += dinomials[j + 1]<tab>dinomialsのj番目をdinomialsの{{jに1を加えた値}}番目だけ増加させる<EOS>
+<SOS>return dinomials[0]<tab>dinomialsの先頭が関数出力となる<EOS>
+<SOS>def euler015_combination(n, r):<tab>関数euler015_combination(n, r)は、以下の通り定義される<EOS>
+<SOS>facts = [1] * (n + 1)<tab>factsを1のリストの{{nに1を加えた値}}倍とする<EOS>
+<SOS>for x in range(n):<tab>{{0からn未満までの数列}}を先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>facts[x + 1] = facts[x] * (x + 1)<tab>factsの{{xに1を加えた値}}番目を{{factsのx番目に{{xに1を加えた値}}を掛けた値}}とする<EOS>
+<SOS>return int(facts[n] / (facts[r] * facts[n - r]))<tab>{{factsのn番目を{{factsのr番目にfactsの{{nからrを引いた値}}番目を掛けた値}}で割った値}}の整数値が関数出力となる<EOS>
+<SOS>def euler015_all_factorials(n):<tab>関数euler015_all_factorials(n)は、以下の通り定義される<EOS>
+<SOS>facts = [1] * (n + 1)<tab>factsを1のリストの{{nに1を加えた値}}倍とする<EOS>
+<SOS>for x in range(n):<tab>{{0からn未満までの数列}}を先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>facts[x + 1] = facts[x] * (x + 1)<tab>factsの{{xに1を加えた値}}番目を{{factsのx番目に{{xに1を加えた値}}を掛けた値}}とする<EOS>
+<SOS>return facts<tab>factsが関数出力となる<EOS>
+<SOS>def euler015_pascal_triangle(n):<tab>関数euler015_pascal_triangle(n)は、以下の通り定義される<EOS>
+<SOS>if n == 1:<tab>もしnが1と等しいとき、<EOS>
+<SOS>return [1]<tab>1のリストが関数出力となる<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>l = euler015_pascal_triangle(n - 1)<tab>lをeuler015_pascal_triangle({{nから1を引いた値}})とする<EOS>
+<SOS>ret = [l[0], l[-1]]<tab>retをlの先頭とlの-1番目のリストとする<EOS>
+<SOS>for i in range(n - 2):<tab>{{0から{{nから2を引いた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.insert(i + 1, l[i] + l[i + 1])<tab>ret.insert(i + 1, l[i] + l[i + 1]) # retのi+1番目にlのi番目とi+1番目の要素の和を追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler014():<tab>関数euler014()は、以下の通り定義される<EOS>
+<SOS>N = 10**6<tab>Nを{{10を6乗した値}}とする<EOS>
+<SOS>cl = [-1] * N<tab>clを-1のリストのN倍とする<EOS>
+<SOS>cl[1] = 0<tab>clの1番目を0とする<EOS>
+<SOS>for n in range(2, N):<tab>{{2からN未満までの数列}}を先頭から順にnとして、以下を繰り返す<EOS>
+<SOS>b = []<tab>bを空のリストとする<EOS>
+<SOS>while n >= N or cl[n] == -1:<tab>もし{{nがN以上}}、または{{clのn番目が-1と等しいか}}のとき、以下を繰り返す<EOS>
+<SOS>b.append(n)<tab>bにnを追加する<EOS>
+<SOS>n = int(n / 2) if n % 2 == 0 else n * 3 + 1<tab>nをもし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}とする<EOS>
+<SOS>l = cl[n]<tab>lをclのn番目とする<EOS>
+<SOS>for m in reversed(b):<tab>{{bを反転した列}}を先頭から順にmとして、以下を繰り返す<EOS>
+<SOS>l += 1<tab>lを1だけ増加させる<EOS>
+<SOS>cl[m] = l<tab>clのm番目をlとする<EOS>
+<SOS>ret = 0<tab>retを0とする<EOS>
+<SOS>for i, n in enumerate(cl):<tab>{{clに番号をつける}}を先頭から順にiとnとして、以下を繰り返す<EOS>
+<SOS>if m < n:<tab>もしmがnより小さいとき、以下のとおり<EOS>
+<SOS>ret = i<tab>retをiとする<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler014_collatz_calc(n):<tab>関数euler014_collatz_calc(n)は、以下の通り定義される<EOS>
+<SOS>return int(n / 2) if n % 2 == 0 else n * 3 + 1<tab>もし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}が関数出力となる<EOS>
+<SOS>def euler014_collatz_problem_count(n):<tab>関数euler014_collatz_problem_count(n)は、以下の通り定義される<EOS>
+<SOS>c = 0<tab>cを0とする<EOS>
+<SOS>n = int(n / 2) if n % 2 == 0 else n * 3 + 1<tab>nをもし{{{{nを2で割った余り}}が0と等しいか}}のとき{{nを2で割った値}}の整数値、そうでなければ{{{{nに3を掛けた値}}に1を加えた値}}とする<EOS>
+<SOS>return c<tab>cが関数出力となる<EOS>
+<SOS>def euler014_list_init(l, n):<tab>関数euler014_list_init(l, n)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>ret.append(n)<tab>retにnを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler014_list_enum(l):<tab>関数euler014_list_enum(l)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(len(l)):<tab>{{0からlの長さ未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.append((i, l[i]))<tab>retにiとlのi番目の組を追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler014_list_reverse(l):<tab>関数euler014_list_reverse(l)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in reversed(l):<tab>{{lを反転した列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.append(i)<tab>retにiを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler014_make_range_list(s, e):<tab>関数euler014_make_range_list(s, e)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(s, e):<tab>{{sからe未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.append(i)<tab>retにiを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler016():<tab>関数euler016()は、以下の通り定義される<EOS>
+<SOS>q = str(2**1000)<tab>qを{{2を1000乗した値}}の文字列とする<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for x in q:<tab>qを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>def euler016_all_digit_sum(n):<tab>関数euler016_all_digit_sum(n)は、以下の通り定義される<EOS>
+<SOS>q = str(n)<tab>qをnの文字列とする<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for ch in q:<tab>qを先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>s += int(ch)<tab>sをchの整数値だけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler016_n_separate_digit(n):<tab>関数euler016_n_separate_digit(n)は、以下の通り定義される<EOS>
+<SOS>ret = [n % 10]<tab>retを{{nを10で割った余り}}のリストとする<EOS>
+<SOS>while int(n / 10) > 0:<tab>もし{{nを10で割った値}}の整数値が0より大きいとき、以下を繰り返す<EOS>
+<SOS>n = int(n / 10)<tab>nを{{nを10で割った値}}の整数値とする<EOS>
+<SOS>ret.insert(0, n % 10)<tab>ret.insert(0, n % 10) # retの先頭にnを10で割った余りを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler016_a_exp_b(a, b):<tab>関数euler016_a_exp_b(a, b)は、以下の通り定義される<EOS>
+<SOS>res = 1<tab>resを1とする<EOS>
+<SOS>c = 0<tab>cを0とする<EOS>
+<SOS>while c < b:<tab>もしcがbより小さいとき、以下を繰り返す<EOS>
+<SOS>res *= a<tab>resをa倍にする<EOS>
+<SOS>c += 1<tab>cを1だけ増加させる<EOS>
+<SOS>return res<tab>resが関数出力となる<EOS>
+<SOS>def euler016_a_exp_b_a(a, b):<tab>関数euler016_a_exp_b_a(a, b)は、以下の通り定義される<EOS>
+<SOS>return a**b<tab>{{aをb乗した値}}が関数出力となる<EOS>
+<SOS>def euler017():<tab>関数euler017()は、以下の通り定義される<EOS>
+<SOS>ret = 0<tab>retを0とする<EOS>
+<SOS>for n in range(1, 1001):<tab>{{1から1001未満までの数列}}を先頭から順にnとして、以下を繰り返す<EOS>
+<SOS>ret += len(word[n])<tab>retをwordのn番目の長さだけ増加させる<EOS>
+<SOS>elif len(str(n)) == 2:<tab>もしそうでなく、nの文字列の長さが2と等しいとき、以下のとおり<EOS>
+<SOS>ret += len(twoword[int(n / 10)])<tab>retをtwowordの{{nを10で割った値}}の整数値番目の長さだけ増加させる<EOS>
+<SOS>ret += len(word[n % 10])<tab>retをwordの{{nを10で割った余り}}番目の長さだけ増加させる<EOS>
+<SOS>elif len(str(n)) == 3:<tab>もしそうでなく、nの文字列の長さが3と等しいとき、以下のとおり<EOS>
+<SOS>ret += len(word[int(n / 100)])<tab>retをwordの{{nを100で割った値}}の整数値番目の長さだけ増加させる<EOS>
+<SOS>ret += len("hundredand")<tab>retを"hundredand"の長さだけ増加させる<EOS>
+<SOS>a = n % 100<tab>aを{{nを100で割った余り}}とする<EOS>
+<SOS>if a != 0 and a <= 20:<tab>もし{{aが0と等しくないか}}、かつ{{aが20以下}}のとき、<EOS>
+<SOS>ret += len(word[a])<tab>retをwordのa番目の長さだけ増加させる<EOS>
+<SOS>elif a == 0:<tab>もしそうでなく、aが0と等しいとき、<EOS>
+<SOS>ret -= 3<tab>retを3だけ減少させる<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>ret += len(twoword[int(a / 10)])<tab>retをtwowordの{{aを10で割った値}}の整数値番目の長さだけ増加させる<EOS>
+<SOS>ret += len(word[a % 10])<tab>retをwordの{{aを10で割った余り}}番目の長さだけ増加させる<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>ret += len("onethousand")<tab>retを"onethousand"の長さだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler017_digit_separate(n):<tab>関数euler017_digit_separate(n)は、以下の通り定義される<EOS>
+<SOS>q = str(n)<tab>qをnの文字列とする<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for ch in q:<tab>qを先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>ret.append(int(ch))<tab>retにchの整数値を追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler017_digit_count(n):<tab>関数euler017_digit_count(n)は、以下の通り定義される<EOS>
+<SOS>c = 1<tab>cを1とする<EOS>
+<SOS>while int(n / 10) > 0:<tab>もし{{nを10で割った値}}の整数値が0より大きいとき、以下を繰り返す<EOS>
+<SOS>n /= 10<tab>nを10分の一にする<EOS>
+<SOS>c += 1<tab>cを1だけ増加させる<EOS>
+<SOS>return c<tab>cが関数出力となる<EOS>
+<SOS>def euler017_ones_to_string(n):<tab>関数euler017_ones_to_string(n)は、以下の通り定義される<EOS>
+<SOS>return word[n % 10]<tab>wordの{{nを10で割った余り}}番目が関数出力となる<EOS>
+<SOS>def euler017_is_equal(a, b):<tab>関数euler017_is_equal(a, b)は、以下の通り定義される<EOS>
+<SOS>return a == b<tab>{{aがbと等しいか}}が関数出力となる<EOS>
+<SOS>def euler017_divid_integer_part(a, b):<tab>関数euler017_divid_integer_part(a, b)は、以下の通り定義される<EOS>
+<SOS>return int(a / b)<tab>{{aをbで割った値}}の整数値が関数出力となる<EOS>
+<SOS>def euler017_string_length(s):<tab>関数euler017_string_length(s)は、以下の通り定義される<EOS>
+<SOS>c = 0<tab>cを0とする<EOS>
+<SOS>for ch in s:<tab>sを先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>c += 1<tab>cを1だけ増加させる<EOS>
+<SOS>return c<tab>cが関数出力となる<EOS>
+<SOS>def euler017_string_length_a(s):<tab>関数euler017_string_length_a(s)は、以下の通り定義される<EOS>
+<SOS>return len(s)<tab>sの長さが関数出力となる<EOS>
+<SOS>def euler013():<tab>関数euler013()は、以下の通り定義される<EOS>
+<SOS>q = []<tab>qを空のリストとする<EOS>
+<SOS>a = str(sum(q))<tab>aをqの総和の文字列とする<EOS>
+<SOS>ret = ""<tab>retを""とする<EOS>
+<SOS>for i, ch in enumerate(a):<tab>{{aに番号をつける}}を先頭から順にiとchとして、以下を繰り返す<EOS>
+<SOS>if i < 10:<tab>もしiが10より小さいとき、<EOS>
+<SOS>ret += ch<tab>retをchだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler013_front_n_slice(s, n):<tab>関数euler013_front_n_slice(s, n)は、以下の通り定義される<EOS>
+<SOS>ret = ""<tab>retを""とする<EOS>
+<SOS>for i, ch in enumerate(s):<tab>{{sに番号をつける}}を先頭から順にiとchとして、以下を繰り返す<EOS>
+<SOS>if i < n:<tab>もしiがnより小さいとき、<EOS>
+<SOS>ret += ch<tab>retをchだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler013_query_n_sum(q, n):<tab>関数euler013_query_n_sum(q, n)は、以下の通り定義される<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for i in range(n):<tab>{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>s += q[i]<tab>sをqのi番目だけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler012():<tab>関数euler012()は、以下の通り定義される<EOS>
+<SOS>s = 1<tab>sを1とする<EOS>
+<SOS>c = 0<tab>cを0とする<EOS>
+<SOS>pl = [2]<tab>plを2のリストとする<EOS>
+<SOS>fl = [1] * 4 + [0] * 96<tab>flを1のリストの{{4に0のリストの96倍を加えた値}}倍とする<EOS>
+<SOS>while c < 500:<tab>もしcが500より小さいとき、以下を繰り返す<EOS>
+<SOS>tn = sum(range(1, s + 1))<tab>tnを{{1から{{sに1を加えた値}}未満までの数列}}の総和とする<EOS>
+<SOS>if not s % 2:<tab>もし{{sを2で割った余り}}の反対のとき、<EOS>
+<SOS>t = (int(s / 2), s + 1)<tab>tを{{sを2で割った値}}の整数値と{{sに1を加えた値}}の組とする<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>t = (s, int((s + 1) / 2))<tab>tをsと{{{{sに1を加えた値}}を2で割った値}}の整数値の組とする<EOS>
+<SOS>fc = 1<tab>fcを1とする<EOS>
+<SOS>for x in t:<tab>tを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>if len(fl) < x:<tab>もしflの長さがxより小さいとき、以下のとおり<EOS>
+<SOS>l = [0] * (x - len(fl) + 1)<tab>lを0のリストの{{{{xからflの長さを引いた値}}に1を加えた値}}倍とする<EOS>
+<SOS>fl += l<tab>flをlだけ増加させる<EOS>
+<SOS>if not fl[x]:<tab>もしflのx番目の反対のとき、以下のとおり<EOS>
+<SOS>nc = 1<tab>ncを1とする<EOS>
+<SOS>for i in range(pl[-1], x + 1):<tab>{{plの-1番目から{{xに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>for j in range(2, int(x**0.5) + 1):<tab>2から{{{{xを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>if i % j == 0:<tab>もし{{iをjで割った余り}}が0と等しいとき、<EOS>
+<SOS>break<tab>この繰り返しを中断する<EOS>
+<SOS>for i in pl:<tab>plを先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if i > int(tn / 2):<tab>もしiが{{tnを2で割った値}}の整数値より大きいとき、<EOS>
+<SOS>break<tab>この繰り返しを中断する<EOS>
+<SOS>if x % i == 0:<tab>もし{{xをiで割った余り}}が0と等しいとき、以下のとおり<EOS>
+<SOS>j = 1<tab>jを1とする<EOS>
+<SOS>a = tn<tab>aをtnとする<EOS>
+<SOS>while a % i == 0:<tab>もし{{aをiで割った余り}}が0と等しいとき、以下を繰り返す<EOS>
+<SOS>a /= i<tab>aをi分の一にする<EOS>
+<SOS>j += 1<tab>jを1だけ増加させる<EOS>
+<SOS>fl[x] = nc<tab>flのx番目をncとする<EOS>
+<SOS>fc *= fl[x]<tab>fcをflのx番目倍にする<EOS>
+<SOS>s += 1<tab>sを1だけ増加させる<EOS>
+<SOS>c = fc<tab>cをfcとする<EOS>
+<SOS>return tn<tab>tnが関数出力となる<EOS>
+<SOS>def euler012_a_over_b(a, b):<tab>関数euler012_a_over_b(a, b)は、以下の通り定義される<EOS>
+<SOS>return b < a<tab>{{bがaより小さいか}}が関数出力となる<EOS>
+<SOS>def euler012_range_prime_enumerate(s, e):<tab>関数euler012_range_prime_enumerate(s, e)は、以下の通り定義される<EOS>
+<SOS>pl = []<tab>plを空のリストとする<EOS>
+<SOS>if s <= 1:<tab>もしsが1以下のとき、<EOS>
+<SOS>s = 2<tab>sを2とする<EOS>
+<SOS>for i in range(s, e + 1):<tab>{{sから{{eに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>f = True<tab>fを真とする<EOS>
+<SOS>for j in range(2, int(i**0.5) + 1):<tab>2から{{{{iを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>if i % j == 0:<tab>もし{{iをjで割った余り}}が0と等しいとき、<EOS>
+<SOS>break<tab>この繰り返しを中断する<EOS>
+<SOS>return pl<tab>plが関数出力となる<EOS>
+<SOS>def euler012_is_coprime(a, b):<tab>関数euler012_is_coprime(a, b)は、以下の通り定義される<EOS>
+<SOS>while b != 0:<tab>もしbが0と等しくないとき、以下を繰り返す<EOS>
+<SOS>a, b = b, a % b<tab>aを{{aをbで割った余り}}とするbをbとする<EOS>
+<SOS>return a == 1<tab>{{aが1と等しいか}}が関数出力となる<EOS>
+<SOS>def euler012_count_division(n, a):<tab>関数euler012_count_division(n, a)は、以下の通り定義される<EOS>
+<SOS>ret = 0<tab>retを0とする<EOS>
+<SOS>while n % a == 0:<tab>もし{{nをaで割った余り}}が0と等しいとき、以下を繰り返す<EOS>
+<SOS>n /= a<tab>nをa分の一にする<EOS>
+<SOS>ret += 1<tab>retを1だけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler012_prime_factorize(n):<tab>関数euler012_prime_factorize(n)は、以下の通り定義される<EOS>
+<SOS>primes = [True] * (n + 1)<tab>primesを真のリストの{{nに1を加えた値}}倍とする<EOS>
+<SOS>p = []<tab>pを空のリストとする<EOS>
+<SOS>for i in range(2, int(n**0.5) + 1):<tab>2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if primes[i]:<tab>もしprimesのi番目のとき、<EOS>
+<SOS>for j in range(i + i, n + 1, i):<tab>{{{{iにiを加えた値}}から{{nに1を加えた値}}未満までのi間隔の数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>primes[j] = False<tab>primesのj番目を偽とする<EOS>
+<SOS>for i in range(2, n + 1):<tab>{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if primes[i]:<tab>もしprimesのi番目のとき、<EOS>
+<SOS>p.append(i)<tab>pにiを追加する<EOS>
+<SOS>fl = []<tab>flを空のリストとする<EOS>
+<SOS>for x in p:<tab>pを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>if n % x == 0:<tab>もし{{nをxで割った余り}}が0と等しいとき、以下のとおり<EOS>
+<SOS>a = n<tab>aをnとする<EOS>
+<SOS>c = 0<tab>cを0とする<EOS>
+<SOS>while a % x == 0:<tab>もし{{aをxで割った余り}}が0と等しいとき、以下を繰り返す<EOS>
+<SOS>a /= x<tab>aをx分の一にする<EOS>
+<SOS>c += 1<tab>cを1だけ増加させる<EOS>
+<SOS>return fl<tab>flが関数出力となる<EOS>
+<SOS>def euler012_nth_triangular_number(n):<tab>関数euler012_nth_triangular_number(n)は、以下の通り定義される<EOS>
+<SOS>return sum(range(1, n + 1))<tab>{{1から{{nに1を加えた値}}未満までの数列}}の総和が関数出力となる<EOS>
+<SOS>def euler012_next_triangular_number(tn):<tab>関数euler012_next_triangular_number(tn)は、以下の通り定義される<EOS>
+<SOS>ret = 0<tab>retを0とする<EOS>
+<SOS>c = 1<tab>cを1とする<EOS>
+<SOS>while ret <= tn:<tab>もしretがtn以下のとき、以下を繰り返す<EOS>
+<SOS>ret += c<tab>retをcだけ増加させる<EOS>
+<SOS>c += 1<tab>cを1だけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler012_count_divisor(expl):<tab>関数euler012_count_divisor(expl)は、以下の通り定義される<EOS>
+<SOS>ret = 1<tab>retを1とする<EOS>
+<SOS>for x in expl:<tab>explを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>ret *= (x + 1)<tab>retを{{xに1を加えた値}}倍にする<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler012_is_list_empty(l):<tab>関数euler012_is_list_empty(l)は、以下の通り定義される<EOS>
+<SOS>return not l<tab>lの反対が関数出力となる<EOS>
+<SOS>def euler012_is_list_empty_a(l):<tab>関数euler012_is_list_empty_a(l)は、以下の通り定義される<EOS>
+<SOS>return len(l) == 0<tab>{{lの長さが0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler010():<tab>関数euler010()は、以下の通り定義される<EOS>
+<SOS>p = [True] * 2000000<tab>pを真のリストの2000000倍とする<EOS>
+<SOS>for x in range(2, int(2000000**0.5) + 1):<tab>2から{{{{2000000を0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>if p[x]:<tab>もしpのx番目のとき、<EOS>
+<SOS>for i in range(2 * x, len(p), x):<tab>{{{{2にxを掛けた値}}からpの長さ未満までのx間隔の数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>p[i] = False<tab>pのi番目を偽とする<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(2, 2000000):<tab>{{2から2000000未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if p[i]:<tab>もしpのi番目のとき、<EOS>
+<SOS>ret.append(i)<tab>retにiを追加する<EOS>
+<SOS>return sum(ret)<tab>retの総和が関数出力となる<EOS>
+<SOS>def euler010_enum_prime(n):<tab>関数euler010_enum_prime(n)は、以下の通り定義される<EOS>
+<SOS>p = [True] * n<tab>pを真のリストのn倍とする<EOS>
+<SOS>for x in range(2, int(n**0.5) + 1):<tab>2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>if p[x]:<tab>もしpのx番目のとき、<EOS>
+<SOS>for i in range(2 * x, len(p), x):<tab>{{{{2にxを掛けた値}}からpの長さ未満までのx間隔の数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>p[i] = False<tab>pのi番目を偽とする<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(2, n):<tab>{{2からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if p[i]:<tab>もしpのi番目のとき、<EOS>
+<SOS>ret.append(i)<tab>retにiを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler010_n_is_prime(n):<tab>関数euler010_n_is_prime(n)は、以下の通り定義される<EOS>
+<SOS>judge = True<tab>judgeを真とする<EOS>
+<SOS>if n < 2:<tab>もしnが2より小さいとき、<EOS>
+<SOS>return False<tab>偽が関数出力となる<EOS>
+<SOS>elif n == 2:<tab>もしそうでなく、nが2と等しいとき、<EOS>
+<SOS>return True<tab>真が関数出力となる<EOS>
+<SOS>for i in range(2, int(n**0.5) + 1):<tab>2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if judge and n % i == 0:<tab>もしjudge、かつ{{{{nをiで割った余り}}が0と等しいか}}のとき、<EOS>
+<SOS>judge = False<tab>judgeを偽とする<EOS>
+<SOS>return judge<tab>judgeが関数出力となる<EOS>
+<SOS>def euler010_list_sum(l):<tab>関数euler010_list_sum(l)は、以下の通り定義される<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for x in l:<tab>lを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>s += x<tab>sをxだけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler010_list_sum_a(l):<tab>関数euler010_list_sum_a(l)は、以下の通り定義される<EOS>
+<SOS>return sum(l)<tab>lの総和が関数出力となる<EOS>
+<SOS>def euler010_n_multiple_list(s, e, d):<tab>関数euler010_n_multiple_list(s, e, d)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>while s < e:<tab>もしsがeより小さいとき、以下を繰り返す<EOS>
+<SOS>ret.append(s)<tab>retにsを追加する<EOS>
+<SOS>s += d<tab>sをdだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>@TODO [#MultiString '""']<tab> [#MultiString '""']<EOS>
+<SOS>def euler011():<tab>関数euler011()は、以下の通り定義される<EOS>
+<SOS>grid = """""".split()<tab>gridを{{[#MultiString '""']を空白で分割した文字列リスト}}とする<EOS>
+<SOS>q = []<tab>qを空のリストとする<EOS>
+<SOS>for ch in grid:<tab>gridを先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>q.append(int(ch))<tab>qにchの整数値を追加する<EOS>
+<SOS>m = 0<tab>mを0とする<EOS>
+<SOS>for i in range(20):<tab>{{0から20未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>for j in range(20):<tab>{{0から20未満までの数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>if j <= 16:<tab>もしjが16以下のとき、以下のとおり<EOS>
+<SOS>m = max(m, q[i*20+j] * q[i*20+j+1] * q[i*20+j+2] * q[i*20+j+3])<tab>mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに20を掛けた値}}にjを加えた値}}に1を加えた値番目を掛けた値にqの{{{{iに20を掛けた値}}にjを加えた値}}に2を加えた値番目を掛けた値にqの{{{{iに20を掛けた値}}にjを加えた値}}に3を加えた値番目を掛けた値の最大値とする<EOS>
+<SOS>if i <= 16:<tab>もしiが16以下のとき、<EOS>
+<SOS>m = max(m, q[i*20+j] * q[(i+1)*20+j+1] * q[(i+2)*20+j+2] * q[(i+3)*20+j+3])<tab>mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに1を加えた値}}に20を掛けた値}}にjを加えた値に1を加えた値番目を掛けた値にqの{{{{iに2を加えた値}}に20を掛けた値}}にjを加えた値に2を加えた値番目を掛けた値にqの{{{{iに3を加えた値}}に20を掛けた値}}にjを加えた値に3を加えた値番目を掛けた値の最大値とする<EOS>
+<SOS>if 4 <= j and i <= 16:<tab>もし{{4がj以下}}、かつ{{iが16以下}}のとき、<EOS>
+<SOS>m = max(m, q[i*20+j] * q[(i+1)*20+j-1] * q[(i+2)*20+j-2] * q[(i+3)*20+j-3])<tab>mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに1を加えた値}}に20を掛けた値}}にjを加えた値から1を引いた値番目を掛けた値にqの{{{{iに2を加えた値}}に20を掛けた値}}にjを加えた値から2を引いた値番目を掛けた値にqの{{{{iに3を加えた値}}に20を掛けた値}}にjを加えた値から3を引いた値番目を掛けた値の最大値とする<EOS>
+<SOS>if i <= 16:<tab>もしiが16以下のとき、<EOS>
+<SOS>m = max(m, q[i*20+j] * q[(i+1)*20+j] * q[(i+2)*20+j] * q[(i+3)*20+j])<tab>mをmとqの{{{{iに20を掛けた値}}にjを加えた値}}番目にqの{{{{iに1を加えた値}}に20を掛けた値}}にjを加えた値番目を掛けた値にqの{{{{iに2を加えた値}}に20を掛けた値}}にjを加えた値番目を掛けた値にqの{{{{iに3を加えた値}}に20を掛けた値}}にjを加えた値番目を掛けた値の最大値とする<EOS>
+<SOS>return m<tab>mが関数出力となる<EOS>
+<SOS>def euler011_less_or_equal(a, b):<tab>関数euler011_less_or_equal(a, b)は、以下の通り定義される<EOS>
+<SOS>return a <= b<tab>{{aがb以下}}が関数出力となる<EOS>
+<SOS>def euler011_less_or_equal_a(a, b):<tab>関数euler011_less_or_equal_a(a, b)は、以下の通り定義される<EOS>
+<SOS>res = b - a<tab>resを{{bからaを引いた値}}とする<EOS>
+<SOS>return res >= 0<tab>{{resが0以上}}が関数出力となる<EOS>
+<SOS>def euler011_over_or_equal(a, b):<tab>関数euler011_over_or_equal(a, b)は、以下の通り定義される<EOS>
+<SOS>return b <= a<tab>{{bがa以下}}が関数出力となる<EOS>
+<SOS>def euler011_over_or_equal_a(a, b):<tab>関数euler011_over_or_equal_a(a, b)は、以下の通り定義される<EOS>
+<SOS>res = b - a<tab>resを{{bからaを引いた値}}とする<EOS>
+<SOS>return res <= 0<tab>{{resが0以下}}が関数出力となる<EOS>
+<SOS>def euler011_string_space_split(s):<tab>関数euler011_string_space_split(s)は、以下の通り定義される<EOS>
+<SOS>sl = []<tab>slを空のリストとする<EOS>
+<SOS>buf = ""<tab>bufを""とする<EOS>
+<SOS>for ch in s:<tab>sを先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>if ch == " ":<tab>もしchが" "と等しいとき、以下のとおり<EOS>
+<SOS>sl.append(buf)<tab>slにbufを追加する<EOS>
+<SOS>buf = ""<tab>bufを""とする<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>buf += ch<tab>bufをchだけ増加させる<EOS>
+<SOS>sl.append(buf)<tab>slにbufを追加する<EOS>
+<SOS>return sl<tab>slが関数出力となる<EOS>
+<SOS>def euler011_zero_to_n_list(n):<tab>関数euler011_zero_to_n_list(n)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>a = 0<tab>aを0とする<EOS>
+<SOS>while a < n:<tab>もしaがnより小さいとき、以下を繰り返す<EOS>
+<SOS>ret.append(a)<tab>retにaを追加する<EOS>
+<SOS>a += 1<tab>aを1だけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler011_zero_to_n_list_a(n):<tab>関数euler011_zero_to_n_list_a(n)は、以下の通り定義される<EOS>
+<SOS>return list(range(n))<tab>{{0からn未満までの数列}}のリストが関数出力となる<EOS>
+<SOS>def euler011_upward_point(x, y):<tab>関数euler011_upward_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x, y - 1)<tab>xと{{yから1を引いた値}}の組が関数出力となる<EOS>
+<SOS>def euler011_downward_point(x, y):<tab>関数euler011_downward_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x, y + 1)<tab>xと{{yに1を加えた値}}の組が関数出力となる<EOS>
+<SOS>def euler011_left_point(x, y):<tab>関数euler011_left_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x - 1, y)<tab>{{xから1を引いた値}}とyの組が関数出力となる<EOS>
+<SOS>def euler011_right_point(x, y):<tab>関数euler011_right_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x + 1, y)<tab>{{xに1を加えた値}}とyの組が関数出力となる<EOS>
+<SOS>def euler011_upper_left_point(x, y):<tab>関数euler011_upper_left_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x - 1, y - 1)<tab>{{xから1を引いた値}}と{{yから1を引いた値}}の組が関数出力となる<EOS>
+<SOS>def euler011_upper_right_point(x, y):<tab>関数euler011_upper_right_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x + 1, y - 1)<tab>{{xに1を加えた値}}と{{yから1を引いた値}}の組が関数出力となる<EOS>
+<SOS>def euler011_lower_left_point(x, y):<tab>関数euler011_lower_left_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x - 1, y + 1)<tab>{{xから1を引いた値}}と{{yに1を加えた値}}の組が関数出力となる<EOS>
+<SOS>def euler011_lower_right_point(x, y):<tab>関数euler011_lower_right_point(x, y)は、以下の通り定義される<EOS>
+<SOS>return (x + 1, y + 1)<tab>{{xに1を加えた値}}と{{yに1を加えた値}}の組が関数出力となる<EOS>
+<SOS>def euler009():<tab>関数euler009()は、以下の通り定義される<EOS>
+<SOS>for i in range(1, 1000):<tab>{{1から1000未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>for j in range(i, 1000):<tab>{{iから1000未満までの数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>for k in range(j, 1000):<tab>{{jから1000未満までの数列}}を先頭から順にkとして、以下を繰り返す<EOS>
+<SOS>p = i * i + j * j<tab>pを{{{{iにiを掛けた値}}に{{jにjを掛けた値}}を加えた値}}とする<EOS>
+<SOS>if p == k * k and i + j + k == 1000:<tab>もし{{pが{{kにkを掛けた値}}と等しいか}}、かつ{{{{iにjを加えた値}}にkを加えた値}}が1000と等しいとき、<EOS>
+<SOS>return i * j * k<tab>{{{{iにjを掛けた値}}にkを掛けた値}}が関数出力となる<EOS>
+<SOS>def euler009_is_pythagoras(a, b, c):<tab>関数euler009_is_pythagoras(a, b, c)は、以下の通り定義される<EOS>
+<SOS>return a * a + b * b == c * c<tab>{{{{aにaを掛けた値}}に{{bにbを掛けた値}}を加えた値}}が{{cにcを掛けた値}}と等しいかが関数出力となる<EOS>
+<SOS>def euler009_n_square(n):<tab>関数euler009_n_square(n)は、以下の通り定義される<EOS>
+<SOS>return n * n<tab>{{nにnを掛けた値}}が関数出力となる<EOS>
+<SOS>def euler009_n_square_a(n):<tab>関数euler009_n_square_a(n)は、以下の通り定義される<EOS>
+<SOS>ret = 0<tab>retを0とする<EOS>
+<SOS>for i in range(l):<tab>{{0からl未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret += n<tab>retをnだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler009_is_sum_equation1000(tp):<tab>関数euler009_is_sum_equation1000(tp)は、以下の通り定義される<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for x in tp:<tab>tpを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>s += x<tab>sをxだけ増加させる<EOS>
+<SOS>if m < N:<tab>もしmがNより小さいとき、<EOS>
+<SOS>return s == 1000<tab>{{sが1000と等しいか}}が関数出力となる<EOS>
+<SOS>def euler009_is_sum_equation1000_a(tp):<tab>関数euler009_is_sum_equation1000_a(tp)は、以下の通り定義される<EOS>
+<SOS>return sum(tp) == 1000<tab>{{tpの総和が1000と等しいか}}が関数出力となる<EOS>
+<SOS>def euler009_all_product(l):<tab>関数euler009_all_product(l)は、以下の通り定義される<EOS>
+<SOS>ret = 1<tab>retを1とする<EOS>
+<SOS>for a in l:<tab>lを先頭から順にaとして、以下を繰り返す<EOS>
+<SOS>ret *= a<tab>retをa倍にする<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler008():<tab>関数euler008()は、以下の通り定義される<EOS>
+<SOS>sl = []<tab>slを空のリストとする<EOS>
+<SOS>for i in range(5):<tab>{{0から5未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>sl.append(int(s[i]))<tab>slにsのi番目の整数値を追加する<EOS>
+<SOS>m = 1<tab>mを1とする<EOS>
+<SOS>for i in sl:<tab>slを先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>m *= i<tab>mをi倍にする<EOS>
+<SOS>for i in range(5, len(s)):<tab>{{5からsの長さ未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>sl.append(int(s[i]))<tab>slにsのi番目の整数値を追加する<EOS>
+<SOS>sl.pop(0)<tab>sl.pop(0) # slの最初の要素を削除する<EOS>
+<SOS>a = 1<tab>aを1とする<EOS>
+<SOS>for j in sl:<tab>slを先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>a *= j<tab>aをj倍にする<EOS>
+<SOS>m = max(m, a)<tab>mをmとaの最大値とする<EOS>
+<SOS>return m<tab>mが関数出力となる<EOS>
+<SOS>def euler008_all_product(l):<tab>関数euler008_all_product(l)は、以下の通り定義される<EOS>
+<SOS>ret = 1<tab>retを1とする<EOS>
+<SOS>for x in l:<tab>lを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>ret *= x<tab>retをx倍にする<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler008_list_slice(l, s, c):<tab>関数euler008_list_slice(l, s, c)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(c):<tab>{{0からc未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.append(l[s + i])<tab>retにlの{{sにiを加えた値}}番目を追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler008_elem_max(a, b):<tab>関数euler008_elem_max(a, b)は、以下の通り定義される<EOS>
+<SOS>return b if a < b else a<tab>{{もし{{aがbより小さいか}}のときb、そうでなければa}}が関数出力となる<EOS>
+<SOS>def euler008_elem_max_a(a, b):<tab>関数euler008_elem_max_a(a, b)は、以下の通り定義される<EOS>
+<SOS>return max(a, b)<tab>aとbの最大値が関数出力となる<EOS>
+<SOS>def euler008_list_add(l, a):<tab>関数euler008_list_add(l, a)は、以下の通り定義される<EOS>
+<SOS>tmp = [a]<tab>tmpをaのリストとする<EOS>
+<SOS>l += tmp<tab>lをtmpだけ増加させる<EOS>
+<SOS>return l<tab>lが関数出力となる<EOS>
+<SOS>def euler008_list_add_a(l, a):<tab>関数euler008_list_add_a(l, a)は、以下の通り定義される<EOS>
+<SOS>l.append(a)<tab>lにaを追加する<EOS>
+<SOS>return l<tab>lが関数出力となる<EOS>
+<SOS>def euler005():<tab>関数euler005()は、以下の通り定義される<EOS>
+<SOS>prime = []<tab>primeを空のリストとする<EOS>
+<SOS>for i in range(2, 20):<tab>{{2から20未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>l = []<tab>lを空のリストとする<EOS>
+<SOS>for y in prime:<tab>primeを先頭から順にyとして、以下を繰り返す<EOS>
+<SOS>l.append(y)<tab>lにyを追加する<EOS>
+<SOS>if len(l) == 0:<tab>もしlの長さが0と等しいとき、<EOS>
+<SOS>prime.append(i)<tab>primeにiを追加する<EOS>
+<SOS>a = 1<tab>aを1とする<EOS>
+<SOS>for p in prime:<tab>primeを先頭から順にpとして、以下を繰り返す<EOS>
+<SOS>for i in range(int(20**(1/p))):<tab>{{0から{{20を{{1をpで割った値}}乗した値}}の整数値未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>a = a * p<tab>aを{{aにpを掛けた値}}とする<EOS>
+<SOS>return a<tab>aが関数出力となる<EOS>
+<SOS>def euler005_enum_prime(n):<tab>関数euler005_enum_prime(n)は、以下の通り定義される<EOS>
+<SOS>prime = []<tab>primeを空のリストとする<EOS>
+<SOS>for i in range(2, n + 1):<tab>{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>f = True<tab>fを真とする<EOS>
+<SOS>for j in prime:<tab>primeを先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>if i % j == 0:<tab>もし{{iをjで割った余り}}が0と等しいとき、以下のとおり<EOS>
+<SOS>f = False<tab>fを偽とする<EOS>
+<SOS>break<tab>この繰り返しを中断する<EOS>
+<SOS>if f:<tab>もしfのとき、<EOS>
+<SOS>prime.append(i)<tab>primeにiを追加する<EOS>
+<SOS>return prime<tab>primeが関数出力となる<EOS>
+<SOS>def euler005_enum_prime_a(n):<tab>関数euler005_enum_prime_a(n)は、以下の通り定義される<EOS>
+<SOS>primes = []<tab>primesを空のリストとする<EOS>
+<SOS>for i in range(2, n + 1):<tab>{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if i == 2:<tab>もしiが2と等しいとき、<EOS>
+<SOS>primes.append(i)<tab>primesにiを追加する<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>for j in range(2, int(i**0.5) + 1):<tab>2から{{{{iを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>if i % j == 0:<tab>もし{{iをjで割った余り}}が0と等しいとき、<EOS>
+<SOS>break<tab>この繰り返しを中断する<EOS>
+<SOS>return primes<tab>primesが関数出力となる<EOS>
+<SOS>def euler005_enum_prime_b(n):<tab>関数euler005_enum_prime_b(n)は、以下の通り定義される<EOS>
+<SOS>primes = [True] * (n + 1)<tab>primesを真のリストの{{nに1を加えた値}}倍とする<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(2, int(n**0.5) + 1):<tab>2から{{{{nを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if primes[i]:<tab>もしprimesのi番目のとき、<EOS>
+<SOS>for j in range(i + i, n + 1, i):<tab>{{{{iにiを加えた値}}から{{nに1を加えた値}}未満までのi間隔の数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>primes[j] = False<tab>primesのj番目を偽とする<EOS>
+<SOS>for i in range(2, n + 1):<tab>{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if primes[i]:<tab>もしprimesのi番目のとき、<EOS>
+<SOS>ret.append(i)<tab>retにiを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler005_expmax(p, n):<tab>関数euler005_expmax(p, n)は、以下の通り定義される<EOS>
+<SOS>a = 1<tab>aを1とする<EOS>
+<SOS>while a < n:<tab>もしaがnより小さいとき、以下を繰り返す<EOS>
+<SOS>a *= p<tab>aをp倍にする<EOS>
+<SOS>return int(a / p)<tab>{{aをpで割った値}}の整数値が関数出力となる<EOS>
+<SOS>def euler005_expmax_a(p, n):<tab>関数euler005_expmax_a(p, n)は、以下の通り定義される<EOS>
+<SOS>return p**int(n**(1/p))<tab>{{pを{{nを{{1をpで割った値}}乗した値}}の整数値乗した値}}が関数出力となる<EOS>
+<SOS>def euler004():<tab>関数euler004()は、以下の通り定義される<EOS>
+<SOS>ans = 0<tab>ansを0とする<EOS>
+<SOS>for j in range(999, 99, -1):<tab>{{999から99未満までの-1間隔の数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>for i in range(999, 99, -1):<tab>{{999から99未満までの-1間隔の数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>s = (str)(j * i)<tab>sを(str)({{jにiを掛けた値}})とする<EOS>
+<SOS>a = ""<tab>aを""とする<EOS>
+<SOS>b = ""<tab>bを""とする<EOS>
+<SOS>sep = (int)(len(s) / 2) + (len(s) % 2)<tab>sepを{{(int)({{sの長さを2で割った値}})に{{sの長さを2で割った余り}}を加えた値}}とする<EOS>
+<SOS>for k in range(sep):<tab>{{0からsep未満までの数列}}を先頭から順にkとして、以下を繰り返す<EOS>
+<SOS>a += s[k]<tab>aをsのk番目だけ増加させる<EOS>
+<SOS>b += s[len(s) - k - 1]<tab>bをsの{{{{sの長さからkを引いた値}}から1を引いた値}}番目だけ増加させる<EOS>
+<SOS>if a == b:<tab>もしaがbと等しいとき、<EOS>
+<SOS>ans = max(ans, i * j)<tab>ansをansと{{iにjを掛けた値}}の最大値とする<EOS>
+<SOS>return ans<tab>ansが関数出力となる<EOS>
+<SOS>def euler004_n_slice(s, n):<tab>関数euler004_n_slice(s, n)は、以下の通り定義される<EOS>
+<SOS>ret = ""<tab>retを""とする<EOS>
+<SOS>for i in range(n):<tab>{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret += s[i]<tab>retをsのi番目だけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler004_n_bslice(s, n):<tab>関数euler004_n_bslice(s, n)は、以下の通り定義される<EOS>
+<SOS>ret = ""<tab>retを""とする<EOS>
+<SOS>for i in range(n):<tab>{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret += s[len(s) - 1 - i]<tab>retをsの{{{{sの長さから1を引いた値}}からiを引いた値}}番目だけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler004_is_equal(a, b):<tab>関数euler004_is_equal(a, b)は、以下の通り定義される<EOS>
+<SOS>return a == b<tab>{{aがbと等しいか}}が関数出力となる<EOS>
+<SOS>def euler004_half_digit(n):<tab>関数euler004_half_digit(n)は、以下の通り定義される<EOS>
+<SOS>s = (str)(n)<tab>sを(str)(n)とする<EOS>
+<SOS>a = len(s)<tab>aをsの長さとする<EOS>
+<SOS>return (int)(a / 2) + (a % 2)<tab>{{(int)({{aを2で割った値}})に{{aを2で割った余り}}を加えた値}}が関数出力となる<EOS>
+<SOS>def euler004_multiple(a, b):<tab>関数euler004_multiple(a, b)は、以下の通り定義される<EOS>
+<SOS>return a * b<tab>{{aにbを掛けた値}}が関数出力となる<EOS>
+<SOS>def euler004_multiple_a(a, b):<tab>関数euler004_multiple_a(a, b)は、以下の通り定義される<EOS>
+<SOS>res = 0<tab>resを0とする<EOS>
+<SOS>for i in range(b):<tab>{{0からb未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>res += a<tab>resをaだけ増加させる<EOS>
+<SOS>return res<tab>resが関数出力となる<EOS>
+<SOS>def euler004_string_reverse(s):<tab>関数euler004_string_reverse(s)は、以下の通り定義される<EOS>
+<SOS>ret = ""<tab>retを""とする<EOS>
+<SOS>for ch in reversed(s):<tab>{{sを反転した列}}を先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>ret += ch<tab>retをchだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler004_is_palindromic(s):<tab>関数euler004_is_palindromic(s)は、以下の通り定義される<EOS>
+<SOS>rs = ""<tab>rsを""とする<EOS>
+<SOS>for ch in reversed(s):<tab>{{sを反転した列}}を先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>rs += ch<tab>rsをchだけ増加させる<EOS>
+<SOS>return s == rs<tab>{{sがrsと等しいか}}が関数出力となる<EOS>
+<SOS>def euler006():<tab>関数euler006()は、以下の通り定義される<EOS>
+<SOS>sumofsq = 0<tab>sumofsqを0とする<EOS>
+<SOS>for i in range(100):<tab>{{0から100未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>sumofsq += (i + 1) * (i + 1)<tab>sumofsqを{{{{iに1を加えた値}}に{{iに1を加えた値}}を掛けた値}}だけ増加させる<EOS>
+<SOS>sqofsum = 101 * 50<tab>sqofsumを{{101に50を掛けた値}}とする<EOS>
+<SOS>return sumofsq - sqofsum<tab>{{sumofsqからsqofsumを引いた値}}が関数出力となる<EOS>
+<SOS>def euler006_make_common_diff_sequence(s, d, n):<tab>関数euler006_make_common_diff_sequence(s, d, n)は、以下の通り定義される<EOS>
+<SOS>ret = [s]<tab>retをsのリストとする<EOS>
+<SOS>for i in range(n - 1):<tab>{{0から{{nから1を引いた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.append(ret[-1] + d)<tab>retに{{retの-1番目にdを加えた値}}を追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler006_make_common_diff_sequence_a(s, d, n):<tab>関数euler006_make_common_diff_sequence_a(s, d, n)は、以下の通り定義される<EOS>
+<SOS>ret = []<tab>retを空のリストとする<EOS>
+<SOS>for i in range(s, s + (d * n), d):<tab>{{sから{{sに{{dにnを掛けた値}}を加えた値}}未満までのd間隔の数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret.append(i)<tab>retにiを追加する<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler006_n_square(n):<tab>関数euler006_n_square(n)は、以下の通り定義される<EOS>
+<SOS>return n * n<tab>{{nにnを掛けた値}}が関数出力となる<EOS>
+<SOS>def euler006_n_square_a(n):<tab>関数euler006_n_square_a(n)は、以下の通り定義される<EOS>
+<SOS>ret = 0<tab>retを0とする<EOS>
+<SOS>for i in range(n):<tab>{{0からn未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>ret += n<tab>retをnだけ増加させる<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler006_sum_a_to_b(a, b):<tab>関数euler006_sum_a_to_b(a, b)は、以下の通り定義される<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>while a < b:<tab>もしaがbより小さいとき、以下を繰り返す<EOS>
+<SOS>s += a<tab>sをaだけ増加させる<EOS>
+<SOS>a += 1<tab>aを1だけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler006_sum_a_to_b_a(a, b):<tab>関数euler006_sum_a_to_b_a(a, b)は、以下の通り定義される<EOS>
+<SOS>return sum(range(a, b))<tab>{{aからb未満までの数列}}の総和が関数出力となる<EOS>
+<SOS>@TODO [#ListForExpr append: [#Name 'i'][#ForExpr each: [#Name 'i']list: [#ApplyExpr name: [#Name 'range']params: [#Arguments [#Int '2'][#Infix left: [#ApplyExpr name: [#Name 'int']params: [#Arguments [#MethodExpr recv: [#Name 'math']name: [#Name 'sqrt']params: [#Arguments [#Name 'p']]]]]name: [#Name '+']right: [#Int '1']]]]cond: [#Infix left: [#Infix left: [#Name 'p']name: [#Name '%']right: [#Name 'i']]name: [#Name '==']right: [#Int '0']]]]<tab> [#ListForExpr append: [#Name 'i'][#ForExpr each: [#Name 'i']list: [#ApplyExpr name: [#Name 'range']params: [#Arguments [#Int '2'][#Infix left: [#ApplyExpr name: [#Name 'int']params: [#Arguments [#MethodExpr recv: [#Name 'math']name: [#Name 'sqrt']params: [#Arguments [#Name 'p']]]]]name: [#Name '+']right: [#Int '1']]]]cond: [#Infix left: [#Infix left: [#Name 'p']name: [#Name '%']right: [#Name 'i']]name: [#Name '==']right: [#Int '0']]]]<EOS>
+<SOS>def euler007():<tab>関数euler007()は、以下の通り定義される<EOS>
+<SOS>count = 0<tab>countを0とする<EOS>
+<SOS>p = 1<tab>pを1とする<EOS>
+<SOS>pl = []<tab>plを空のリストとする<EOS>
+<SOS>while count < 10001:<tab>もしcountが10001より小さいとき、以下を繰り返す<EOS>
+<SOS>p += 1<tab>pを1だけ増加させる<EOS>
+<SOS>l = [ i for i in range(2, int(math.sqrt(p)) + 1) if p % i == 0 ]<tab>lを[#ListForExpr append: [#Name 'i'][#ForExpr each: [#Name 'i']list: [#ApplyExpr name: [#Name 'range']params: [#Arguments [#Int '2'][#Infix left: [#ApplyExpr name: [#Name 'int']params: [#Arguments [#MethodExpr recv: [#Name 'math']name: [#Name 'sqrt']params: [#Arguments [#Name 'p']]]]]name: [#Name '+']right: [#Int '1']]]]cond: [#Infix left: [#Infix left: [#Name 'p']name: [#Name '%']right: [#Name 'i']]name: [#Name '==']right: [#Int '0']]]]とする<EOS>
+<SOS>if len(l) == 0:<tab>もしlの長さが0と等しいとき、<EOS>
+<SOS>count += 1<tab>countを1だけ増加させる<EOS>
+<SOS>return p<tab>pが関数出力となる<EOS>
+<SOS>def euler007_n_division(a, n):<tab>関数euler007_n_division(a, n)は、以下の通り定義される<EOS>
+<SOS>return a % n == 0<tab>{{{{aをnで割った余り}}が0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler007_n_division_a(a, n):<tab>関数euler007_n_division_a(a, n)は、以下の通り定義される<EOS>
+<SOS>while a > 0:<tab>もしaが0より大きいとき、以下を繰り返す<EOS>
+<SOS>a -= n<tab>aをnだけ減少させる<EOS>
+<SOS>return a == 0<tab>{{aが0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler007_is_prime(a):<tab>関数euler007_is_prime(a)は、以下の通り定義される<EOS>
+<SOS>dl = []<tab>dlを空のリストとする<EOS>
+<SOS>for i in range(2, a):<tab>{{2からa未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if a % i == 0:<tab>もし{{aをiで割った余り}}が0と等しいとき、<EOS>
+<SOS>dl.append(i)<tab>dlにiを追加する<EOS>
+<SOS>return len(dl) == 0<tab>{{dlの長さが0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler007_is_prime_a(a):<tab>関数euler007_is_prime_a(a)は、以下の通り定義される<EOS>
+<SOS>if a < 2:<tab>もしaが2より小さいとき、<EOS>
+<SOS>return False<tab>偽が関数出力となる<EOS>
+<SOS>elif a == 2:<tab>もしそうでなく、aが2と等しいとき、<EOS>
+<SOS>return True<tab>真が関数出力となる<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>for i in range(2, int(a**0.5) + 1):<tab>2から{{{{aを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>if a % i == 0:<tab>もし{{aをiで割った余り}}が0と等しいとき、<EOS>
+<SOS>return False<tab>偽が関数出力となる<EOS>
+<SOS>return True<tab>真が関数出力となる<EOS>
+<SOS>def euler007_succ(a):<tab>関数euler007_succ(a)は、以下の通り定義される<EOS>
+<SOS>return a + 1<tab>{{aに1を加えた値}}が関数出力となる<EOS>
+<SOS>def euler007_is_less(a, b):<tab>関数euler007_is_less(a, b)は、以下の通り定義される<EOS>
+<SOS>return a < b<tab>{{aがbより小さいか}}が関数出力となる<EOS>
+<SOS>def euler007_is_equale_zero(a):<tab>関数euler007_is_equale_zero(a)は、以下の通り定義される<EOS>
+<SOS>return a == 0<tab>{{aが0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler003():<tab>関数euler003()は、以下の通り定義される<EOS>
+<SOS>n = 600851475143<tab>nを600851475143とする<EOS>
+<SOS>i = 2<tab>iを2とする<EOS>
+<SOS>while i * i < n:<tab>もし{{iにiを掛けた値}}がnより小さいとき、以下を繰り返す<EOS>
+<SOS>while n % i == 0:<tab>もし{{nをiで割った余り}}が0と等しいとき、以下を繰り返す<EOS>
+<SOS>n = n / i<tab>nを{{nをiで割った値}}とする<EOS>
+<SOS>i = i + 1<tab>iを{{iに1を加えた値}}とする<EOS>
+<SOS>return int(n)<tab>nの整数値が関数出力となる<EOS>
+<SOS>def euler003_n_morethan_square(a, n):<tab>関数euler003_n_morethan_square(a, n)は、以下の通り定義される<EOS>
+<SOS>return a * a < n<tab>{{{{aにaを掛けた値}}がnより小さいか}}が関数出力となる<EOS>
+<SOS>def euler003_n_divide_a(n, a):<tab>関数euler003_n_divide_a(n, a)は、以下の通り定義される<EOS>
+<SOS>while n % a == 0:<tab>もし{{nをaで割った余り}}が0と等しいとき、以下を繰り返す<EOS>
+<SOS>n /= a<tab>nをa分の一にする<EOS>
+<SOS>return int(n)<tab>nの整数値が関数出力となる<EOS>
+<SOS>def euler002():<tab>関数euler002()は、以下の通り定義される<EOS>
+<SOS>fib = [1, 2]<tab>fibを1と2のリストとする<EOS>
+<SOS>while fib[-1] < 4000000:<tab>もしfibの-1番目が4000000より小さいとき、以下を繰り返す<EOS>
+<SOS>fib.append(fib[-1] + fib[-2])<tab>fibに{{fibの-1番目にfibの-2番目を加えた値}}を追加する<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for x in fib:<tab>fibを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>if x % 2 == 0:<tab>もし{{xを2で割った余り}}が0と等しいとき、<EOS>
+<SOS>s += x<tab>sをxだけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler002_divide_2(n):<tab>関数euler002_divide_2(n)は、以下の通り定義される<EOS>
+<SOS>return n % 2 == 0<tab>{{{{nを2で割った余り}}が0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler002_add_param(a, b):<tab>関数euler002_add_param(a, b)は、以下の通り定義される<EOS>
+<SOS>return a + b<tab>{{aにbを加えた値}}が関数出力となる<EOS>
+<SOS>def euler002_sum_list(l):<tab>関数euler002_sum_list(l)は、以下の通り定義される<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for x in l:<tab>lを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>s += x<tab>sをxだけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler002_sum_list_a(l):<tab>関数euler002_sum_list_a(l)は、以下の通り定義される<EOS>
+<SOS>return sum(l)<tab>lの総和が関数出力となる<EOS>
+<SOS>def euler002_n_fibnocci_sequence(n):<tab>関数euler002_n_fibnocci_sequence(n)は、以下の通り定義される<EOS>
+<SOS>fibs = [0, 1]<tab>fibsを0と1のリストとする<EOS>
+<SOS>a = n - 2<tab>aを{{nから2を引いた値}}とする<EOS>
+<SOS>if n == 1:<tab>もしnが1と等しいとき、<EOS>
+<SOS>return [0]<tab>0のリストが関数出力となる<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>while a > 0:<tab>もしaが0より大きいとき、以下を繰り返す<EOS>
+<SOS>fibs.append(fibs[-1] + fibs[-2])<tab>fibsに{{fibsの-1番目にfibsの-2番目を加えた値}}を追加する<EOS>
+<SOS>a -= 1<tab>aを1だけ減少させる<EOS>
+<SOS>return fibs<tab>fibsが関数出力となる<EOS>
+<SOS>def euler002_n_fibnocci_number(n):<tab>関数euler002_n_fibnocci_number(n)は、以下の通り定義される<EOS>
+<SOS>fibs = [0, 1]<tab>fibsを0と1のリストとする<EOS>
+<SOS>if 0 < n <= 2:<tab>もし{{0がnより小さいか}}が2以下のとき、<EOS>
+<SOS>return fibs[n - 1]<tab>fibsの{{nから1を引いた値}}番目が関数出力となる<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>a = n - 2 <tab>aを{{nから2を引いた値}}とする<EOS>
+<SOS>while a > 0:<tab>もしaが0より大きいとき、以下を繰り返す<EOS>
+<SOS>fibs.append(fibs[-1] + fibs[-2])<tab>fibsに{{fibsの-1番目にfibsの-2番目を加えた値}}を追加する<EOS>
+<SOS>a -= 1<tab>aを1だけ減少させる<EOS>
+<SOS>return fibs[-1]<tab>fibsの-1番目が関数出力となる<EOS>
+<SOS>def euler020():<tab>関数euler020()は、以下の通り定義される<EOS>
+<SOS>fact = 1<tab>factを1とする<EOS>
+<SOS>for i in range(100):<tab>{{0から100未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>fact *= (i + 1)<tab>factを{{iに1を加えた値}}倍にする<EOS>
+<SOS>s = str(fact)<tab>sをfactの文字列とする<EOS>
+<SOS>q = []<tab>qを空のリストとする<EOS>
+<SOS>for ch in s:<tab>sを先頭から順にchとして、以下を繰り返す<EOS>
+<SOS>q.append(int(ch))<tab>qにchの整数値を追加する<EOS>
+<SOS>return sum(q)<tab>qの総和が関数出力となる<EOS>
+<SOS>def euler020_factorial(n):<tab>関数euler020_factorial(n)は、以下の通り定義される<EOS>
+<SOS>ret = 1<tab>retを1とする<EOS>
+<SOS>for x in range(n):<tab>{{0からn未満までの数列}}を先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>ret *= (x + 1)<tab>retを{{xに1を加えた値}}倍にする<EOS>
+<SOS>return ret<tab>retが関数出力となる<EOS>
+<SOS>def euler020_digit_sum(n):<tab>関数euler020_digit_sum(n)は、以下の通り定義される<EOS>
+<SOS>q = str(n)<tab>qをnの文字列とする<EOS>
+<SOS>s = 0<tab>sを0とする<EOS>
+<SOS>for x in q:<tab>qを先頭から順にxとして、以下を繰り返す<EOS>
+<SOS>s += int(x)<tab>sをxの整数値だけ増加させる<EOS>
+<SOS>return s<tab>sが関数出力となる<EOS>
+<SOS>def euler019():<tab>関数euler019()は、以下の通り定義される<EOS>
+<SOS>d = 365<tab>dを365とする<EOS>
+<SOS>for y in range(1901, 2001):<tab>{{1901から2001未満までの数列}}を先頭から順にyとして、以下を繰り返す<EOS>
+<SOS>for i, day in enumerate(days):<tab>{{daysに番号をつける}}を先頭から順にiとdayとして、以下を繰り返す<EOS>
+<SOS>if d % 7 == 6:<tab>もし{{dを7で割った余り}}が6と等しいとき、<EOS>
+<SOS>sd += 1<tab>sdを1だけ増加させる<EOS>
+<SOS>d += day <tab>dをdayだけ増加させる<EOS>
+<SOS>if (y % 400 == 0 or ((not y % 100 == 0) and y % 4 == 0)) and i == 1:<tab>もし{{{{yを400で割った余り}}が0と等しいか}}、または{{{{yを100で割った余り}}が0と等しいか}}の反対、かつ{{{{yを4で割った余り}}が0と等しいか}}、かつ{{iが1と等しいか}}のとき、<EOS>
+<SOS>d += 1<tab>dを1だけ増加させる<EOS>
+<SOS>return sd<tab>sdが関数出力となる<EOS>
+<SOS>def euler019_is_leap_year(y):<tab>関数euler019_is_leap_year(y)は、以下の通り定義される<EOS>
+<SOS>return y % 400 == 0 or ((not y % 100 == 0) and y % 4 == 0)<tab>{{{{yを400で割った余り}}が0と等しいか}}、または{{{{yを100で割った余り}}が0と等しいか}}の反対、かつ{{{{yを4で割った余り}}が0と等しいか}}が関数出力となる<EOS>
+<SOS>def euler019_names_of_the_day(y, m, d):<tab>関数euler019_names_of_the_day(y, m, d)は、以下の通り定義される<EOS>
+<SOS>if m <= 2:<tab>もしmが2以下のとき、以下のとおり<EOS>
+<SOS>m += 12<tab>mを12だけ増加させる<EOS>
+<SOS>y -= 1<tab>yを1だけ減少させる<EOS>
+<SOS>gamma = 0<tab>gammaを0とする<EOS>
+<SOS>if 1582 <= y:<tab>もし1582がy以下のとき、<EOS>
+<SOS>gamma = -2 * int(y / 100) + int( int(y / 100) / 4 )<tab>gammaを{{{{-2に{{yを100で割った値}}の整数値を掛けた値}}に{{{{yを100で割った値}}の整数値を4で割った値}}の整数値を加えた値}}とする<EOS>
+<SOS>もしそうでなければ、<tab>なければ、<EOS>
+<SOS>gamma = -1 * int(y / 100) + 5<tab>gammaを{{{{-1に{{yを100で割った値}}の整数値を掛けた値}}に5を加えた値}}とする<EOS>
+<SOS>h = (d + int(26 * (m + 1) / 10) + (y % 100) + int((y % 100) / 4) + gamma) % 7<tab>hを{{dに{{{{26に{{mに1を加えた値}}を掛けた値}}を10で割った値}}の整数値を加えた値}}に{{yを100で割った余り}}を加えた値に{{{{yを100で割った余り}}を4で割った値}}の整数値を加えた値にgammaを加えた値を7で割った余りとする<EOS>
+<SOS>return name[h]<tab>nameのh番目が関数出力となる<EOS>
+<SOS>def euler018():<tab>関数euler018()は、以下の通り定義される<EOS>
+<SOS>for i in reversed(range(len(tri) - 1)):<tab>{{{{0から{{triの長さから1を引いた値}}未満までの数列}}を反転した列}}を先頭から順にiとして、以下を繰り返す<EOS>
+<SOS>for j in range(len(tri[i])):<tab>{{0からtriのi番目の長さ未満までの数列}}を先頭から順にjとして、以下を繰り返す<EOS>
+<SOS>tri[i][j] += max(tri[i + 1][j], tri[i + 1][j + 1])<tab>triのi番目のj番目をtriの{{iに1を加えた値}}番目のj番目とtriの{{iに1を加えた値}}番目の{{jに1を加えた値}}番目の最大値だけ増加させる<EOS>
+<SOS>return tri[0][0]<tab>triの先頭の先頭が関数出力となる<EOS>
