@@ -434,9 +434,13 @@ class Train(object):
             output_sentence = ' '.join(output_words)
             print('<', output_sentence)
 
+# print('リスト入力：', end='')
+# s_list = list(map(str, input().split('<sep>')))
+s_list = []
+with open('s_list.txt', 'r') as f :
+    for l in f :
+        s_list.append(l[:-1])
 
-print('リスト入力：', end='')
-s_list = list(map(str, input().split('<sep>')))
 print('準備中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -453,12 +457,8 @@ hidden_size = 256
 encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
-Train(encoder1, attn_decoder1).trainIters(2500, print_every=100)
+Train(encoder1, attn_decoder1).trainIters(5000, print_every=250)
 
 print('翻訳中……')
 # Train(encoder1, attn_decoder1).evaluateRandomly()
 Train(encoder1, attn_decoder1).evaluateOnce(s_list)
-
-
-# 学習済みモデル別で作る
-# ユニークな単語数調べる

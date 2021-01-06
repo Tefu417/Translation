@@ -1,0 +1,22 @@
+sd = 0
+s += int(x)
+return s
+for i in range(n):
+c += 1
+if n <= 20:
+m = 0
+if i % y == 0:
+while n != 1:
+m = n
+break
+a < b
+for n <= len(l) :
+a = int(input())
+a, b, c = map(int, input().split())
+import math
+print(x + 4 * y)
+t = [i for i in s]
+while True :
+a,b = list(input().split())
+if x + 2 > W and y + 1 > H :
+p = float(len(s))
