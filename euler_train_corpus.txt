@@ -22,7 +22,6 @@
 <SOS>def euler015_pascal_triangle(n):<tab>関数euler015_pascal_triangle(n)は、以下の通り定義される<EOS>
 <SOS>if n == 1:<tab>もしnが1と等しいとき、<EOS>
 <SOS>return [1]<tab>1のリストが関数出力となる<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>l = euler015_pascal_triangle(n - 1)<tab>lをeuler015_pascal_triangle({{nから1を引いた値}})とする<EOS>
 <SOS>ret = [l[0], l[-1]]<tab>retをlの先頭とlの-1番目のリストとする<EOS>
 <SOS>for i in range(n - 2):<tab>{{0から{{nから2を引いた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
@@ -111,10 +110,8 @@
 <SOS>ret += len(word[a])<tab>retをwordのa番目の長さだけ増加させる<EOS>
 <SOS>elif a == 0:<tab>もしそうでなく、aが0と等しいとき、<EOS>
 <SOS>ret -= 3<tab>retを3だけ減少させる<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>ret += len(twoword[int(a / 10)])<tab>retをtwowordの{{aを10で割った値}}の整数値番目の長さだけ増加させる<EOS>
 <SOS>ret += len(word[a % 10])<tab>retをwordの{{aを10で割った余り}}番目の長さだけ増加させる<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>ret += len("onethousand")<tab>retを"onethousand"の長さだけ増加させる<EOS>
 <SOS>return ret<tab>retが関数出力となる<EOS>
 <SOS>def euler017_digit_separate(n):<tab>関数euler017_digit_separate(n)は、以下の通り定義される<EOS>
@@ -170,7 +167,6 @@
 <SOS>tn = sum(range(1, s + 1))<tab>tnを{{1から{{sに1を加えた値}}未満までの数列}}の総和とする<EOS>
 <SOS>if not s % 2:<tab>もし{{sを2で割った余り}}の反対のとき、<EOS>
 <SOS>t = (int(s / 2), s + 1)<tab>tを{{sを2で割った値}}の整数値と{{sに1を加えた値}}の組とする<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>t = (s, int((s + 1) / 2))<tab>tをsと{{{{sに1を加えた値}}を2で割った値}}の整数値の組とする<EOS>
 <SOS>fc = 1<tab>fcを1とする<EOS>
 <SOS>for x in t:<tab>tを先頭から順にxとして、以下を繰り返す<EOS>
@@ -336,7 +332,6 @@
 <SOS>if ch == " ":<tab>もしchが" "と等しいとき、以下のとおり<EOS>
 <SOS>sl.append(buf)<tab>slにbufを追加する<EOS>
 <SOS>buf = ""<tab>bufを""とする<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>buf += ch<tab>bufをchだけ増加させる<EOS>
 <SOS>sl.append(buf)<tab>slにbufを追加する<EOS>
 <SOS>return sl<tab>slが関数出力となる<EOS>
@@ -459,7 +454,6 @@
 <SOS>for i in range(2, n + 1):<tab>{{2から{{nに1を加えた値}}未満までの数列}}を先頭から順にiとして、以下を繰り返す<EOS>
 <SOS>if i == 2:<tab>もしiが2と等しいとき、<EOS>
 <SOS>primes.append(i)<tab>primesにiを追加する<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>for j in range(2, int(i**0.5) + 1):<tab>2から{{{{iを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にjとして、以下を繰り返す<EOS>
 <SOS>if i % j == 0:<tab>もし{{iをjで割った余り}}が0と等しいとき、<EOS>
 <SOS>break<tab>この繰り返しを中断する<EOS>
@@ -588,7 +582,6 @@
 <SOS>return False<tab>偽が関数出力となる<EOS>
 <SOS>elif a == 2:<tab>もしそうでなく、aが2と等しいとき、<EOS>
 <SOS>return True<tab>真が関数出力となる<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>for i in range(2, int(a**0.5) + 1):<tab>2から{{{{aを0.5乗した値}}の整数値に1を加えた値}}未満までの数列を先頭から順にiとして、以下を繰り返す<EOS>
 <SOS>if a % i == 0:<tab>もし{{aをiで割った余り}}が0と等しいとき、<EOS>
 <SOS>return False<tab>偽が関数出力となる<EOS>
@@ -638,7 +631,6 @@
 <SOS>a = n - 2<tab>aを{{nから2を引いた値}}とする<EOS>
 <SOS>if n == 1:<tab>もしnが1と等しいとき、<EOS>
 <SOS>return [0]<tab>0のリストが関数出力となる<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>while a > 0:<tab>もしaが0より大きいとき、以下を繰り返す<EOS>
 <SOS>fibs.append(fibs[-1] + fibs[-2])<tab>fibsに{{fibsの-1番目にfibsの-2番目を加えた値}}を追加する<EOS>
 <SOS>a -= 1<tab>aを1だけ減少させる<EOS>
@@ -647,7 +639,6 @@
 <SOS>fibs = [0, 1]<tab>fibsを0と1のリストとする<EOS>
 <SOS>if 0 < n <= 2:<tab>もし{{0がnより小さいか}}が2以下のとき、<EOS>
 <SOS>return fibs[n - 1]<tab>fibsの{{nから1を引いた値}}番目が関数出力となる<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>a = n - 2 <tab>aを{{nから2を引いた値}}とする<EOS>
 <SOS>while a > 0:<tab>もしaが0より大きいとき、以下を繰り返す<EOS>
 <SOS>fibs.append(fibs[-1] + fibs[-2])<tab>fibsに{{fibsの-1番目にfibsの-2番目を加えた値}}を追加する<EOS>
@@ -692,7 +683,6 @@
 <SOS>gamma = 0<tab>gammaを0とする<EOS>
 <SOS>if 1582 <= y:<tab>もし1582がy以下のとき、<EOS>
 <SOS>gamma = -2 * int(y / 100) + int( int(y / 100) / 4 )<tab>gammaを{{{{-2に{{yを100で割った値}}の整数値を掛けた値}}に{{{{yを100で割った値}}の整数値を4で割った値}}の整数値を加えた値}}とする<EOS>
-<SOS>もしそうでなければ、<tab>なければ、<EOS>
 <SOS>gamma = -1 * int(y / 100) + 5<tab>gammaを{{{{-1に{{yを100で割った値}}の整数値を掛けた値}}に5を加えた値}}とする<EOS>
 <SOS>h = (d + int(26 * (m + 1) / 10) + (y % 100) + int((y % 100) / 4) + gamma) % 7<tab>hを{{dに{{{{26に{{mに1を加えた値}}を掛けた値}}を10で割った値}}の整数値を加えた値}}に{{yを100で割った余り}}を加えた値に{{{{yを100で割った余り}}を4で割った値}}の整数値を加えた値にgammaを加えた値を7で割った余りとする<EOS>
 <SOS>return name[h]<tab>nameのh番目が関数出力となる<EOS>
