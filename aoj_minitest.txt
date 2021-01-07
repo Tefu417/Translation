@@ -1,0 +1,12 @@
+A = 1
+return False
+A, B = 0, True
+while len ( A ) :
+A = ( B / 180 )
+if A >= 0 :
+print ( A // B )
+for A in range ( 24 ) :
+A += int ( input ( ) )
+A = B - 1
+if A + B > 21 :
+A //= B
