@@ -409,28 +409,28 @@ class Train(object):
             print('<', output_sentence)
 
 s_list = []
-with open('Seq2Seq/test_py_input.txt', 'r') as f :
+with open('Seq2Seq/test_jpn_input.txt', 'r') as f :
     for l in f :
         s_list.append(l[:-1])
 
 print('学習中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'Seq2Seq/Corpus-euler/corpus-euler.txt'
+txt = 'Seq2Seq/euler-ja-train.txt'
 SOS_token = 0
 EOS_token = 1
 
 # Jpn2Py
-# input_lang, output_lang, pairs, reverse = Pair().prepareData('ja', 'py', True)
+input_lang, output_lang, pairs, reverse = Pair().prepareData('ja', 'py', True)
 # Py2Jpn
-input_lang, output_lang, pairs, reverse = Pair().prepareData('py', 'ja', False)
+# input_lang, output_lang, pairs, reverse = Pair().prepareData('py', 'ja', False)
 
 hidden_size = 256
 encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
 def main():
-    Train(encoder1, attn_decoder1).trainIters(1000, print_every=50)
+    Train(encoder1, attn_decoder1).trainIters(10000, print_every=500)
 
     print('翻訳中……')
     # Train(encoder1, attn_decoder1).evaluateRandomly()
