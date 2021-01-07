@@ -1,0 +1,10 @@
+sd = 0
+s += int(x)
+return s
+for i in range(n):
+c += 1
+if n <= 20:
+m = 0
+if i % y == 0:
+while n != 1:
+m = n

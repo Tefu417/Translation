@@ -1,0 +1,10 @@
+<SOS>sd = 0<tab>sdに0を代入<EOS>
+<SOS>s += int(x)<tab>sにxを表す整数を足す<EOS>
+<SOS>return s<tab>sを返す<EOS>
+<SOS>for i in range(n):<tab>n未満の非負整数を順にiとして<EOS>
+<SOS>c += 1<tab>cに1を足す<EOS>
+<SOS>if n <= 20:<tab>もしnが20以下であれば<EOS>
+<SOS>m = 0<tab>mを0にする<EOS>
+<SOS>if i % y == 0:<tab>もしiがyで割り切れるなら<EOS>
+<SOS>while n != 1:<tab>nが1でない間<EOS>
+<SOS>m = n<tab>mをnにする<EOS>

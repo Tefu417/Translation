@@ -399,15 +399,20 @@ class Train(object):
 
     def evaluateOnce(self, s_list):
         for s in s_list:
-            print('{0}/{1}'.format(s_list.index(s)+1, len(s_list)))
-            print('>', s)
-            output_words, attentions = self.evaluate(reverse, s)
+            norm_s = Normalize().normalizeString(s)
+            s_list[s_list.index(s)] = norm_s
+
+            print('{0}/{1}'.format(s_list.index(norm_s)+1, len(s_list)))
+            print('>', norm_s)
+            output_words, attentions = self.evaluate(reverse, norm_s)
             output_sentence = ' '.join(output_words)
             print('<', output_sentence)
 
+s_list = []
+with open('Seq2Seq/test_py_input.txt', 'r') as f :
+    for l in f :
+        s_list.append(l[:-1])
 
-print('リスト入力：', end='')
-s_list = list(map(str, input().split(',')))
 print('学習中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -425,7 +430,7 @@ encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
 def main():
-    Train(encoder1, attn_decoder1).trainIters(5000, print_every=500)
+    Train(encoder1, attn_decoder1).trainIters(1000, print_every=50)
 
     print('翻訳中……')
     # Train(encoder1, attn_decoder1).evaluateRandomly()
