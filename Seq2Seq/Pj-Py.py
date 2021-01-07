@@ -437,14 +437,14 @@ class Train(object):
 # print('リスト入力：', end='')
 # s_list = list(map(str, input().split('<sep>')))
 s_list = []
-with open('s_list.txt', 'r') as f :
+with open('aoj_data_txt/test_py.txt', 'r') as f :
     for l in f :
         s_list.append(l[:-1])
 
 print('準備中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'train_corpus.txt'
+txt = 'aoj_train_corpus.txt'
 SOS_token = 0
 EOS_token = 1
 
@@ -457,7 +457,7 @@ hidden_size = 256
 encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
-Train(encoder1, attn_decoder1).trainIters(5000, print_every=250)
+Train(encoder1, attn_decoder1).trainIters(2500, print_every=250)
 
 print('翻訳中……')
 # Train(encoder1, attn_decoder1).evaluateRandomly()
