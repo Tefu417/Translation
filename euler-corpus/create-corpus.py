@@ -8,12 +8,12 @@ import glob
 
 with open('Seq2Seq/euler-corpus.txt', 'a') as newfile :
 
-    for f in glob.glob('Seq2Seq/euler-corpus/*.txt') :
+    for f in glob.glob('euler-corpus/euler*.txt') :
         with open(f, 'r') as oldfile :
             for line in oldfile :
-                n = line.find('   ## ')
+                n = line.find(' # ')
                 c = line[: n]
-                ja = line[n + 6 : -1]
+                ja = line[n + 3 : -1]
                 l = str('<SOS>' + c + '<tab>' + ja + '<EOS>')
                 newfile.write(l)
                 newfile.write('\n')
