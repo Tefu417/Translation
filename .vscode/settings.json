@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/tefu/.pyenv/versions/3.7.6/bin/python",
+    "python.pythonPath": "/Library/Developer/CommandLineTools/usr/bin/python3",
     "python.analysis.extraPaths": [
         "./source"
     ]
