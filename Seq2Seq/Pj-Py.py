@@ -437,27 +437,27 @@ class Train(object):
 # print('リスト入力：', end='')
 # s_list = list(map(str, input().split('<sep>')))
 s_list = []
-with open('aoj_data_txt/test_py.txt', 'r') as f :
+with open('aoj_prosym2021/ja_minitest.txt', 'r') as f :
     for l in f :
         s_list.append(l[:-1])
 
 print('準備中……')
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-txt = 'aoj_train_corpus.txt'
+txt = 'prosym_train_corpus.txt'
 SOS_token = 0
 EOS_token = 1
 
 # PJ2Py
-# input_lang, output_lang, pairs, reverse = Pair().prepareData('pj', 'py', True)
+input_lang, output_lang, pairs, reverse = Pair().prepareData('pj', 'py', True)
 # Py2PJ
-input_lang, output_lang, pairs, reverse = Pair().prepareData('py', 'pj', False)
+# input_lang, output_lang, pairs, reverse = Pair().prepareData('py', 'pj', False)
 
 hidden_size = 256
 encoder1 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
 attn_decoder1 = AttnDecoderRNN(hidden_size, output_lang.n_words, dropout_p=0.1).to(device)
 
-Train(encoder1, attn_decoder1).trainIters(2500, print_every=250)
+Train(encoder1, attn_decoder1).trainIters(10000, print_every=100)
 
 print('翻訳中……')
 # Train(encoder1, attn_decoder1).evaluateRandomly()
