@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "python.pythonPath": "/home/acc12954dm/.pyenv/versions/3.6.5/bin/python",
     "python.analysis.extraPaths": [
         "./source"
     ]
