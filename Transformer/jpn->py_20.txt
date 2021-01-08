@@ -1,0 +1,53 @@
+BLEU = 42.48
+
+1から6未満までの数列を順にAとして、繰り返す
+trg = [forAinrange(1,6):
+forAinrange(1,6):<eos>
+
+A、B、Cを出力する
+trg = [print(A,B,C)
+print(a,B,C,b)<eos>
+
+Aの2番目を2だけ減少させる
+trg = [A[2]-=2
+a[2]-=2<eos>
+
+Aが1と等しい間、次を繰り返す
+trg = [whileA==1:
+whilea==1:<eos>
+
+AがBにCを加えた値以下のとき、
+trg = [ifA<=B+C:
+if-(B+c)<=C:<eos>
+
+Aを5で割った商をAとする
+trg = [A=A//5
+else=B//5//5<eos>
+
+Aが8より小さいとき、
+trg = [ifA<8:
+ifa<8:<eos>
+
+AをBの1番目だけ増加させる
+trg = [A+=B[1
+a+=1<eos>
+
+0から17未満までの数列を順にAとして、繰り返す
+trg = [forAinrange(17):
+forAinrange(17):<eos>
+
+360からAを引いた値を返す
+trg = [return360-A
+return3-60<eos>
+
+Aのqの末尾にBを追加する
+trg = [A.q.append(B)
+a.q.append(B)<eos>
+
+Aの0を取り出した値
+trg = [A.pop(0)
+a.pop(0)
+
+Aの末尾に偽を追加する
+trg = [A.append(False)
+write(False.append(False))<eos>
