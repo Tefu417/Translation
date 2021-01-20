@@ -1,0 +1,14 @@
+for A in range ( 1 , 6 ) :
+print ( A , B , C )
+A [ 2 ] -= 2
+while A == 1 :
+if A <= B + C :
+A = A // 5
+e = input ( )
+if A < 8 :
+A += B [ 1 ]
+for A in range ( 17 ) :
+return 360 - A
+A . q . append ( B )
+A [ B ] = C . pop ( )
+A . append ( False )

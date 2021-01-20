@@ -1,0 +1,66 @@
+BLEU = 39.60
+
+example_idx = 3
+for A in range ( 1 , 6 ) :
+trg = [1 から 6 未 満 までの 数 列 を 順に A として 、 繰り返す
+1 から 6 未 満 までの 数 列 を 順に 無限 の 整数 列 として 、 繰り返す <eos>
+
+example_idx = 13
+print ( A , B , C )
+trg = [A 、 B 、 C を出力する
+a 、 b を出力する <eos>
+
+example_idx = 17
+A [ 2 ] -= 2
+trg = [A の 2 番 目 を 2 だけ 減少 させる
+a の 2 番 目 を 2 だけ 減少 させる <eos>
+
+example_idx = 18
+while A == 1 :
+trg = [A が 1 と 等 しい 間 、 次 を 繰り返す
+a が 1 と 等 しい 間 、 次 を 繰り返す <eos>
+
+example_idx = 35
+if A <= B + C :
+trg = [A が B に C を加えた 値 以下の とき 、
+a が b 7 以下の とき 、 <eos>
+
+example_idx = 40
+A = A // 5
+trg = [A を 5 で 割 った 商 を A とする
+a を 5 で 割 った 商 を a とする <eos>
+
+example_idx = 92
+if A < 8 :
+trg = [A が 8 より 小さい とき 、
+a が 8 より 小さい とき 、 <eos>
+
+example_idx = 137
+A += B [ 1 ]
+trg = [A を B の 1 番 目 だけ 増加 させる
+a を a の 1 番 目 だけ 増加 させる <eos>
+
+example_idx = 149
+for A in range ( 17 ) :
+trg = [0 から 17 未 満 までの 数 列 を 順に A として 、 繰り返す
+0 から 17 未 満 までの 数 列 を 順に 2 として 、 繰り返す <eos>
+
+example_idx = 193
+return 360 - A
+trg = [3 60 から A を 引 いた 値を返す
+3 60 から 30 を 引 いた 値を返す <eos>
+
+example_idx = 213
+A . q . append ( B )
+trg = [A の q の 末 尾 に B を追加する
+a の 末 尾 に b ( b ) を追加する <eos>
+
+example_idx = 1390
+A . pop ( 0 )
+trg = [A の 0 を取り 出した 値
+a ( 0 ) <eos>
+
+example_idx = 2819
+A . append ( False )
+trg = [A の 末 尾 に 偽 を追加す
+空 列 の 末 尾 に " { } " を追加する <eos>
