@@ -1,0 +1,583 @@
+for i in range ( n ) : 
+ans = max ( ans , i * j ) 
+if p == k * k and i + j + k == 1000 : 
+rs += ch
+return a % n == 0
+primes = [ True ] * ( n + 1 ) 
+facts [ x + 1 ] = facts [ x ] * ( x + 1 ) 
+ret = [ ] 
+else : 
+n /= a
+def euler019_names_of_the_day ( y , m , d ) : 
+def euler013_front_n_slice ( s , n ) : 
+return [ 1 ] 
+while count < 10001 : 
+ret . insert ( 0 , n % 10 ) 
+def euler011_over_or_equal ( a , b ) : 
+def euler004_n_slice ( s , n ) : 
+for ch in s : 
+for k in range ( j , 1000 ) : 
+if i == 2 : 
+sl . pop ( 0 ) 
+s = str ( fact ) 
+for ch in q : 
+ret = [ ] 
+for ch in s : 
+while n % a == 0 : 
+return y % 400 == 0 or ( ( not y % 100 == 0 ) and y % 4 == 0 ) 
+def euler010_n_is_prime ( n ) : 
+q = str ( n ) 
+gamma = -1 * int ( y / 100 ) + 5
+def euler009_is_sum_equation1000 ( tp ) : 
+ret *= ( x + 1 ) 
+m = max ( m , q [ i*20+j ] * q [ ( i+1 ) *20+j+1 ] * q [ ( i+2 ) *20+j+2 ] * q [ ( i+3 ) *20+j+3 ] ) 
+def euler004_multiple_a ( a , b ) : 
+return res
+for i , ch in enumerate ( s ) : 
+a = 0
+def euler013_query_n_sum ( q , n ) : 
+if a != 0 and a <= 20 : 
+l = [ i for i in range ( 2 , int ( math . sqrt ( p ) ) + 1 ) if p % i == 0 ] 
+a = \" \" 
+p = [ ] 
+b = \" \" 
+return int ( a / p ) 
+ret . append ( n ) 
+ret += len ( word [ int ( n / 100 ) ] ) 
+for i in range ( 20 ) : 
+if p [ i ] : 
+count += 1
+for i in range ( s , e ) : 
+for i in sl : 
+for i in range ( 2 , a ) : 
+def euler017 ( ) : 
+ret += len ( word [ n % 10 ] ) 
+return ret
+ret += len ( word [ n ] ) 
+def euler010_list_sum_a ( l ) : 
+def euler011_right_point ( x , y ) : 
+dinomials = [ 0 ] * 21
+return n * n
+ret . insert ( i + 1 , l [ i ] + l [ i + 1 ] ) 
+for i in range ( 2 , n + 1 ) : 
+for i in range ( 2 , n + 1 ) : 
+def euler007_n_division_a ( a , n ) : 
+ret . append ( i ) 
+return fl
+def euler016 ( ) : 
+if len ( l ) == 0 : 
+t = ( int ( s / 2 ) , s + 1 ) 
+elif a == 2 : 
+for i in range ( pl [ -1 ] , x + 1 ) : 
+def euler009_is_sum_equation1000_a ( tp ) : 
+return sum ( range ( a , b ) ) 
+if judge and n % i == 0 : 
+sumofsq += ( i + 1 ) * ( i + 1 ) 
+n = int ( n / 2 ) if n % 2 == 0 else n * 3 + 1
+primes = [ ] 
+if n == 1 : 
+def euler008_all_product ( l ) : 
+b . append ( n ) 
+def euler012 ( ) : 
+return a * b
+return len ( dl ) == 0
+while i * i < n : 
+for i in range ( b ) : 
+def euler012_a_over_b ( a , b ) : 
+if i % j == 0 : 
+def euler002_add_param ( a , b ) : 
+if n % x == 0 : 
+return sum ( l ) 
+return sum ( q ) 
+if len ( fl ) < x : 
+pl = [ 2 ] 
+return word [ n % 10 ] 
+l . append ( a ) 
+a = n - 2 
+dinomials [ i ] = int ( facts [ 20 ] / ( facts [ i ] * facts [ 20 - i ] ) ) 
+return sumofsq - sqofsum
+a /= x
+for i in range ( len ( l ) ) : 
+ret *= a
+res = b - a
+return sum ( l ) 
+p [ i ] = False
+def euler008_list_slice ( l , s , c ) : 
+return int ( facts [ n ] / ( facts [ r ] * facts [ n - r ] ) ) 
+j += 1
+def euler004 ( ) : 
+ret . append ( ret [ -1 ] + d ) 
+pl . append ( i ) 
+for j in range ( i + i , n + 1 , i ) : 
+for i , n in enumerate ( cl ) : 
+ret += len ( word [ a % 10 ] ) 
+s += d
+for x in l : 
+def euler011_string_space_split ( s ) : 
+return not l
+cl [ m ] = l
+while a > 0 : 
+def euler011_lower_left_point ( x , y ) : 
+def euler010_list_sum ( l ) : 
+for i in range ( 20 ) : 
+def euler005_expmax_a ( p , n ) : 
+def euler005_enum_prime_a ( n ) : 
+def euler004_half_digit ( n ) : 
+return judge
+ret . append ( s ) 
+def euler009_n_square ( n ) : 
+return p**int ( n** ( 1/p ) ) 
+b = [ ] 
+if ch == \" \" : 
+ret . append ( l [ s + i ] ) 
+def euler007_is_less ( a , b ) : 
+def euler017_digit_count ( n ) : 
+for i in range ( l ) : 
+res = 0
+for i in range ( int ( 20** ( 1/p ) ) ) : 
+fibs . append ( fibs [ -1 ] + fibs [ -2 ] ) 
+for x in range ( n ) : 
+ret = [ l [ 0 ] , l [ -1 ] ] 
+for i , ch in enumerate ( a ) : 
+for i in range ( 2 , n + 1 ) : 
+res = 1
+for k in range ( sep ) : 
+def euler006_sum_a_to_b_a ( a , b ) : 
+fc *= fl [ x ] 
+else : 
+return b <= a
+if j <= 16 : 
+return dinomials [ 0 ] 
+return ( x - 1 , y + 1 ) 
+def euler010 ( ) : 
+def euler011_lower_right_point ( x , y ) : 
+ret = 1
+d = 365
+l . append ( y ) 
+return a == 1
+a += 1
+return int ( n / 2 ) if n % 2 == 0 else n * 3 + 1
+ans = 0
+a = len ( s ) 
+for x in p : 
+sl . append ( buf ) 
+def euler007_n_division ( a , n ) : 
+while n % i == 0 : 
+ret . append ( i ) 
+if s <= 1 : 
+primes . append ( i ) 
+while int ( n / 10 ) > 0 : 
+def euler007_is_prime ( a ) : 
+judge = False
+a , b = b , a % b
+q = [ ] 
+count = 0
+p [ i ] = False
+if i <= 16 : 
+m = 1
+def euler008_list_add ( l , a ) : 
+grid = \" \" \" \" \" \" . split ( ) 
+m = max ( m , q [ i*20+j ] * q [ ( i+1 ) *20+j ] * q [ ( i+2 ) *20+j ] * q [ ( i+3 ) *20+j ] ) 
+q = [ ] 
+ret . append ( i ) 
+for j in range ( 20 ) : 
+for j in range ( i + i , n + 1 , i ) : 
+def euler017_digit_separate ( n ) : 
+return l
+def euler007_succ ( a ) : 
+for y in range ( 1901 , 2001 ) : 
+fl = [ ] 
+def euler012_nth_triangular_number ( n ) : 
+def euler009_is_pythagoras ( a , b , c ) : 
+for i in range ( 100 ) : 
+return len ( s ) 
+return a <= b
+N = 10**6
+for i in range ( s , s + ( d * n ) , d ) : 
+h = ( d + int ( 26 * ( m + 1 ) / 10 ) + ( y % 100 ) + int ( ( y % 100 ) / 4 ) + gamma ) % 7
+def euler004_string_reverse ( s ) : 
+return ( x + 1 , y - 1 ) 
+for i in range ( 2 , int ( a**0 . 5 ) + 1 ) : 
+def euler015_combination ( n , r ) : 
+for x in range ( n ) : 
+return ( x - 1 , y ) 
+judge = True
+return pl
+def euler017_ones_to_string ( n ) : 
+return ( int ) ( a / 2 ) + ( a % 2 ) 
+def euler018 ( ) : 
+return s == rs
+facts = [ 1 ] * ( n + 1 ) 
+a = tn
+if i < 10 : 
+def euler012_is_list_empty_a ( l ) : 
+for i in range ( 5 ) : 
+sl = [ ] 
+i = 2
+def euler004_n_bslice ( s , n ) : 
+while b != 0 : 
+for i in range ( n - 2 ) : 
+def euler005_enum_prime_b ( n ) : 
+ret = [ ] 
+while s < e : 
+def euler003_n_morethan_square ( a , n ) : 
+while c < 500 : 
+if primes [ i ] : 
+ret += len ( twoword [ int ( a / 10 ) ] ) 
+sl = [ ] 
+for i in range ( 2 , int ( n**0 . 5 ) + 1 ) : 
+if x % 2 == 0 : 
+for i in pl : 
+return len ( l ) == 0
+tmp = [ a ] 
+if a % i == 0 : 
+for x in l : 
+def euler004_is_equal ( a , b ) : 
+return p
+return prime
+elif a == 0 : 
+def euler006_n_square ( n ) : 
+s += a
+for j in range ( 999 , 99 , -1 ) : 
+if n < 2 : 
+while a % x == 0 : 
+ret += len ( \" hundredand \" ) 
+def euler017_string_length_a ( s ) : 
+b += s [ len ( s ) - k - 1 ] 
+def euler003_n_divide_a ( n , a ) : 
+q = str ( n ) 
+p . append ( i ) 
+return a * a < n
+def euler011_zero_to_n_list ( n ) : 
+ret += len ( \" onethousand \" ) 
+primes [ j ] = False
+def euler010_n_multiple_list ( s , e , d ) : 
+ret += s [ i ] 
+a *= p
+for ch in grid : 
+dl . append ( i ) 
+break
+for j in range ( 2 , int ( x**0 . 5 ) + 1 ) : 
+t = ( s , int ( ( s + 1 ) / 2 ) ) 
+if i < n : 
+n = int ( n / 2 ) if n % 2 == 0 else n * 3 + 1
+for j in range ( i , 1000 ) : 
+fact = 1
+fib = [ 1 , 2 ] 
+if p [ x ] : 
+res += a
+def euler011_upward_point ( x , y ) : 
+for x in l : 
+break
+a -= 1
+for x in t : 
+return tn
+p += 1
+def euler002 ( ) : 
+n /= 10
+def euler007_is_equale_zero ( a ) : 
+c = fc
+def euler006 ( ) : 
+ret = [ ] 
+s += 1
+fl = [ 1 ] * 4 + [ 0 ] * 96
+l = cl [ n ] 
+else : 
+while ret <= tn : 
+c = 1
+ret = [ n % 10 ] 
+return a + 1
+buf += ch
+return ( x + 1 , y ) 
+def euler012_is_coprime ( a , b ) : 
+sl . append ( int ( s [ i ] ) ) 
+def euler012_count_division ( n , a ) : 
+sd += 1
+for i in range ( 2 , 20 ) : 
+for x in range ( n ) : 
+for i , day in enumerate ( days ) : 
+def euler017_divid_integer_part ( a , b ) : 
+for n in range ( 2 , N ) : 
+n = 600851475143
+m = max ( m , q [ i*20+j ] * q [ i*20+j+1 ] * q [ i*20+j+2 ] * q [ i*20+j+3 ] ) 
+for i in range ( 20 ) : 
+return i * j * k
+for i in range ( 1 , 1000 ) : 
+def euler008_elem_max ( a , b ) : 
+ret += n
+ret *= x
+return s == 1000
+def euler016_a_exp_b_a ( a , b ) : 
+elif n == 2 : 
+return fibs [ -1 ] 
+tn = sum ( range ( 1 , s + 1 ) ) 
+facts = [ 1 ] * ( n + 1 ) 
+if ( y % 400 == 0 or ( ( not y % 100 == 0 ) and y % 4 == 0 ) ) and i == 1 : 
+def euler011_less_or_equal_a ( a , b ) : 
+if 0 < n <= 2 : 
+ret = [ s ] 
+def euler012_is_list_empty ( l ) : 
+def euler019 ( ) : 
+while a % i == 0 : 
+def euler011_upper_right_point ( x , y ) : 
+def euler008_elem_max_a ( a , b ) : 
+s = ( str ) ( n ) 
+return sum ( range ( 1 , n + 1 ) ) 
+return fibs
+def euler009 ( ) : 
+fl [ x ] = nc
+if n == 1 : 
+while c < b : 
+return res <= 0
+def euler012_range_prime_enumerate ( s , e ) : 
+if x % i == 0 : 
+dl = [ ] 
+for i in range ( 5 , len ( s ) ) : 
+m *= i
+buf = \" \" 
+j = 1
+if a % i == 0 : 
+nc *= j
+ret -= 3
+nc = 1
+def euler005_enum_prime ( n ) : 
+for j in range ( 20 ) : 
+def euler009_all_product ( l ) : 
+a = 1
+def euler012_prime_factorize ( n ) : 
+p = i * i + j * j
+for n in range ( 1 , 1001 ) : 
+for j in range ( 2 , int ( i**0 . 5 ) + 1 ) : 
+def euler011_zero_to_n_list_a ( n ) : 
+fact *= ( i + 1 ) 
+if len ( l ) == 0 : 
+ret += s [ len ( s ) - 1 - i ] 
+s += q [ i ] 
+return a * a + b * b == c * c
+def euler008 ( ) : 
+l = euler015_pascal_triangle ( n - 1 ) 
+q . append ( int ( ch ) ) 
+for i in range ( 999 , 99 , -1 ) : 
+dinomials [ j ] += dinomials [ j + 1 ] 
+for x in range ( 2 , int ( 2000000**0 . 5 ) + 1 ) : 
+def euler011_less_or_equal ( a , b ) : 
+for ch in s : 
+for j in prime : 
+return a == 0
+def euler014_list_enum ( l ) : 
+def euler005_expmax ( p , n ) : 
+ret += len ( twoword [ int ( n / 10 ) ] ) 
+return True
+ret = 0
+c += 1
+return facts
+return int ( a / b ) 
+for i in range ( s , e + 1 ) : 
+prime = [ ] 
+a -= n
+pl = [ ] 
+if 4 <= j and i <= 16 : 
+l = [ ] 
+def euler014_list_reverse ( l ) : 
+m = 0
+return sd
+p = 1
+def euler011 ( ) : 
+def euler009_n_square_a ( n ) : 
+return a < b
+return m
+ret . append ( a ) 
+return a**b
+else : 
+a = a * p
+return [ 0 ] 
+tri [ i ] [ j ] += max ( tri [ i + 1 ] [ j ] , tri [ i + 1 ] [ j + 1 ] ) 
+elif len ( str ( n ) ) == 3 : 
+return n % 2 == 0
+buf = \" \" 
+ret += c
+if 1582 <= y : 
+n = int ( n / 10 ) 
+i = i + 1
+for i in range ( c ) : 
+def euler011_downward_point ( x , y ) : 
+def euler016_a_exp_b ( a , b ) : 
+def euler014_collatz_calc ( n ) : 
+while fib [ -1 ] < 4000000 : 
+ret += len ( word [ a ] ) 
+p = [ True ] * 2000000
+a /= i
+for x in fib : 
+a = str ( sum ( q ) ) 
+def euler002_divide_2 ( n ) : 
+while a < n : 
+f = True
+while int ( n / 10 ) > 0 : 
+if m <= 2 : 
+s += x
+l = [ 0 ] * ( x - len ( fl ) + 1 ) 
+for m in reversed ( b ) : 
+for i in reversed ( l ) : 
+def euler011_left_point ( x , y ) : 
+def euler017_is_equal ( a , b ) : 
+fl . append ( ( x , c ) ) 
+prime . append ( i ) 
+def euler002_sum_list ( l ) : 
+fibs = [ 0 , 1 ] 
+def euler012_count_divisor ( expl ) : 
+return a + b
+if primes [ i ] : 
+s += int ( ch ) 
+ret += 1
+if f : 
+sumofsq = 0
+gamma = 0
+facts [ i + 1 ] = facts [ i ] * ( i + 1 ) 
+if p [ x ] : 
+if not i in pl : 
+m = max ( m , a ) 
+def euler008_list_add_a ( l , a ) : 
+def euler014_make_range_list ( s , e ) : 
+return max ( a , b ) 
+pl = [ ] 
+facts = [ 1 ] * 21
+def euler013 ( ) : 
+for i in range ( 2 , int ( n**0 . 5 ) + 1 ) : 
+else : 
+for x in expl : 
+l += tmp
+cl [ 1 ] = 0
+def euler006_make_common_diff_sequence ( s , d , n ) : 
+def euler014 ( ) : 
+m += 12
+return sum ( tp ) == 1000
+l += 1
+def euler005 ( ) : 
+return ans
+def euler014_list_init ( l , n ) : 
+ret = [ ] 
+facts [ x + 1 ] = facts [ x ] * ( x + 1 ) 
+for i in reversed ( range ( len ( tri ) - 1 ) ) : 
+ret += ch
+for i in range ( 2 , n ) : 
+def euler020 ( ) : 
+def euler006_make_common_diff_sequence_a ( s , d , n ) : 
+ret = \" \" 
+gamma = -2 * int ( y / 100 ) + int ( int ( y / 100 ) / 4 ) 
+return primes
+return res >= 0
+if not fl [ x ] : 
+def euler016_n_separate_digit ( n ) : 
+return tri [ 0 ] [ 0 ] 
+return a
+return sum ( ret ) 
+c = 0
+m = max ( m , q [ i*20+j ] * q [ ( i+1 ) *20+j-1 ] * q [ ( i+2 ) *20+j-2 ] * q [ ( i+3 ) *20+j-3 ] ) 
+f = False
+for x in tp : 
+s = 2
+if m < N : 
+def euler016_all_digit_sum ( n ) : 
+sep = ( int ) ( len ( s ) / 2 ) + ( len ( s ) % 2 ) 
+if d % 7 == 6 : 
+def euler004_multiple ( a , b ) : 
+for i in range ( 2 , int ( n**0 . 5 ) + 1 ) : 
+ret . append ( ( i , l [ i ] ) ) 
+ret . append ( int ( ch ) ) 
+def euler006_sum_a_to_b ( a , b ) : 
+return name [ h ] 
+def euler002_sum_list_a ( l ) : 
+for i in range ( 2 , 2000000 ) : 
+rs = \" \" 
+def euler011_upper_left_point ( x , y ) : 
+primes = [ True ] * ( n + 1 ) 
+for x in q : 
+q = str ( 2**1000 ) 
+return ( x , y + 1 ) 
+def euler017_string_length ( s ) : 
+fc = 1
+if not s % 2 : 
+return int ( n ) 
+for i in range ( 2 * x , len ( p ) , x ) : 
+return s
+for i in range ( n - 1 ) : 
+return False
+a = n - 2
+c = 0
+return ( x + 1 , y + 1 ) 
+if m < n : 
+if primes [ i ] : 
+def euler019_is_leap_year ( y ) : 
+if a < 2 : 
+return list ( range ( n ) ) 
+ret = 1
+if i % j == 0 : 
+fib . append ( fib [ -1 ] + fib [ -2 ] ) 
+p = [ True ] * n
+for x in range ( 2 , int ( n**0 . 5 ) + 1 ) : 
+for j in sl : 
+s = ( str ) ( j * i ) 
+def euler015_all_factorials ( n ) : 
+res *= a
+a = n % 100
+sqofsum = 101 * 50
+for i in range ( 21 ) : 
+if a == b : 
+ret += ch
+while a < b : 
+return ( x - 1 , y - 1 ) 
+def euler015 ( ) : 
+a = 1
+for i in range ( n ) : 
+for p in prime : 
+def euler015_pascal_triangle ( n ) : 
+def euler002_n_fibnocci_sequence ( n ) : 
+def euler003 ( ) : 
+def euler014_collatz_problem_count ( n ) : 
+q . append ( int ( ch ) ) 
+elif len ( str ( n ) ) == 2 : 
+while n >= N or cl [ n ] == -1 : 
+for ch in reversed ( s ) : 
+def euler007 ( ) : 
+return b < a
+s = 1
+def euler020_digit_sum ( n ) : 
+while a < n : 
+a *= j
+ret = 0
+a += s [ k ] 
+def euler010_enum_prime ( n ) : 
+def euler012_next_triangular_number ( tn ) : 
+fl += l
+def euler002_n_fibnocci_number ( n ) : 
+return a == b
+y -= 1
+for x in q : 
+ret . append ( i ) 
+return c
+return fibs [ n - 1 ] 
+for y in prime : 
+cl = [ -1 ] * N
+for j in range ( 2 , int ( i**0 . 5 ) + 1 ) : 
+def euler006_n_square_a ( n ) : 
+q = str ( n ) 
+d += 1
+prime = [ ] 
+def euler011_over_or_equal_a ( a , b ) : 
+return sl
+a = n
+def euler020_factorial ( n ) : 
+return b if a < b else a
+n = n / i
+def euler007_is_prime_a ( a ) : 
+d += day 
+s += int ( x ) 
+else : 
+for i in range ( 2 * x , len ( p ) , x ) : 
+s = 0
+if i > int ( tn / 2 ) : 
+ret = i
+for a in l : 
+return ( x , y - 1 ) 
+def euler004_is_palindromic ( s ) : 
+for j in range ( len ( tri [ i ] ) ) : 
